@@ -487,7 +487,7 @@ int main() {
 }
 ~~~
 
-### Consejos para la realización de las prácticas de programación
+### 2.4. Consejos para la realización de las prácticas de programación
 
 * Pensar antes de escribir el código. Coger lápiz y papel y estructurar los pasos que se desean implementar (algoritmo).
 * Detenerse ante cualquier mensaje de error o *warning* y solucionarlo antes de continuar.
