@@ -1,22 +1,6 @@
 
 # Tema 1: Introducción a la  programación
 
-## Contenidos
-
-- [1. Lenguajes de programación](#1)
-    - [1.1. El ordenador y sus componentes](#1-1)
-    - [1.2. Representación de la información](#1-2)
-    - [1.3. Programa](#1-3)
-    - [1.4. Los primeros lenguajes de programación](#1-4)
-    - [1.5. Los primeros lenguajes de alto nivel](#1-5)
-    - [1.6. Compiladores e intérpretes](#1-6)
-- [2. Lenguaje C](#2)
-- [3. Aprender a programar](#3)
-	 - [3.1. Características deseables de un programa](#3-1)
-	 - [3.2. Pasos para desarrollar un programa](#3-2)
-	 - 	[3.3. Normas de estilo para programar en C](#3-3)
-
-
 ## 1. Lenguajes de programación
 
 Un lenguaje de programación permite especificar procesos que se
