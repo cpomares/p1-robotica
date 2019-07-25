@@ -17,7 +17,7 @@
 	 - 	[3.3. Normas de estilo para programar en C](#3-3)
 
 
-## Lenguajes de programación
+## 1. Lenguajes de programación
 
 Un lenguaje de programación permite especificar procesos que se
 ejecutan en computadores. Un programa escrito en un determinado
@@ -27,7 +27,7 @@ ello, para entender en profundidad qué es un lenguaje de programación
 es fundamental conocer el ordenador.
 
 
-### <a name="1-1"/> 1.1. El ordenador y sus componentes
+###  1.1. El ordenador y sus componentes
 
 Lor ordenadores poseen los siguientes componentes:
 * **Dispositivos de entrada**. Se encargan de capturar información de entrada a la computadora: teclado, ratón, micrófono, etc.
@@ -49,14 +49,15 @@ se pueden leer o escribir simultáneamente. En el ejemplo, cada palabra es de 1 
 cada palabra de memoria
 
 
-### <a name="1-2"/> 1.2. Representación de la información
+### 1.2. Representación de la información
 
 La información se representa en una computadora mediante el uso de dos estados: ausencia y presencia de corriente. Esto se debe a la naturaleza eléctrica de la misma:
 
 <img src="imagenes/impulsos.png" width="400px"/>
 
 Esta dualidad nos permite adoptar un sistema **binario** para representar la información. Así, la presencia de señal se representa por el 1 y la ausencia por el 0. Esto nos lleva al concepto de **bit**, que es la unidad mínima de información. Un *bit* puede adoptar los valores 0 ó 1.Un único *bit* aporta poca cantidad de información. Es por ello que los *bits* seagrupan de 8 en 8 formando un **byte**. Un *byte* permite representar 2^8 = 256 combinaciones diferentes.A su vez, los *bytes* se agrupan formando **palabras**, que dependiendo de cada computadora pueden ser de 8, 16, 32 ó 64 *bytes*.
-### <a name="1-3"/> 1.3. Programa
+
+### 1.3. Programa
 
 Un programa es el conjunto ordenado de instrucciones que indican a la computadora las acciones que debe realizar para cumplir una tarea específica. En este sentido, con un programa especificamos al ordenador qué tiene que hacer, en el orden en el que lo tiene que hacer y los datos que ha de usar para ello.Los programas están escritos en un determinado lenguaje formal libre de ambigüedades, de forma que la especificación de lo que queremos hacer sea unívoca.
 
