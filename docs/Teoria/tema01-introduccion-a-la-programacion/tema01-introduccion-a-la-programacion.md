@@ -202,7 +202,7 @@ el programa traductor puede dedicar más tiempo a intentar encontrar la mejor tr
 posible, la que proporcione el programa de código máquina más rápido (o que consuma
 menos memoria).
 
-### Desarrollo de programas en lenguaje C
+### 2.1. Desarrollo de programas en lenguaje C
 
 Cuando se implementa un programa, en primer lugar editamos el **código fuente** con un editor. Estos archivos contienen la implementación del programa en un determinado lenguaje, pero no se pueden ejecutar directamente. Para ello necesitamos **compilar** los programas oara obtener el **código objeto**, que es un código en binario intermedio que puede enlazarse con otros móulos ya compilados o con bibliotecas para obtener un **código ejecutable**. Este último es un fichero que se puede ejecutar directamente.
 
@@ -261,7 +261,7 @@ y el resultado es la salida por pantalla:
 - La sintaxis de C es más compleja. La sintaxis de Python es más sencilla y sus programas son más fáciles de escribir y depurar.
 
 
-## 3. Aprender a programar
+### 2.2. Aprender a programar
 
 **A programar se aprende programando**. En esta asignatura os daréis cuenta que no sirve de nada memorizar programas, ni mirar ejercicios resueltos o soluciones a las prácticas planteadas. Debéis empezar desde el principio a hacer pequeños programas y modificaciones de los que hagamos o planteemos en clase. Pelearos con el código, que os salgan errores, resolverlos, etc. Es la única forma de aprender. Una vez hayáis implementado una solución a un problema, entonces es el momento de mirar otra solución para ver si podéis mejorarlo, pero primero debéis haberlo resuelto vosotros o al menos intentado resolver.
 
@@ -269,7 +269,7 @@ Un programa de computadora es sólo una recopilación de las instrucciones neces
 
 Por ejemplo, si queremos implementar un programa que comprueba si un número es impar, el conjunto de instrucciones que resuelve el problema es el *programa*. El método que se utiliza para comprobar si el número es par o impar es el *algoritmo*. Normalmente, para desarrollar un programa para resolver un problema particular, primero hay que pensar en el algoritmo y luego desarrollar un programa que implementa ese algoritmo. Por lo tanto, el algoritmo para resolver el problema par / impar podría expresarse de la siguiente manera: Primero, dividir el número por dos. Si el resto de la división es cero, el número es par; de lo contrario, el número es impar.
 
-### 3.1 Características deseables de un programa
+#### Características deseables de un programa
 
 1. **Integridad**: Corrección de los cálculos
 2. **Claridad**: Facilidad de lectura del programa en conjunto, con énfasis en la lógica subyacente.
@@ -280,7 +280,7 @@ Por ejemplo, si queremos implementar un programa que comprueba si un número es 
 
 Todas estas características las tendremos en cuenta en la evaluación de vuestros programas en la asignatura.
 
-### 3.2 Pasos para desarrollar un programa
+#### Pasos para desarrollar un programa
 
 Es fundamental comprender bien el problema antes de pensar en la solución. Antes de ponerse a escribir el programa es necesario tener claro cómo resolverlo, pensar en ello utilizando lápiz y papel:
 
@@ -290,7 +290,7 @@ Es fundamental comprender bien el problema antes de pensar en la solución. Ant
 4. Verificar y probar el programa
 5. Optimizar
 
-#### Entender el problema
+##### Entender el problema
 
 Para entender el problema debemos pensar y analizarlo. Debemos plantearnos las siguientes cuestiones:
 
@@ -305,7 +305,7 @@ Ejemplo:
 Se desea calcular la nota de una asignatura de un alumno teniendo en cuenta la nota de los exámenes realizados en una determinada convocatoria.
 >En Enero, la nota final se obtiene con el 15% de la nota de un primer examen con ordenador, el 35% de la nota de un segundo examen con ordenador y el 50% restante con la nota de un examen escrito, excepto si la nota del examen escrito o la del segundo examen con ordenador es menor que 4, en cuyo caso la nota final será la mínima de las dos.>En Julio, la nota final se obtendrá como 50% nota del examen escrito, 50% nota del examen con ordenador, excepto si cualquiera de estas dos notas es menor que 4, en cuyo caso la nota final será la mínima de las dos.
 
-#### Diseñar la solución
+##### Diseñar la solución
 
 - Detectar los pasos a seguir para solucionar el problema
 - Estructurar el programa
@@ -319,7 +319,7 @@ Algoritmo:
 - Si es la convocatoria de JulioEntonces	- Dime las notas del examen escrito y del examen con ordenador
 	- Si la nota del examen escrito < 4 o nota examen ordenador < 4EntoncesTU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord.)	- SinoTU NOTA FINAL ES = 0,5* Ordenador+0,5*Escrito
 
-#### Implementar el programa
+##### Implementar el programa
 
 - Desarrollar en un lenguaje de programación los pasos a seguir para resolver el problema
 - Importante: la solución debe ser (lo suficientemente) óptima. Se pueden encontrar distintas soluciones para resolver el mismo problema
@@ -366,18 +366,18 @@ int main() {
 }
 ~~~
 
-#### Probar el programa
+##### Probar el programa
 
 - Comprobar que el resultado obtenido es el adecuado. Para ello se deben realizar pruebas exhaustivas sobre nuestro programa y testear que los resultados obtenidos son los que esperamos
 - Si no, volver al paso anterior
 
 <img src="imagenes/depuracion.png" width="400px"/>
 
-#### Optimización
+##### Optimización
 
 Después de tener un programa correcto y validado, es conveniente estudiar si se puede mejorar la solución para que el programa sea más eficiente, más legible y menos redundante.
 
-#### Documentación
+##### Documentación
 
 La documentación es un parte fundamental en el desarrollo de código.
 
@@ -392,7 +392,7 @@ Usar lenguaje apropiado. Si tenemos funciones, comentar lo que hace justo antes 
 ~~~c/* Realiza la suma ponderada de los valores pasados por parámetro */double sumap (double a, double b) {
 ~~~La principal función de los comentarios es el mantenimiento: tanto por ti como para otros programadores
 
-### 3.3. Normas de estilo para programar en C
+### 2.3 Normas de estilo para programar en C
 
 > **Nota**:  En este apartado vamos a hablar de términos que iremos explicando poco a poco en la asignatura. La idea es recopilarlo para que os sirva de guía y de consulta.
 
@@ -410,7 +410,7 @@ No existen un conjunto de reglas fijas para programar con legibilidad. Lo que s�
 4. Estructura del programa
 5. Identación o sangrado
 
-#### 1. Identificadores significativos
+#### Identificadores significativos
 
 Un identificador es un nombre asociado a un objeto de programa, que puede ser una variable, función, constante, tipo de datos... El nombre de cada identificador debe expresar lo más claramente posible al objeto que identifica. Normalmente los identificadores deben empezar por una letra, no pueden contener espacios y suelen tener una longitud máxima que puede variar, pero que no debería superar los 10-20 caracteres para evitar lecturas muy pesadas.
 
@@ -420,7 +420,7 @@ Es muy normal usar variables como i, j o k para nombres de índices de bucles (f
 
 Para los identificadores de función se suelen usar las formas de los verbos en infinitivo, seguido de algún sustantivo, para indicar claramente lo que hace. Por ejemplo, una función podría llamarse `evitarObstaculo`, y sería más comprensible que si le hubiéramos llamado `evitar`.
 
-#### 2. Constantes simbólicas
+#### Constantes simbólicas
 
 En un programa es muy normal usar constantes (numéricas, cadenas...). Si estas constantes las usamos directamente en el programa, el programa funcionará, pero es más recomendable usar constantes simbólicas, de forma que las definimos al principio del programa y luego las usamos cuando haga falta. Así, conseguimos principalmente dos ventajas:
 
@@ -442,7 +442,7 @@ Se encarga de cambiar todas las ocurrencias de CONSTANTE por el valor indicado e
 
 Por convenio, las constantes se suelen poner completamente en mayúsculas y las variables no, de forma que leyendo el programa podamos saber rápidamente qué es cada cosa. En general, se deben usar constantes simbólicas en constantes que aparezcan más de una vez en el programa referidas a un mismo elemento que pueda variar ocasionalmente.
 
-#### 3. Comentarios
+#### Comentarios
 
 Sirven para aumentar la claridad de un programa, ayudan para la documentación y bien utilizados nos pueden ahorrar mucho tiempo.
 
@@ -456,7 +456,7 @@ Los comentarios deben ser breves y concisos. Se deben poner comentarios cuando s
 
 No olvidemos que los comentarios son textos para las personas, por lo que debemos cuidar el estilo, acentos y signos de puntuación.
 
-#### 4. Estructura del programa
+#### Estructura del programa
 
 Un programa debe ser claro, estar bien organizado y ser fácil de leer y entender
 
@@ -475,7 +475,7 @@ Estructura típica de un programa C, es el que usaremos en esta asignatura:
 
 Este orden no es estricto y pueden cambiarse algunos puntos por otros, pero debemos ser coherentes y usar el mismo orden en todos nuestros programas
 
-#### 5. Identación o sangrado
+#### Identación o sangrado
 
 La indentación o sangrado consiste en tabular hacia la derecha todas las sentencias de una misma función o bloque, de forma que se vea rápidamente cuales pertenecen al bloque y cuales no.
 
