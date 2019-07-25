@@ -17,7 +17,7 @@
 	 - 	[3.3. Normas de estilo para programar en C](#3-3)
 
 
-## <a name="1"/> 1. Lenguajes de programación
+## Lenguajes de programación
 
 Un lenguaje de programación permite especificar procesos que se
 ejecutan en computadores. Un programa escrito en un determinado
