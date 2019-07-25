@@ -489,10 +489,10 @@ int main() {
 
 ### 2.4. Consejos para la realización de las prácticas de programación
 
+* Leer bien el enunciado de lo que te piden.
 * Pensar antes de escribir el código. Coger lápiz y papel y estructurar los pasos que se desean implementar (algoritmo).
 * Detenerse ante cualquier mensaje de error o *warning* y solucionarlo antes de continuar.
 * Ir paso a paso. Nunca escribas una gran porción de código sin haberla probado poco a poco.
-* Leer bien el enunciado de lo que te piden.
 * Escribir comentarios a medida que escribes código.
 * Preguntar al profesor lo que no entiendas.
 
