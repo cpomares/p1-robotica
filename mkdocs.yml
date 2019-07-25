@@ -4,6 +4,7 @@ use_directory_urls: false
 nav:
 - 'Teoría':
    - 'Descripción de la asignatura': 'Teoria/tema00-descripcion-asignatura/tema00-descripcion-asignatura.md'
+   - 'Tema 1': 'Teoria/tema01-introduccion-a-la-programacion/tema01-introduccion-a-la-programacion.md'
 
 theme:
     language: es
