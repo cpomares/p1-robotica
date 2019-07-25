@@ -65,7 +65,7 @@ Con respecto al nivel de abstracción de estos lenguajes, los podemos clasifica
   * **Lenguajes Máquina**: Como su propio nombre indica, se trata de los lenguajes "nativos" de la computadora, y por ello es capaz de procesarlos directamente. Sumamente costosos para el programador.
   * **Lenguajes de Alto Nivel**: Se trata de lenguajes mucho más cercanos al lenguaje humano, con un alto nivel de abstracción, por lo que son más comprensibles y menos engorrosos de usar para el programador. Los programas construidos con estos lenguajes han de ser traducidos a lenguaje máquina mediante el uso de un compilador para que la computadora los pueda procesar. Python, C, C++, Java, etc.
 
-### <a name="1-4"/> 1.4. Los primeros lenguajes de programación
+### 1.4. Los primeros lenguajes de programación
 
 Los primeros computadores electrónicos se programan directamente usando el conjunto de instrucciones del procesador, en **código máquina**, código hexadecimal.
 
@@ -92,7 +92,7 @@ El lenguaje ensamblador constituye un gran avance en lo que a facilidad de compr
 Los **lenguajes de alto nivel** se caracterizan por no ser dependientes de máquina. Mediante la compilación de un programa escrito en lenguaje de alto nivel podremos ejecutarlo en cualquier máquina. Para ello, necesitaremos un compilador de ese lenguaje para cada máquina en la que queramos ejecutar nuestro programa.Otra característica de estos lenguajes es su sintaxis es más cercana al lenguaje natural del programador y proporciona distintas herramientas de abstracción que facilitan la programación.
 
 
-### <a name="1-5"/> 1.5. Los primeros lenguajes de alto nivel
+### 1.5. Los primeros lenguajes de alto nivel
 
 Los primeros lenguajes de alto nivel se desarrollaron a finales de la
 década de los 50:
@@ -116,7 +116,7 @@ El **lenguaje C** surgió en 1972, derivado de Fortran y Algol. Es el que vamos 
 El **lenguaje Python** surgió en 1991, a partir de Lisp y C.
 
 
-### <a name="1-6"/> 1.6. Compiladores e intérpretes
+### 1.6. Compiladores e intérpretes
 
 En el nivel de abstracción más bajo, la ejecución de un programa en un
 computador consiste en la ejecución de un conjunto de instrucciones
@@ -175,7 +175,7 @@ programación Java, en el que se realizan ambos procesos: por un lado, el compil
 
 - Ejemplos: Java, Scala
 
-## <a name="2"/> 2. Lenguaje C
+## 2. Lenguaje C
 
 C es el lenguaje principal que vamos a estudiar en la asignatura, pero vamos a ver también algunos ejemplos en Python.
 
@@ -261,7 +261,7 @@ y el resultado es la salida por pantalla:
 - La sintaxis de C es más compleja. La sintaxis de Python es más sencilla y sus programas son más fáciles de escribir y depurar.
 
 
-## <a name="3"/> 3. Aprender a programar
+## 3. Aprender a programar
 
 **A programar se aprende programando**. En esta asignatura os daréis cuenta que no sirve de nada memorizar programas, ni mirar ejercicios resueltos o soluciones a las prácticas planteadas. Debéis empezar desde el principio a hacer pequeños programas y modificaciones de los que hagamos o planteemos en clase. Pelearos con el código, que os salgan errores, resolverlos, etc. Es la única forma de aprender. Una vez hayáis implementado una solución a un problema, entonces es el momento de mirar otra solución para ver si podéis mejorarlo, pero primero debéis haberlo resuelto vosotros o al menos intentado resolver.
 
@@ -269,7 +269,7 @@ Un programa de computadora es sólo una recopilación de las instrucciones neces
 
 Por ejemplo, si queremos implementar un programa que comprueba si un número es impar, el conjunto de instrucciones que resuelve el problema es el *programa*. El método que se utiliza para comprobar si el número es par o impar es el *algoritmo*. Normalmente, para desarrollar un programa para resolver un problema particular, primero hay que pensar en el algoritmo y luego desarrollar un programa que implementa ese algoritmo. Por lo tanto, el algoritmo para resolver el problema par / impar podría expresarse de la siguiente manera: Primero, dividir el número por dos. Si el resto de la división es cero, el número es par; de lo contrario, el número es impar.
 
-### <a name="3.1"/> 3.1 Características deseables de un programa
+### 3.1 Características deseables de un programa
 
 1. **Integridad**: Corrección de los cálculos
 2. **Claridad**: Facilidad de lectura del programa en conjunto, con énfasis en la lógica subyacente.
@@ -280,7 +280,7 @@ Por ejemplo, si queremos implementar un programa que comprueba si un número es 
 
 Todas estas características las tendremos en cuenta en la evaluación de vuestros programas en la asignatura.
 
-### <a name="3-2"/> 3.2 Pasos para desarrollar un programa
+### 3.2 Pasos para desarrollar un programa
 
 Es fundamental comprender bien el problema antes de pensar en la solución. Antes de ponerse a escribir el programa es necesario tener claro cómo resolverlo, pensar en ello utilizando lápiz y papel:
 
@@ -392,7 +392,7 @@ Usar lenguaje apropiado. Si tenemos funciones, comentar lo que hace justo antes 
 ~~~c/* Realiza la suma ponderada de los valores pasados por parámetro */double sumap (double a, double b) {
 ~~~La principal función de los comentarios es el mantenimiento: tanto por ti como para otros programadores
 
-### <a name="3-3"/> 3-3. Normas de estilo para programar en C
+### 3.3. Normas de estilo para programar en C
 
 > **Nota**:  En este apartado vamos a hablar de términos que iremos explicando poco a poco en la asignatura. La idea es recopilarlo para que os sirva de guía y de consulta.
 
@@ -518,6 +518,6 @@ Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.in
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
