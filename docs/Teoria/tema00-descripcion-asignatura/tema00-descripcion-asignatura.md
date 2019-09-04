@@ -111,10 +111,6 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
 
-<img src="imagenes/kochan-cover.jpg" width="170px"/>
-
-* KOCHAN, Stephen G. Programming in C. Fourth Edition, 2015. ISBN: 978-0321776419
-
 <img src="imagenes/kernighan-cover.jpg" width="170px"/>
 
 * KERNIGHAN, Brian W.; RITCHIE, Dennis M. El lenguaje de programación C. Pearson Educación, 1991. ISBN: 968-880-205-0
