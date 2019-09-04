@@ -20,7 +20,7 @@ prácticas de 2 h. a la semana
 
 * [Sitio Moodle](https://moodle2019-20.ua.es/moodle/course/view.php?id=1262) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
-* [Foro de consultas y anuncios](******)
+* [Foro de consultas y anuncios](https://moodle2019-20.ua.es/moodle/mod/forum/view.php?id=18878)
   en el sitio Moodle
 
 ### Objetivos y competencias
