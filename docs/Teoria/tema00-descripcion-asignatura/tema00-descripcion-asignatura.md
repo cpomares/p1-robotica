@@ -115,7 +115,7 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * KERNIGHAN, Brian W.; RITCHIE, Dennis M. El lenguaje de programación C. Pearson Educación, 1991. ISBN: 968-880-205-0
 
-<img src="imagenes/carballeira-cover2.jpg" width="170px"/>
+<img src="imagenes/carballeira-cover2.JPG" width="170px"/>
 
 * Carballeira. Problemas resueltos de programación en lenguaje C
 
