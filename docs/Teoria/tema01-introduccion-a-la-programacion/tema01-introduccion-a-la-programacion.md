@@ -500,6 +500,11 @@ int main() {
 
 Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.info/noprog_ESP.html) donde explican qué no debes hacer cuando implementas un programa.
 
+## Bibliografía
+
+- Capítulo 1 y del 3.1 al 3.4  de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
+- Capítulo 1.4 "Programming Language Pragmatics", Michael L. Scott, Compilation and Interpretation
+
 ----
 
 Programación 1, Grado de Robótica, curso 2019-20  

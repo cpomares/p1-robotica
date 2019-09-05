@@ -1,24 +1,7 @@
 
 # Tema 2: Tipos de datos simples
 
-## Contenidos
-
-- [1. Tipos de datos](#1)
-- [2. Identificadores](#2)
-- [3. Variables y constantes](#3)
-	- [3-1. Variables](#3-1)
-	- [3-2. Constantes](#3-2)
-- [4. Tipos de datos simples](#4)
-	- [4-1. Enteros](#4-1)
-	- [4-2. Reales](#4-2)
-	- [4-3. Carácter](#4-3)
-	- [4-4. Lógico](#4-4)
-	- [4-5. Enumerados](#4-5)
-- [5. Sentencias de entrada / salida](#5)
-	- [5-1. Salida `printf`](#5-1)
-	- [5-2. Entrada `scanf`](#5-2)
-
-## <a name="1"/> 1. Tipos de datos
+## 1. Tipos de datos
 
 Los elementos básicos de los que consta un programa son:
 
@@ -71,7 +54,7 @@ Sólo representan un dato, son los tipos básicos: entero, carácter, real, etc.
 
 Están formados por un conjunto de elementos (tipos simples u otros estructurados). Los veremos en próximos temas
 
-## <a name="2"/> 2. Identificadores
+## 2. Identificadores
 
 Un *identificador* es un nombre que se asigna a los distintos elementos de un programa: variables, funciones, etc. En lenguaje C son válidos los caracteres alfabéticos en mayúsculas, minúsculas, dígitos numéricos (0..9) y el subrayado (_), aunque no pueden empezar por un número. Las mayúsculas y minúsculas se consideran caracteres distintos, el identificador `hola`es distinto a `Hola`.
 
@@ -120,9 +103,9 @@ do       inline   struct      _Complex
 double   int      switch      _Imaginary
 ~~~
 
-## <a name="3"/> 3. Variables y constantes
+## 3. Variables y constantes
 
-### <a name="3-1"/> 3.1. Variables
+### 3.1. Variables
 
 Las variables son espacios reservados en la memoria que, como su nombre indica, pueden cambiar de contenido a lo largo de la ejecución de un programa. Una variable corresponde a un área reservada en la memoria principal del ordenador.
 
@@ -203,14 +186,14 @@ Definimos variables en Python:
 >>> precio = 30.95
 ~~~
 
-## <a name="4"/> 4. Tipos de datos simples
+## 4. Tipos de datos simples
 
 En C hay 8 tipos de datos simples o elementales, a partir de los cuales se construyen todos los demás. Estos tipos sirven para hacer operaciones aritméticas (numéricos enteros o reales), representación de caracteres (caracteres) y valores lógicos (booleanos).
 
 Vamos a ver los tipos de datos simples, sus operadores asociados y el tamaño que ocupan en memoria.
 
 
-### <a name="4-1"/> 4.1. Enteros
+### 4.1. Enteros
 
 Los tipos de datos que permiten representar números enteros en C son:
 
@@ -261,7 +244,7 @@ int main()
 
 Si se asigna a una variable de un tipo un valor que está fuera de su rango, no se obtiene ningún error ni aviso. Ese es uno de los problemas de C, su permisividad con los tipos. Hay que ser cuidadoso.
 
-### <a name="4-2"/> 4.2. Reales
+### 4.2. Reales
 
 Hay dos tipos números reales o números en coma flotante en C:
 
@@ -299,13 +282,13 @@ a % 3; //→ devuelve 0a % 4; //→ devuelve 2
 
 Cuando la división se realiza entre enteros, el resultado se trunca al entero más próximo por debajo. Por ejemplo, el resultado de 23/5 es 4 (se llama división entera). Sin embargo en la división real (alguno de los operandos es un número real) no se trunca el resultado. 23/4 da 5.75
 
-### <a name="4-3"/> 4.3. Carácter
+### 4.3. Carácter
 
 El tipo carácter `char`permite representar valores consistentes en un único carácter, como 'a', 'z', 'B', '%', '5', etc.
 
 Los caracteres válidos son los que están incluidos en la tabla del estándar ASCII extendido. El estándar incluye 256 caracteres, por lo que se necesitan 8 bits (1 byte) para representar un carácter en C.
 
-### <a name="4-4"/> 4.4. Lógico
+### 4.4. Lógico
 
 A diferencia de otros lenguajes, C no tiene un tipo booleano nativo. Necesitamos añadir la cabecera:
 
@@ -407,7 +390,7 @@ Precedencia | Operador  | Asociatividad
 7	| &&	| izq. a derecha
 8	| = += -= *= etc	| derecha a izq.
 
-### <a name="4-5"/> 4.5. Enumerados
+### 4.5. Enumerados
 
 Un tipo enumerado permite definir un conjunto de constantes simbólicas con valor entero. Limita los posibles valores a los expresados explícitamente a través de una lista. Cada valor de la enumeración se asocia internamente a un número entero, comenzando por 0 y aumentando de 1 en 1.~~~cenum calificacion {suspenso, aprobado, notable, sobresaliente, matricula };
 ~~~
@@ -449,7 +432,7 @@ Otro ejemplo:
 enum paloPoker{pica, corazon, trebol, diamante };enum paloPoker paloCarta; //variable tipo enumpaloCarta = corazon;paloCarta = espada; // Error! espada no definida en enum
 ~~~
 
-## <a name="3"/> 3. Definición de tipos con `typedef`
+## 5. Definición de tipos con `typedef`
 
 
 C permite que el programador defina sus propios tipos de datos mediante la palabra clave `typedef`. Esta palabra puede tener distintos usos, los iremos viendo conforme vayamos aprendiendo los distintos tipos de datos.
@@ -488,19 +471,19 @@ paloCarta = corazon;
 ~~~
 
 
-## <a name="4"/> 4. Sentencias de entrada / salida
+## 6. Sentencias de entrada / salida
 
 Las sentencias de entrada permiten asociar a las variables valores aportados por el usuario.Por ejemplo, un programa que pida al usuario un precio en euros para convertirlo a pesetas. Las veremos más adelante.Las sentencias de salida permiten mostrar datos al usuario, incluyendo el valor de las variables.Por ejemplo, mostrar el precio una vez convertido a pesetas.
 
 
 
-### <a name="4-1"/> 4.1. Salida: `printf`
+### 6.1. Salida: `printf`
 
 Permite imprimir en la pantalla en un formato determinado:
 
 - cadenas de caracteres que se mostrarán conforme se hayan introducido- variables que mostrarán su valor en base a un tipo indicadoLas cadena de caracteres puede incluir valores especiales para introducir saltos de linea usando `\n`
 
-####Sintaxis
+#### Sintaxis
 ~~~c
 printf(cadena de control, val1, val2, ..., valN);
 ~~~
@@ -542,9 +525,11 @@ printf("El valor de valorImprimir es: %d\n", valorImprimir);// El valor de valo
 ~~~
 
 
-### <a name="4-2"/> 4.2. `scanf`
+### 6.2. Entrada: `scanf`
 
 La sentencia `scanf` nos permite leer un dato que ha introducido el usuario desde teclado y almacenarlo en una variable.Se utilizan una serie de marcas, de forma análoga a `printf`, para dar formato a la entrada en base a los tipos base.
+
+#### Sintaxis
 
 Su **sintaxis** es similar a `printf`:
 
@@ -654,8 +639,14 @@ Ya vimos en el tema anterior que Python es un lenguaje débilmente tipado. Eso s
 
 Los tipos de datos que encontramos en Python son muy similares a los de C (pero siempre son objetos): enteros, decimales, complejos, cadenas, etc. También incluye otros como tuplas, listas, diccionarios, etc.
 
+
+## Bibliografía
+
+- Capítulos 3.7 a 3.12 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
+- Capítulos 4.1 a 4.4, 4.8 y 4.9 de "Fundamentos de Programación", Jesús Carretero y otros  
+
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
