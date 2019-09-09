@@ -182,7 +182,7 @@ cd practica0
 - Descarga en la carpeta el fichero `firstProgramErrorA.c` y `firstProgramErrorB.c`
 - Para cada fichero:
     - Abre el fichero desde Geany y estudia las diferencias con respecto al programa original
-    - Intenta compilar (añadir la opción `-Wall nos ayuda). Fíjate que el Geany utiliza esta opción al compilar (observa la ventana donde muestra el resultado de la compilación). Después, desde línea de comandos compila con la opción `-Wall` y sin dicha opción, y entiende para qué sirve.  
+    - Intenta compilar (añadir la opción `-Wall` nos ayuda). Fíjate que el Geany utiliza esta opción al compilar (observa la ventana donde muestra el resultado de la compilación). Después, desde línea de comandos compila con la opción `-Wall` y sin dicha opción, y entiende para qué sirve.  
     - Estudia la salida obtenida por el compilador o el programa si la compilación terminó con éxito
     - Encuentra el error y corrígelo   
 
