@@ -1,0 +1,711 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Práctica 0: Entorno Linux y herramientas - P1 Robótica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#practica-0-entorno-linux-y-herramientas" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="P1 Robótica" class="md-header-nav__button md-logo">
+          
+            <img src="../../imagenes/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              P1 Robótica
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Práctica 0: Entorno Linux y herramientas
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="P1 Robótica" class="md-nav__button md-logo">
+      
+        <img src="../../imagenes/logo.png" width="48" height="48">
+      
+    </a>
+    P1 Robótica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Teoría
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Teoría
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Teoria/tema00-descripcion-asignatura/tema00-descripcion-asignatura.html" title="Descripción de la asignatura" class="md-nav__link">
+      Descripción de la asignatura
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Teoria/tema01-introduccion-a-la-programacion/tema01-introduccion-a-la-programacion.html" title="Tema 1" class="md-nav__link">
+      Tema 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-esta-practica" title="Objetivos de esta práctica" class="md-nav__link">
+    Objetivos de esta práctica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realizar-y-probar-un-programa" title="Realizar y probar un programa" class="md-nav__link">
+    Realizar y probar un programa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-operativo-linux" title="Sistema operativo Linux" class="md-nav__link">
+    Sistema operativo Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-de-linux" title="Terminal de Linux" class="md-nav__link">
+    Terminal de Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algunos-comandos-del-terminal-de-linux" title="Algunos comandos del terminal de Linux" class="md-nav__link">
+    Algunos comandos del terminal de Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ls" title="ls" class="md-nav__link">
+    ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" title="cd" class="md-nav__link">
+    cd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd" title="pwd" class="md-nav__link">
+    pwd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" title="mkdir" class="md-nav__link">
+    mkdir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" title="rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmdir" title="rmdir" class="md-nav__link">
+    rmdir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" title="cp" class="md-nav__link">
+    cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" title="mv" class="md-nav__link">
+    mv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" title="clear" class="md-nav__link">
+    clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" title="man" class="md-nav__link">
+    man
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" title="find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo" title="sudo" class="md-nav__link">
+    sudo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-programas-en-linux" title="Instalación de programas en Linux" class="md-nav__link">
+    Instalación de programas en Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-de-textos-geany" title="Editor de textos Geany" class="md-nav__link">
+    Editor de textos Geany
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuestro-primer-programa" title="Nuestro primer programa" class="md-nav__link">
+    Nuestro primer programa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-enlazar-y-ejecutar-desde-linea-de-comandos-terminal" title="Compilar, enlazar y ejecutar desde  línea de comandos (terminal)" class="md-nav__link">
+    Compilar, enlazar y ejecutar desde  línea de comandos (terminal)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descubriendo-errores" title="Descubriendo errores" class="md-nav__link">
+    Descubriendo errores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depuracion-de-programas" title="Depuración de programas" class="md-nav__link">
+    Depuración de programas
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="practica-0-entorno-linux-y-herramientas">Práctica 0: Entorno Linux y herramientas<a class="headerlink" href="#practica-0-entorno-linux-y-herramientas" title="Permanent link">&para;</a></h1>
+<h2 id="objetivos-de-esta-practica">Objetivos de esta práctica<a class="headerlink" href="#objetivos-de-esta-practica" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Conocer y comprender las herramientas necesarias para la realización de un programa </li>
+<li>Aprender a manejar las herramientas y el entorno seleccionado para las prácticas</li>
+<li>Sistema Operativo: <code>Linux</code></li>
+<li>Editor de textos: <code>Geany</code></li>
+<li>Compilador: <code>gcc</code></li>
+<li>Compilar y ejecutar un primer programa</li>
+<li>Depurar los fallos encontrados</li>
+</ul>
+<h2 id="realizar-y-probar-un-programa">Realizar y probar un programa<a class="headerlink" href="#realizar-y-probar-un-programa" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Para realizar y probar un programa, debemos implementar el programa usando un editor de textos</li>
+<li>Compilar el programa para obtener un ejecutable, usando un compilador</li>
+<li>Ejecutar el programa (ejecutable) desde el sistema operativo</li>
+</ul>
+<p>Existen numerosos IDEs, o entornos integrados de desarrollo, que facilitan la tarea del desarrollador, tales como Eclipse, NetBeans, Visual Studio, IntelIiJ, etc</p>
+<p>En las prácticas, usaremos <strong>Geany</strong> como alternativa ligera y de licencia GPL entre el resto de opciones</p>
+<h2 id="sistema-operativo-linux">Sistema operativo Linux<a class="headerlink" href="#sistema-operativo-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Las prácticas se desarrollarán bajo el Sistema Operativo Linux</li>
+<li>
+<p>Es posible usarlo a través de una "máquina virtual", permite emular un Sistema Operativo. Por ejemplo, para lanzar Windows desde Linux o viceversa</p>
+</li>
+<li>
+<p>Es importante conocer los comandos básicos para usar el terminal, así como algunos conceptos base</p>
+</li>
+<li>Diferencias entre mayúsculas y minúsculas (case sensitive)</li>
+<li>Separador de carpetas en una ruta: / (en lugar de \)</li>
+</ul>
+<h2 id="terminal-de-linux">Terminal de Linux<a class="headerlink" href="#terminal-de-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lanzar la terminal<ul>
+<li>Desde el icono “Terminal”</li>
+<li>Combinación de teclas “Ctrl+Alt+T”</li>
+</ul>
+</li>
+<li>Prompt: símbolo $<ul>
+<li>Indica que el terminal esta listo para recibir comandos</li>
+</ul>
+</li>
+<li>Sistema de ficheros:<ul>
+<li>Raiz: /</li>
+<li>Carpeta de usuario: /home/username ó ~ </li>
+</ul>
+</li>
+</ul>
+<p><strong> imagen terminal linux </strong></p>
+<h2 id="algunos-comandos-del-terminal-de-linux">Algunos comandos del terminal de Linux<a class="headerlink" href="#algunos-comandos-del-terminal-de-linux" title="Permanent link">&para;</a></h2>
+<h3 id="ls"><code>ls</code><a class="headerlink" href="#ls" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Muestra el contenido del directorio actual (nombres de ficheros y directorios)</li>
+<li>Se puede usar con modificadores, por ejemplo, <code>ls -l</code> muestra más detalles</li>
+</ul>
+<h3 id="cd"><code>cd</code><a class="headerlink" href="#cd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Para cambiar de directorio: <code>cd nombreDirectorio</code></p>
+</li>
+<li>
+<p>Si no se indica nombre de directorio, nos movemos al <code>/home</code> del usuario</p>
+</li>
+</ul>
+<p><code>cd ..</code> subir un nivel en la jerarquía de directorios</p>
+<h3 id="pwd"><code>pwd</code><a class="headerlink" href="#pwd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Muestra el nombre de la ruta actuaL</li>
+</ul>
+<h3 id="mkdir"><code>mkdir</code><a class="headerlink" href="#mkdir" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para crear directorios nuevos: <code>mkdir directorio</code></li>
+</ul>
+<h3 id="rm"><code>rm</code><a class="headerlink" href="#rm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para borrar ficheros: <code>rm prueba.c</code></li>
+</ul>
+<h3 id="rmdir"><code>rmdir</code><a class="headerlink" href="#rmdir" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Para borrar directorios que estén vacíos: <code>rmdir directorio</code></p>
+</li>
+<li>
+<p>Si no están vacíos: <code>rmdir -r directorio</code></p>
+</li>
+</ul>
+<h3 id="cp"><code>cp</code><a class="headerlink" href="#cp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Copia ficheros entre distintos directorios del disco duro: <code>cp  fichero.c   practica0/.</code></li>
+</ul>
+<h3 id="mv"><code>mv</code><a class="headerlink" href="#mv" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Renombra ficheros: <code>mv fichero.c nuevoNombre.c</code></li>
+</ul>
+<h3 id="clear"><code>clear</code><a class="headerlink" href="#clear" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Borra la pantalla</li>
+</ul>
+<h3 id="man"><code>man</code><a class="headerlink" href="#man" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Muestra ayuda de un comando de linux: <code>man comando</code></li>
+<li>Para mostrar ayuda de una función del lenguaje C: <code>man 3 funcionC</code></li>
+</ul>
+<h3 id="find"><code>find</code><a class="headerlink" href="#find" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Buscar ficheros o directorios: <code>find -name &lt;opciones_busqueda&gt;</code></li>
+</ul>
+<h3 id="sudo">sudo<a class="headerlink" href="#sudo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lanzar un comando como superusuario: <code>sudo comando</code></li>
+</ul>
+<h2 id="instalacion-de-programas-en-linux">Instalación de programas en Linux<a class="headerlink" href="#instalacion-de-programas-en-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Existen repositorios de aplicaciones similares a "Google Play"</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">nombre_aplicacion</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Es necesario lanzarla como root </li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">geany</span> 
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">gcc</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="editor-de-textos-geany">Editor de textos Geany<a class="headerlink" href="#editor-de-textos-geany" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Gestión de ficheros y edición estándar<ul>
+<li>Nuevo, guardar como, buscar, reemplazar</li>
+</ul>
+</li>
+<li>Editor de textos “enriquecido”<ul>
+<li>Palabras clave aparecen con un color resaltado    </li>
+</ul>
+</li>
+<li>Opciones para programar<ul>
+<li>Construir → Compilar | Construir | Ejecutar</li>
+<li>Sobre el fichero actual que contiene el programa</li>
+</ul>
+</li>
+<li>Vista inferior<ul>
+<li>Mensajes de salida, errores, vista de terminal, etc.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="imagenes/geany.png" /></p>
+<ul>
+<li>Construir → Compilar<ul>
+<li>Equivalente al comando gcc -c programa.c</li>
+<li>Genera un programa en código objeto programa.o</li>
+</ul>
+</li>
+<li>Construir → Construir<ul>
+<li>Equivalente al comando <code>gcc -o programa programa.c</code></li>
+<li>Compilar y enlazar</li>
+<li>Generará un ejecutable llamado `programa (sin extensión)</li>
+</ul>
+</li>
+<li>Construir → Ejecutar<ul>
+<li>Equivalente a la ejecución desde consola <code>./ejecutable</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="nuestro-primer-programa">Nuestro primer programa<a class="headerlink" href="#nuestro-primer-programa" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Antes de empezar, crea una carpeta en el sistema para alojar todos los ficheros</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">mkdir</span> <span class="n">practica0</span>
+<span class="n">cd</span> <span class="n">practica0</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Descarga el fichero <code>firstProgram.c</code> en la carpeta <code>practica0</code></li>
+<li>Abrirlo desde Geany:<ul>
+<li>Compilar y estudiar los ficheros generados </li>
+<li>Construir y estudiar los ficheros generados </li>
+<li>Ejecutar</li>
+<li>Eliminar todos los ficheros salvo el <code>.c</code> original</li>
+</ul>
+</li>
+</ul>
+<h2 id="compilar-enlazar-y-ejecutar-desde-linea-de-comandos-terminal">Compilar, enlazar y ejecutar desde  línea de comandos (terminal)<a class="headerlink" href="#compilar-enlazar-y-ejecutar-desde-linea-de-comandos-terminal" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Abrir de nuevo el terminal y realiza las siguientes acciones:</p>
+<ul>
+<li>
+<p>Compilar únicamente:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">gcc</span> <span class="o">-</span><span class="k">c</span> <span class="n">firstProgram</span><span class="p">.</span><span class="k">c</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Compilar y enlazar generando ejecutable:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">gcc</span> <span class="o">-</span><span class="n">o</span> <span class="n">ejecutable</span> <span class="n">firstProgram</span><span class="p">.</span><span class="k">c</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Ejecutar el fichero generado:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">ejectuable</span> 
+</pre></div>
+</td></tr></table>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="descubriendo-errores">Descubriendo errores<a class="headerlink" href="#descubriendo-errores" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Descarga en la carpeta el fichero <code>firstProgramErrorA.c</code> y <code>firstProgramErrorB.c</code></li>
+<li>Para cada fichero:<ul>
+<li>Abre el fichero desde Geany y estudia las diferencias con respecto al programa original</li>
+<li>Intenta compilar (añadir la opción <code>-Wall nos ayuda). Fíjate que el Geany utiliza esta opción al compilar (observa la ventana donde muestra el resultado de la compilación). Después, desde línea de comandos compila con la opción</code>-Wall` y sin dicha opción, y entiende para qué sirve.  </li>
+<li>Estudia la salida obtenida por el compilador o el programa si la compilación terminó con éxito</li>
+<li>Encuentra el error y corrígelo   </li>
+</ul>
+</li>
+</ul>
+<h2 id="depuracion-de-programas">Depuración de programas<a class="headerlink" href="#depuracion-de-programas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dos tipos de errores:<ul>
+<li>Sintácticos: los detecta el compilador. Se solucionan fácilmente</li>
+<li>Lógicos: se producen en el diseño del programa o en la implementación sin que suponga un error de sintaxis. MUY DIFÍCILES DE SOLUCIONAR</li>
+</ul>
+</li>
+<li>Herramienta para la detección de errores:<ul>
+<li>Depurador o debugger <code>gdb</code></li>
+<li>Programa externo. Trabaja con el ejecutable</li>
+<li>Añadimos la opción <code>-g</code> al compilar con <code>gcc</code> para incluir información de depurado en el ejecutable</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+© Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
+Antonio Botía, Cristina Pomares</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
