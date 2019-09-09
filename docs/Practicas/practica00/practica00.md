@@ -40,7 +40,7 @@ En las prácticas, usaremos **Geany** como alternativa ligera y de licencia GPL 
     - Raiz: /
     - Carpeta de usuario: /home/username ó ~ 
 
-** imagen terminal linux **
+![](imagenes/terminal.png)
 
 ## Algunos comandos del terminal de Linux
 
