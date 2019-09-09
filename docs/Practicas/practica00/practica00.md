@@ -148,6 +148,7 @@ mkdir practica0
 cd practica0
 ~~~
 
+- Accede a **Moodle** donde se encuentran los ficheros necesarios para realizar esta práctica
 - Descarga el fichero `firstProgram.c` en la carpeta `practica0`
 - Abrirlo desde Geany:
     - Compilar y estudiar los ficheros generados 

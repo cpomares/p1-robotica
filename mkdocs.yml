@@ -5,6 +5,9 @@ nav:
 - 'Teoría':
    - 'Descripción de la asignatura': 'Teoria/tema00-descripcion-asignatura/tema00-descripcion-asignatura.md'
    - 'Tema 1': 'Teoria/tema01-introduccion-a-la-programacion/tema01-introduccion-a-la-programacion.md'
+   - 'Tema 2': 'Teoria/tema02-tipos-de-datos-simples/tema02-tipos-de-datos-simples.md'
+- 'Prácticas':
+   - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
 
 theme:
     language: es
