@@ -130,12 +130,12 @@ sudo apt install gcc
 ![](imagenes/geany.png)
 
 - Construir → Compilar
-    - Equivalente al comando gcc -c programa.c
+    - Equivalente al comando `gcc -c programa.c`
     - Genera un programa en código objeto programa.o
 - Construir → Construir
     - Equivalente al comando `gcc -o programa programa.c`
     - Compilar y enlazar
-    - Generará un ejecutable llamado `programa (sin extensión)
+    - Generará un ejecutable llamado `programa` (sin extensión)
 - Construir → Ejecutar
     - Equivalente a la ejecución desde consola `./ejecutable`
 
