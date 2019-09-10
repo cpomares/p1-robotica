@@ -96,7 +96,7 @@ En las prácticas, usaremos **Geany** como alternativa ligera y de licencia GPL 
 
 - Buscar ficheros o directorios: `find -name <opciones_busqueda>`
 
-### sudo
+### `sudo`
 
 - Lanzar un comando como superusuario: `sudo comando`
 
