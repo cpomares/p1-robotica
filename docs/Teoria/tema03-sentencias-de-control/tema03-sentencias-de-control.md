@@ -5,17 +5,17 @@
 
 - [1. Programas y algoritmos](#1)
 - [2. Estructuras de selección](#2)
-	- [2-1. Sentencia `if`](#2-1)
-	- [2-2. Sentencia `if-else`](#2-2)
-	- [2-3. Sentencias `if`anidadas](#2-3)
-	- [2-4. Operador `?`](#2-4)
-	- [2-5. Sentencias `switch`](#2-5)
-	- [2-6. Ejercicios](#2-6)
+   - [2-1. Sentencia `if`](#2-1)
+   - [2-2. Sentencia `if-else`](#2-2)
+   - [2-3. Sentencias `if`anidadas](#2-3)
+   - [2-4. Operador `?`](#2-4)
+   - [2-5. Sentencias `switch`](#2-5)
+   - [2-6. Ejercicios](#2-6)
 - [3. Estructuras de iteración](#3)
-	- [3-1. Bucle `while`](#3-1)  
-	- [3-2. Bucle `do-while`](#3-2)
-	- [3-3. Bucle `for`](#3-3)
-	- [3-4. Ejemplos de bucles](#3-4)
+   - [3-1. Bucle `while`](#3-1)  
+   - [3-2. Bucle `do-while`](#3-2)
+   - [3-3. Bucle `for`](#3-3)
+   - [3-4. Ejemplos de bucles](#3-4)
 - [4. Traza de ejecución de un programa](#4)
 
 ## <a name="1"/> 1. Programas y algoritmos
@@ -45,11 +45,11 @@ La **estructura secuencial** es aquella en la que las instrucciones o sentencias
 Ejemplo:
 
 ~~~c
-int valorA = 11, valorB = 4, resultado; resultado = valorA / valorB;valorA = valorA + 1; // resultado = 2
+int valorA = 11, valorB = 4, resultado;resultado = valorA / valorB;valorA = valorA + 1; // resultado = 2
 ~~~No es lo mismo que:
 
 ~~~c
-int valorA = 11, valorB = 4, resultado; valorA = valorA + 1;resultado = valorA / valorB; // resultado = 3
+int valorA = 11, valorB = 4, resultado;valorA = valorA + 1;resultado = valorA / valorB; // resultado = 3
 ~~~
 
 
@@ -87,14 +87,14 @@ La **sintaxis** de la sentencia `if` es:
 // Cuando la ejecución condicional afecta a una única línea
 
 if (condicion_a_cumplir)
-	instrucción a realizar;
+   instrucción a realizar;
 ~~~
 
 ~~~c
 // Cuando la ejecución condicional afecta a una o más líneas
 
 if (condicion_a_cumplir) {
-	instrucción(es) a realizar;
+   instrucción(es) a realizar;
 }
 ~~~
 
@@ -108,7 +108,7 @@ Como hemos comentado, el lenguaje C nativo no incorpora el tipo `bool`, por lo q
 Ejemplo de sentencia `if`:
 
 ~~~c
-bool fumador = true;double dineroAhorrado = 500;...if (fumador)	dineroAhorrado = 0;...if (dineroAhorrado > 1000 ) {	fumador = false;}
+bool fumador = true;double dineroAhorrado = 500;...if (fumador)   dineroAhorrado = 0;...if (dineroAhorrado > 1000 ) {   fumador = false;}
 ~~~
 
 El uso de llaves es opcional si la instrucción a ejecutar tiene una única sentencia y es obligatorio si la instrucción tiene dos o más sentencias. Si no se añaden llaves, solamente la primera instrucción después del `if (condicion_a_cumplir)` será condicional: la segunda y sucesivas se ejecutarán siempre.
@@ -129,7 +129,7 @@ if (condicionCumplida) {
 ~~~
 La `condicion_a_cumplir` puede obtenerse mediante la combinación (usando operadores lógicos) de diferentes (sub)condiciones.Precedencia de operadores:
 
-	1. ()	2. *, /, %	3. +, -	4. <, <=, >, >= – ==, !=	5. &&	6. ||
+   1. ()   2. *, /, %   3. +, -   4. <, <=, >, >= – ==, !=   5. &&   6. ||
 Ejemplo:
 
 ~~~c++
@@ -139,7 +139,7 @@ prioridad = false,
 camaraEncendida = true;
 int tiempoEnEspera = 100;
 ...
-if(oscuridad || bateriaAgotada || (tiempoEnEspera>60 && !prioridad))	cameraEncendida = false;
+if(oscuridad || bateriaAgotada || (tiempoEnEspera>60 && !prioridad))   cameraEncendida = false;
 ~~~
 
 Un programa con sentencias `if` puede visualizarse como un diagrama de la siguiente forma:
@@ -147,7 +147,7 @@ Un programa con sentencias `if` puede visualizarse como un diagrama de la siguie
 ~~~c
 instruccion_a;
 
-if(condicion)	instruccionSiSeCumpleCondicion;
+if(condicion)   instruccionSiSeCumpleCondicion;
 
 instruccion_b;instruccion_c;
 ~~~
@@ -324,7 +324,7 @@ switch (numHermanos) {
       printf("Familia numerosa \n");
       break;
    default :
-   	  printf("Familia muy numerosa \n");
+        printf("Familia muy numerosa \n");
 }
 ~~~
 
@@ -398,10 +398,10 @@ Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor 
 4. Escribe un programa que pida una nota de 0 a 10 y la muestre en forma de texto: "Suspenso", "Aprobado", "Notable", "Sobresaliente".
 5. Escribe un programa que pida dos números por teclado y una de las cuatro operaciones aritméticas de una calculadora (+, -, *, /). Devuelve el resultado de la operación aplicada a los dos números.
 6. Escribe un programa que calcule el índice de masa corporal IMC de una persona. Se debe introducir el peso en kg y la altura en m. El IMC = peso / (altura * altura). El programa muestra por pantalla el tipo de peso:
-	- IMC < 18.0 --> "Inferior al normal"
-	- 18.1 - 24.9 --> "Normal"
-	- 25.0 - 29.9 --> "Sobrepeso"
-	- IMC > 30.0 --> "Obesidad"
+   - IMC < 18.0 --> "Inferior al normal"
+   - 18.1 - 24.9 --> "Normal"
+   - 25.0 - 29.9 --> "Sobrepeso"
+   - IMC > 30.0 --> "Obesidad"
 7. Escribe un programa que solicite al usuario una letra (mayúscula o minúscula) e indique si es una vocal o una consonante.
 
 ___
@@ -428,7 +428,7 @@ Permite repetir **cero** o más veces la ejecución de una secuencia de senten
 **Sintaxis:**
 
 ~~~c
-while (condicion_a_cumplir) {	secuencia_de_instrucciones;
+while (condicion_a_cumplir) {   secuencia_de_instrucciones;
 }
 ~~~
 
@@ -444,7 +444,7 @@ Ejemplo:
 ~~~c
 int cargaBateria = 0;
 
-while (cargaBateria < 100) {	cargaBateria = cargaBateria + 1;
+while (cargaBateria < 100) {   cargaBateria = cargaBateria + 1;
 }
 ~~~
 
@@ -473,7 +473,7 @@ Permite repetir **una** o más veces la ejecución de una secuencia de sentenc
 **Sintaxis**:
 
 ~~~c
-do {	secuencia_de_instrucciones;
+do {   secuencia_de_instrucciones;
 } while (condición_a_cumplir);
 ~~~
 
@@ -516,11 +516,11 @@ for (inicialización_contador; condicion; modificación_contador){
 **Semántica**:
 
 - Primera vez que se ejecuta:
-	- Se ejecuta la `inicialización_contador`
-	- Se evalúa la `condición`. Si el resultado es verdadero se ejecuta la `secuencia_de_instrucciones`. Si es falso, finaliza.
+   - Se ejecuta la `inicialización_contador`
+   - Se evalúa la `condición`. Si el resultado es verdadero se ejecuta la `secuencia_de_instrucciones`. Si es falso, finaliza.
 - Segunda vez y sucesivas ejecuciones:
-	- Se ejecuta la `modificación_contador`
-	- Se evalúa la `condición`. Si el resultado es verdadero se ejecuta la `secuencia_de_instrucciones`. Si es falso, finaliza.
+   - Se ejecuta la `modificación_contador`
+   - Se evalúa la `condición`. Si el resultado es verdadero se ejecuta la `secuencia_de_instrucciones`. Si es falso, finaliza.
 
 Ejemplos:
 
@@ -572,8 +572,8 @@ Para saber qué tipo de bucle hay que usar:
 
 - Si el cuerpo del bucle (secuencia de instrucciones) se tiene que ejecutar al menos una vez: `do-while`
 - Si no (0 ó más veces):
-	- Si no sabemos de antemano el número de iteraciones: `while`
-	- Si sabemos el número de iteraciones (usamos un contador): `for`
+   - Si no sabemos de antemano el número de iteraciones: `while`
+   - Si sabemos el número de iteraciones (usamos un contador): `for`
 
 ### Variables en los bucles
 
@@ -686,23 +686,26 @@ Ejemplo con bucle `for` y `do-while`
 
 ~~~c
 #define NUM_PARCIALES 5 // Número de exámenes parciales
-int main() {
-	float nota_parcial, nota_final;
-	float suma;
-	int i;
-	suma = 0;
 
-	// Introducir las notas de todos los parciales y sumarlas (sólo cuando el dato introducido sea correcto)
-	for (i = 1; i <= NUM_PARCIALES; i++) {
-		do {
-			printf("Dime tu nota del parcial %d\n", i);
-			scanf("%f", &nota_parcial);
-		} while (nota_parcial < 0.0 || nota_parcial > 10.0);
-		suma = suma + nota_parcial;
-	}
-	// Calcular la nota media e imprimirla por pantalla
-	nota_final = suma / NUM_PARCIALES;
-	printf("Tu nota final es: %.2f\n", nota_final); //%.2f imprime sólo dos decimales
+int main() {
+   float nota_parcial, nota_final;
+   float suma;
+   int i;
+   suma = 0;
+
+   // Introducir las notas de todos los parciales y sumarlas (sólo cuando el dato introducido sea correcto)
+   for (i = 1; i <= NUM_PARCIALES; i++) {
+      do {
+         printf("Dime tu nota del parcial %d\n", i);
+         scanf("%f", &nota_parcial);
+      } while (nota_parcial < 0.0 || nota_parcial > 10.0);
+      suma = suma + nota_parcial;
+   }
+   // Calcular la nota media e imprimirla por pantalla
+   nota_final = suma / NUM_PARCIALES;
+   printf("Tu nota final es: %.2f\n", nota_final); //%.2f imprime sólo dos decimales
+
+   return 0;
 }
 ~~~
 
@@ -766,7 +769,7 @@ i   | i * i | res
 Veamos otro ejemplo:
 
 > Todos los días paso por una librería y me compro una serie de libros siguiendo este patrón
-> - día 1 → 1 libro
+>- día 1 → 1 libro
 - día 2 → 2 libros
 - día N → N libros
 
@@ -778,7 +781,7 @@ Veamos otro ejemplo:
 int capacidadMaxima = 15,
     capacidadActual = 0,
     dia = 0;
-do {	dia = dia + 1;	capacidadActual = capacidadActual + dia;
+do {   dia = dia + 1;   capacidadActual = capacidadActual + dia;
 } while(capacidadActual <= capacidadMaxima);printf("Rebasamos la capacidad el día %d", dia);
 ~~~
 >
@@ -797,7 +800,7 @@ Iteración | dia | capacidadActual
 ## <a name="5"/> 5.  Ejercicios resueltos
 
 #### Ejercicio 1
-Escribe un programa que lea cantidades y precios y al final indique el total de la factura. Primero se pregunta la cantidad vendida, tras lo cual el usuario introducirá un número entero positivo.Después se pregunta el precio que será un número decimal positivo. La lectura termina cuando en la cantidad se introduzca un cero. Si es así se escribirá el total.
+Escribe un programa que lea cantidades y precios y al final indique el total de la factura.Primero se pregunta la cantidad vendida, tras lo cual el usuario introducirá un número entero positivo.Después se pregunta el precio que será un número decimal positivo. La lectura termina cuando en la cantidad se introduzca un cero. Si es así se escribirá el total.
 
 ~~~c
 int main(){
@@ -823,6 +826,8 @@ int main(){
       }
    }while(n!=0);
    printf("Total vendido = %.2f", total);
+
+   return 0;
 }~~~
 
 #### Ejercicio 2
@@ -841,6 +846,8 @@ int main() {
    for(i = 1; i <= 10; i++) {
       printf("%d x %d = %d\n", i, num, i * num);
    }
+
+   return 0;
 }
 ~~~
 
@@ -871,6 +878,8 @@ int main(){
     printf("\n");
     col1++;
   }
+
+  return 0;
 }
 ~~~
 
@@ -925,7 +934,10 @@ int main(){
             break;
       }
    }while(seleccion!=1);
-}~~~
+
+   return 0;
+}
+~~~
 
 #### Ejercicio 5
 
@@ -947,7 +959,7 @@ int main(){
     }
     printf("\n");
   }
-
+  return 0;
 }
 ~~~
 
@@ -956,16 +968,16 @@ int main(){
 ## <a name="6"/> 6.  Ejercicios propuestos
 
 1. Escribe un programa que muestre todos los multiplos de un número dado en el rango [0, 100] – Pedir el número por teclado2. Escribe un programa que muestre todos los divisores de un número dado
-	– Pedir el número por consola	– Uso del operando módulo %3. Hacer las trazas de los ejercicios 1 (valor de entrada 40) y 2 (valor de entrada 16)
+   – Pedir el número por consola   – Uso del operando módulo %3. Hacer las trazas de los ejercicios 1 (valor de entrada 40) y 2 (valor de entrada 16)
 4. Escribir un programa que pida dos números y muestre un menú como este:
-	1. Suma	2. Resta	3. Multiplicación
-	4. División
-	5. Módulo
-	6. Salir
+   1. Suma   2. Resta   3. Multiplicación
+   4. División
+   5. Módulo
+   6. Salir
 Tras mostrar el menú, el programa debe leer un número del 1 al 6 y realizar la opción indicada con los dos números. Tras realizar las operaciones e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente. Finalizará cuando se introduzca la opción 6.
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig

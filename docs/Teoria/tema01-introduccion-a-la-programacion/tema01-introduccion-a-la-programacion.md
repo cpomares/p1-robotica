@@ -63,10 +63,10 @@ ensamblador.
 El programa anterior en ensamblador sería:
 
 ~~~
-	CAR A
-	RES B
-	ALM C
-	STOP
+   CAR A
+   RES B
+   ALM C
+   STOP
 C: 0
 A: 7
 B: 2
@@ -201,7 +201,11 @@ Este proceso es un ciclo, de forma que si después de ejecutar el programa hemos
 Ejemplo de programa en C:
 
 ~~~c
-#include <stdio.h>int main() {	printf("Hola mundo!!\n");	return 0;
+#include <stdio.h>
+
+int main() {
+   printf("Hola mundo!!\n");
+   return 0;
 }
 ~~~
 
@@ -230,11 +234,11 @@ La opción -o es abreviatura de *output*, y a ella le sigue el nombre del ficher
 
 Ahora ejecutamos el fichero ejecutable:
 
-	./holamundo
+   ./holamundo
 
 y el resultado es la salida por pantalla:
 
-	Hola mundo!!
+   Hola mundo!!
 
 #### Diferencias entre C y Python
 
@@ -298,10 +302,10 @@ Se desea calcular la nota de una asignatura de un alumno teniendo en cuenta la n
 
 Algoritmo:
 >- Dime de qué convocatoria quieres saber tu nota final
-- Si es la convocatoria de Enero entonces	- Dime la nota de los 2 exámenes con ordenador y del examen escrito
-	- Si la nota del examen escrito < 4 o nota examen ordenador 2 < 4 EntoncesTU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord. 2)	- Sino TU NOTA FINAL ES =0,15* Ordenador_1+0,35* Ordenador_2+0,5*Escrito
-- Si es la convocatoria de JulioEntonces	- Dime las notas del examen escrito y del examen con ordenador
-	- Si la nota del examen escrito < 4 o nota examen ordenador < 4EntoncesTU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord.)	- SinoTU NOTA FINAL ES = 0,5* Ordenador+0,5*Escrito
+- Si es la convocatoria de Enero entonces   - Dime la nota de los 2 exámenes con ordenador y del examen escrito
+   - Si la nota del examen escrito < 4 o nota examen ordenador 2 < 4 EntoncesTU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord. 2)   - Sino TU NOTA FINAL ES =0,15* Ordenador_1+0,35* Ordenador_2+0,5*Escrito
+- Si es la convocatoria de JulioEntonces   - Dime las notas del examen escrito y del examen con ordenador
+   - Si la nota del examen escrito < 4 o nota examen ordenador < 4EntoncesTU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord.)   - SinoTU NOTA FINAL ES = 0,5* Ordenador+0,5*Escrito
 
 ##### Implementar el programa
 
@@ -315,38 +319,38 @@ Programa para calcular la nota:
 #include <stdio.h>
 
 int main() {
-	char convocatoria;
-	float ordenador_1, ordenador_2, examen_escrito, nota_final;
+   char convocatoria;
+   float ordenador_1, ordenador_2, examen_escrito, nota_final;
 
-	printf("Dime la convocatoria(E,J):");
-	scanf("%c", &convocatoria);
+   printf("Dime la convocatoria(E,J):");
+   scanf("%c", &convocatoria);
 
-	if (convocatoria == 'E') {
-		printf("Dime la nota del primer examen con ordenador:");
-		scanf("%f", &ordenador_1);
-		printf("Dime la nota del segundo examen con ordenador:");
-		scanf("%f", &ordenador_2);
-		printf("Dime la nota del examen escrito:");
-		scanf("%f",&examen_escrito);
-		if (examen_escrito < 4 || ordenador_2 < 4)
-			// minimo: función que calcula el número más pequeño entre 2 números
-			nota_final = minimo(examen_escrito, ordenador_2);
-		else
-			nota_final = 0.15*ordenador_1 + 0.35*ordenador_2 + 0.5*examen_escrito;
-		}
-	else if (convocatoria == 'J' ) {
-		printf("Dime la nota del examen escrito:");
-		scanf("%f", &examen_escrito);
-		printf("Dime la nota del examen con ordenador:");
-		scanf("%f", &ordenador_2);
-		if (examen_escrito < 4 || ordenador_2 < 4)
-			// minimo: función que calcula el número más pequeño entre 2 números
-			nota_final = minimo(examen_escrito, ordenador_2);
-		else
-			nota_final = 0.5*ordenador_2 + 0.5*examen_escrito;
-		}
-	printf("TU NOTA FINAL ES %f \n", nota_final);
-	return 0;
+   if (convocatoria == 'E') {
+      printf("Dime la nota del primer examen con ordenador:");
+      scanf("%f", &ordenador_1);
+      printf("Dime la nota del segundo examen con ordenador:");
+      scanf("%f", &ordenador_2);
+      printf("Dime la nota del examen escrito:");
+      scanf("%f",&examen_escrito);
+      if (examen_escrito < 4 || ordenador_2 < 4)
+         // minimo: función que calcula el número más pequeño entre 2 números
+         nota_final = minimo(examen_escrito, ordenador_2);
+      else
+         nota_final = 0.15*ordenador_1 + 0.35*ordenador_2 + 0.5*examen_escrito;
+      }
+   else if (convocatoria == 'J' ) {
+      printf("Dime la nota del examen escrito:");
+      scanf("%f", &examen_escrito);
+      printf("Dime la nota del examen con ordenador:");
+      scanf("%f", &ordenador_2);
+      if (examen_escrito < 4 || ordenador_2 < 4)
+         // minimo: función que calcula el número más pequeño entre 2 números
+         nota_final = minimo(examen_escrito, ordenador_2);
+      else
+         nota_final = 0.5*ordenador_2 + 0.5*examen_escrito;
+      }
+   printf("TU NOTA FINAL ES %f \n", nota_final);
+   return 0;
 }
 ~~~
 

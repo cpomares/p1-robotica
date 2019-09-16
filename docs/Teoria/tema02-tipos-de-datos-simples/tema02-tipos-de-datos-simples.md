@@ -238,7 +238,7 @@ int main()
    printf("Un unsigned long ocupa %d bytes\n",
    sizeof(unsigned long));
 
-   return(0);
+   return 0;
 }
 ~~~
 
@@ -346,7 +346,7 @@ int main()
    printf("true AND false es %d\n", true && false);
    printf("false OR true es %d\n", false || true);
 
-   return(0);
+   return 0;
 }
 ~~~
 
@@ -370,7 +370,7 @@ int main()
    printf("\n mínimo valor para un long %ld", LONG_MIN);
    printf("\n máximo valor para un long %ld", LONG_MAX);
 
-   return(0);
+   return 0;
 }
 ~~~
 
@@ -417,6 +417,8 @@ int main()
    printf ("Sexto día de la semana: %d\n", dia); //5
    dia = domingo;
    printf ("Ultimo día de la semana: %d\n", dia); //6
+
+   return 0;
 }
 ~~~
 
@@ -558,6 +560,8 @@ int main() {
    printf("El valor de letra es %c\n", letra);
    siguiente = letra + 1;
    printf("La siguiente letra es %c\n", siguiente);
+
+   return 0;
 }
 ~~~
 
@@ -607,6 +611,7 @@ int main()
     scanf("%c", &c);
     printf("c = %c\n", c);
 
+    return 0;
 }
 ~~~
 
