@@ -23,7 +23,7 @@ int main() {
 
    printf("Introduce tu altura en metros: ");
    ________________________;
- 
+
 
    printf("\n\nLa inicial de tu nombre es: %c\n",inicial);
    printf("La suma de tu edad y altura es: %.2f\n", edad + altura);
@@ -39,19 +39,19 @@ Implementa un programa que solicite al usuario 3 caracteres y los muestre por pa
 Ejemplo de ejecución:
 
 ~~~
-Introduce 3 caracteres: 
+Introduce 3 caracteres:
 a b c
 Los caracteres introducidos en orden inverso son:
 c b a
 ~~~
 
-**Datos de entrada:** 3 caracteres 
+**Datos de entrada:** 3 caracteres
 
 **Casos de prueba:**
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| a b c            |  c b a              | 
+| a b c            |  c b a              |
 | 5 6 7            |  7 6 5              |   
 | * > ?            |  ? > *              |    
 
@@ -73,7 +73,7 @@ En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|1                 |  En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos              | 
+|1                 |  En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos              |
 | 20               |  En 20 años hay 175200 horas, 10512000 minutos, 630720000 segundos     |   
 | 100              |  En 100 años hay 876000 horas, 52560000 minutos, 3153600000 segundos    |  
 
@@ -96,7 +96,7 @@ La nota final en la convocatoria ordinaria de Enero es: 5.07
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|  4.3  5.5  5.0   | La nota final en la convocatoria ordinaria de Enero es: 5.07              | 
+|  4.3  5.5  5.0   | La nota final en la convocatoria ordinaria de Enero es: 5.07              |
 |  7.0  4.0  3.5   | La nota final en la convocatoria ordinaria de Enero es: 4.20 |   
 |  7.3  8.6  9.8   | La nota final en la convocatoria ordinaria de Enero es: 9.00 |  
 
@@ -105,7 +105,7 @@ La nota final en la convocatoria ordinaria de Enero es: 5.07
 Escribe un programa que incluya un enumerado llamado TipoFigura con los tipos de figura circulo, cuadrado y triangulo.
 
 Después imprime por pantalla el número asignado por el enumerado a cada figura.
-Tienes que cambiar el número por defecto. 
+Tienes que cambiar el número por defecto.
 
 Ejemplo de ejecución:
 
@@ -117,12 +117,12 @@ Cuadrado: 3
 
 ### Ejercicio 6 ###
 
-Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro. Cada vértice consta de una coordenada x,y, 
+Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro. Cada vértice consta de una coordenada x,y,
 
 Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el scanf de la siguiente forma:
 
 ~~~c
-scanf(“%d,%d”, &x, &y);
+scanf("%d,%d", &x, &y);
 ~~~
 
 Para calcular el perímetro, primero debes obtener los tres lados mediante el cálculo de la distancia euclídea entre los tres vértices. La fórmula de la distancia euclídea es:
@@ -148,9 +148,9 @@ El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31     | 
+| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31     |
 | 2,2 4,4 8,8      | El perímetro del triángulo cuyos lados son (2,2)--(4,4)--(8,8) es 16.971  |   
-| 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.458  | 
+| 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.458  |
 
 
 ----
