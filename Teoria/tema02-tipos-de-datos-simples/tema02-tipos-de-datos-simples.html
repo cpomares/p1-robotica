@@ -390,6 +390,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema03-sentencias-de-control/tema03-sentencias-de-control.html" title="Tema 3" class="md-nav__link">
+      Tema 3
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1312,14 +1324,39 @@ Por ejemplo, mostrar el precio una vez convertido a pesetas.</p>
 <p>La cadena de control debe ir entre comillas dobles. Ejemplo: <code>“Hola mundo”</code></p>
 <p>Si queremos mostrar el valor de una variable o valor, haremos uso de especificadores de formato (marcas) dentro de la cadena de control. Por cada marca debemos añadir una variable o valor. La marca determina cómo visualizar la variable (número, base
 del numero, cifras decimales, etc). El valor puede ser el resultado de una operación</p>
-<p>Las marcas se definen usando <code>%tipo</code>:</p>
-<ul>
-<li>Números enteros en base 10 → d, i</li>
-<li>Números reales → f, g</li>
-<li>Número en base hexadecimal → x</li>
-<li>Número real con notación científica → e</li>
-<li>Carácter → c</li>
-</ul>
+<p>Los códigos de formato o marcas se definen usando <code>%tipo</code>. Los más comunes son:</p>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th align="center">Significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d</td>
+<td align="center">entero</td>
+</tr>
+<tr>
+<td>%c</td>
+<td align="center">carácter</td>
+</tr>
+<tr>
+<td>%f</td>
+<td align="center">real</td>
+</tr>
+<tr>
+<td>%e</td>
+<td align="center">real notación científica</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Precisión</strong></p>
+<p>Si añadimos un <code>.numero</code> entre el <code>%</code>y el <code>f</code>podemos ajustar la cantidad de decimales que queremos mostrar:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La nota media es: %.3f&quot;</span><span class="p">,</span> <span class="n">nota</span><span class="p">);</span>   <span class="c1">// 3 decimales </span>
+</pre></div>
+</td></tr></table>
+
 <p>Ejemplos:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1577,13 +1614,13 @@ Cristina Pomares Puig</p>
           </a>
         
         
-          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tema03-sentencias-de-control/tema03-sentencias-de-control.html" title="Tema 3" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Práctica 0: Entorno Linux y herramientas
+                Tema 3
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
