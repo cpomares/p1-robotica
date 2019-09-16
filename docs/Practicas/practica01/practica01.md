@@ -23,7 +23,7 @@ int main() {
 
    printf("Introduce tu altura en metros: ");
    ________________________;
- 
+
 
    printf("\n\nLa inicial de tu nombre es: %c\n",inicial);
    printf("La suma de tu edad y altura es: %.2f\n", edad + altura);
@@ -39,21 +39,21 @@ Implementa un programa que solicite al usuario 3 caracteres y los muestre por pa
 Ejemplo de ejecución:
 
 ~~~
-Introduce 3 caracteres: 
+Introduce 3 caracteres:
 a b c
 Los caracteres introducidos en orden inverso son:
 c b a
 ~~~
 
-**Datos de entrada:** 3 caracteres 
+**Datos de entrada:** `3 caracteres`
 
 **Casos de prueba:**
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| a b c            |  c b a              | 
-| 5 6 7            |  7 6 5              |   
-| * > ?            |  ? > *              |    
+| a b c            | c b a              |
+| 5 6 7            | 7 6 5              |   
+| * > ?            | ? > *              |    
 
 
 ### Ejercicio 3 ###
@@ -67,15 +67,15 @@ Introduce número de años: 1
 En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos
 ~~~
 
-**Dato de entrada:** número de años
+**Dato de entrada:** `número de años`
 
 **Casos de prueba:**
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|1                 |  En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos              | 
-| 20               |  En 20 años hay 175200 horas, 10512000 minutos, 630720000 segundos     |   
-| 100              |  En 100 años hay 876000 horas, 52560000 minutos, 3153600000 segundos    |  
+|1                 | En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos              |
+| 20               | En 20 años hay 175200 horas, 10512000 minutos, 630720000 segundos    |
+| 100              | En 100 años hay 876000 horas, 52560000 minutos, 3153600000 segundos   |
 
 ### Ejercicio 4 ###
 
@@ -90,13 +90,13 @@ Introduce la nota del tercer examen (temas 1 al 9): 5.0
 La nota final en la convocatoria ordinaria de Enero es: 5.07
 ~~~
 
-**Datos de entrada:** nota1 nota2 nota3
+**Datos de entrada:** `nota1` `nota2` `nota3`
 
 **Casos de prueba:**
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|  4.3  5.5  5.0   | La nota final en la convocatoria ordinaria de Enero es: 5.07              | 
+|  4.3  5.5  5.0   | La nota final en la convocatoria ordinaria de Enero es: 5.07 |
 |  7.0  4.0  3.5   | La nota final en la convocatoria ordinaria de Enero es: 4.20 |   
 |  7.3  8.6  9.8   | La nota final en la convocatoria ordinaria de Enero es: 9.00 |  
 
@@ -105,7 +105,7 @@ La nota final en la convocatoria ordinaria de Enero es: 5.07
 Escribe un programa que incluya un enumerado llamado TipoFigura con los tipos de figura circulo, cuadrado y triangulo.
 
 Después imprime por pantalla el número asignado por el enumerado a cada figura.
-Tienes que cambiar el número por defecto. 
+Tienes que cambiar el número por defecto.
 
 Ejemplo de ejecución:
 
@@ -142,15 +142,15 @@ Introduce el punto 3: 6,7
 El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31
 ~~~
 
-**Datos de entrada:** x1,y1 x2,y2 x3,y3
+**Datos de entrada:** `x1,y1` `x2,y2` `x3,y3`
 
 **Casos de prueba:**
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31     | 
+| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31    |
 | 2,2 4,4 8,8      | El perímetro del triángulo cuyos lados son (2,2)--(4,4)--(8,8) es 16.97  |   
-| 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.45  | 
+| 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.45  |
 
 
 ----
