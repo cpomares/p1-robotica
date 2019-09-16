@@ -492,12 +492,22 @@ printf(cadena de control, val1, val2, ..., valN);
 
 La cadena de control debe ir entre comillas dobles. Ejemplo: `“Hola mundo”`Si queremos mostrar el valor de una variable o valor, haremos uso de especificadores de formato (marcas) dentro de la cadena de control. Por cada marca debemos añadir una variable o valor. La marca determina cómo visualizar la variable (número, basedel numero, cifras decimales, etc). El valor puede ser el resultado de una operación
 
-Las marcas se definen usando `%tipo`:
-- Números enteros en base 10 → d, i
-- Números reales → f, g
-- Número en base hexadecimal → x
-- Número real con notación científica → e
-- Carácter → c
+Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son:
+| Formato   | Significa      |  
+|-----------|:--------------:|
+| %d        | entero         | 
+| %c        | carácter       |   
+| %f        | real           |  
+| %e        | real notación científica |
+
+**Precisión**
+
+Si añadimos un `.numero` entre el `%`y el `f`podemos ajustar la cantidad de decimales que queremos mostrar:
+
+~~~c
+printf("La nota media es: %.3f", nota);   // 3 decimales 
+~~~
+
 
 Ejemplos:
 

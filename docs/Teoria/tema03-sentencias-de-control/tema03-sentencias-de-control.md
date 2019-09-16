@@ -1,24 +1,8 @@
 
 # Tema 3: Sentencias de control
 
-## Contenidos
 
-- [1. Programas y algoritmos](#1)
-- [2. Estructuras de selección](#2)
-   - [2-1. Sentencia `if`](#2-1)
-   - [2-2. Sentencia `if-else`](#2-2)
-   - [2-3. Sentencias `if`anidadas](#2-3)
-   - [2-4. Operador `?`](#2-4)
-   - [2-5. Sentencias `switch`](#2-5)
-   - [2-6. Ejercicios](#2-6)
-- [3. Estructuras de iteración](#3)
-   - [3-1. Bucle `while`](#3-1)  
-   - [3-2. Bucle `do-while`](#3-2)
-   - [3-3. Bucle `for`](#3-3)
-   - [3-4. Ejemplos de bucles](#3-4)
-- [4. Traza de ejecución de un programa](#4)
-
-## <a name="1"/> 1. Programas y algoritmos
+## 1. Programas y algoritmos
 
 - Un **algoritmo** es un conjunto de instrucciones que permiten hallar la solución a un determinado problema.
 - Un **programa** es un conjunto de sentencias escritas en un lenguaje determinado para que un ordenador lleve a cabo una tarea. Los programas codifican algoritmos.
@@ -36,7 +20,7 @@ printf("El area de un triángulo de base %d y altura %d es %g\n", base, altura,
 
 En un determinado instante, el **estado de un programa** queda definido por el valor que tienen sus variables en ese momento. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es **imprescindible realizar las sentencias adecuadas en el orden adecuado**.
 
-## <a name="2"/> 2. Sentencias de control
+## 2. Sentencias de control
 
  El **flujo de ejecución de un programa** define el orden que siguen las sentencias durante la ejecución del mismo.
 
@@ -63,7 +47,7 @@ condición.
 <img src="imagenes/estructuras_control.png" width="600px"/>
 
 
-## <a name="2"/> 2. Estructuras de selección
+## 3. Estructuras de selección
 
 Permiten que el programa determine las sentencias a ejecutar en base a determinadas **condiciones**.
 
@@ -77,7 +61,7 @@ Suponen una **bifurcación** en la secuencia de ejecución de las instruccione
 > - Si el robot está cerca de un obstáculo: reducir su velocidad
 > - Si el semáforo esta en rojo: detenernos, en cualquier otro caso: continuar
 
-### <a name="2-1"/> 2.1 Sentencia `if`
+### Sentencia `if`
 
 La sentencia `if` permite decidir qué secuencia de código se va a ejecutar a continuación en base a una condición.
 
@@ -154,7 +138,7 @@ instruccion_b;instruccion_c;
 
 <img src="imagenes/if.png" width="600px"/>
 
-### <a name="2-2"/> 2.2 Sentencia `if-else`
+### Sentencia `if-else`
 
 
 La sentencia `if-else`es una forma ampliada de la sentencia `if`. La utilizamos cuando tenemos instrucciones que sólo queremos que seejecuten cuando no se cumple la condición (opción `else`)
@@ -204,7 +188,7 @@ instruccion_c;
 
 <img src="imagenes/if-else.png" width="600px"/>
 
-### <a name="2-3"/> 2.3  Sentencias `if` anidadas
+### Sentencias `if` anidadas
 
 Podemos anidar condiciones usando la combinación `else if`:
 
@@ -251,7 +235,7 @@ if total_compra > 100:
     importe_a_pagar = total_compra – importe_descuento
 ~~~
 
-### <a name="2-4"/> 2.4  Operador `?`
+### Operador `?`
 
 Es una herramienta útil para evaluar expresiones condicionales de forma abreviada.
 
@@ -279,7 +263,7 @@ es equivalente a: if (b<0) a = -b; else a = b;
 */
 ~~~
 
-### <a name="2-5"/> 2.5  Sentencias `switch`
+### Sentencias `switch`
 
 La sentencia `switch`permite seleccionar entre múltiples opciones.
 
@@ -390,7 +374,7 @@ Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor 
     }
 ~~~
 
-### <a name="2-6"/> 2.6  Ejercicios
+### Ejercicios
 
 1. Escribe un programa que pida dos números por teclado y nos indique cual es el mayor, cual es el menor o si son iguales.
 2. Escribe un programa que pida dos número por teclado y nos diga si uno es múltiplo del otro (divisible).
@@ -407,7 +391,7 @@ Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor 
 ___
 
 
-## <a name="3"/> 3. Estructuras de iteración
+## 4. Estructuras de iteración
 
 Un **bucle** es una estructura de programación formada por una secuencia de sentencias, denominada **cuerpo del bucle**, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una **iteración**. El número de veces que se ejecuta el cuerpo del bucle está controlado por una **condición** (expresión lógica).
   Por lo tanto, a la hora de diseñar e implementar un bucle, hayque tener en cuenta dos aspectos:
@@ -421,7 +405,7 @@ Se pueden agrupar en dos tipos, dependiendo si conocemos de antemano el número 
 - Bucles **determinados**: Sabemos a priori el número de veces que se repetirá el bucle. Es el caso del bucle `for`
 - Bucles **indeterminados**: No sabemos de antemano cuántas iteraciones se realizarán. Es el caso de los bucles `while`y `do-while`
 
-### <a name="3-1"/> 3.1  Bucle `while`
+### Bucle `while`
 
 Permite repetir **cero** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
@@ -466,7 +450,7 @@ while (res == 'S' || res == 's') {
 printf("Te he dado %d caramelos\n", caramelos);
 ~~~
 
-### <a name="3-2"/> 3.2.  Bucle `do-while`
+### Bucle `do-while`
 
 Permite repetir **una** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
@@ -499,7 +483,7 @@ printf("La suma de todos los números introducidos es: %d\n", suma);
 
 Al situarse la condición se sitúa al final, la `secuencia_de_instrucciones` se ejecuta al menos una vez.
 
-### <a name="3-3"/> 3.3. Bucle `for`
+### Bucle `for`
 
 Permite repetir un número determinado de veces la ejecución de una secuencia de instrucciones. El número de iteraciones del bucle es controlado por una variable usada como un **contador**.
 
@@ -628,7 +612,7 @@ for animal in lista_animales:
     print "El animal es:", animal
 ~~~
 
-### <a name="3-4"/> 3.4. Ejemplos de bucles en C
+### Ejemplos de bucles en C
 
 Ejemplo con bucle `while`. Utilizamos el bucle indeterminado `while`porque no sabemos de antemano el número de iteraciones: el bucle terminará cuando el usuario introduzca un cero.
 
@@ -729,7 +713,7 @@ printf("El factorial de %d es %d\n", n, res);
 Ejercicio: Haz el ejercicio anterior (factorial de un número) utilizando un bucle for
 
 
-## <a name="4"/> 4. Traza de ejecución de un programa
+## 5. Traza de ejecución de un programa
 
 Se utiliza para estudiar la secuencia de **estados** por los que pasa un programa, es decir, el valor que van tomando las variables instrucción a instrucción. Las variables almacenan el estado de un programa y mediante los pasos de ejecución se va modificando su estado. Se utilizan principalmente para depurar un programa (corregir errores de ejecución) o para comprender qué hace un programa o parte del mismo.
 
@@ -797,7 +781,7 @@ Iteración | dia | capacidadActual
 6   | 6   | 15 + 6 = **21**
 
 ---
-## <a name="5"/> 5.  Ejercicios resueltos
+## Ejercicios resueltos
 
 #### Ejercicio 1
 Escribe un programa que lea cantidades y precios y al final indique el total de la factura.Primero se pregunta la cantidad vendida, tras lo cual el usuario introducirá un número entero positivo.Después se pregunta el precio que será un número decimal positivo. La lectura termina cuando en la cantidad se introduzca un cero. Si es así se escribirá el total.
@@ -965,7 +949,7 @@ int main(){
 
 ---
 
-## <a name="6"/> 6.  Ejercicios propuestos
+## Ejercicios propuestos
 
 1. Escribe un programa que muestre todos los multiplos de un número dado en el rango [0, 100] – Pedir el número por teclado2. Escribe un programa que muestre todos los divisores de un número dado
    – Pedir el número por consola   – Uso del operando módulo %3. Hacer las trazas de los ejercicios 1 (valor de entrada 40) y 2 (valor de entrada 16)
