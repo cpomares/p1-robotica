@@ -399,6 +399,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica01/practica01.html" title="Práctica 1: Tipos de datos simples" class="md-nav__link">
+      Práctica 1: Tipos de datos simples
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -599,10 +611,10 @@ ensamblador.</p>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="n">CAR</span> <span class="n">A</span>
-    <span class="n">RES</span> <span class="n">B</span>
-    <span class="n">ALM</span> <span class="k">C</span>
-    <span class="n">STOP</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>   <span class="n">CAR</span> <span class="n">A</span>
+   <span class="n">RES</span> <span class="n">B</span>
+   <span class="n">ALM</span> <span class="k">C</span>
+   <span class="n">STOP</span>
 <span class="k">C</span><span class="p">:</span> <span class="mi">0</span>
 <span class="n">A</span><span class="p">:</span> <span class="mi">7</span>
 <span class="n">B</span><span class="p">:</span> <span class="mi">2</span>
@@ -704,11 +716,15 @@ menos memoria).</p>
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola mundo!!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola mundo!!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -729,15 +745,9 @@ menos memoria).</p>
 <p><code>gcc -o holamundo holamundo.c</code></p>
 <p>La opción -o es abreviatura de <em>output</em>, y a ella le sigue el nombre del fichero que contendrá la traducción a código máquina del programa. Este fichero sólo se genera si el programa C está correctamente escrito y no tiene errores de compilación.</p>
 <p>Ahora ejecutamos el fichero ejecutable:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">holamundo</span>
-</pre></div>
-</td></tr></table>
-
+<p>./holamundo</p>
 <p>y el resultado es la salida por pantalla:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Hola</span> <span class="n">mundo</span><span class="o">!!</span>
-</pre></div>
-</td></tr></table>
-
+<p>Hola mundo!!</p>
 <h4>Diferencias entre C y Python</h4>
 <ul>
 <li>C es un lenguaje imperativo. Python es multiparadigma (imperativo, orientado a objetos y funcional).</li>
@@ -797,23 +807,19 @@ menos memoria).</p>
 <blockquote>
 <ul>
 <li>Dime de qué convocatoria quieres saber tu nota final</li>
-<li>Si es la convocatoria de Enero entonces<ul>
+<li>Si es la convocatoria de Enero entonces</li>
 <li>Dime la nota de los 2 exámenes con ordenador y del examen escrito</li>
 <li>Si la nota del examen escrito &lt; 4 o nota examen ordenador 2 &lt; 4 Entonces
 TU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord. 2)</li>
 <li>Sino TU NOTA FINAL ES =0,15<em> Ordenador_1+0,35</em> Ordenador_2+0,5*Escrito</li>
-</ul>
-</li>
 <li>Si es la convocatoria de Julio
-Entonces<ul>
+Entonces</li>
 <li>Dime las notas del examen escrito y del examen con ordenador</li>
 <li>Si la nota del examen escrito &lt; 4 o nota examen ordenador &lt; 4
 Entonces
 TU NOTA FINAL ES = mínimo (nota ex. escrito, nota ex. ord.)</li>
 <li>Sino
 TU NOTA FINAL ES = 0,5<em> Ordenador+0,5</em>Escrito</li>
-</ul>
-</li>
 </ul>
 </blockquote>
 <h5>Implementar el programa</h5>
@@ -861,38 +867,38 @@ TU NOTA FINAL ES = 0,5<em> Ordenador+0,5</em>Escrito</li>
 36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">char</span> <span class="n">convocatoria</span><span class="p">;</span>
-    <span class="kt">float</span> <span class="n">ordenador_1</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">,</span> <span class="n">examen_escrito</span><span class="p">,</span> <span class="n">nota_final</span><span class="p">;</span>
+   <span class="kt">char</span> <span class="n">convocatoria</span><span class="p">;</span>
+   <span class="kt">float</span> <span class="n">ordenador_1</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">,</span> <span class="n">examen_escrito</span><span class="p">,</span> <span class="n">nota_final</span><span class="p">;</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la convocatoria(E,J):&quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">convocatoria</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la convocatoria(E,J):&quot;</span><span class="p">);</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">convocatoria</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">convocatoria</span> <span class="o">==</span> <span class="sc">&#39;E&#39;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del primer examen con ordenador:&quot;</span><span class="p">);</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_1</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del segundo examen con ordenador:&quot;</span><span class="p">);</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_2</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen escrito:&quot;</span><span class="p">);</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">examen_escrito</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">examen_escrito</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">ordenador_2</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
-            <span class="c1">// minimo: función que calcula el número más pequeño entre 2 números</span>
-            <span class="n">nota_final</span> <span class="o">=</span> <span class="n">minimo</span><span class="p">(</span><span class="n">examen_escrito</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">);</span>
-        <span class="k">else</span>
-            <span class="n">nota_final</span> <span class="o">=</span> <span class="mf">0.15</span><span class="o">*</span><span class="n">ordenador_1</span> <span class="o">+</span> <span class="mf">0.35</span><span class="o">*</span><span class="n">ordenador_2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">examen_escrito</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">convocatoria</span> <span class="o">==</span> <span class="sc">&#39;J&#39;</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen escrito:&quot;</span><span class="p">);</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">examen_escrito</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen con ordenador:&quot;</span><span class="p">);</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_2</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">examen_escrito</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">ordenador_2</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
-            <span class="c1">// minimo: función que calcula el número más pequeño entre 2 números</span>
-            <span class="n">nota_final</span> <span class="o">=</span> <span class="n">minimo</span><span class="p">(</span><span class="n">examen_escrito</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">);</span>
-        <span class="k">else</span>
-            <span class="n">nota_final</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ordenador_2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">examen_escrito</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;TU NOTA FINAL ES %f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">nota_final</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">convocatoria</span> <span class="o">==</span> <span class="sc">&#39;E&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del primer examen con ordenador:&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_1</span><span class="p">);</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del segundo examen con ordenador:&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_2</span><span class="p">);</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen escrito:&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">examen_escrito</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">examen_escrito</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">ordenador_2</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
+         <span class="c1">// minimo: función que calcula el número más pequeño entre 2 números</span>
+         <span class="n">nota_final</span> <span class="o">=</span> <span class="n">minimo</span><span class="p">(</span><span class="n">examen_escrito</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">);</span>
+      <span class="k">else</span>
+         <span class="n">nota_final</span> <span class="o">=</span> <span class="mf">0.15</span><span class="o">*</span><span class="n">ordenador_1</span> <span class="o">+</span> <span class="mf">0.35</span><span class="o">*</span><span class="n">ordenador_2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">examen_escrito</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">convocatoria</span> <span class="o">==</span> <span class="sc">&#39;J&#39;</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen escrito:&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">examen_escrito</span><span class="p">);</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dime la nota del examen con ordenador:&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ordenador_2</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">examen_escrito</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">ordenador_2</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
+         <span class="c1">// minimo: función que calcula el número más pequeño entre 2 números</span>
+         <span class="n">nota_final</span> <span class="o">=</span> <span class="n">minimo</span><span class="p">(</span><span class="n">examen_escrito</span><span class="p">,</span> <span class="n">ordenador_2</span><span class="p">);</span>
+      <span class="k">else</span>
+         <span class="n">nota_final</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ordenador_2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">examen_escrito</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;TU NOTA FINAL ES %f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">nota_final</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>

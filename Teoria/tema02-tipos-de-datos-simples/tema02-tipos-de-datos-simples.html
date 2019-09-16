@@ -426,6 +426,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica01/practica01.html" title="Práctica 1: Tipos de datos simples" class="md-nav__link">
+      Práctica 1: Tipos de datos simples
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -869,7 +881,7 @@ Indica qué identificadores son válidos en C:</p>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Un unsigned long ocupa %d bytes</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
    <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">));</span>
 
-   <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1070,7 +1082,7 @@ Indica qué identificadores son válidos en C:</p>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;true AND false es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">true</span> <span class="o">&amp;&amp;</span> <span class="nb">false</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;false OR true es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="nb">false</span> <span class="o">||</span> <span class="nb">true</span><span class="p">);</span>
 
-   <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1111,7 +1123,7 @@ Indica qué identificadores son válidos en C:</p>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> mínimo valor para un long %ld&quot;</span><span class="p">,</span> <span class="n">LONG_MIN</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> máximo valor para un long %ld&quot;</span><span class="p">,</span> <span class="n">LONG_MAX</span><span class="p">);</span>
 
-   <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1201,7 +1213,9 @@ Indica qué identificadores son válidos en C:</p>
 19
 20
 21
-22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Programa que hace operaciones con días de la semana</span>
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Programa que hace operaciones con días de la semana</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
@@ -1222,6 +1236,8 @@ Indica qué identificadores son válidos en C:</p>
    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Sexto día de la semana: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dia</span><span class="p">);</span> <span class="c1">//5</span>
    <span class="n">dia</span> <span class="o">=</span> <span class="n">domingo</span><span class="p">;</span>
    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Ultimo día de la semana: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dia</span><span class="p">);</span> <span class="c1">//6</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1387,7 +1403,9 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kt">char</span> <span class="n">letra</span><span class="p">;</span>
@@ -1399,6 +1417,8 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El valor de letra es %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">letra</span><span class="p">);</span>
    <span class="n">siguiente</span> <span class="o">=</span> <span class="n">letra</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La siguiente letra es %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">siguiente</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1462,7 +1482,8 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
 14
 15
 16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
 
@@ -1478,6 +1499,7 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
     <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;c = %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
 
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
