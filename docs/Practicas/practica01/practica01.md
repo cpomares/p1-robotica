@@ -117,7 +117,7 @@ Cuadrado: 3
 
 ### Ejercicio 6 ###
 
-Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro. Cada vértice consta de una coordenada x,y,
+Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro. Cada vértice consta de una coordenada x,y.
 
 Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el scanf de la siguiente forma:
 
