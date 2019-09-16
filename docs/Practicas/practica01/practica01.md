@@ -45,9 +45,9 @@ Los caracteres introducidos en orden inverso son:
 c b a
 ~~~
 
-**Datos de entrada:** `3 caracteres`
+Datos de entrada: `3 caracteres`
 
-**Casos de prueba:**
+Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
@@ -67,9 +67,9 @@ Introduce número de años: 1
 En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos
 ~~~
 
-**Dato de entrada:** `número de años`
+Dato de entrada: `número de años`
 
-**Casos de prueba:**
+Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
@@ -90,9 +90,9 @@ Introduce la nota del tercer examen (temas 1 al 9): 5.0
 La nota final en la convocatoria ordinaria de Enero es: 5.07
 ~~~
 
-**Datos de entrada:** `nota1` `nota2` `nota3`
+Datos de entrada: `nota1` `nota2` `nota3`
 
-**Casos de prueba:**
+Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
@@ -142,9 +142,9 @@ Introduce el punto 3: 6,7
 El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31
 ~~~
 
-**Datos de entrada:** `x1,y1` `x2,y2` `x3,y3`
+Datos de entrada: `x1,y1` `x2,y2` `x3,y3`
 
-**Casos de prueba:**
+Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
