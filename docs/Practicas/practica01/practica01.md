@@ -102,7 +102,7 @@ Casos de prueba:
 
 ### Ejercicio 5 ###
 
-Escribe un programa que incluya un enumerado llamado TipoFigura con los tipos de figura circulo, cuadrado y triangulo.
+Escribe un programa que incluya un enumerado llamado `TipoFigura` con los tipos de figura `circulo`, `cuadrado` y `triangulo`.
 
 Después imprime por pantalla el número asignado por el enumerado a cada figura.
 Tienes que cambiar el número por defecto.
@@ -119,7 +119,7 @@ Cuadrado: 3
 
 Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro (con dos decimales). Cada vértice consta de una coordenada x,y.
 
-Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el scanf de la siguiente forma:
+Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el `scanf` de la siguiente forma:
 
 ~~~c
 scanf(“%d,%d”, &x, &y);
