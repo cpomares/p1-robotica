@@ -62,7 +62,7 @@ Implementa un programa que solicite al usuario un número de años y muestre por
 
 Ejemplo de ejecución:
 
-~~~
+~~~text
 Introduce número de años: 1
 En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos
 ~~~
@@ -83,7 +83,7 @@ Implementa un programa que solicite al usuario las notas de los 3 exámenes de l
 
 Ejemplo de ejecución:
 
-~~~
+~~~text
 Introduce la nota del primer examen (temas 1 al 3): 4.3
 Introduce la nota del segundo examen (temas 1 al 6): 5.5
 Introduce la nota del tercer examen (temas 1 al 9): 5.0
@@ -109,7 +109,7 @@ Tienes que cambiar el número por defecto.
 
 Ejemplo de ejecución:
 
-~~~
+~~~text
 Circulo: 1
 Triangulo: 2
 Cuadrado: 3
@@ -135,7 +135,7 @@ distancia = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1) * (y2 - y1));
 
 Ejemplo de ejecución:
 
-~~~
+~~~text
 Introduce el punto 1: 2,3
 Introduce el punto 2: 4,5
 Introduce el punto 3: 6,7
