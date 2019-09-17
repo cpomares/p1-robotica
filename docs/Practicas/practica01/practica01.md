@@ -38,7 +38,7 @@ Implementa un programa que solicite al usuario 3 caracteres y los muestre por pa
 
 Ejemplo de ejecución:
 
-~~~
+~~~text
 Introduce 3 caracteres:
 a b c
 Los caracteres introducidos en orden inverso son:
