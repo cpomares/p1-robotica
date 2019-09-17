@@ -122,7 +122,7 @@ Escribe un programa que pida por teclado los vértices de un triángulo y calcul
 Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el `scanf` de la siguiente forma:
 
 ~~~c
-scanf(“%d,%d”, &x, &y);
+scanf("%d,%d", &x, &y);
 ~~~
 
 Para calcular el perímetro, primero debes obtener los tres lados mediante el cálculo de la distancia euclídea entre los tres vértices. La fórmula de la distancia euclídea es:
