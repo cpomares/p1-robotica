@@ -495,9 +495,11 @@ La cadena de control debe ir entre comillas dobles. Ejemplo: `“Hola mundo”`
 Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son:
 | Formato   | Significa      |  
 |-----------|:--------------:|
-| %d        | entero         | 
+| %d        | entero         |
 | %c        | carácter       |   
 | %f        | real           |  
+| %ld       | long           |
+| %u        | unsigned       |
 | %e        | real notación científica |
 
 **Precisión**
@@ -505,7 +507,7 @@ Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son
 Si añadimos un `.numero` entre el `%`y el `f`podemos ajustar la cantidad de decimales que queremos mostrar:
 
 ~~~c
-printf("La nota media es: %.3f", nota);   // 3 decimales 
+printf("La nota media es: %.3f", nota);   // 3 decimales
 ~~~
 
 
