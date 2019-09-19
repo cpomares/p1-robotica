@@ -1031,6 +1031,7 @@ otro caso se evalúa la <code>expresión3</code>.</p>
 <li>Se evalúa en primer lugar la expresión que va entre paréntesis a continuación del <code>switch</code>. Debe dar como resultado un número entero.</li>
 <li>Después la ejecución empieza en el primer <code>case</code> cuya expresión coincida con el resultado obtenido en <code>variable_entera_a_evaluar</code>. Se ejecutan todas las instrucciones hasta el <code>break</code>.</li>
 <li>El <code>default</code>se ejecuta si no ha habido ningún <code>case</code>cuyo resultado coincida con <code>variable_entera_a_evaluar</code>.</li>
+<li>Si hubiesen dos o más sentencias <code>case</code>seguidas sin <code>break</code>, se ejecutan todas hasta llegar al <code>break</code>.</li>
 </ul>
 <p>Diagrama:</p>
 <p><img src="imagenes/switch.png" width="600px"/></p>
@@ -1075,12 +1076,27 @@ otro caso se evalúa la <code>expresión3</code>.</p>
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Sentencias case sin break (no recomendable)</span>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Sentencias case sin break</span>
 <span class="c1">// Si contador vale 1 se ejecutarán las dos sentencias `printf`:</span>
 <span class="k">switch</span> <span class="p">(</span><span class="n">contador</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
       <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opcion 1&quot;</span><span class="p">);</span>
    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opcion 2&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Lo anterior es equivalente a:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">contador</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+   <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opcion 1&quot;</span><span class="p">);</span>
       <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opcion 2&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
