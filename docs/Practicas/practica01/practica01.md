@@ -139,7 +139,7 @@ Ejemplo de ejecución:
 Introduce el punto 1: 2,3
 Introduce el punto 2: 4,5
 Introduce el punto 3: 6,7
-El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31
+El perímetro del triángulo cuyos lados son (2,3)--(4,5)--(6,7) es 11.31
 ~~~
 
 Datos de entrada: `x1,y1` `x2,y2` `x3,y3`
@@ -148,7 +148,7 @@ Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)-(4,5)-(6,7) es 11.31    |
+| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)--(4,5)--(6,7) es 11.31    |
 | 2,2 4,4 8,8      | El perímetro del triángulo cuyos lados son (2,2)--(4,4)--(8,8) es 16.97  |   
 | 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.45  |
 
