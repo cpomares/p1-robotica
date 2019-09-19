@@ -287,6 +287,7 @@ La **semántica** de la sentencia `switch`es:
 - Se evalúa en primer lugar la expresión que va entre paréntesis a continuación del `switch`. Debe dar como resultado un número entero.
 - Después la ejecución empieza en el primer `case` cuya expresión coincida con el resultado obtenido en `variable_entera_a_evaluar`. Se ejecutan todas las instrucciones hasta el `break`.
 - El `default`se ejecuta si no ha habido ningún `case`cuyo resultado coincida con `variable_entera_a_evaluar`.
+- Si hubiesen dos o más sentencias `case`seguidas sin `break`, se ejecutan todas hasta llegar al `break`.
 
 Diagrama:
 
@@ -315,12 +316,23 @@ switch (numHermanos) {
 Cada bloque de sentencias `case`debe terminar con un `break`. Si no es así, el compilador entiende que también debe ejecutarse el bloque del case siguiente y lo engloba como el mismo bloque. Ejemplo:
 
 ~~~c
-// Sentencias case sin break (no recomendable)
+// Sentencias case sin break
 // Si contador vale 1 se ejecutarán las dos sentencias `printf`:
 switch (contador) {
    case 1:
       printf("Opcion 1");
    case 2:
+      printf("Opcion 2");
+}
+~~~
+
+Lo anterior es equivalente a:
+
+~~~c
+switch (contador) {
+   case 1:
+   case 2:
+      printf("Opcion 1");
       printf("Opcion 2");
 }
 ~~~
