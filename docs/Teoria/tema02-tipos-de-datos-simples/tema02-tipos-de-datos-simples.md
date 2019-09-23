@@ -495,7 +495,7 @@ La cadena de control debe ir entre comillas dobles. Ejemplo: `“Hola mundo”`
 Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son:
 | Formato   | Significa      |  
 |-----------|:--------------:|
-| %d        | entero         |
+| %d %i     | entero         |
 | %c        | carácter       |   
 | %f        | real           |  
 | %ld       | long           |
