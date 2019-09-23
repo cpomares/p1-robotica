@@ -604,7 +604,7 @@ do {
 
 #### Bucles en Python
 
-**Bucle while en Python**
+Bucle while en Python:
 
 ~~~python
 num = 1
@@ -613,7 +613,7 @@ while num <= 10:
     num = num + 1
 ~~~
 
-**Bucle for en Python**
+Bucle for en Python:
 
 Ejemplo que itera sobre una lista:
 
@@ -966,10 +966,12 @@ int main(){
 1. Escribe un programa que muestre todos los multiplos de un número dado en el rango [0, 100] – Pedir el número por teclado2. Escribe un programa que muestre todos los divisores de un número dado
    – Pedir el número por consola   – Uso del operando módulo %3. Hacer las trazas de los ejercicios 1 (valor de entrada 40) y 2 (valor de entrada 16)
 4. Escribir un programa que pida dos números y muestre un menú como este:
-   1. Suma   2. Resta   3. Multiplicación
+
+~~~text   1. Suma   2. Resta   3. Multiplicación
    4. División
    5. Módulo
    6. Salir
+~~~
 Tras mostrar el menú, el programa debe leer un número del 1 al 6 y realizar la opción indicada con los dos números. Tras realizar las operaciones e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente. Finalizará cuando se introduzca la opción 6.
 
 ----
