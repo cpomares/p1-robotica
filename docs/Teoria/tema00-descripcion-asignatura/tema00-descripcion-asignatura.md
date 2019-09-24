@@ -81,9 +81,9 @@ La distribución de grupos del curso 2019-20 es la siguiente:
 
 En la convocatoria ordinaria (enero) se realizará una evaluación continua con las siguientes pruebas:
 
-* **Examen 1**: Del tema 1 al tema 3. Pondera un 15% en la nota final. No se exige nota mínima.
-* **Examen 2**: Del tema 1 al tema 6. Pondera un 35% en la nota final. No se exige nota mínima.
-* **Examen 3**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la fecha oficial asignada al examen final de la convocatoria de enero.
+* **Examen 1**: Del tema 1 al tema 3. Pondera un 15% en la nota final. No se exige nota mínima. **Jueves 10 octubre, 16h-18h**
+* **Examen 2**: Del tema 1 al tema 6. Pondera un 35% en la nota final. No se exige nota mínima.  **Miércoles 27 noviembre, 11h-13h**
+* **Examen 3**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la **fecha oficial** asignada al examen final de la convocatoria de enero.
 
 Todos los exámenes de la asignatura se realizarán por escrito e incluirán conceptos y ejercicios relacionados con los trabajados tanto en las sesiones de teoría como de prácticas.
 
