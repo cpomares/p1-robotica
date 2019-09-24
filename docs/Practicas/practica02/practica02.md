@@ -62,7 +62,7 @@ Ejemplos de ejecución:
 Introduce figura:
 1
 Introduce diámetro (ancho) del círculo: 30
-El area es: 94.20
+El area es: 706.86
 ~~~
 
 Datos de entrada: `tipo figura`, `ancho`, `[alto]`
