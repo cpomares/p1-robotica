@@ -205,6 +205,27 @@ Diagrama sentencia `if anidada`:
 
 <img src="imagenes/if-anidado.png" width="600px"/>
 
+También podemos anidar `if-else` con esta estructura, dependiendo del problema:
+
+~~~c
+if ( ...) {
+   ...
+}
+else {
+   if ( ... ) {
+      ...
+   }
+   else {
+      if ( ... ) {
+         ...
+      }
+   }
+}
+
+~~~ 
+
+Como siempre, hay que procurar buscar claridad, legibilidad y sencillez en nuestro programa. Si tenemos que anidar sentencias `if`, hacerlas lo más claras y eficientes posibles.
+
 #### Sentencias condicionales en Python
 
 Las estructuras de control de flujo condicionales, se definen mediante el uso de tres palabras claves reservadas, del lenguaje: `if` , `elif` (como el `else-if`de C) y `else`.
@@ -973,6 +994,11 @@ int main(){
    6. Salir
 ~~~
 Tras mostrar el menú, el programa debe leer un número del 1 al 6 y realizar la opción indicada con los dos números. Tras realizar las operaciones e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente. Finalizará cuando se introduzca la opción 6.
+
+## Bibliografía
+
+- Capítulos 5 y 6 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
+- Capítulos 5.1 a 5.7 de "Fundamentos de Programación", Jesús Carretero y otros  
 
 ----
 
