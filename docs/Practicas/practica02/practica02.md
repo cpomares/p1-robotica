@@ -45,7 +45,7 @@ Casos de prueba:
 |:----------------:|:-------------------:|
 | 3                | El mes número 3 tiene 30 días  |
 | 11               | El mes número 11 tiene 31 días |
-| 2                | El mes número 2 tiene 28 días  |
+| 1                | El mes número 2 tiene 28 días  |
 
 ### Ejercicio 3 ###
 
@@ -75,7 +75,7 @@ Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 1 30             | El área es: 94.20   |
+| 1 30             | El área es: 706.86  |
 | 2 23 30          | El área es: 345.00  |
 | 3 20             | El área es: 400.00  |
 
