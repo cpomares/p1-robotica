@@ -113,7 +113,9 @@ if (condicionCumplida) {
 ~~~
 La `condicion_a_cumplir` puede obtenerse mediante la combinación (usando operadores lógicos) de diferentes (sub)condiciones.Precedencia de operadores:
 
-   1. ()   2. *, /, %   3. +, -   4. <, <=, >, >= – ==, !=   5. &&   6. ||
+~~~text
+1. ()2. *, /, %3. +, -4. <, <=, >, >= – ==, !=5. &&6. ||
+~~~
 Ejemplo:
 
 ~~~c++
