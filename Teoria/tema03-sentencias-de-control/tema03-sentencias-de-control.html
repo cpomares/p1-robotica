@@ -406,6 +406,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
       
       
       
@@ -643,6 +650,13 @@
         <li class="md-nav__item">
   <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
     Ejercicios propuestos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
   </a>
   
 </li>
@@ -945,6 +959,36 @@ ejecuten cuando no se cumple la condición (opción <code>else</code>)</p>
 
 <p>Diagrama sentencia <code>if anidada</code>:</p>
 <p><img src="imagenes/if-anidado.png" width="600px"/></p>
+<p>También podemos anidar <code>if-else</code> con esta estructura, dependiendo del problema:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="p">...)</span> <span class="p">{</span>
+   <span class="p">...</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="p">...</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="p">...</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="p">...</span> <span class="p">)</span> <span class="p">{</span>
+         <span class="p">...</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Como siempre, hay que procurar buscar claridad, legibilidad y sencillez en nuestro programa. Si tenemos que anidar sentencias <code>if</code>, hacerlas lo más claras y eficientes posibles.</p>
 <h4>Sentencias condicionales en Python</h4>
 <p>Las estructuras de control de flujo condicionales, se definen mediante el uso de tres palabras claves reservadas, del lenguaje: <code>if</code> , <code>elif</code> (como el <code>else-if</code>de C) y <code>else</code>.</p>
 <p>Veamos su sintaxis con algunos ejemplos:</p>
@@ -2103,6 +2147,11 @@ Después se pregunta el precio que será un número decimal positivo. La lectura
 </td></tr></table>
 
 <p>Tras mostrar el menú, el programa debe leer un número del 1 al 6 y realizar la opción indicada con los dos números. Tras realizar las operaciones e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente. Finalizará cuando se introduzca la opción 6.</p>
+<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Capítulos 5 y 6 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero</li>
+<li>Capítulos 5.1 a 5.7 de "Fundamentos de Programación", Jesús Carretero y otros  </li>
+</ul>
 <hr />
 <p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
