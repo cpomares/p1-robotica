@@ -20,7 +20,7 @@ Casos de prueba:
 | a                | El carácter introducido es una letra minúscula |
 | 4                | El carácter introducido es un dígito          |   
 | %                | El carácter introducido es desconocido     |   
-| F                | El carácter introducido es una letra mayúscula | 
+| F                | El carácter introducido es una letra mayúscula |
 
 
 ### Ejercicio 2 ###
@@ -45,11 +45,11 @@ Casos de prueba:
 |:----------------:|:-------------------:|
 | 3                | El mes número 3 tiene 30 días  |
 | 11               | El mes número 11 tiene 31 días |
-| 1                | El mes número 2 tiene 28 días  |
+| 1                | El mes número 1 tiene 28 días  |
 
 ### Ejercicio 3 ###
 
-Utilizando el tipo enumerado `TipoFigura` del ejercicio 5 de la práctica anterior, escribe un programa que solicite por teclado una de las tres figuras y calcule e imprima su área correspondiente. Para ellos deberá solicitar los datos necesarios de cada figura. 
+Utilizando el tipo enumerado `TipoFigura` del ejercicio 5 de la práctica anterior, escribe un programa que solicite por teclado una de las tres figuras y calcule e imprima su área correspondiente. Para ellos deberá solicitar los datos necesarios de cada figura.
 
 Utiliza `typedef` para definir el enumerado `TipoFigura`, puedes hacerlo fuera del main de forma global.
 
@@ -67,7 +67,7 @@ El area es: 706.86
 
 Datos de entrada: `tipo figura`, `ancho`, `[alto]`
 
-- `Círculo`, `ancho` 
+- `Círculo`, `ancho`
 - `Triángulo`, `ancho`, `alto`
 - `Cuadrado`, `ancho`
 
@@ -82,7 +82,7 @@ Casos de prueba:
 
 ### Ejercicio 4 ###
 
-Implementa un programa que calcule la nota final de la asignatura. En primer lugar se debe solicitar la convocatoria, `'E'` si se trata de la de Enero o `'J'` si se trata de Julio. Si no se teclea ninguna de ellas, se mostrará un mensaje en el que se indique que es incorrecta. 
+Implementa un programa que calcule la nota final de la asignatura. En primer lugar se debe solicitar la convocatoria, `'E'` si se trata de la de Enero o `'J'` si se trata de Julio. Si no se teclea ninguna de ellas, se mostrará un mensaje en el que se indique que es incorrecta.
 
 La nota final de la convocatoria de Enero se calcula tal y como está explicado en el ejercicio 4 de la práctica 1.La nota final de la convocatoria de Julio consiste en un único examen.
 
@@ -91,7 +91,7 @@ Además de la nota numérica, deberá aparecer su descripción literal equivalen
 - `0 <= nota < 5` ==> SUSPENSO
 - `5 <= nota < 7` ==> APROBADO
 - `7 <= nota < 9` ==> NOTABLE
-- `nota >= 9` ==> SOBRESALIENTE 
+- `nota >= 9` ==> SOBRESALIENTE
 
 Ejemplo de ejecución:
 
