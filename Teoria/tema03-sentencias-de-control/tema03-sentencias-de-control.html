@@ -374,6 +374,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#bucles-for-anidados" title="Bucles for anidados" class="md-nav__link">
+    Bucles for anidados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplos-de-bucles-en-c" title="Ejemplos de bucles en C" class="md-nav__link">
     Ejemplos de bucles en C
   </a>
@@ -617,6 +624,13 @@
           <li class="md-nav__item">
   <a href="#validacion-de-datos" title="Validación de datos" class="md-nav__link">
     Validación de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucles-for-anidados" title="Bucles for anidados" class="md-nav__link">
+    Bucles for anidados
   </a>
   
 </li>
@@ -1497,6 +1511,39 @@ Su objetivo es recordar en un determinado lugar del programa un suceso determina
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un número par: &quot;</span><span class="p">);</span>
    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
 <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">);</span>  <span class="c1">//repetir mientras no sea par</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="bucles-for-anidados">Bucles <code>for</code> anidados<a class="headerlink" href="#bucles-for-anidados" title="Permanent link">&para;</a></h3>
+<p>Es frecuente utilizar un bucle for dentro de otro. </p>
+<p>Ejemplo, imprimimos las posiciones de una matriz:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 10</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">fil</span><span class="p">,</span> <span class="n">col</span><span class="p">;</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="n">fil</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">fil</span> <span class="o">&lt;</span> <span class="n">TAM</span><span class="p">;</span> <span class="n">fil</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">TAM</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%4d-%d&quot;</span><span class="p">,</span> <span class="n">fil</span><span class="p">,</span> <span class="n">col</span><span class="p">);</span>  <span class="c1">//%4d añade 4 espacios delante del entero</span>
+      <span class="p">}</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
