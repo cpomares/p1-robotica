@@ -224,7 +224,7 @@ else {
    }
 }
 
-~~~ 
+~~~
 
 Como siempre, hay que procurar buscar claridad, legibilidad y sencillez en nuestro programa. Si tenemos que anidar sentencias `if`, hacerlas lo más claras y eficientes posibles.
 
@@ -620,14 +620,14 @@ int num;
 
 do {
    printf("Introduce un número par: ");
-   scanf("%d", num);
+   scanf("%d", &num);
 }while(num % 2 != 0);  //repetir mientras no sea par
 
 ~~~
 
 ### Bucles `for` anidados
 
-Es frecuente utilizar un bucle for dentro de otro. 
+Es frecuente utilizar un bucle for dentro de otro.
 
 Ejemplo, imprimimos las posiciones de una matriz:
 
@@ -939,47 +939,49 @@ Escribe un programa que muestre un menú como este:
 En las opciones 2 y 3 el programa pedirá el número sobre el que se calcula el sumatorio o el factorial. Tras calcular el sumatorio o el factorial e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente.
 
 ~~~c
+#include <stdio.h>
+
+#define SALIR 1
 
 int main(){
-   int seleccion;
-   int n, aux;
-   double res;
+    int seleccion;
+    int num, i;
+    int res;
 
-   do{
-      /* Mostrar el menú*/
-      do{
-         printf("******************\n");
-         printf("1 Salir\n");
-         printf("2 Sumatorio\n");
-         printf("3 Factorial\n");
-         printf("******************\n");
-         printf("Escriba su opcion: ");
-         scanf("%d", &seleccion);
-      } while(seleccion!=1 && seleccion!=2 && seleccion!=3);
+    do{
+        do{
+            printf("******************\n");
+            printf("1 Salir\n");
+            printf("2 Sumatorio\n");
+            printf("3 Factorial\n");
+            printf("******************\n");
+            printf("Escriba su opcion: ");
+            scanf("%d", &seleccion);
+        } while(seleccion!=1 && seleccion!=2 && seleccion!=3);
 
-      switch(seleccion){
-         case 2:/* Sumatorio */
-            printf("Escriba el numero sobre el que quiere el sumatorio: ");
-            scanf("%d", &n);
-            res = 0;
-            for(aux = n;aux >= 1;aux--)
-               res += aux;
-            printf("El sumatorio es: %.0lf\n\n\n", res);
-            break;
+        switch(seleccion){
+            case 2:/* Sumatorio */
+                printf("Escriba el numero sobre el que quiere el sumatorio: ");
+                scanf("%d", &num);
+                res = 0;
+                for(i = 0;i <= num; i++)
+                    res += i;
+                printf("El sumatorio es: %d\n", res);
+                break;
 
-         case 3: /* Factorial */
-            printf("Escriba el numero sobre el que quiere el factorial: ");
-            scanf("%d", &n);
-            res = 1;
-            for(aux = n;aux >= 1;aux--)
-               res *= aux;
-            printf("El factorial es: %.0lf\n\n\n", res);
-            break;
-      }
-   }while(seleccion!=1);
+            case 3: /* Factorial */
+                printf("Escriba el numero sobre el que quiere el factorial: ");
+                scanf("%d", &num);
+                res = 1;
+                for(i = 1;i <= num; i++)
+                    res *= i;
+                printf("El factorial es: %d\n", res);
+                break;
+            }
+    }while(seleccion != SALIR);
 
-   return 0;
-}
+    return 0;
+}
 ~~~
 
 #### Ejercicio 5
