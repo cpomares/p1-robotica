@@ -1480,7 +1480,7 @@ que tener en cuenta dos aspectos:</p>
 </pre></div>
 </td></tr></table>
 
-<p>Para saber qué tipo de bucle hay que usar:</p>
+<p>Pero hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:</p>
 <ul>
 <li>Si el cuerpo del bucle (secuencia de instrucciones) se tiene que ejecutar al menos una vez: <code>do-while</code></li>
 <li>Si no (0 ó más veces):</li>
@@ -1515,7 +1515,7 @@ Su objetivo es recordar en un determinado lugar del programa un suceso determina
 </td></tr></table>
 
 <h3 id="bucles-for-anidados">Bucles <code>for</code> anidados<a class="headerlink" href="#bucles-for-anidados" title="Permanent link">&para;</a></h3>
-<p>Es frecuente utilizar un bucle for dentro de otro.</p>
+<p>Se puede utilizar un bucle for dentro de otro. Para cada iteración del bucle exterior, se ejecuta completo el bucle interior.</p>
 <p>Ejemplo, imprimimos las posiciones de una matriz:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1924,11 +1924,7 @@ Después se pregunta el precio que será un número decimal positivo. La lectura
 20
 21
 22
-23
-24
-25
-26
-27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
    <span class="kt">double</span> <span class="n">precio</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 
@@ -1936,17 +1932,13 @@ Después se pregunta el precio que será un número decimal positivo. La lectura
       <span class="k">do</span><span class="p">{</span>
          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Introduzca la cantidad vendida: &quot;</span><span class="p">);</span>
          <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-         <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Cantidad no valida&quot;</span><span class="p">);</span>
       <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">// validación de datos</span>
 
       <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
-         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduzca el precio: &quot;</span><span class="p">);</span>
          <span class="k">do</span><span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduzca el precio: &quot;</span><span class="p">);</span>
             <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">precio</span><span class="p">);</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">precio</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
-               <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Precio no valido&quot;</span><span class="p">);</span>
-            <span class="k">else</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">precio</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
                <span class="n">total</span><span class="o">+=</span><span class="n">n</span><span class="o">*</span><span class="n">precio</span><span class="p">;</span>
          <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">precio</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// validación de datos</span>
       <span class="p">}</span>
