@@ -625,6 +625,30 @@ do {
 
 ~~~
 
+### Bucles `for` anidados
+
+Es frecuente utilizar un bucle for dentro de otro. 
+
+Ejemplo, imprimimos las posiciones de una matriz:
+
+~~~c
+#define TAM 10
+
+int main() {
+   int fil, col;
+
+   for (fil = 0; fil < TAM; fil++){
+      for (col = 0; col < TAM; col++) {
+         printf("%4d-%d", fil, col);  //%4d añade 4 espacios delante del entero
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+~~~
+
+
 #### Bucles en Python
 
 Bucle while en Python:
