@@ -587,7 +587,7 @@ while(i < 10) {
 }
 ~~~
 
-Para saber qué tipo de bucle hay que usar:
+Pero hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:
 
 - Si el cuerpo del bucle (secuencia de instrucciones) se tiene que ejecutar al menos una vez: `do-while`
 - Si no (0 ó más veces):
@@ -627,7 +627,7 @@ do {
 
 ### Bucles `for` anidados
 
-Es frecuente utilizar un bucle for dentro de otro.
+Se puede utilizar un bucle for dentro de otro. Para cada iteración del bucle exterior, se ejecuta completo el bucle interior.
 
 Ejemplo, imprimimos las posiciones de una matriz:
 
@@ -853,17 +853,13 @@ int main(){
       do{
          printf("\nIntroduzca la cantidad vendida: ");
          scanf("%d",&n);
-         if(n<0)
-            printf("Cantidad no valida");
       }while(n<0);  // validación de datos
 
       if (n>0){
-         printf("Introduzca el precio: ");
          do{
+            printf("Introduzca el precio: ");
             scanf("%lf",&precio);
-            if(precio<0)
-               printf("Precio no valido");
-            else
+            if (precio > 0)
                total+=n*precio;
          }while(precio<0); // validación de datos
       }
@@ -876,7 +872,6 @@ int main(){
 #### Ejercicio 2
 
 Escribe un programa que escriba la tabla de multiplicar de un número pedido entre 1 y 10
-
 ~~~c
 int main() {
    int num, i;
@@ -937,8 +932,7 @@ Escribe un programa que muestre un menú como este:
 - si se elige 3 se calcula el factorial
 
 En las opciones 2 y 3 el programa pedirá el número sobre el que se calcula el sumatorio o el factorial. Tras calcular el sumatorio o el factorial e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente.
-
-~~~c
+~~~c
 #include <stdio.h>
 
 #define SALIR 1
