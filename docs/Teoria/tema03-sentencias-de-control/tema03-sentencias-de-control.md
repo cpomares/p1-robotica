@@ -625,9 +625,9 @@ do {
 
 ~~~
 
-### Bucles `for` anidados
+### Bucles anidados
 
-Se puede utilizar un bucle for dentro de otro. Para cada iteración del bucle exterior, se ejecuta completo el bucle interior.
+Se puede utilizar un bucle dentro de otro. Para cada iteración del bucle exterior, se ejecuta completo el bucle interior.
 
 Ejemplo, imprimimos las posiciones de una matriz:
 
