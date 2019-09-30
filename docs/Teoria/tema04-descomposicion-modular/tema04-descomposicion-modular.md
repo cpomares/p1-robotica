@@ -1,26 +1,15 @@
 
 # Tema 4: Descomposición modular
 
-## Contenidos
+## 1. Descomposición modular
 
-- [1. Descomposición modular](#1)
-- [2. Funciones](#2)
-- [3. Ámbito de las variables](#3)
-- [4. Paso de parámetros por valor y por referencia](#4)
-- [5. Estructura de un programa en C](#5)
-- [6. Bibliotecas del lenguaje C](#6)
-- [7. Ejercicios](#7)
-
-
-## <a name="1"/> 1. Descomposición modular
-
-Ya hemos visto que en C se utilizan funciones de biblioteca (como `printf` o `scanf`). También hemos utilizado la función `main`, que es la función principal del programa. Sin embargo, también es posible que el programador pueda definir sus propias funciones que realicen determinadas tareas.
+Ya hemos visto que en C se utilizan funciones de biblioteca (como `printf` o `scanf`). También hemos utilizado la función `main`, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.
 
 El uso de funciones definidas por el programador permite dividir un programa grande en un cierto número de componentes más pequeñas, cada una de las cuales con un propósito único e identificable. Por tanto, un programa en C se puede modularizar en subproblemas (programar de forma estructurada) mediante el uso adecuado de funciones.
 
 Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función `main` instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).
 
-Una de las habilidades fundamentales del pensamiento computacional es la **abstracción**: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones), ... Esto hace el código más fácil de entender, probar, modificar, compartir, reutilizar.
+Una de las habilidades fundamentales del pensamiento computacional es la **abstracción**: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones). Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.
 
 Ventajas de modularizar un programa:
 
@@ -41,7 +30,7 @@ Cuando empezamos a abordar un problema, lo mejor es ir dividiéndolo en subprob
 >- Encontrar la puerta del aula y salir- Guiado por el pasillo hasta encontrar las escaleras
 - Bajar las escaleras- Encontrar la puerta de salida y salirCada subproblema puede ser tratado por separado: analizado, dividido a su vez en subproblemas, probado de manera independiente, y tenemos la posibilidad de reutilizar código ya hecho
 
-## <a name="2"/> 2. Funciones
+## 2. Funciones
 
 Algunos lenguajes de programación tienen dos tipos de
 herramientas para modularizar: procedimientos y funciones. En el lenguaje C sólo existen las **funciones**.
@@ -211,7 +200,7 @@ Otros ejemplos:
 ~~~
 
 
-## <a name="3"/> 3. Ámbito de las variables
+## Ámbito de las variables
 
 **Variables locales**: Son variables que sólo son visibles y accesibles dentro del ámbito donde se han creado
 
@@ -250,7 +239,7 @@ una función ésta debe estar definida previamente.
 
 Esta segunda forma es más laboriosa pero evita errores en el orden de las funciones. Además, el tener todos los prototipos juntos simplifica localizar las características de cada función.
 
-## <a name="4"/> 4. Paso de parámetros por valor y por referencia
+## Paso de parámetros por valor y por referencia
 
 #### Paso de parámetros por valor
 
@@ -530,7 +519,7 @@ a, b, c = f()
 # Ahora "a" es 4, "b" es 5 y "c" es 6.
 ~~~
 
-## <a name="5"/> 5. Estructura de un programa en C
+## Estructura de un programa en C
 
 1. Comentarios: En primer lugar se deben incluir unos comentarios indicando qué hace el programa, requisitos, autor, fecha...
 2. Inclusión de las Bibliotecas:
@@ -547,7 +536,7 @@ final, los prototipos no son estrictamente necesarios.
 La comunicación entre funciones debe realizarse a través de parámetros, y **no** de variables globales
 
 
-## <a name="6"/> 6. Bibliotecas del lenguaje C
+## Bibliotecas del lenguaje C
 
 La mayoría de lenguajes de programación proporcionan una colección de procedimientos y funciones de uso común (bibliotecas o librerías). En lenguaje C, para hacer uso de los módulos incluidos en una biblioteca se utiliza la directiva del compilador `#include`.
 Existe una gran variedad de bibliotecas disponibles:
@@ -562,7 +551,7 @@ La mayoría de lenguajes de programación proporcionan una colección de proc
 
 ---
 
-## <a name="7"/> 7. Ejercicios
+## Ejercicios
 
 
 1. Define un programa que pida un número impar y dibuje una T de ese tamaño. Define las funciones que consideres necesarias.
@@ -974,6 +963,6 @@ int sumaIntervalo(int a, int b) {
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
