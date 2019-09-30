@@ -187,7 +187,8 @@ Datos de entrada: `dos números enteros`
 - Datos de entrada: `15 20`
 - Resultado esperado (salida por pantalla): 
 
-    ~~~text
+
+    ~~~text    
     Introduce alto [15..30] y ancho [8..20] de los números: 15  20
     .........#.....####################
     ........##.....#..................#
@@ -204,7 +205,8 @@ Datos de entrada: `dos números enteros`
     .........#.....#..................#
     .........#.....#..................#
     .........#.....####################
-~~~
+    ~~~
+
 
 ----
 
