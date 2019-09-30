@@ -64,9 +64,9 @@ elementos vistos en las funciones matemáticas:
 
 - **Definición**: Donde se define su nombre, los parámetroparámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
 del valor que se devuelve (tipo de la función).
-- **parámetros formales**: Son los nombres de los parámetros que aparecen en la definición de una función.
+- **Parámetros formales**: Son los nombres de los parámetros que aparecen en la definición de una función.
 - **Llamada a una función**: Es la instrucción donde se invoca a la función.
-- **parámetros actuales**: Son los parámetros utilizados en la llamada.
+- **Parámetros actuales**: Son los parámetros utilizados en la llamada.
 
 Ejemplo: implementamos en C la función matemática f(x)=x+5:
 
@@ -204,7 +204,7 @@ Otros ejemplos:
 
 **Variables locales**: Son variables que sólo son visibles y accesibles dentro del ámbito donde se han creado
 
-- Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece. - Si esta declaración se realiza dentro de un bloque de código (dentro de un if, switch, for, while ...), sólo es accesible dentro del bloque de código
+- Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece.- Si esta declaración se realiza dentro de un bloque de código (dentro de un if, switch, for, while ...), sólo es accesible dentro del bloque de código
 
 **Variables globales** (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a **efectos laterales** erróneos que suelen ser muy difícil de localizar.
 
@@ -309,7 +309,7 @@ TMotor leerPalanca() {
       printf("¿En qué posición está la palanca del cortacésped? 0-Avance 1-Restroceso\n");
       scanf("%d", &direccionMotor);
    }while(direccionMotor != Avance && direccionMotor != Retroceso);
-   
+
    return direccionMotor;
 }
 
