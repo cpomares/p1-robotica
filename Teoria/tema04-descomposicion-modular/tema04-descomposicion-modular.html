@@ -36,7 +36,7 @@
     
     
       
-        <title>Tema 4: Descomposición modular - P1 Robótica</title>
+        <title>Tema 4 - P1 Robótica</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tema 4: Descomposición modular
+                Tema 4
               
             </span>
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -236,6 +238,124 @@
     <a href="../tema03-sentencias-de-control/tema03-sentencias-de-control.html" title="Tema 3" class="md-nav__link">
       Tema 3
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 4
+      </label>
+    
+    <a href="tema04-descomposicion-modular.html" title="Tema 4" class="md-nav__link md-nav__link--active">
+      Tema 4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descomposicion-modular" title="1. Descomposición modular" class="md-nav__link">
+    1. Descomposición modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-funciones" title="2. Funciones" class="md-nav__link">
+    2. Funciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-una-funcion-en-c" title="Sintaxis de una función en C" class="md-nav__link">
+    Sintaxis de una función en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-de-las-variables" title="Ámbito de las variables" class="md-nav__link">
+    Ámbito de las variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donde-definir-las-funciones-en-c" title="Dónde definir las funciones en C" class="md-nav__link">
+    Dónde definir las funciones en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-de-parametros-por-valor-y-por-referencia" title="Paso de parámetros por valor y por referencia" class="md-nav__link">
+    Paso de parámetros por valor y por referencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-un-programa-en-c" title="Estructura de un programa en C" class="md-nav__link">
+    Estructura de un programa en C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliotecas-del-lenguaje-c" title="Bibliotecas del lenguaje C" class="md-nav__link">
+    Bibliotecas del lenguaje C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" title="Ejercicios" class="md-nav__link">
+    Ejercicios
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -299,6 +419,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica03/practica03.html" title="Práctica 3: Sentencias de interación" class="md-nav__link">
+      Práctica 3: Sentencias de interación
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -325,15 +457,76 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contenidos" title="Contenidos" class="md-nav__link">
-    Contenidos
+  <a href="#1-descomposicion-modular" title="1. Descomposición modular" class="md-nav__link">
+    1. Descomposición modular
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#2-funciones" title="2. Funciones" class="md-nav__link">
+    2. Funciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#sintaxis-de-una-funcion-en-c" title="Sintaxis de una función en C" class="md-nav__link">
     Sintaxis de una función en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-de-las-variables" title="Ámbito de las variables" class="md-nav__link">
+    Ámbito de las variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donde-definir-las-funciones-en-c" title="Dónde definir las funciones en C" class="md-nav__link">
+    Dónde definir las funciones en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-de-parametros-por-valor-y-por-referencia" title="Paso de parámetros por valor y por referencia" class="md-nav__link">
+    Paso de parámetros por valor y por referencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-un-programa-en-c" title="Estructura de un programa en C" class="md-nav__link">
+    Estructura de un programa en C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliotecas-del-lenguaje-c" title="Bibliotecas del lenguaje C" class="md-nav__link">
+    Bibliotecas del lenguaje C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" title="Ejercicios" class="md-nav__link">
+    Ejercicios
   </a>
   
 </li>
@@ -356,21 +549,11 @@
                 
                 
                 <h1 id="tema-4-descomposicion-modular">Tema 4: Descomposición modular<a class="headerlink" href="#tema-4-descomposicion-modular" title="Permanent link">&para;</a></h1>
-<h2 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="#1">1. Descomposición modular</a></li>
-<li><a href="#2">2. Funciones</a></li>
-<li><a href="#3">3. Ámbito de las variables</a></li>
-<li><a href="#4">4. Paso de parámetros por valor y por referencia</a></li>
-<li><a href="#5">5. Estructura de un programa en C</a></li>
-<li><a href="#6">6. Bibliotecas del lenguaje C</a></li>
-<li><a href="#7">7. Ejercicios</a></li>
-</ul>
-<h2 id="1-descomposicion-modular"><a name="1"/> 1. Descomposición modular<a class="headerlink" href="#1-descomposicion-modular" title="Permanent link">&para;</a></h2>
-<p>Ya hemos visto que en C se utilizan funciones de biblioteca (como <code>printf</code> o <code>scanf</code>). También hemos utilizado la función <code>main</code>, que es la función principal del programa. Sin embargo, también es posible que el programador pueda definir sus propias funciones que realicen determinadas tareas.</p>
+<h2 id="1-descomposicion-modular">1. Descomposición modular<a class="headerlink" href="#1-descomposicion-modular" title="Permanent link">&para;</a></h2>
+<p>Ya hemos visto que en C se utilizan funciones de biblioteca (como <code>printf</code> o <code>scanf</code>). También hemos utilizado la función <code>main</code>, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.</p>
 <p>El uso de funciones definidas por el programador permite dividir un programa grande en un cierto número de componentes más pequeñas, cada una de las cuales con un propósito único e identificable. Por tanto, un programa en C se puede modularizar en subproblemas (programar de forma estructurada) mediante el uso adecuado de funciones.</p>
 <p>Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función <code>main</code> instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).</p>
-<p>Una de las habilidades fundamentales del pensamiento computacional es la <strong>abstracción</strong>: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones), ... Esto hace el código más fácil de entender, probar, modificar, compartir, reutilizar.</p>
+<p>Una de las habilidades fundamentales del pensamiento computacional es la <strong>abstracción</strong>: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones). Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.</p>
 <p>Ventajas de modularizar un programa:</p>
 <ul>
 <li><strong>Generalización</strong>: si un programa tiene instrucciones repetidas en distintas partes, esas instrucciones repetidas se pueden agrupar en una sola función, a la que acceder cuando sea necesario.</li>
@@ -395,7 +578,7 @@
 </ul>
 </blockquote>
 <p>Cada subproblema puede ser tratado por separado: analizado, dividido a su vez en subproblemas, probado de manera independiente, y tenemos la posibilidad de reutilizar código ya hecho</p>
-<h2 id="2-funciones"><a name="2"/> 2. Funciones<a class="headerlink" href="#2-funciones" title="Permanent link">&para;</a></h2>
+<h2 id="2-funciones">2. Funciones<a class="headerlink" href="#2-funciones" title="Permanent link">&para;</a></h2>
 <p>Algunos lenguajes de programación tienen dos tipos de
 herramientas para modularizar: procedimientos y funciones. En el lenguaje C sólo existen las <strong>funciones</strong>.</p>
 <p>Un programa en C está estructurado en funciones. De hecho, <code>main()</code> es una función, es la función principal.</p>
@@ -604,7 +787,7 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 </pre></div>
 </td></tr></table>
 
-<h2 id="3-ambito-de-las-variables"><a name="3"/> 3. Ámbito de las variables<a class="headerlink" href="#3-ambito-de-las-variables" title="Permanent link">&para;</a></h2>
+<h2 id="ambito-de-las-variables">Ámbito de las variables<a class="headerlink" href="#ambito-de-las-variables" title="Permanent link">&para;</a></h2>
 <p><strong>Variables locales</strong>: Son variables que sólo son visibles y accesibles dentro del ámbito donde se han creado</p>
 <ul>
 <li>Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece. </li>
@@ -651,7 +834,7 @@ una función ésta debe estar definida previamente.
 </li>
 </ol>
 <p>Esta segunda forma es más laboriosa pero evita errores en el orden de las funciones. Además, el tener todos los prototipos juntos simplifica localizar las características de cada función.</p>
-<h2 id="4-paso-de-parametros-por-valor-y-por-referencia"><a name="4"/> 4. Paso de parámetros por valor y por referencia<a class="headerlink" href="#4-paso-de-parametros-por-valor-y-por-referencia" title="Permanent link">&para;</a></h2>
+<h2 id="paso-de-parametros-por-valor-y-por-referencia">Paso de parámetros por valor y por referencia<a class="headerlink" href="#paso-de-parametros-por-valor-y-por-referencia" title="Permanent link">&para;</a></h2>
 <h4>Paso de parámetros por valor</h4>
 <p>Cuando se produce la llamada a una función, se transfiere la ejecución del programa al cuerpo de la función. Se crea un <strong>nuevo ámbito local</strong> donde la función se ejecuta. Pasos:</p>
 <ol>
@@ -1089,7 +1272,7 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 </pre></div>
 </td></tr></table>
 
-<h2 id="5-estructura-de-un-programa-en-c"><a name="5"/> 5. Estructura de un programa en C<a class="headerlink" href="#5-estructura-de-un-programa-en-c" title="Permanent link">&para;</a></h2>
+<h2 id="estructura-de-un-programa-en-c">Estructura de un programa en C<a class="headerlink" href="#estructura-de-un-programa-en-c" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Comentarios: En primer lugar se deben incluir unos comentarios indicando qué hace el programa, requisitos, autor, fecha...</li>
 <li>Inclusión de las Bibliotecas:<ul>
@@ -1110,7 +1293,7 @@ final, los prototipos no son estrictamente necesarios.</li>
 </li>
 </ol>
 <p>La comunicación entre funciones debe realizarse a través de parámetros, y <strong>no</strong> de variables globales</p>
-<h2 id="6-bibliotecas-del-lenguaje-c"><a name="6"/> 6. Bibliotecas del lenguaje C<a class="headerlink" href="#6-bibliotecas-del-lenguaje-c" title="Permanent link">&para;</a></h2>
+<h2 id="bibliotecas-del-lenguaje-c">Bibliotecas del lenguaje C<a class="headerlink" href="#bibliotecas-del-lenguaje-c" title="Permanent link">&para;</a></h2>
 <p>La mayoría de lenguajes de programación proporcionan una colección de procedimientos y funciones de uso común (bibliotecas o librerías). En lenguaje C, para hacer uso de los módulos incluidos en una biblioteca se utiliza la directiva del compilador <code>#include</code>.</p>
 <p>Existe una gran variedad de bibliotecas disponibles:
   - Funciones matemáticas
@@ -1120,7 +1303,7 @@ final, los prototipos no son estrictamente necesarios.</li>
 <h4>Algunas funciones predefinidas en C</h4>
 <p><img src="imagenes/predef.png" width="500px"/></p>
 <hr />
-<h2 id="7-ejercicios"><a name="7"/> 7. Ejercicios<a class="headerlink" href="#7-ejercicios" title="Permanent link">&para;</a></h2>
+<h2 id="ejercicios">Ejercicios<a class="headerlink" href="#ejercicios" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Define un programa que pida un número impar y dibuje una T de ese tamaño. Define las funciones que consideres necesarias.
@@ -1849,7 +2032,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 </td></tr></table>
 
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2018-19<br />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
@@ -1868,6 +2051,41 @@ Cristina Pomares Puig</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema03-sentencias-de-control/tema03-sentencias-de-control.html" title="Tema 3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Tema 3
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 0: Entorno Linux y herramientas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
