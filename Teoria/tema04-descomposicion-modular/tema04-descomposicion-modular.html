@@ -648,7 +648,9 @@ del valor que se devuelve (tipo de la función).</li>
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Prototipo o declaración de la función f</span>
 
@@ -663,6 +665,8 @@ del valor que se devuelve (tipo de la función).</li>
    <span class="n">num3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num2</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %d, %d y %d.&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">num3</span><span class="p">));</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Definición de la función f</span>
@@ -793,8 +797,6 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 <li>Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece.</li>
 <li>Si esta declaración se realiza dentro de un bloque de código (dentro de un if, switch, for, while ...), sólo es accesible dentro del bloque de código</li>
 </ul>
-<p><strong>Variables globales</strong> (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a <strong>efectos laterales</strong> erróneos que suelen ser muy difícil de localizar.</p>
-<p>Ejemplos:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -817,6 +819,7 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 </pre></div>
 </td></tr></table>
 
+<p><strong>Variables globales</strong> (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a <strong>efectos laterales</strong> erróneos que suelen ser muy difícil de localizar.</p>
 <h3 id="donde-definir-las-funciones-en-c">Dónde definir las funciones en C<a class="headerlink" href="#donde-definir-las-funciones-en-c" title="Permanent link">&para;</a></h3>
 <p>En un programa en C las funciones pueden situarse en dos sitios distintos:</p>
 <ol>
@@ -845,12 +848,12 @@ variables de los parámetros formales.<ul>
 el primer parámetro formal, el segundo en el segundo...
 Esta copia no se hace por el nombre de los respectivos parámetros formales y actuales.</li>
 <li>Se copia el valor: si el argumento
-actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos argumentos actuales y formales son variables distintas.</li>
+actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos parámetros actuales y formales son variables distintas.</li>
 </ul>
 </li>
 <li>Se declaran las variables locales a la función.</li>
 <li>Se ejecuta el código de la función en ese ámbito local.</li>
-<li>Al terminar la función las variables LOCALES son destruidas, es decir, el <strong>ámbito donde la función se ejecutó desaparece</strong>. Si los argumentos formales se modifican dentro de la función, no se modificarán los argumentos
+<li>Al terminar la función las variables LOCALES son destruidas, es decir, el <strong>ámbito donde la función se ejecutó desaparece</strong>. Si los parámetros formales se modifican dentro de la función, no se modificarán los argumentos
 actuales, puesto que son variables distintas.</li>
 </ol>
 <p>Ejemplo:</p>
@@ -876,7 +879,9 @@ actuales, puesto que son variables distintas.</li>
 20
 21
 22
-23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*¿Qué salida produce el siguiente programa para distintas entradas?*/</span>
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*¿Qué salida produce el siguiente programa para distintas entradas?*/</span>
 
 <span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
@@ -892,6 +897,8 @@ actuales, puesto que son variables distintas.</li>
    <span class="n">z</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %.1f, %.1f y %.1f.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">float</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">){</span>
@@ -935,7 +942,9 @@ actuales, puesto que son variables distintas.</li>
 30
 31
 32
-33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">Avance</span><span class="p">,</span> <span class="n">Retroceso</span><span class="p">}</span> <span class="n">TMotor</span><span class="p">;</span>
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">Avance</span><span class="p">,</span> <span class="n">Retroceso</span><span class="p">}</span> <span class="n">TMotor</span><span class="p">;</span>
 
 <span class="n">TMotor</span> <span class="nf">leerPalanca</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">modificaEstadoMotor</span><span class="p">(</span><span class="n">TMotor</span><span class="p">);</span>
@@ -945,6 +954,8 @@ actuales, puesto que son variables distintas.</li>
 
    <span class="n">estadoMotor</span> <span class="o">=</span> <span class="n">leerPalanca</span><span class="p">();</span>
    <span class="n">modificaEstadoMotor</span><span class="p">(</span><span class="n">estadoMotor</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">TMotor</span> <span class="nf">leerPalanca</span><span class="p">()</span> <span class="p">{</span>
@@ -1012,7 +1023,9 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 14
 15
 16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span> <span class="c1">// prototipo de la función swap</span>
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span> <span class="c1">// prototipo de la función swap</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
@@ -1021,6 +1034,8 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
    <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;x: %d, y: %d, z:%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="cm">/* Intercambio de valores entre dos variables */</span>
@@ -1107,13 +1122,17 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">);</span> <span class="c1">// prototipo</span>
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">);</span> <span class="c1">// prototipo</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">resultado</span><span class="p">;</span>
 
    <span class="n">resultado</span> <span class="o">=</span> <span class="n">elevarAlCuadrado</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El resultado es: %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// definición</span>
@@ -1145,7 +1164,9 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 21
 22
 23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Ejemplo</span> <span class="mi">4</span><span class="o">:</span>
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Ejemplo</span> <span class="mi">4</span><span class="o">:</span>
 
 <span class="c1">// Prototipo o declaración de la función</span>
 <span class="kt">int</span> <span class="n">potencia</span><span class="p">(</span><span class="kt">int</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponente</span><span class="p">);</span>
@@ -1155,6 +1176,8 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
    <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
 
    <span class="n">res</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>  <span class="c1">// Llamada a la función</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 
@@ -1201,7 +1224,9 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 26
 27
 28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Prototipos</span>
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Prototipos</span>
 <span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">pedirXY</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
 
@@ -1210,6 +1235,8 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 
    <span class="n">pedirXY</span><span class="p">(</span><span class="o">&amp;</span><span class="n">posX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">posY</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;X: %d, Y: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Definiciones de funciones</span>
@@ -1468,7 +1495,8 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 41
 42
 43
-44</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+44
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
 <span class="c1">// Prototipos de funciones</span>
 <span class="c1">///////////</span>
 <span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">();</span>
@@ -1483,6 +1511,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
    <span class="n">n</span> <span class="o">=</span> <span class="n">pedirDato</span><span class="p">();</span>
    <span class="n">dibujaT</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">//////////</span>
@@ -1561,7 +1590,9 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 43
 44
 45
-46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
 <span class="c1">// Prototipos de funciones</span>
 <span class="c1">///////////</span>
 <span class="kt">void</span> <span class="nf">pedirDatos</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="p">);</span>
@@ -1577,6 +1608,8 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
    <span class="n">pedirDatos</span><span class="p">(</span><span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">);</span>
    <span class="n">sumaYCuenta</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">suma</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cuenta</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma entre %d y %d es: %d y hay %d números</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">cuenta</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">//////////</span>
@@ -1672,7 +1705,9 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 59
 60
 61
-62</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
 <span class="c1">// Prototipos de funciones</span>
 <span class="c1">///////////</span>
 <span class="kt">void</span> <span class="nf">mostrar_menu</span><span class="p">();</span>
@@ -1711,6 +1746,8 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
             <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Debe introducir una opción de 1 a 3</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
       <span class="p">}</span>
    <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">opcion</span><span class="o">!=</span><span class="mi">3</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">//////////</span>
@@ -1772,7 +1809,8 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 32
 33
 34
-35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
 <span class="c1">// Prototipo de función</span>
 <span class="c1">///////////</span>
 <span class="kt">int</span> <span class="nf">binarioADecimal</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
@@ -1792,6 +1830,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
    <span class="c1">// Mostrar Resultados</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El numero %d en base 2 equivale a %d en base 10</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num10</span><span class="p">);</span>
 
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">//////////</span>
@@ -1944,8 +1983,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 28
 29
 30
-31
-32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">cuentaCaracteres</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">cuentaCaracteres</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kt">char</span> <span class="n">primero</span><span class="p">,</span> <span class="n">ultimo</span><span class="p">;</span>
@@ -1955,7 +1993,6 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El primer carácter es: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">primero</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El último es: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ultimo</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El total es: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
-
 
    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
