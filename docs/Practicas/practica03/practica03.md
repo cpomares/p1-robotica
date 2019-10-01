@@ -4,6 +4,8 @@
 
 Escribe un programa que invierta los dígitos de un entero positivo solicitado por teclado (hay que validar el dato) y lo almacene en una variable. La variable que contiene el número invertido se mostrará por pantalla posteriormente.
 
+Pista: debes usar las operaciones `/10`  `%10`  `*10`.
+
 **Ejemplo de ejecución:**
 
 ~~~text
@@ -25,7 +27,7 @@ Datos de entrada:  `número positivo`
 
 ### Ejercicio 2 ###
 
-Implementa un programa que calcule el resultado acumulado de aplicar sucesivas operaciones aritméticas. El programa inicialmente solicitará un número entero y a continuación irá solicitando un operador aritmético y el siguiente operando, acumulando el resultado para la siguiente operación. 
+Implementa un programa que calcule el resultado acumulado de aplicar sucesivas operaciones aritméticas. El programa inicialmente solicitará un número entero y a continuación irá solicitando un operador aritmético y el siguiente operando, acumulando el resultado para la siguiente operación.
 
 Los operadores aritméticos permitidos serán ‘+’, ‘-‘, ‘*’, ‘/‘. En caso de introducir un operador incorrecto, se volverá a pedir. El programa deberá terminar cuando el carácter introducido como operador sea un punto ‘.’
 Hay que tener en cuenta que no se puede hacer una división por cero, en cuyo caso se mostrará el mensaje “Error: división por cero” y se solicitará la siguiente operación a realizar.
@@ -47,16 +49,16 @@ El resultado final acumulado es: 2
 **Casos de prueba:**
 
 - Datos de entrada: `25 .`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
     ~~~text
     Introduce un número: 25
     Introduce operador aritmético ('.' para terminar): .
     El resultado final acumulado es: 25
     ~~~
-    
+
 - Datos de entrada: `34 - 14 / 0 .`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
     ~~~text
     Introduce un número: 34
@@ -94,7 +96,7 @@ Datos de entrada: `número impar`
 **Casos de prueba:**
 
 - Datos de entrada: `5`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
     ~~~text
     Introduce un número: 5
@@ -104,9 +106,9 @@ Datos de entrada: `número impar`
     1       2
     1
     ~~~
-    
+
 - Datos de entrada: `9`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
     ~~~text
     Introduce un número: 9
@@ -124,7 +126,7 @@ Datos de entrada: `número impar`
 
 ### Ejercicio 4 ###
 
-Implementa un programa que dibuje en pantalla el número 10 con un alto y ancho especificado. Inicialmente se pedirá el alto y ancho cuyos valores deben están incluidos en los intervalos [15..30] y [8..20] respectivamente. Se validarán dichos valores introducidos y cuando sean correctos, se procederá a dibujar el número 10. 
+Implementa un programa que dibuje en pantalla el número 10 con un alto y ancho especificado. Inicialmente se pedirá el alto y ancho cuyos valores deben están incluidos en los intervalos [15..30] y [8..20] respectivamente. Se validarán dichos valores introducidos y cuando sean correctos, se procederá a dibujar el número 10.
 Utilizaremos ‘#’ como carácter de relleno, y ‘.’ como carácter de fondo (en vez de usar el carácter blanco ‘ ‘).
 Los dos dígitos estarán espaciados por 5 caracteres.
 Para dibujar la diagonal del número 1, usaremos la mitad del ancho especificado.
@@ -157,7 +159,7 @@ Datos de entrada: `dos números enteros`
 **Casos de prueba:**
 
 - Datos de entrada: `20 5` `20 8`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
     ~~~text
     Introduce alto [15..30] y ancho [8..20] de los números: 20 5
@@ -185,7 +187,7 @@ Datos de entrada: `dos números enteros`
     ~~~
 
 - Datos de entrada: `15 20`
-- Resultado esperado (salida por pantalla): 
+- Resultado esperado (salida por pantalla):
 
 
     ~~~text    
