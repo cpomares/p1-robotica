@@ -101,6 +101,8 @@ void main() {
    num3 = f(num2+1);
 
    printf("\n- Valores: %d, %d y %d.", num1, num2, f(num3));
+   
+   return 0;
 }
 
 int f (int x) {   // Definición de la función f
@@ -206,9 +208,6 @@ Otros ejemplos:
 
 - Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece.- Si esta declaración se realiza dentro de un bloque de código (dentro de un if, switch, for, while ...), sólo es accesible dentro del bloque de código
 
-**Variables globales** (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a **efectos laterales** erróneos que suelen ser muy difícil de localizar.
-
-Ejemplos:
 
 ~~~c
 int main() {
@@ -222,6 +221,10 @@ int main() {
    return 0;
 }
 ~~~
+
+**Variables globales** (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a **efectos laterales** erróneos que suelen ser muy difícil de localizar.
+
+
 
 ### Dónde definir las funciones en C
 
@@ -252,10 +255,10 @@ variables de los parámetros formales.
 el primer parámetro formal, el segundo en el segundo...
 	Esta copia no se hace por el nombre de los respectivos parámetros formales y actuales.
 	- Se copia el valor: si el argumento
-actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos argumentos actuales y formales son variables distintas.
+actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos parámetros actuales y formales son variables distintas.
 3. Se declaran las variables locales a la función.
 4. Se ejecuta el código de la función en ese ámbito local.
-5. Al terminar la función las variables LOCALES son destruidas, es decir, el **ámbito donde la función se ejecutó desaparece**. Si los argumentos formales se modifican dentro de la función, no se modificarán los argumentos
+5. Al terminar la función las variables LOCALES son destruidas, es decir, el **ámbito donde la función se ejecutó desaparece**. Si los parámetros formales se modifican dentro de la función, no se modificarán los argumentos
 actuales, puesto que son variables distintas.
 
 Ejemplo:
@@ -277,6 +280,8 @@ void main(){
    z = func(y,x);
 
    printf("\n- Valores: %.1f, %.1f y %.1f.", x, y, z);
+   
+   return 0;
 }
 
 float func (float x, float y){
@@ -300,6 +305,8 @@ int main() {
 
    estadoMotor = leerPalanca();
    modificaEstadoMotor(estadoMotor);
+   
+   return 0;
 }
 
 TMotor leerPalanca() {
@@ -359,6 +366,8 @@ int main(){
    swap(&y, &z);
 
    printf("x: %d, y: %d, z:%d\n", x, y, z);
+   
+   return 0;
 }
 
 /* Intercambio de valores entre dos variables */
@@ -372,7 +381,6 @@ void swap (int *x, int *y){ // definición de la función swap
 Ejemplo 2:
 
 ~~~c
-
 void dividirSeguro(int , int , int *, bool *);
 
 int main() {
@@ -416,6 +424,8 @@ int main() {
    resultado = elevarAlCuadrado(valor);
 
    printf("El resultado es: %d \n", resultado);
+   
+   return 0;
 }
 
 int elevarAlCuadrado(int entrada) { // definición
@@ -435,6 +445,8 @@ int main() {
    int res;
 
    res = potencia(2,4);  // Llamada a la función
+   
+   return 0;
 }
 
 
@@ -463,6 +475,8 @@ int main() {
 
    pedirXY(&posX, &posY);
    printf("X: %d, Y: %d\n", posX, posY);
+   
+   return 0;
 }
 
 // Definiciones de funciones
@@ -647,7 +661,8 @@ int main() {
 
    n = pedirDato();
    dibujaT(n);
-
+   
+   return 0;
 }
 
 //////////
@@ -698,6 +713,8 @@ int main() {
    pedirDatos(&n1, &n2);
    sumaYCuenta(n1, n2, &suma, &cuenta);
    printf("La suma entre %d y %d es: %d y hay %d números\n", n1, n2, suma, cuenta);
+   
+   return 0;
 }
 
 //////////
@@ -772,6 +789,8 @@ int main(){
             printf("Debe introducir una opción de 1 a 3\n");
       }
    } while(opcion!=3);
+   
+   return 0;
 }
 
 //////////
@@ -820,7 +839,8 @@ int main() {
 
    // Mostrar Resultados
    printf("El numero %d en base 2 equivale a %d en base 10\n", num2, num10);
-
+   
+   return 0;
 }
 
 //////////
@@ -906,7 +926,6 @@ int main() {
    printf("El primer carácter es: %c\n", primero);
    printf("El último es: %c\n", ultimo);
    printf("El total es: %d\n", total);
-
 
    return 0;
 }
