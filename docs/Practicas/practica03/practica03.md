@@ -4,6 +4,14 @@
 
 Escribe un programa que invierta los dígitos de un entero positivo solicitado por teclado (hay que validar el dato) y lo almacene en una variable. La variable que contiene el número invertido se mostrará por pantalla posteriormente.
 
+Para obtener el número invertido, de debe empezar en el número 0 e ir añadiéndole las cifras por la derecha:
+
+1. Obtener el último dígito
+2. Añadirlo al número invertido (tener en cuenta las decenas, centenas, etc).
+3. Reducir en un dígito el número original
+
+Se repetirá este proceso hasta que el número original no tenga dígitos. 
+
 Pista: debes usar las operaciones `/10`  `%10`  `*10`.
 
 **Ejemplo de ejecución:**
