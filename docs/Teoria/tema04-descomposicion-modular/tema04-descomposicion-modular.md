@@ -354,7 +354,7 @@ La función recibe la referencia a la posición de memoria donde se encuentra 
 	- Usar el operador de indirección `*` (asterisco) delante del argumento formal correspondiente.
 	- Se usará el operador `*` cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función.
 
-Ejemplo 1:
+Ejemplo:
 
 ~~~c
 void swap (int*, int*); // prototipo de la función swap
@@ -378,7 +378,7 @@ void swap (int *x, int *y){ // definición de la función swap
 }
 ~~~
 
-Ejemplo 2:
+Por lo general, usaremos funciones con paso de parámetros **por valor** cuando sólo queramos devolver **un resultado**, y éste se devuelve con `return`. Y cuando se necesite devolver **más de un resultado**, usaremos funciones con paso de parámetros **por referencia**, siendo esta función tipo `void`.
 
 ~~~c
 int elevarAlCuadrado(int entrada); // prototipo
@@ -395,11 +395,10 @@ int main() {
 int elevarAlCuadrado(int entrada) { // definición
       return entrada * entrada;
 }
-
 ~~~
 
 ~~~c
-Ejemplo 3:
+Ejemplo:
 
 // Prototipo o declaración de la función
 int potencia(int base, int exponente);
@@ -427,7 +426,7 @@ int potencia(int base, int exponente) {
 }
 ~~~
 
-Ejemplo 4:
+Ejemplo:
 
 ~~~c
 // Prototipos
@@ -463,8 +462,6 @@ void pedirXY(int *x, int *y) {
 }
 
 ~~~
-
-Por lo general, usaremos funciones con paso de parámetros **por valor** cuando sólo queramos devolver **un resultado**, y éste se devuelve con `return`. Y cuando se necesite devolver **más de un resultado**, usaremos funciones con paso de parámetros **por referencia**, siendo esta función tipo `void`.
 
 #### Funciones en Python
 
