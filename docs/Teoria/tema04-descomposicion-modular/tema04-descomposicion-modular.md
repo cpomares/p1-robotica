@@ -101,7 +101,7 @@ void main() {
    num3 = f(num2+1);
 
    printf("\n- Valores: %d, %d y %d.", num1, num2, f(num3));
-   
+
    return 0;
 }
 
@@ -280,7 +280,7 @@ void main(){
    z = func(y,x);
 
    printf("\n- Valores: %.1f, %.1f y %.1f.", x, y, z);
-   
+
    return 0;
 }
 
@@ -305,7 +305,7 @@ int main() {
 
    estadoMotor = leerPalanca();
    modificaEstadoMotor(estadoMotor);
-   
+
    return 0;
 }
 
@@ -366,7 +366,7 @@ int main(){
    swap(&y, &z);
 
    printf("x: %d, y: %d, z:%d\n", x, y, z);
-   
+
    return 0;
 }
 
@@ -381,42 +381,6 @@ void swap (int *x, int *y){ // definición de la función swap
 Ejemplo 2:
 
 ~~~c
-void dividirSeguro(int , int , int *, bool *);
-
-int main() {
-    int valor1, valor2, result;
-    bool error;
-
-    printf("Introduce dos numeros:\n");
-    scanf("%d",&valor1);
-    scanf("%d",&valor2);
-
-    dividirSeguro(valor1, valor2, &result, &error);
-
-    if(error)
-        printf("Error: Division por cero\n");
-    else
-        printf("%d/%d = %d\n",valor1, valor2, result);
-
-    return 0;
-}
-
-/* División segura */
-void dividirSeguro(int dividendo, int divisor, int *result, bool *error) {
-    *error = false;
-
-    if(divisor != 0)
-        *result = dividendo / divisor;
-    else
-        *error = true;
-
-}
-
-~~~
-
-Ejemplo 3:
-
-~~~c
 int elevarAlCuadrado(int entrada); // prototipo
 int main() {
    int valor = 7, resultado;
@@ -424,7 +388,7 @@ int main() {
    resultado = elevarAlCuadrado(valor);
 
    printf("El resultado es: %d \n", resultado);
-   
+
    return 0;
 }
 
@@ -435,7 +399,7 @@ int elevarAlCuadrado(int entrada) { // definición
 ~~~
 
 ~~~c
-Ejemplo 4:
+Ejemplo 3:
 
 // Prototipo o declaración de la función
 int potencia(int base, int exponente);
@@ -445,7 +409,7 @@ int main() {
    int res;
 
    res = potencia(2,4);  // Llamada a la función
-   
+
    return 0;
 }
 
@@ -463,7 +427,7 @@ int potencia(int base, int exponente) {
 }
 ~~~
 
-Ejemplo 5:
+Ejemplo 4:
 
 ~~~c
 // Prototipos
@@ -475,7 +439,7 @@ int main() {
 
    pedirXY(&posX, &posY);
    printf("X: %d, Y: %d\n", posX, posY);
-   
+
    return 0;
 }
 
@@ -661,7 +625,7 @@ int main() {
 
    n = pedirDato();
    dibujaT(n);
-   
+
    return 0;
 }
 
@@ -713,7 +677,7 @@ int main() {
    pedirDatos(&n1, &n2);
    sumaYCuenta(n1, n2, &suma, &cuenta);
    printf("La suma entre %d y %d es: %d y hay %d números\n", n1, n2, suma, cuenta);
-   
+
    return 0;
 }
 
@@ -789,7 +753,7 @@ int main(){
             printf("Debe introducir una opción de 1 a 3\n");
       }
    } while(opcion!=3);
-   
+
    return 0;
 }
 
@@ -839,7 +803,7 @@ int main() {
 
    // Mostrar Resultados
    printf("El numero %d en base 2 equivale a %d en base 10\n", num2, num10);
-   
+
    return 0;
 }
 
