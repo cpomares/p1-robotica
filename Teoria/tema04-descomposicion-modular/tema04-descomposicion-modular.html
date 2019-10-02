@@ -1061,69 +1061,6 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 11
 12
 13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">dividirSeguro</span><span class="p">(</span><span class="kt">int</span> <span class="p">,</span> <span class="kt">int</span> <span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="p">,</span> <span class="kt">bool</span> <span class="o">*</span><span class="p">);</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">,</span> <span class="n">result</span><span class="p">;</span>
-    <span class="kt">bool</span> <span class="n">error</span><span class="p">;</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce dos numeros:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">valor1</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">valor2</span><span class="p">);</span>
-
-    <span class="n">dividirSeguro</span><span class="p">(</span><span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error: Division por cero</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">else</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d/%d = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="cm">/* División segura */</span>
-<span class="kt">void</span> <span class="nf">dividirSeguro</span><span class="p">(</span><span class="kt">int</span> <span class="n">dividendo</span><span class="p">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="kt">bool</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">divisor</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="n">dividendo</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Ejemplo 3:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
 14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">);</span> <span class="c1">// prototipo</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">resultado</span><span class="p">;</span>
@@ -1166,7 +1103,7 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 23
 24
 25
-26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Ejemplo</span> <span class="mi">4</span><span class="o">:</span>
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Ejemplo</span> <span class="mi">3</span><span class="o">:</span>
 
 <span class="c1">// Prototipo o declaración de la función</span>
 <span class="kt">int</span> <span class="n">potencia</span><span class="p">(</span><span class="kt">int</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponente</span><span class="p">);</span>
@@ -1195,7 +1132,7 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 </pre></div>
 </td></tr></table>
 
-<p>Ejemplo 5:</p>
+<p>Ejemplo 4:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
