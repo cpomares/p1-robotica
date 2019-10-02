@@ -263,6 +263,33 @@ actuales, puesto que son variables distintas.
 
 Ejemplo:
 
+Ejemplo:
+
+~~~c
+int func (int); // prototipo
+
+int main(){
+    int x, y;
+
+    printf("\n- Introduzca un número: ");
+    scanf("%d",&x);
+
+    y = func (x);
+
+    printf("\n- Valores: %d %d\n", x, y);
+
+    return 0;
+}
+
+int func (int x){
+	x = x * 2;
+	return x;
+}
+
+~~~
+
+Ejemplo:
+
 ~~~c
 /*¿Qué salida produce el siguiente programa para distintas entradas?*/
 
@@ -270,26 +297,25 @@ Ejemplo:
 
 float func (float x, float y); // prototipo
 
-void main(){
-   float x, y, z;
+int main(){
+	float x, y, z;
 
-   printf("\n- Introduzca un número: ");
-   scanf("%f",&x);
+	printf("\n- Introduzca un número: ");
+	scanf("%f",&x);
 
-   y = x + x;
-   z = func(y,x);
+	y = x + x;
+	z = func(y,x);
 
-   printf("\n- Valores: %.1f, %.1f y %.1f.", x, y, z);
+	printf("\n- Valores: %.1f, %.1f y %.1f.", x, y, z);
 
-   return 0;
+	return 0;
 }
 
 float func (float x, float y){
-   x = x + 1;
-   y = y + 2;
-   return x - y;
+	x = x + 1;
+	y = y + 2;
+	return x - y;
 }
-
 ~~~
 
 Ejemplo de funciones con enumerados:
