@@ -966,6 +966,10 @@ int sumaIntervalo(int a, int b) {
 
 ~~~
 
+## Bibliografía
+
+- Capítulos 7.1 a 7.4.3 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
+- Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros 
 
 ----
 
