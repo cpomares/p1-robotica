@@ -55,14 +55,14 @@ funciones matemáticas: pueden tener parámetros  de cualquier tipo y pueden inc
 
 #### Funciones como cajas negras
 
-Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber cómo funciona y cómo se usa, pero no cómo está implementada.
+Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber qué hace y cómo se usa, pero no cómo está implementada.
 
 #### Elementos de las funciones
 
 Las funciones en programación también tienen todos los
 elementos vistos en las funciones matemáticas:
 
-- **Definición**: Donde se define su nombre, los parámetroparámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
+- **Definición**: Donde se define su nombre, los parámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
 del valor que se devuelve (tipo de la función).
 - **Parámetros formales**: Son los nombres de los parámetros que aparecen en la definición de una función.
 - **Llamada a una función**: Es la instrucción donde se invoca a la función.
@@ -235,6 +235,7 @@ En un programa en C las funciones pueden situarse en dos sitios distintos:
 	- En este caso se definirá la función `main()` al final.
 	- Las funciones se ordenarán teniendo en cuenta que para utilizar
 una función ésta debe estar definida previamente.
+
 2. Después de la función `main()`:
 	- En este caso lo habitual es definir la función `main()` al principio.
 	- Antes de la función `main()` se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.
@@ -969,7 +970,7 @@ int sumaIntervalo(int a, int b) {
 ## Bibliografía
 
 - Capítulos 7.1 a 7.4.3 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
-- Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros 
+- Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros
 
 ----
 
