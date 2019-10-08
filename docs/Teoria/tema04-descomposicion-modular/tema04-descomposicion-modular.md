@@ -265,8 +265,6 @@ actuales, puesto que son variables distintas.
 
 Ejemplo:
 
-Ejemplo:
-
 ~~~c
 int func (int); // prototipo
 
