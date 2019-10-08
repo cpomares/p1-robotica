@@ -611,12 +611,12 @@ herramientas para modularizar: procedimientos y funciones. En el lenguaje C sól
 <p>Las funciones en programación son más generales que las
 funciones matemáticas: pueden tener parámetros  de cualquier tipo y pueden incorporar estructuras de control.</p>
 <h4>Funciones como cajas negras</h4>
-<p>Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber cómo funciona y cómo se usa, pero no cómo está implementada.</p>
+<p>Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber qué hace y cómo se usa, pero no cómo está implementada.</p>
 <h4>Elementos de las funciones</h4>
 <p>Las funciones en programación también tienen todos los
 elementos vistos en las funciones matemáticas:</p>
 <ul>
-<li><strong>Definición</strong>: Donde se define su nombre, los parámetroparámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
+<li><strong>Definición</strong>: Donde se define su nombre, los parámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
 del valor que se devuelve (tipo de la función).</li>
 <li><strong>Parámetros formales</strong>: Son los nombres de los parámetros que aparecen en la definición de una función.</li>
 <li><strong>Llamada a una función</strong>: Es la instrucción donde se invoca a la función.</li>
@@ -838,16 +838,16 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 <p>En un programa en C las funciones pueden situarse en dos sitios distintos:</p>
 <ol>
 <li>
-<p>Antes de la función <code>main()</code>:</p>
-<ul>
-<li>En este caso se definirá la función <code>main()</code> al final.</li>
-<li>Las funciones se ordenarán teniendo en cuenta que para utilizar
-una función ésta debe estar definida previamente.
-2. Después de la función <code>main()</code>:</li>
-<li>En este caso lo habitual es definir la función <code>main()</code> al principio.</li>
-<li>Antes de la función <code>main()</code> se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.</li>
-<li>El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.</li>
-</ul>
+<p>Antes de la función <code>main()</code>:
+   - En este caso se definirá la función <code>main()</code> al final.
+   - Las funciones se ordenarán teniendo en cuenta que para utilizar
+una función ésta debe estar definida previamente.</p>
+</li>
+<li>
+<p>Después de la función <code>main()</code>:
+   - En este caso lo habitual es definir la función <code>main()</code> al principio.
+   - Antes de la función <code>main()</code> se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.
+   - El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.</p>
 </li>
 </ol>
 <p>Esta segunda forma es más laboriosa pero evita errores en el orden de las funciones. Además, el tener todos los prototipos juntos simplifica localizar las características de cada función.</p>
@@ -2063,7 +2063,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Capítulos 7.1 a 7.4.3 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero</li>
-<li>Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros </li>
+<li>Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros</li>
 </ul>
 <hr />
 <p>Programación 1, Grado de Robótica, curso 2019-20<br />
