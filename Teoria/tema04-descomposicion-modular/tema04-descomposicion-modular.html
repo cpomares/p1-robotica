@@ -836,20 +836,20 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 <p><strong>Variables globales</strong> (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a <strong>efectos laterales</strong> erróneos que suelen ser muy difícil de localizar.</p>
 <h3 id="donde-definir-las-funciones-en-c">Dónde definir las funciones en C<a class="headerlink" href="#donde-definir-las-funciones-en-c" title="Permanent link">&para;</a></h3>
 <p>En un programa en C las funciones pueden situarse en dos sitios distintos:</p>
-<ol>
+<ul>
+<li>Antes de la función <code>main()</code>:</li>
+<li>En este caso se definirá la función <code>main()</code> al final.</li>
 <li>
-<p>Antes de la función <code>main()</code>:
-   - En este caso se definirá la función <code>main()</code> al final.
-   - Las funciones se ordenarán teniendo en cuenta que para utilizar
+<p>Las funciones se ordenarán teniendo en cuenta que para utilizar
 una función ésta debe estar definida previamente.</p>
 </li>
 <li>
-<p>Después de la función <code>main()</code>:
-   - En este caso lo habitual es definir la función <code>main()</code> al principio.
-   - Antes de la función <code>main()</code> se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.
-   - El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.</p>
+<p>Después de la función <code>main()</code>:</p>
 </li>
-</ol>
+<li>En este caso lo habitual es definir la función <code>main()</code> al principio.</li>
+<li>Antes de la función <code>main()</code> se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.</li>
+<li>El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.</li>
+</ul>
 <p>Esta segunda forma es más laboriosa pero evita errores en el orden de las funciones. Además, el tener todos los prototipos juntos simplifica localizar las características de cada función.</p>
 <h2 id="paso-de-parametros-por-valor-y-por-referencia">Paso de parámetros por valor y por referencia<a class="headerlink" href="#paso-de-parametros-por-valor-y-por-referencia" title="Permanent link">&para;</a></h2>
 <h4>Paso de parámetros por valor</h4>
