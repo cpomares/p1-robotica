@@ -231,11 +231,13 @@ int main() {
 En un programa en C las funciones pueden situarse en dos sitios distintos:
 
 - Antes de la función `main()`:
+
    - En este caso se definirá la función `main()` al final.
    - Las funciones se ordenarán teniendo en cuenta que para utilizar
 una función ésta debe estar definida previamente.
 
 - Después de la función `main()`:
+
    - En este caso lo habitual es definir la función `main()` al principio.
    - Antes de la función `main()` se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.
    - El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.
