@@ -461,11 +461,11 @@
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce valores del intervalo 1: 0 5
 Introduce valores del intervalo 2: 10 12
-0 10 1 11 2 12 3 4 5 
+0 10 1 11 2 12 3 4 5
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>2 intervalos válidos</code> </p>
+<p>Datos de entrada: <code>2 intervalos válidos</code></p>
 <p><strong>Casos de prueba:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -473,7 +473,7 @@ Introduce valores del intervalo 2: 10 12
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Entrada: 
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Entrada:
 7 2
 20 30
 3 8
@@ -539,7 +539,7 @@ Salida por pantalla:
   <span class="n">m</span> <span class="o">=</span> <span class="n">mes</span> <span class="o">+</span> <span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
   <span class="n">primerDia</span> <span class="o">=</span> <span class="p">(</span><span class="n">dia</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="mi">400</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
 
-  <span class="k">if</span> <span class="p">(</span><span class="n">dia1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1">// domingo</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">primerDia</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1">// domingo</span>
     <span class="n">primerDia</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
    <span class="k">return</span> <span class="n">primerDia</span><span class="p">;</span>
@@ -568,7 +568,7 @@ Introduce año: 2019
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>mes</code>, <code>año</code> </p>
+<p>Datos de entrada: <code>mes</code>, <code>año</code></p>
 <p><strong>Casos de prueba:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -638,11 +638,11 @@ Introduce año: 2019
 
 <h3 id="ejercicio-3">Ejercicio 3<a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h3>
 <p>Implementa un programa que irá pidiendo 4 caracteres para representar un número binario de 4 bits. En caso de haberse introducido 4 dígitos binarios, se dibujarán en pantalla con un determinado alto y ancho que habrá sido solicitado previamente. Si algún carácter introducido no es un dígito binario, el programa terminará.</p>
-<p><strong>Pista</strong>: Partiendo de la solución del ejercicio 4 de la práctica anterior, modulariza dicho programa. 
-Tres de las funciones que incluyas (deberías definir más de 3), deberían realizar lo siguiente: </p>
+<p><strong>Pista</strong>: Partiendo de la solución del ejercicio 4 de la práctica anterior, modulariza dicho programa.
+Tres de las funciones que incluyas (deberías definir más de 3), deberían realizar lo siguiente:</p>
 <ul>
 <li>una función para imprimir una determinada fila para el número 1</li>
-<li>otra función para imprimir la separación entre los números en cualquier fila </li>
+<li>otra función para imprimir la separación entre los números en cualquier fila</li>
 <li>otra función para imprimir una determinada fila para el número 0.</li>
 </ul>
 <p><strong>Ejemplo de ejecución:</strong></p>
