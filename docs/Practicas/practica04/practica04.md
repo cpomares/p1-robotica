@@ -11,15 +11,15 @@ Implementa un programa, modularizado en funciones, que pida 2 intervalos de núm
 ~~~text
 Introduce valores del intervalo 1: 0 5
 Introduce valores del intervalo 2: 10 12
-0 10 1 11 2 12 3 4 5 
+0 10 1 11 2 12 3 4 5
 ~~~
 
-Datos de entrada: `2 intervalos válidos` 
+Datos de entrada: `2 intervalos válidos`
 
 **Casos de prueba:**
 
 ~~~text
-Entrada: 
+Entrada:
 7 2
 20 30
 3 8
@@ -62,7 +62,7 @@ int zeller (int dia, int mes, int anyo) {
   m = mes + (12*a) - 2;
   primerDia = (dia + y + (y/4) - (y/100) + (y/400) + (31*m) / 12) % 7;
 
-  if (dia1 == 0)  // domingo
+  if (primerDia == 0)  // domingo
     primerDia = 7;
 
    return primerDia;
@@ -84,7 +84,7 @@ Introduce año: 2019
   28  29  30  31
 ~~~
 
-Datos de entrada: `mes`, `año` 
+Datos de entrada: `mes`, `año`
 
 **Casos de prueba:**
 
@@ -131,11 +131,11 @@ Introduce año: 2019
 
 Implementa un programa que irá pidiendo 4 caracteres para representar un número binario de 4 bits. En caso de haberse introducido 4 dígitos binarios, se dibujarán en pantalla con un determinado alto y ancho que habrá sido solicitado previamente. Si algún carácter introducido no es un dígito binario, el programa terminará.
 
-**Pista**: Partiendo de la solución del ejercicio 4 de la práctica anterior, modulariza dicho programa. 
-Tres de las funciones que incluyas (deberías definir más de 3), deberían realizar lo siguiente: 
+**Pista**: Partiendo de la solución del ejercicio 4 de la práctica anterior, modulariza dicho programa.
+Tres de las funciones que incluyas (deberías definir más de 3), deberían realizar lo siguiente:
 
 - una función para imprimir una determinada fila para el número 1
-- otra función para imprimir la separación entre los números en cualquier fila 
+- otra función para imprimir la separación entre los números en cualquier fila
 - otra función para imprimir una determinada fila para el número 0.
 
 
