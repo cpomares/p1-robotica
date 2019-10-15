@@ -4,7 +4,7 @@
 
 ### Ejercicio 1 ###
 
-Implementa un programa, modularizado en funciones, que pida 2 intervalos de números `[a,b]` comprobando que son válidos, es decir, que `a > b`, e imprima los valores de ambos intervalos de forma intercalada. Ten en cuenta que el tamaño de los intervalos puede ser distinto.
+Implementa un programa, modularizado en funciones, que pida 2 intervalos de números `[a,b]` comprobando que son válidos, es decir, que `a < b`, e imprima los valores de ambos intervalos de forma intercalada. Ten en cuenta que el tamaño de los intervalos puede ser distinto.
 
 **Ejemplo de ejecución:**
 
@@ -40,7 +40,7 @@ Salida por pantalla:
 
 ~~~text
 Entrada:
-11 5
+11 15
 1 5
 
 Salida por pantalla:
