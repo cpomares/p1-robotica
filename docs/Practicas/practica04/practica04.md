@@ -21,11 +21,11 @@ Datos de entrada: `2 intervalos válidos`
 ~~~text
 Entrada:
 7 2
-20 30
 3 8
+20 30
 
 Salida por pantalla:
-20 3 21 4 22 5 23 6 24 7 25 8 26 27 28 29 30
+3 20 4 21 5 22 6 23 7 24 8 25 26 27 28 29 30
 ~~~
 
 ~~~text
