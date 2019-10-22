@@ -264,13 +264,13 @@ Los elementos también se almacenan contiguos en memoria:
 
 - Si se conocen todos los elementos al declarar el array, hay dos modos de escribir la lista de inicializaciones:
 
-	-  Todos los valores seguidos:
+	1. Todos los valores seguidos:
 
 	~~~c
 	int matriz[2][3]={0,1,2,10,11,12};
 	~~~
 
-	- Por partes (mejor, mayor claridad):
+	2. Por partes (mejor, mayor claridad):
 
 	~~~c
 	int matriz[2][3] = { {0,1,2},
