@@ -1,7 +1,7 @@
 
 # Tema 4: Descomposición modular
 
-## 1. Descomposición modular
+## 1. Descomposición modular 
 
 Ya hemos visto que en C se utilizan funciones de biblioteca (como `printf` o `scanf`). También hemos utilizado la función `main`, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.
 
