@@ -1,18 +1,8 @@
 
 # Tema 5: Datos estructurados: Arrays
 
-## Contenidos
 
-- [1. Tipos de datos estructurados](#1)
-- [2. Tipo Array](#2)
-	- [2-1. Definición](#2-1)
-	- [2-2. Arrays y funciones](#2-2)
-- [3. Arrays multidimensionales](#3)
-- [4. Cadenas de caracteres](#4)
-- [5. Algoritmos de ordenación](#5)
-
-
-## <a name="1"/> 1. Tipos de datos estructurados
+## 1. Tipos de datos estructurados
 
 A partir de los tipos de datos simples que hemos visto, se pueden definir en C otros tipos de datos compuestos por colecciones o agrupaciones de elementos de tipos simples.
 Los tipos estructurados o compuestos pueden almacenar más de un elemento (valor) a la vez. Se dividen en:
@@ -23,15 +13,15 @@ Los tipos estructurados o compuestos pueden almacenar más de un elemento (valor
 	- Cadenas de caracteres
 - **Registros** o estructuras: una variable de tipo registro puede almacenar elementos de **distinto tipo**. En C, se utiliza el tipo `struct`equivalente al `record` de otros lenguajes.  
 
-## <a name="2"/> 2. Tipo Array  
+## 2. Tipo Array  
 
 Es una estructura de datos que contiene una colección de datos finita, homogénea y ordenada de elementos, y se almacena en posiciones de memoria contiguas.- **finita**: debe determinarse cuál será el número máximo de elementos que podrán almacenarse en el array- **homogénea**: todos los elementos deben ser del mismo tipo- **ordenada**: se puede determinar cuál es el n-ésimo elemento del array   
 
 A un elemento específico de un array se accede mediante un **índice**, que siempre empieza en la posición 0 (la primera posición del array) y se numeran consecutivamente 0, 1, 2, 3, etc. La última posición tendrá como índice el número de elementos del array menos uno.
 
-### <a name="2-1"/> 2.1  Definición de un array
+### 2.1 Declaración de un array
 
-**Sintaxis** para definir un array **unidimensional** en C:
+**Sintaxis** para declarar un array **unidimensional** en C:
 
 ~~~c
 tipoDato nombreArray[dimension];
@@ -115,7 +105,9 @@ void inicializarArray(float calificaciones[]) {
 	}
 }~~~
 
-### <a name="2-2"/> 2.2   Arrays y funciones
+**Precaución**:  C permite asignar valores fuera de rango a los subíondices. Se debe tener cuidado con no hacer esta acción, ya que se sobreescribirían datos o código
+
+### 2.2 Arrays y funciones
 
 - En lenguaje C, el paso de parámetros de los arrays siempre es por **referencia**.
 - En lenguaje C, las funciones no pueden devolver un tipo array estático. Para modificar un array, ha de ser pasado como parámetro (siempre es por referencia y por tanto se modificará el array original)
@@ -138,6 +130,8 @@ int main()
     longitud = rellenaDatos(v);
     media = calculaMedia(v, longitud);
     printf("La nota media es %.2f\n", media);
+    
+    return 0;
 }
 
 float calculaMedia(float a[], int len) {
@@ -226,11 +220,12 @@ int main()
     int v[] = {1,3,5,1,3,5};
 
     ocurrencias(v, &mayor, &num_ocur, &pos_pri, &pos_ult);
-
+    
+    return 0;
 }
 ~~~
 
-## <a name="3"/> 3. Arrays multidimensionales
+## 3. Arrays multidimensionales
 
 Hemos visto los arrays unidimensionales, cuyos elementos se almacenan en posiciones contiguas de memoria, a cada una de las cuales se puede acceder directamente mediante un índice.
 
@@ -258,7 +253,7 @@ float cubo[3][2][5];
 
 #### Almacenamiento en memoria arrays multidimensionales
 
-Los elementos se almacenan contiguos en memoria:
+Los elementos también se almacenan contiguos en memoria:
 
 <img src="imagenes/array3.png" width="400px"/>
 
@@ -316,6 +311,8 @@ void main(){
     for(i = 0;i < 3; i++)
         for(j = 0;j < 4; j++)
             num[i][j] = (i * 4) + j + 1;
+            
+    return 0;
 }
 ~~~
 
@@ -338,6 +335,8 @@ int main() {
     for(fil = 0; fil < FILAS; fil++)
         for(col = 0; col < COLUMNAS; col++)
             printf("El valor de [%d][%d] es %d\n", fil, col, matriz[fil][col]);
+            
+    return 0;
 }
 
 // Salida por pantalla:
@@ -443,11 +442,13 @@ int main(){
     rellenar(vec);
     Funcion(vec[cont]); //Modifica la fila 3 (vector)
     imprimir(vec);
+    
+    return 0;
 }
 ~~~
 
 
-## <a name="4"/> 4. Cadenas de caracteres
+## 4. Cadenas de caracteres
 
 - En C no existe un tipo específico para trabajar concadenas de caracteres (en otros lenguajes es el tipo `String`).
 - En C, una cadena de caracteres es un array unidimensional de tipo
@@ -467,6 +468,10 @@ char cadena[]="Adios";
 En las dos últimas declaraciones el tamaño del array será el
 número de caracteres dado en la inicialización más 1 (que corresponde
 al carácter ‘\0’).
+
+Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.
+
+![](imagenes/cadenaCaracteres.png)
 
 ##### `printf` y `scanf` con cadenas
 Las funciones `printf` y `scanf` tratan el `'\0'` automáticamente con `%s`
@@ -532,6 +537,8 @@ int main() {
         printf("Primer nombre mayor que el segundo\n");
     else
         printf("Primer nombre menor que el segundo\n");
+        
+    return 0;
 }
 ~~~
 
@@ -788,7 +795,7 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
     }
     ~~~
 
-## <a name="5"/> 5. Algoritmos de ordenación
+## 5. Algoritmos de ordenación
 
 Es interesante y habitual la operación de ordenación en un array. La búsqueda de un dato dentro de un conjunto es otro de los procesos más habituales en el tratamiento de información. Si los datos están ordenados, la localización de uno de ellos puede acelerarse.
 
@@ -800,7 +807,7 @@ Imaginemos que tenemos declarado el siguiente vector:~~~cint vec[5]={1, 5, 6,
 Cada algoritmo tiene su **complejidad**. Son métricas que permiten conocer el tiempo de procesamiento de cada algoritmo.
 La forma estándar es utilizar ordenes de complejidad, que relacionan el tiempo de computación con el tamaño del problema a tratar.La jerarquía de ordenes de complejidad sería O(1)<O(log n)<O(n)<O(n logn)<O(n2)<O(n3)<O(n4)..
 
-### <a name="5.1"/> 5.1 Algoritmo de la burbuja
+### 5.1 Algoritmo de la burbuja
 
 El método de la burbuja funciona revisando cada elemento del vector que va a ser ordenado con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces todo el vector hasta que no se necesiten más intercambios, lo cual significa que está ordenado. Este algoritmo obtiene su nombre de la forma con la que suben por la lista los elementos durante los intercambios, como si fueran pequeñas burbujas. También es conocido como el método del intercambio directo.
 
@@ -836,7 +843,7 @@ void burbuja(int v[], int elems) {
 ~~~
 
 
-### <a name="5.2"/> 5.2 Algoritmo de selección
+### 5.2 Algoritmo de selección
 
 Consiste en encontrar el menor de todos los elementos del vector e intercambiarlo con el que está en la primera posición. Luego el segundo mas pequeño, y así sucesivamente hasta ordenarlo todo. Su implementación requiere O(n2) comparaciones e intercambios para ordenar una secuencia de elementos.
 
@@ -882,7 +889,7 @@ void seleccion(int v[], int tam) {
 }
 ~~~
 
-### <a name="5.3"/> 5.3  Algoritmo de inserción
+### 5.3 Algoritmo de inserción
 
 Este método consiste en insertar un elemento del vector en la parte izquierda del mismo que ya se encuentra ordenada. Este proceso se repite desde el segundo hasta el n-esimo elemento.
 
@@ -938,8 +945,13 @@ void insercion(int numbers[], int array_size) {
 
     <img src="imagenes/ejer4-3.png" width="150px"/>
 
+## Bibliografía
+
+- Capítulos 9.1 a 9.5 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
+- Capítulos 8.1 y 8.2 de "Fundamentos de Programación", Jesús Carretero y otros
+
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
