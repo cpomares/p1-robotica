@@ -1013,16 +1013,16 @@ arrays de dimensión n–1.</li>
 <ul>
 <li>
 <p>Si se conocen todos los elementos al declarar el array, hay dos modos de escribir la lista de inicializaciones:</p>
-<ul>
+<ol>
 <li>Todos los valores seguidos:</li>
-</ul>
+</ol>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">matriz</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">};</span>
 </pre></div>
 </td></tr></table>
 
-<ul>
+<ol start="2">
 <li>Por partes (mejor, mayor claridad):</li>
-</ul>
+</ol>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">matriz</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},</span>
                     <span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">}</span> <span class="p">}</span> <span class="p">;</span>
@@ -1191,10 +1191,34 @@ que en la declaración.</li>
 44
 45
 46
-47</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Suma de matrices</span>
+47
+48
+49
+50
+51
+52
+53
+54</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Suma de matrices</span>
 
 <span class="cp">#define FILAS 5</span>
 <span class="cp">#define COLUMNAS 7</span>
+
+<span class="kt">void</span> <span class="nf">rellena</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">[][</span><span class="n">COLUMNAS</span><span class="p">]);</span>
+<span class="kt">void</span> <span class="nf">suma</span><span class="p">(</span><span class="kt">int</span> <span class="n">m1</span><span class="p">[][</span><span class="n">COLUMNAS</span><span class="p">],</span> <span class="kt">int</span> <span class="n">m2</span><span class="p">[][</span><span class="n">COLUMNAS</span><span class="p">],</span> <span class="kt">int</span> <span class="n">r</span><span class="p">[][</span><span class="n">COLUMNAS</span><span class="p">]);</span>
+<span class="kt">void</span> <span class="nf">imprime</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">[][</span><span class="n">COLUMNAS</span><span class="p">]);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">],</span>
+        <span class="n">b</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">],</span>
+        <span class="n">c</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">];</span>
+
+    <span class="n">rellena</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">rellena</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+    <span class="n">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+    <span class="n">imprime</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="cm">/* Función que rellena los</span>
 <span class="cm">valores de una matriz */</span>
@@ -1227,16 +1251,6 @@ que en la declaración.</li>
             <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">],</span>
-        <span class="n">b</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">],</span>
-        <span class="n">c</span><span class="p">[</span><span class="n">FILAS</span><span class="p">][</span><span class="n">COLUMNAS</span><span class="p">];</span>
-
-    <span class="n">rellena</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-    <span class="n">rellena</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
-    <span class="n">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
-    <span class="n">imprime</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1280,7 +1294,27 @@ que en la declaración.</li>
 36
 37
 38
-39</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">Funcion</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">[]){</span>  <span class="c1">//Recibe una fila (vector)</span>
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">funcion</span><span class="p">(</span><span class="kt">int</span> <span class="p">[]);</span>
+<span class="kt">void</span> <span class="nf">imprimir</span><span class="p">(</span><span class="kt">int</span> <span class="p">[][</span><span class="mi">5</span><span class="p">]);</span>
+<span class="kt">void</span> <span class="nf">rellenar</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">[][</span><span class="mi">5</span><span class="p">]);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">vec</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">cont</span><span class="p">;</span>
+
+    <span class="n">cont</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">rellenar</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
+    <span class="n">funcion</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">cont</span><span class="p">]);</span> <span class="c1">//Modifica la fila 3 (vector)</span>
+    <span class="n">imprimir</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">funcion</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">[]){</span>  <span class="c1">//Recibe una fila (vector)</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
         <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
@@ -1307,18 +1341,6 @@ que en la declaración.</li>
    <span class="p">}</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">vec</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
-    <span class="kt">int</span> <span class="n">cont</span><span class="p">;</span>
-
-    <span class="n">cont</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-    <span class="n">rellenar</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
-    <span class="n">Funcion</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">cont</span><span class="p">]);</span> <span class="c1">//Modifica la fila 3 (vector)</span>
-    <span class="n">imprimir</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
@@ -1334,22 +1356,35 @@ carácter nulo que se representa por <code>'\0'</code>. Este carácter marca el 
 parte de las operaciones básicas sobre cadenas.</li>
 </ul>
 <p>Ejemplos:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
 <span class="kt">char</span> <span class="n">cadena</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;Adios&quot;</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
+<span class="o">~~~</span>                                                                                                         <span class="n">En</span> <span class="n">las</span> <span class="n">dos</span> <span class="err">ú</span><span class="n">ltimas</span> <span class="n">declaraciones</span> <span class="n">el</span> <span class="n">tamaño</span> <span class="n">del</span> <span class="n">array</span> <span class="n">será</span> <span class="n">el</span>
+<span class="n">número</span> <span class="n">de</span> <span class="n">caracteres</span> <span class="n">dado</span> <span class="n">en</span> <span class="n">la</span> <span class="n">inicialización</span> <span class="n">más</span> <span class="mi">1</span> <span class="p">(</span><span class="n">que</span> <span class="n">corresponde</span> <span class="n">al</span> <span class="n">carácter</span> <span class="err">‘\</span><span class="mi">0</span><span class="err">’</span><span class="p">).</span>
 
-<p>En las dos últimas declaraciones el tamaño del array será el
-número de caracteres dado en la inicialización más 1 (que corresponde
-al carácter ‘\0’).</p>
-<p>Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.</p>
-<p><img alt="" src="imagenes/cadenaCaracteres.png" /></p>
-<h5><code>printf</code> y <code>scanf</code> con cadenas</h5>
-<p>Las funciones <code>printf</code> y <code>scanf</code> tratan el <code>'\0'</code> automáticamente con <code>%s</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
+<span class="n">Las</span> <span class="n">cadenas</span> <span class="n">se</span> <span class="n">deben</span> <span class="n">almacenar</span> <span class="n">en</span> <span class="n">arrays</span> <span class="n">de</span> <span class="n">caracteres</span><span class="p">,</span> <span class="n">pero</span> <span class="n">no</span> <span class="n">todos</span> <span class="n">lo</span> <span class="n">arrays</span> <span class="n">de</span> <span class="n">caracteres</span> <span class="n">contienen</span> <span class="n">cadenas</span><span class="p">.</span> <span class="n">Las</span> <span class="n">cadenas</span> <span class="n">contienen</span> <span class="n">un</span> <span class="n">carácter</span> <span class="n">nulo</span> <span class="n">al</span> <span class="n">final</span> <span class="n">del</span> <span class="n">array</span> <span class="n">de</span> <span class="n">caracteres</span><span class="p">.</span>
+
+<span class="o">!</span><span class="p">[](</span><span class="n">imagenes</span><span class="o">/</span><span class="n">cadenaCaracteres</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+
+<span class="cp">##### `printf` y `scanf` con cadenas</span>
+<span class="n">Las</span> <span class="n">funciones</span> <span class="err">`</span><span class="n">printf</span><span class="err">`</span> <span class="n">y</span> <span class="err">`</span><span class="n">scanf</span><span class="err">`</span> <span class="n">tratan</span> <span class="n">el</span> <span class="err">`</span><span class="sc">&#39;\0&#39;</span><span class="err">`</span> <span class="n">automa</span><span class="err">́</span><span class="n">ticamente</span> <span class="n">con</span> <span class="err">`</span><span class="o">%</span><span class="n">s</span><span class="err">`</span>
+
+<span class="o">~~~</span><span class="n">c</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
 <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span>
 <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span> <span class="c1">//lee la entrada estandar hasta encontrar \n, sin detenerse en espacios</span>
 </pre></div>
@@ -1408,7 +1443,7 @@ resultante. No comprueban si el resultado cabe en la cadena final.</p>
 
       <span class="n">len</span><span class="o">++</span><span class="p">;</span>
 
-   <span class="k">return</span><span class="p">(</span><span class="n">len</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1492,7 +1527,7 @@ resultante. No comprueban si el resultado cabe en la cadena final.</p>
 <span class="cm">                            escribir &quot;Hola y adios&quot; a pesar de que en total</span>
 <span class="cm">                            son más de 10 caracteres, puede escribir otra</span>
 <span class="cm">                            cosa o puede quedarse colgado el terminal. */</span>
-
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1603,7 +1638,9 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 59
 60
 61
-62</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
 
@@ -1623,6 +1660,8 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
    <span class="n">mayor</span> <span class="o">=</span> <span class="n">mayorVector</span><span class="p">(</span><span class="n">vector</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El elemento mayor del vector es : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">mayor</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c1">//Función para leer el contenido del vector.</span>
 <span class="c1">//Leeremos números enteros positivos</span>
@@ -1698,7 +1737,9 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 25
 26
 27
-28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 15</span>
+28
+29
+30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 15</span>
 <span class="k">typedef</span> <span class="kt">char</span> <span class="n">TCadena</span><span class="p">[</span><span class="n">TAM</span><span class="p">];</span>
 
 <span class="kt">void</span> <span class="nf">alReves</span><span class="p">(</span><span class="n">TCadena</span><span class="p">,</span> <span class="n">TCadena</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
@@ -1714,6 +1755,8 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
    <span class="n">alReves</span><span class="p">(</span><span class="n">palabra</span><span class="p">,</span> <span class="n">palabra_reves</span><span class="p">,</span> <span class="n">longitud_palabra</span><span class="p">);</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Palabra escrita al revés: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">palabra_reves</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">alReves</span><span class="p">(</span><span class="n">TCadena</span> <span class="n">palabra</span><span class="p">,</span> <span class="n">TCadena</span> <span class="n">palabra_reves</span><span class="p">,</span> <span class="kt">int</span> <span class="n">longitud</span><span class="p">){</span>
@@ -1767,7 +1810,9 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 33
 34
 35
-36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define FILS 5</span>
+36
+37
+38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define FILS 5</span>
 <span class="cp">#define COLS 4</span>
 
 <span class="k">typedef</span> <span class="kt">int</span> <span class="n">TMatriz</span><span class="p">[</span><span class="n">FILS</span><span class="p">][</span><span class="n">COLS</span><span class="p">];</span>
@@ -1780,6 +1825,8 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 
    <span class="n">leerMatriz</span><span class="p">(</span><span class="n">matriz</span><span class="p">);</span>
    <span class="n">escribirMatriz</span><span class="p">(</span><span class="n">matriz</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">leerMatriz</span><span class="p">(</span><span class="n">TMatriz</span> <span class="n">matriz</span><span class="p">)</span> <span class="p">{</span>
@@ -1850,7 +1897,9 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 38
 39
 40
-41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 11</span>
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 11</span>
 <span class="k">typedef</span> <span class="kt">int</span> <span class="n">TMatriz</span><span class="p">[</span><span class="n">TAM</span><span class="p">][</span><span class="n">TAM</span><span class="p">];</span>
 
 <span class="kt">void</span> <span class="nf">rellenaTablaMultiplicar</span><span class="p">(</span><span class="n">TMatriz</span> <span class="n">A</span><span class="p">);</span>
@@ -1861,6 +1910,8 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 
    <span class="n">rellenaTablaMultiplicar</span><span class="p">(</span><span class="n">tabla</span><span class="p">);</span>
    <span class="n">imprimir</span><span class="p">(</span><span class="n">tabla</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">rellenaTablaMultiplicar</span><span class="p">(</span><span class="n">TMatriz</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
