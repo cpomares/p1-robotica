@@ -115,7 +115,9 @@ void inicializarArray(float calificaciones[]) {
 - En lenguaje C, el paso de parámetros de los arrays siempre es por **referencia**.
 - En lenguaje C, las funciones no pueden devolver un tipo array estático. Para modificar un array, ha de ser pasado como parámetro (siempre es por referencia y por tanto se modificará el array original)
 - Es imposible que la función determine el tamaño del array. Si se necesita el tamaño en la función, se tiene que pasar como argumento
-- Si el número de elementos es fijo, se puede utilizar una constante#### Ejemplos
+- Si el número de elementos es fijo, se puede utilizar una constante
+
+#### Ejemplos
 
 Ejemplo 1:
 
@@ -165,7 +167,6 @@ int rellenaDatos(float vector[]) {
 
     return indice;
 }
-
 ~~~
 
 Ejemplo 2:
