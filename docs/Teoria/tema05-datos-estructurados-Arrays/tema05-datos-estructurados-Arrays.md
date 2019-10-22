@@ -361,6 +361,23 @@ Ejemplo 3:
 #define FILAS 5
 #define COLUMNAS 7
 
+void rellena(int m[][COLUMNAS]);
+void suma(int m1[][COLUMNAS], int m2[][COLUMNAS], int r[][COLUMNAS]);
+void imprime(int m[][COLUMNAS]);
+
+int main() {
+    int a[FILAS][COLUMNAS],
+        b[FILAS][COLUMNAS],
+        c[FILAS][COLUMNAS];
+
+    rellena(a);
+    rellena(b);
+    suma(a,b,c);
+    imprime(c);
+
+    return 0;
+}
+
 /* Función que rellena los
 valores de una matriz */
 void rellena(int m[][COLUMNAS]) {
@@ -393,23 +410,28 @@ void imprime(int m[][COLUMNAS]) {
         printf("\n");
     }
 }
-int main() {
-    int a[FILAS][COLUMNAS],
-        b[FILAS][COLUMNAS],
-        c[FILAS][COLUMNAS];
-
-    rellena(a);
-    rellena(b);
-    suma(a,b,c);
-    imprime(c);
-}
-
 ~~~
 
 Ejemplo donde pasamos como parámetro a una función sólo una fila de una matriz:
 
 ~~~c
-void Funcion(int v[]){  //Recibe una fila (vector)
+void funcion(int []);
+void imprimir(int [][5]);
+void rellenar(int m[][5]);
+
+int main(){
+    int vec[5][5];
+    int cont;
+
+    cont = 3;
+    rellenar(vec);
+    funcion(vec[cont]); //Modifica la fila 3 (vector)
+    imprimir(vec);
+
+    return 0;
+}
+
+void funcion(int v[]){  //Recibe una fila (vector)
     int i;
     for( i = 0; i < 5; i++){
         v[i]= 100;
@@ -436,18 +458,6 @@ void rellenar(int m[][5]) {
    }
    printf("\n");
 }
-
-int main(){
-    int vec[5][5];
-    int cont;
-
-    cont = 3;
-    rellenar(vec);
-    Funcion(vec[cont]); //Modifica la fila 3 (vector)
-    imprimir(vec);
-
-    return 0;
-}
 ~~~
 
 
@@ -466,11 +476,8 @@ Ejemplos:
 ~~~c
 char cadena[20];
 char cadena[]="Adios";
-~~~                                                                                                          
-
-En las dos últimas declaraciones el tamaño del array será el
-número de caracteres dado en la inicialización más 1 (que corresponde
-al carácter ‘\0’).
+~~~                                                                                                         En las dos últimas declaraciones el tamaño del array será el
+número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).
 
 Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.
 
@@ -517,7 +524,7 @@ int longitudCadena(char cad[]){
    while (cad[len] != '\0')       
       len++;
 
-   return(len);
+   return len;
 }
 ~~~
 
@@ -566,7 +573,7 @@ int main() {
                             escribir "Hola y adios" a pesar de que en total
                             son más de 10 caracteres, puede escribir otra
                             cosa o puede quedarse colgado el terminal. */
-
+    return 0;
 }
 ~~~
 
@@ -632,6 +639,8 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
        mayor = mayorVector(vector);
 
        printf("El elemento mayor del vector es : %d\n",mayor);
+
+       return 0;
     }
     //Función para leer el contenido del vector.
     //Leeremos números enteros positivos
@@ -695,6 +704,8 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
        alReves(palabra, palabra_reves, longitud_palabra);
 
        printf("Palabra escrita al revés: %s\n", palabra_reves);
+
+       return 0;
     }
 
     void alReves(TCadena palabra, TCadena palabra_reves, int longitud){
@@ -725,6 +736,8 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
 
        leerMatriz(matriz);
        escribirMatriz(matriz);
+
+       return 0;
     }
 
     void leerMatriz(TMatriz matriz) {
@@ -766,6 +779,8 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
 
        rellenaTablaMultiplicar(tabla);
        imprimir(tabla);
+
+       return 0;
     }
 
     void rellenaTablaMultiplicar(TMatriz A) {
