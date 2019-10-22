@@ -79,6 +79,9 @@ int vectorB[] = {11, 23, 3, 10};
 // Se inicializan sólo los 4 primeros elementos
 int vectorC[10] = {7, 7, 7, 7};
 ~~~
+
+<img src="imagenes/vectorIncompleto.png" width="300px"/>
+
 ~~~c
 // Si hay más valores, da ERROR:
 int vectorD[5]={1, 20, 3, 40, 5, 60};
@@ -130,7 +133,7 @@ int main()
     longitud = rellenaDatos(v);
     media = calculaMedia(v, longitud);
     printf("La nota media es %.2f\n", media);
-    
+
     return 0;
 }
 
@@ -220,7 +223,7 @@ int main()
     int v[] = {1,3,5,1,3,5};
 
     ocurrencias(v, &mayor, &num_ocur, &pos_pri, &pos_ult);
-    
+
     return 0;
 }
 ~~~
@@ -311,7 +314,7 @@ void main(){
     for(i = 0;i < 3; i++)
         for(j = 0;j < 4; j++)
             num[i][j] = (i * 4) + j + 1;
-            
+
     return 0;
 }
 ~~~
@@ -335,7 +338,7 @@ int main() {
     for(fil = 0; fil < FILAS; fil++)
         for(col = 0; col < COLUMNAS; col++)
             printf("El valor de [%d][%d] es %d\n", fil, col, matriz[fil][col]);
-            
+
     return 0;
 }
 
@@ -442,7 +445,7 @@ int main(){
     rellenar(vec);
     Funcion(vec[cont]); //Modifica la fila 3 (vector)
     imprimir(vec);
-    
+
     return 0;
 }
 ~~~
@@ -537,7 +540,7 @@ int main() {
         printf("Primer nombre mayor que el segundo\n");
     else
         printf("Primer nombre menor que el segundo\n");
-        
+
     return 0;
 }
 ~~~
