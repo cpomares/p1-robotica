@@ -1298,7 +1298,7 @@ que en la declaración.</li>
 40
 41
 42
-43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">funcion</span><span class="p">(</span><span class="kt">int</span> <span class="p">[]);</span>
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">rellenaFila</span><span class="p">(</span><span class="kt">int</span> <span class="p">[]);</span>
 <span class="kt">void</span> <span class="nf">imprimir</span><span class="p">(</span><span class="kt">int</span> <span class="p">[][</span><span class="mi">5</span><span class="p">]);</span>
 <span class="kt">void</span> <span class="nf">rellenar</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">[][</span><span class="mi">5</span><span class="p">]);</span>
 
@@ -1308,13 +1308,13 @@ que en la declaración.</li>
 
     <span class="n">cont</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
     <span class="n">rellenar</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
-    <span class="n">funcion</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">cont</span><span class="p">]);</span> <span class="c1">//Modifica la fila 3 (vector)</span>
+    <span class="n">rellenaFila</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">cont</span><span class="p">]);</span> <span class="c1">//Modifica la fila 3 (vector)</span>
     <span class="n">imprimir</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">funcion</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">[]){</span>  <span class="c1">//Recibe una fila (vector)</span>
+<span class="kt">void</span> <span class="nf">rellenaFila</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">[]){</span>  <span class="c1">//Recibe una fila (vector)</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
         <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
