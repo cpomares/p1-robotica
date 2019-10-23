@@ -416,7 +416,7 @@ void imprime(int m[][COLUMNAS]) {
 Ejemplo donde pasamos como parámetro a una función sólo una fila de una matriz:
 
 ~~~c
-void funcion(int []);
+void rellenaFila(int []);
 void imprimir(int [][5]);
 void rellenar(int m[][5]);
 
@@ -426,13 +426,13 @@ int main(){
 
     cont = 3;
     rellenar(vec);
-    funcion(vec[cont]); //Modifica la fila 3 (vector)
+    rellenaFila(vec[cont]); //Modifica la fila 3 (vector)
     imprimir(vec);
 
     return 0;
 }
 
-void funcion(int v[]){  //Recibe una fila (vector)
+void rellenaFila(int v[]){  //Recibe una fila (vector)
     int i;
     for( i = 0; i < 5; i++){
         v[i]= 100;
