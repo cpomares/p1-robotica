@@ -456,7 +456,6 @@ void rellenar(int m[][5]) {
          m[i][j] = 20;
       }
    }
-   printf("\n");
 }
 ~~~
 
