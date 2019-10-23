@@ -502,8 +502,8 @@ Para trabajar con cadenas de caracteres, en C tenemos la librería `string.h`:
 Algunas de las funciones que incluye:
 
 - **`int strlen(char s[]);`** Devuelve el tamaño de la cadena antes de `'\0'`
-- **`char strcpy(char dest[], char src[]);`**Copia la cadena origen `src` en la cadena destino `dest`.
-- **`char strcat(char dest[], char src[]);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
+- **`char *strcpy(char dest[], char src[]);`**Copia la cadena origen `src` en la cadena destino `dest`.
+- **`char *strcat(char dest[], char src[]);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
 - **`int strcmp(char s1[], char s2[]);`**
 Compara dos cadenas. Devuelve 0 en caso de que sean iguales. <0 si la primera cadena es menor y >0 si la primera cadena es mayor. Orden lexicográfico
 
