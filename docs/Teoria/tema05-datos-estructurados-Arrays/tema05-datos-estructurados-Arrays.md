@@ -417,16 +417,16 @@ Ejemplo donde pasamos como parámetro a una función sólo una fila de una matri
 ~~~c
 void rellenaFila(int []);
 void imprimir(int [][5]);
-void rellenar(int m[][5]);
+void rellenar(int [][5]);
 
 int main(){
-    int vec[5][5];
+    int m[5][5];
     int cont;
 
     cont = 3;
-    rellenar(vec);
-    rellenaFila(vec[cont]); //Modifica la fila 3 (vector)
-    imprimir(vec);
+    rellenar(m);
+    rellenaFila(m[cont]); //Modifica la fila 3 (vector)
+    imprimir(m);
 
     return 0;
 }
