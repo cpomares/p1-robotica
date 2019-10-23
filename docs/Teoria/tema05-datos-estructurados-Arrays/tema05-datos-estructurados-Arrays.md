@@ -386,8 +386,7 @@ void rellena(int m[][COLUMNAS]) {
 
     for(i = 0; i < FILAS; i++)
         for(j = 0; j < COLUMNAS; j++) {
-            printf("Valor [%d,%d]: ",
-i,j);
+            printf("Valor [%d,%d]: ", i,j);
             scanf("%d", &m[i][j]);
         }
 }
