@@ -15,7 +15,7 @@ nav:
    - 'Práctica 2: Sentencias de selección': 'Practicas/practica02/practica02.md'
    - 'Práctica 3: Sentencias de interación': 'Practicas/practica03/practica03.md'
    - 'Práctica 4: Descomposición modular': 'Practicas/practica04/practica04.md'
-   - 'Práctica 5: Datos estructurados: Arrays':'Practicas/practica05/practica05.md'
+   - 'Práctica 5: Datos estructurados. Arrays': 'Practicas/practica05/practica05.md'
 theme:
     language: es
     name: 'material'
