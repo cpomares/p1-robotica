@@ -335,6 +335,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#printf-y-scanf-con-cadenas" title="printf y scanf con cadenas" class="md-nav__link">
+    printf y scanf con cadenas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#libreria-stringh" title="Librería string.h" class="md-nav__link">
+    Librería string.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-con-cadenas-de-caracteres" title="Ejemplos con cadenas de caracteres" class="md-nav__link">
+    Ejemplos con cadenas de caracteres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplos-de-arrays-utilizando-typedef" title="Ejemplos de arrays utilizando typedef" class="md-nav__link">
     Ejemplos de arrays utilizando typedef
   </a>
@@ -574,6 +595,27 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf-y-scanf-con-cadenas" title="printf y scanf con cadenas" class="md-nav__link">
+    printf y scanf con cadenas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#libreria-stringh" title="Librería string.h" class="md-nav__link">
+    Librería string.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-con-cadenas-de-caracteres" title="Ejemplos con cadenas de caracteres" class="md-nav__link">
+    Ejemplos con cadenas de caracteres
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ejemplos-de-arrays-utilizando-typedef" title="Ejemplos de arrays utilizando typedef" class="md-nav__link">
@@ -1364,41 +1406,26 @@ carácter nulo que se representa por <code>'\0'</code>. Este carácter marca el 
 parte de las operaciones básicas sobre cadenas.</li>
 </ul>
 <p>Ejemplos:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
 <span class="kt">char</span> <span class="n">cadena</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;Adios&quot;</span><span class="p">;</span>
-<span class="o">~~~</span>                                                                                                         <span class="n">En</span> <span class="n">las</span> <span class="n">dos</span> <span class="err">ú</span><span class="n">ltimas</span> <span class="n">declaraciones</span> <span class="n">el</span> <span class="n">tamaño</span> <span class="n">del</span> <span class="n">array</span> <span class="n">será</span> <span class="n">el</span>
-<span class="n">número</span> <span class="n">de</span> <span class="n">caracteres</span> <span class="n">dado</span> <span class="n">en</span> <span class="n">la</span> <span class="n">inicialización</span> <span class="n">más</span> <span class="mi">1</span> <span class="p">(</span><span class="n">que</span> <span class="n">corresponde</span> <span class="n">al</span> <span class="n">carácter</span> <span class="err">‘\</span><span class="mi">0</span><span class="err">’</span><span class="p">).</span>
+</pre></div>
+</td></tr></table>
 
-<span class="n">Las</span> <span class="n">cadenas</span> <span class="n">se</span> <span class="n">deben</span> <span class="n">almacenar</span> <span class="n">en</span> <span class="n">arrays</span> <span class="n">de</span> <span class="n">caracteres</span><span class="p">,</span> <span class="n">pero</span> <span class="n">no</span> <span class="n">todos</span> <span class="n">lo</span> <span class="n">arrays</span> <span class="n">de</span> <span class="n">caracteres</span> <span class="n">contienen</span> <span class="n">cadenas</span><span class="p">.</span> <span class="n">Las</span> <span class="n">cadenas</span> <span class="n">contienen</span> <span class="n">un</span> <span class="n">carácter</span> <span class="n">nulo</span> <span class="n">al</span> <span class="n">final</span> <span class="n">del</span> <span class="n">array</span> <span class="n">de</span> <span class="n">caracteres</span><span class="p">.</span>
-
-<span class="o">!</span><span class="p">[](</span><span class="n">imagenes</span><span class="o">/</span><span class="n">cadenaCaracteres</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
-
-<span class="cp">##### `printf` y `scanf` con cadenas</span>
-<span class="n">Las</span> <span class="n">funciones</span> <span class="err">`</span><span class="n">printf</span><span class="err">`</span> <span class="n">y</span> <span class="err">`</span><span class="n">scanf</span><span class="err">`</span> <span class="n">tratan</span> <span class="n">el</span> <span class="err">`</span><span class="sc">&#39;\0&#39;</span><span class="err">`</span> <span class="n">automa</span><span class="err">́</span><span class="n">ticamente</span> <span class="n">con</span> <span class="err">`</span><span class="o">%</span><span class="n">s</span><span class="err">`</span>
-
-<span class="o">~~~</span><span class="n">c</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
+<p>En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).</p>
+<p>Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.</p>
+<p><img alt="" src="imagenes/cadenaCaracteres.png" /></p>
+<h3 id="printf-y-scanf-con-cadenas"><code>printf</code> y <code>scanf</code> con cadenas<a class="headerlink" href="#printf-y-scanf-con-cadenas" title="Permanent link">&para;</a></h3>
+<p>Las funciones <code>printf</code> y <code>scanf</code> tratan el <code>'\0'</code> automáticamente con <code>%s</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
 <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span>
 <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span> <span class="c1">//lee la entrada estandar hasta encontrar \n, sin detenerse en espacios</span>
 </pre></div>
 </td></tr></table>
 
-<h5>Librería <code>string.h</code></h5>
+<h3 id="libreria-stringh">Librería <code>string.h</code><a class="headerlink" href="#libreria-stringh" title="Permanent link">&para;</a></h3>
 <p>Para trabajar con cadenas de caracteres, en C tenemos la librería <code>string.h</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 </pre></div>
@@ -1422,7 +1449,7 @@ Compara dos cadenas. Devuelve 0 en caso de que sean iguales. &lt;0 si la primera
 </ul>
 <p><code>strcpy</code> y <code>strcat</code> devuelven un puntero a la cadena
 resultante. No comprueban si el resultado cabe en la cadena final.</p>
-<h4>Ejemplos con cadenas de caracteres</h4>
+<h3 id="ejemplos-con-cadenas-de-caracteres">Ejemplos con cadenas de caracteres<a class="headerlink" href="#ejemplos-con-cadenas-de-caracteres" title="Permanent link">&para;</a></h3>
 <p>Ejemplo 1:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
