@@ -51,7 +51,7 @@ Introduce valores del intervalo 2: 1 45
 
 ### Ejercicio 2 ###
 
-Implementa la función `concatena` que recibe dos cadenas como parámetro y concatena la segunda a continuación de la primera. No puedes usar las funciones predefinidas `strcat` ni `strlen`. 
+Implementa un programa que pida dos cadenas de texto y concatene la segunda a continuación de la primera. No puedes usar las funciones predefinidas `strcat` ni `strlen`. 
 
 **Ejemplo de ejecución:**
 
@@ -65,19 +65,8 @@ Datos de entrada: `dos cadenas de texto`
 **Casos de prueba:**
 
 ~~~text
-Datose entrada:
-cadena1: hola
-cadena2: amigo
-Resultado:
-cadena1: holaamigo
-~~~
-
-~~~text
-Datos entrada:
-cadena1: AAAAAAAAA
-cadena2: BBBBBBBB
-Resultado:
-cadena1: AAAAAAAAABBBBBBBB
+Introduce cadenas: AAAAAAAAA BBBBBBBB
+Resultado: AAAAAAAAABBBBBBBB
 ~~~
 
 ### Ejercicio 3 ###
