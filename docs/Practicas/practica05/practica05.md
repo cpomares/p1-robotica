@@ -66,23 +66,23 @@ Datos de entrada: `dos cadenas de texto`
 
 ~~~text
 Datose entrada:
-cadena1: hola 
+cadena1: hola
 cadena2: amigo
-Resultado: 
+Resultado:
 cadena1: holaamigo
 ~~~
 
 ~~~text
 Datos entrada:
-cadena1: AAAAAAAAA 
+cadena1: AAAAAAAAA
 cadena2: BBBBBBBB
-Resultado: 
+Resultado:
 cadena1: AAAAAAAAABBBBBBBB
 ~~~
 
 ### Ejercicio 3 ###
 
-Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 5x7 (define para ello un tipo `TCalendario`), rellenando con ceros los días vacíos.
+Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 6x7 (define para ello un tipo `TCalendario`), rellenando con ceros los días vacíos.
 
 El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz.
 
@@ -96,14 +96,27 @@ Por ejemplo, Octubre 2019 se almacenaría en la siguiente matriz `TCalendario`:
 Introduce mes: 10
 Introduce año: 2019
 
-LUN MAR MIE JUE VIE SAB DOM
+ LUN MAR MIE JUE VIE SAB DOM
    .   1   2   3   4   5   6
    7   8   9  10  11  12  13
   14  15  16  17  18  19  20
   21  22  23  24  25  26  27
   28  29  30  31   .   .   .
+   .   .   .   .   .   .   .
 ~~~
 
+~~~text
+Introduce mes: 09
+Introduce año: 2019
+
+ LUN MAR MIE JUE VIE SAB DOM
+   .   .   .   .   .   .   1
+   2   3   4   5   6   7   8
+   9  10  11  12  13  14  15
+  16  17  18  19  20  21  22
+  23  24  25  26  27  28  29
+  30   .   .   .   .   .   .
+~~~
 
 ### Ejercicio 4 ###
 
