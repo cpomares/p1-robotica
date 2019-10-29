@@ -572,9 +572,9 @@ Resultado: holaamigo
 3
 4
 5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Datose entrada:
-cadena1: hola 
+cadena1: hola
 cadena2: amigo
-Resultado: 
+Resultado:
 cadena1: holaamigo
 </pre></div>
 </td></tr></table>
@@ -584,36 +584,60 @@ cadena1: holaamigo
 3
 4
 5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Datos entrada:
-cadena1: AAAAAAAAA 
+cadena1: AAAAAAAAA
 cadena2: BBBBBBBB
-Resultado: 
+Resultado:
 cadena1: AAAAAAAAABBBBBBBB
 </pre></div>
 </td></tr></table>
 
 <h3 id="ejercicio-3">Ejercicio 3<a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h3>
-<p>Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 5x7 (define para ello un tipo <code>TCalendario</code>), rellenando con ceros los días vacíos.</p>
+<p>Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 6x7 (define para ello un tipo <code>TCalendario</code>), rellenando con ceros los días vacíos.</p>
 <p>El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz.</p>
 <p>Por ejemplo, Octubre 2019 se almacenaría en la siguiente matriz <code>TCalendario</code>:</p>
 <p><img src="imagenes/octubre2019.png" width="300px"/></p>
 <p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce mes: 10
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce mes: 10
 Introduce año: 2019
 
-LUN MAR MIE JUE VIE SAB DOM
+ LUN MAR MIE JUE VIE SAB DOM
    .   1   2   3   4   5   6
    7   8   9  10  11  12  13
   14  15  16  17  18  19  20
   21  22  23  24  25  26  27
   28  29  30  31   .   .   .
+   .   .   .   .   .   .   .
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce mes: 09
+Introduce año: 2019
+
+ LUN MAR MIE JUE VIE SAB DOM
+   .   .   .   .   .   .   1
+   2   3   4   5   6   7   8
+   9  10  11  12  13  14  15
+  16  17  18  19  20  21  22
+  23  24  25  26  27  28  29
+  30   .   .   .   .   .   .
 </pre></div>
 </td></tr></table>
 
