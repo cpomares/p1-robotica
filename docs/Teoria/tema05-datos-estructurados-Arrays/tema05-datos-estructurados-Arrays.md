@@ -818,10 +818,15 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
 
 Es interesante y habitual la operación de ordenación en un array. La búsqueda de un dato dentro de un conjunto es otro de los procesos más habituales en el tratamiento de información. Si los datos están ordenados, la localización de uno de ellos puede acelerarse.
 
-Por ejemplo, si quereos mantener ordenado un vector de calificaciones para poder consultar rápidamente las cinco mejores notas, tendríamos que ordenar nuestro vector de mayor a menor (en orden decreciente) y acceder a las cinco primeras posiciones del vector.
+Por ejemplo, si queremos mantener ordenado un vector de calificaciones para poder consultar rápidamente las cinco mejores notas, tendríamos que ordenar nuestro vector de mayor a menor (en orden decreciente) y acceder a las cinco primeras posiciones del vector.
 
-Imaginemos que tenemos declarado el siguiente vector:~~~cint vec[5]={1, 5, 6, 4, 2};
-~~~Ahora queremos saber si un determinado valor, 3 por ejemplo, se encuentra en dicho vector, o queremos devolver el valor más parecido ¿qué haríamos?Lo mismo podemos hacer para cadenas de caracteres (que es donde más se usa la ordenación).Vamos a ver varios métodos (algoritmos) de ordenación de vectores.Aunque los veamos para enteros, son perfectamente extensibles a otros tipos de datos (incluso registros).Sólo tendríamos que definir la manera de comparar datos (<, >, =) Podemos ordenar de mayor a menor o de menor a mayor.
+Imaginemos que tenemos declarado el siguiente vector:
+
+~~~c
+int vec[5]={1, 5, 6, 4, 2};
+~~~
+
+Ahora queremos saber si un determinado valor, 3 por ejemplo, se encuentra en dicho vector, o queremos devolver el valor más parecido ¿qué haríamos?Lo mismo podemos hacer para cadenas de caracteres (que es donde más se usa la ordenación).Vamos a ver varios métodos (algoritmos) de ordenación de vectores.Aunque los veamos para enteros, son perfectamente extensibles a otros tipos de datos (incluso registros).Sólo tendríamos que definir la manera de comparar datos (<, >, =) Podemos ordenar de mayor a menor o de menor a mayor.
 
 Cada algoritmo tiene su **complejidad**. Son métricas que permiten conocer el tiempo de procesamiento de cada algoritmo.
 La forma estándar es utilizar ordenes de complejidad, que relacionan el tiempo de computación con el tamaño del problema a tratar.La jerarquía de ordenes de complejidad sería O(1)<O(log n)<O(n)<O(n logn)<O(n2)<O(n3)<O(n4)..
