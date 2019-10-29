@@ -475,14 +475,16 @@ Ejemplos:
 ~~~c
 char cadena[20];
 char cadena[]="Adios";
-~~~                                                                                                         En las dos últimas declaraciones el tamaño del array será el
-número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).
+~~~
+
+En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).
 
 Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.
 
 ![](imagenes/cadenaCaracteres.png)
 
-##### `printf` y `scanf` con cadenas
+### `printf` y `scanf` con cadenas
+
 Las funciones `printf` y `scanf` tratan el `'\0'` automáticamente con `%s`
 
 ~~~c
@@ -491,7 +493,7 @@ scanf("%s", cadena);
 scanf("%[^\n]s", cadena); //lee la entrada estandar hasta encontrar \n, sin detenerse en espacios
 ~~~
 
-##### Librería `string.h`
+### Librería `string.h`
 
 Para trabajar con cadenas de caracteres, en C tenemos la librería `string.h`:
 
@@ -510,7 +512,7 @@ Compara dos cadenas. Devuelve 0 en caso de que sean iguales. <0 si la primera ca
 `strcpy` y `strcat` devuelven un puntero a la cadena
 resultante. No comprueban si el resultado cabe en la cadena final.
 
-#### Ejemplos con cadenas de caracteres
+### Ejemplos con cadenas de caracteres
 
 Ejemplo 1:
 
