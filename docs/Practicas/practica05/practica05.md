@@ -84,7 +84,7 @@ cadena1: AAAAAAAAABBBBBBBB
 
 Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 6x7 (define para ello un tipo `TCalendario`), rellenando con ceros los días vacíos.
 
-El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz.
+El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz. Los 0s almacenados se imprimen como puntos `.`.
 
 Por ejemplo, Octubre 2019 se almacenaría en la siguiente matriz `TCalendario`:
 
