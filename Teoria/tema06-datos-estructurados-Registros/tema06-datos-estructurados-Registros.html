@@ -858,7 +858,7 @@
 
 <h4>El operador <code>-&gt;</code></h4>
 <p>Para acceder a los campos de una variable de tipo puntero (lo veremos en el siguiente tema) a registro utilizamos el operador puntero <code>-&gt;</code>. Este operador indica que en la parte izquierda está la dirección de memoria de un registro, y la parte derecha los campos del mismo.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">puntero_estructura</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="o">&lt;</span><span class="n">nombre_campo</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">datos</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&lt;puntero_estructura&gt; -&gt; &lt;nombre_campo&gt; = datos;
 </pre></div>
 </td></tr></table>
 
@@ -940,7 +940,9 @@ registro sin modificarlo</li>
 45
 46
 47
-48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+48
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
    <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
 <span class="p">}</span><span class="n">TPunto</span><span class="p">;</span>
@@ -963,6 +965,8 @@ registro sin modificarlo</li>
 
    <span class="n">imprimePunto</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
    <span class="n">imprimePunto</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">TPunto</span> <span class="nf">leerPunto</span><span class="p">()</span> <span class="p">{</span>
@@ -1058,13 +1062,17 @@ registro sin modificarlo</li>
 </ul>
 <p>Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño.</p>
 <p>Sintaxis:</p>
-<pre style="background-color:#ffffe6">
-union nombre-union {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>union nombre-union {
     tipo1 campo1;
     tipo2 campo2;
     ...
 };
-</pre>
+</pre></div>
+</td></tr></table>
 
 <p>La forma de acceder a los campos de una unión es igual que en las estructuras.</p>
 <p>También se pueden definir con <code>typedef</code>.</p>
@@ -1106,7 +1114,9 @@ union nombre-union {
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">union</span> <span class="p">{</span>
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">union</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
    <span class="kt">char</span> <span class="n">b</span><span class="p">;</span>
 <span class="p">}</span><span class="n">TPrueba</span><span class="p">;</span>
@@ -1116,6 +1126,8 @@ union nombre-union {
    <span class="n">p1</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
    <span class="n">p1</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;p1.a: %d p1.b: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">a</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">b</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Salida:</span>
@@ -1193,7 +1205,9 @@ union nombre-union {
 67
 68
 69
-70</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 2</span>
+70
+71
+72</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 2</span>
 
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">CD</span><span class="p">,</span> <span class="n">DVD</span><span class="p">}</span> <span class="n">TTipoDisp</span><span class="p">;</span>
 
@@ -1241,6 +1255,8 @@ union nombre-union {
    <span class="n">disp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">DVD</span><span class="p">;</span>
 
    <span class="n">imprimeDisp</span><span class="p">(</span><span class="n">disp</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">imprimeDisp</span><span class="p">(</span><span class="n">TDispositivo</span> <span class="n">arrayDisp</span><span class="p">[])</span> <span class="p">{</span>
@@ -1434,7 +1450,9 @@ union nombre-union {
 111
 112
 113
-114</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAMCAD 45</span>
+114
+115
+116</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAMCAD 45</span>
 <span class="cp">#define NUMALU 30</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
@@ -1486,6 +1504,8 @@ union nombre-union {
             <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opción incorrecta</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
       <span class="p">}</span>
    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">opcion</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">pedirOpcion</span><span class="p">()</span> <span class="p">{</span>
@@ -1620,7 +1640,9 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 64
 65
 66
-67</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+67
+68
+69</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
@@ -1647,6 +1669,8 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El perímetro del triángulo es: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">triangulo</span><span class="p">.</span><span class="n">perimetro</span><span class="p">);</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El área del triángulo es: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">triangulo</span><span class="p">.</span><span class="n">area</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">TTriangulo</span> <span class="nf">leerTriangulo</span><span class="p">()</span> <span class="p">{</span>
