@@ -50,18 +50,17 @@ Diferencias respecto a los arrays:
 - Los elementos de un array son todos del mismo tipo, en una estructura no.
 - En un array se selecciona un elemento por su posición dentro del array, en una estructura cada elemento tiene su identificador
 
-
 ### 1.1 Definición de un registro
 
 La sintaxis es:
 
-<pre style="background-color:#ffffe6">
+~~~text
 struct nombreRegistro {
    tipo-campo1 nombre-campo1
    tipo-campo2 nombre-campo2
    ...
 };
-</pre>
+~~~
 
 Pueden utilizarse arrays como campos. Ejemplo:
 
@@ -76,9 +75,10 @@ struct CD {
 
 Sintaxis utilizando `typedef`:
 
-<pre style="background-color:#ffffe6">
+~~~text
 typedef struct {...} nombreRegistro;
-</pre>
+~~~
+
 Dentro de las llaves escribiremos los campos que va a contener el registro.
 
 ~~~c
@@ -284,7 +284,7 @@ Las uniones son similares a las estructuras en cuanto que agrupan una serie de d
 - Las estructuras almacenan variables relacionadas juntas y almacenadas en posiciones contiguas de memoria.
 - Las uniones almacenan también múltiples campos, pero todos ellos se solapan entre sí en la misma posición. Para determinar el tamaño de una unión se analiza el tamaño de cada campo y el de mayor tamaño será el tamaño de la unión.
 
-Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño. 
+Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño.
 
 Sintaxis:
 
