@@ -1,17 +1,7 @@
 
 # Tema 6: Tipos de datos estructurados: Registros
 
-## Contenidos
-
-- [1. Registros](#1)
-	- [1-1. Definición ](#1-1)
-	- [1-2. Operadores ](#1-2)
-	- [1-3. Registros y funciones ](#1-3)
-	- [1-4. Estructuras anidadas ](#1-4)
-	- [1-5. Arrays de registros ](#1-5)
-- [2. Uniones](#2)
-
-## <a name="1"/> 1. Registros
+## 1. Registros
 
 Los tipos de datos compuestos o estructurados, son tipos compuestos por otros tipos. Vimos que habían dos tipos:
 
@@ -61,7 +51,7 @@ Diferencias respecto a los arrays:
 - En un array se selecciona un elemento por su posición dentro del array, en una estructura cada elemento tiene su identificador
 
 
-### <a name="1-1"/> 1.1  Definición de un registro
+### 1.1 Definición de un registro
 
 La sintaxis es:
 
@@ -144,10 +134,10 @@ Podemos inicializar los registros al definir las variables o dejarlos vacíos pa
    };
 ~~~
 
-### <a name="1-2"/> 1.2  Operadores para manejo de registros
+### 1.2 Operadores para manejo de registros
 
 #### El operador `.`
-Para acceder a los campos de una variable de tipo registro utilizamos el operador punto `.`. Este opeador proporciona el camino directo al campo correspondiente. Los datos deben ser del mismo tipo que el tipo declarado para ese campo.
+Para acceder a los campos de una variable de tipo registro utilizamos el operador punto `.`. Este operador proporciona el camino directo al campo correspondiente. Los datos deben ser del mismo tipo que el tipo declarado para ese campo.
 
 ~~~c
 TPersona persona2;
@@ -178,7 +168,7 @@ void imprimir (TPersona *p) {
 }
 ~~~
 
-### <a name="1-3"/> 1.3  Registros y funciones
+### 1.3  Registros y funciones
 
 #### Paso de registros como parámetros a funciones
 
@@ -244,7 +234,7 @@ void swap(TPunto* p1, TPunto* p2) {
 ~~~
 
 
-### <a name="1-4"/> 1.4 Estructuras anidadas
+### 1.4 Estructuras anidadas
 
 Un registro puede contener otros registros.
 
@@ -265,7 +255,7 @@ typedef struct{
 } TCliente;
 ~~~
 
-### <a name="1-5"/> 1.5 Arrays de registros
+### 1.5 Arrays de registros
 
 Podemos definir arrays donde su tipo base sea un registro, es decir, cada elemento del vector es un registro, con memoria reservada para su uso. Ya que en los arrays sólo podemos almacenar diversos valores de un mismo tipo, los arrays de estructuras permiten almacenar diversos valores de diferentes tipos agrupados en registros.
 
@@ -287,7 +277,7 @@ vectorProductos[0].precio = 17.5
 vectorProductos[0].stock = 4;
 ~~~
 
-## <a name="2"/> 2. Uniones
+## 2. Uniones
 
 Las uniones son similares a las estructuras en cuanto que agrupan una serie de datos, pero la forma de almacenamiento es diferente:
 
@@ -700,6 +690,6 @@ Define un array genérico de figuras de tipo TFigura. Podrá contener tanto tri�
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
