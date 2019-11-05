@@ -36,7 +36,7 @@
     
     
       
-        <title>Tema 6: Tipos de datos estructurados: Registros - P1 Robótica</title>
+        <title>Tema 5 - P1 Robótica</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tema 6: Tipos de datos estructurados: Registros
+                Tema 5
               
             </span>
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -260,6 +262,165 @@
     <a href="../tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.html" title="Tema 5" class="md-nav__link">
       Tema 5
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 5
+      </label>
+    
+    <a href="tema06-datos-estructurados-Registros.html" title="Tema 5" class="md-nav__link md-nav__link--active">
+      Tema 5
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-registros" title="1. Registros" class="md-nav__link">
+    1. Registros
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion-de-un-registro" title="1.1 Definición de un registro" class="md-nav__link">
+    1.1 Definición de un registro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-operadores-para-manejo-de-registros" title="1.2 Operadores para manejo de registros" class="md-nav__link">
+    1.2 Operadores para manejo de registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-registros-y-funciones" title="1.3  Registros y funciones" class="md-nav__link">
+    1.3  Registros y funciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-estructuras-anidadas" title="1.4 Estructuras anidadas" class="md-nav__link">
+    1.4 Estructuras anidadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-arrays-de-registros" title="1.5 Arrays de registros" class="md-nav__link">
+    1.5 Arrays de registros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uniones" title="2. Uniones" class="md-nav__link">
+    2. Uniones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" title="Ejercicio 3" class="md-nav__link">
+    Ejercicio 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
+    Ejercicios propuestos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
+    Ejercicio 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5" title="Ejercicio 5" class="md-nav__link">
+    Ejercicio 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6" title="Ejercicio 6" class="md-nav__link">
+    Ejercicio 6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -385,9 +546,118 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contenidos" title="Contenidos" class="md-nav__link">
-    Contenidos
+  <a href="#1-registros" title="1. Registros" class="md-nav__link">
+    1. Registros
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion-de-un-registro" title="1.1 Definición de un registro" class="md-nav__link">
+    1.1 Definición de un registro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-operadores-para-manejo-de-registros" title="1.2 Operadores para manejo de registros" class="md-nav__link">
+    1.2 Operadores para manejo de registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-registros-y-funciones" title="1.3  Registros y funciones" class="md-nav__link">
+    1.3  Registros y funciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-estructuras-anidadas" title="1.4 Estructuras anidadas" class="md-nav__link">
+    1.4 Estructuras anidadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-arrays-de-registros" title="1.5 Arrays de registros" class="md-nav__link">
+    1.5 Arrays de registros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uniones" title="2. Uniones" class="md-nav__link">
+    2. Uniones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" title="Ejercicio 3" class="md-nav__link">
+    Ejercicio 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
+    Ejercicios propuestos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
+    Ejercicio 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5" title="Ejercicio 5" class="md-nav__link">
+    Ejercicio 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6" title="Ejercicio 6" class="md-nav__link">
+    Ejercicio 6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -409,19 +679,7 @@
                 
                 
                 <h1 id="tema-6-tipos-de-datos-estructurados-registros">Tema 6: Tipos de datos estructurados: Registros<a class="headerlink" href="#tema-6-tipos-de-datos-estructurados-registros" title="Permanent link">&para;</a></h1>
-<h2 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="#1">1. Registros</a><ul>
-<li><a href="#1-1">1-1. Definición </a></li>
-<li><a href="#1-2">1-2. Operadores </a></li>
-<li><a href="#1-3">1-3. Registros y funciones </a></li>
-<li><a href="#1-4">1-4. Estructuras anidadas </a></li>
-<li><a href="#1-5">1-5. Arrays de registros </a></li>
-</ul>
-</li>
-<li><a href="#2">2. Uniones</a></li>
-</ul>
-<h2 id="1-registros"><a name="1"/> 1. Registros<a class="headerlink" href="#1-registros" title="Permanent link">&para;</a></h2>
+<h2 id="1-registros">1. Registros<a class="headerlink" href="#1-registros" title="Permanent link">&para;</a></h2>
 <p>Los tipos de datos compuestos o estructurados, son tipos compuestos por otros tipos. Vimos que habían dos tipos:</p>
 <ul>
 <li>Array: Está compuesto por elementos del mismo tipo. Por ejemplo, un array de enteros, todos sus elementos son enteros.</li>
@@ -468,7 +726,7 @@
 <li>Los elementos de un array son todos del mismo tipo, en una estructura no.</li>
 <li>En un array se selecciona un elemento por su posición dentro del array, en una estructura cada elemento tiene su identificador</li>
 </ul>
-<h3 id="11-definicion-de-un-registro"><a name="1-1"/> 1.1  Definición de un registro<a class="headerlink" href="#11-definicion-de-un-registro" title="Permanent link">&para;</a></h3>
+<h3 id="11-definicion-de-un-registro">1.1 Definición de un registro<a class="headerlink" href="#11-definicion-de-un-registro" title="Permanent link">&para;</a></h3>
 <p>La sintaxis es:</p>
 <pre style="background-color:#ffffe6">
 struct nombreRegistro {
@@ -575,9 +833,9 @@ typedef struct {...} nombreRegistro;
 </pre></div>
 </td></tr></table>
 
-<h3 id="12-operadores-para-manejo-de-registros"><a name="1-2"/> 1.2  Operadores para manejo de registros<a class="headerlink" href="#12-operadores-para-manejo-de-registros" title="Permanent link">&para;</a></h3>
+<h3 id="12-operadores-para-manejo-de-registros">1.2 Operadores para manejo de registros<a class="headerlink" href="#12-operadores-para-manejo-de-registros" title="Permanent link">&para;</a></h3>
 <h4>El operador <code>.</code></h4>
-<p>Para acceder a los campos de una variable de tipo registro utilizamos el operador punto <code>.</code>. Este opeador proporciona el camino directo al campo correspondiente. Los datos deben ser del mismo tipo que el tipo declarado para ese campo.</p>
+<p>Para acceder a los campos de una variable de tipo registro utilizamos el operador punto <code>.</code>. Este operador proporciona el camino directo al campo correspondiente. Los datos deben ser del mismo tipo que el tipo declarado para ese campo.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -613,7 +871,7 @@ typedef struct {...} nombreRegistro;
 </pre></div>
 </td></tr></table>
 
-<h3 id="13-registros-y-funciones"><a name="1-3"/> 1.3  Registros y funciones<a class="headerlink" href="#13-registros-y-funciones" title="Permanent link">&para;</a></h3>
+<h3 id="13-registros-y-funciones">1.3  Registros y funciones<a class="headerlink" href="#13-registros-y-funciones" title="Permanent link">&para;</a></h3>
 <h4>Paso de registros como parámetros a funciones</h4>
 <ul>
 <li>
@@ -729,7 +987,7 @@ registro sin modificarlo</li>
 </pre></div>
 </td></tr></table>
 
-<h3 id="14-estructuras-anidadas"><a name="1-4"/> 1.4 Estructuras anidadas<a class="headerlink" href="#14-estructuras-anidadas" title="Permanent link">&para;</a></h3>
+<h3 id="14-estructuras-anidadas">1.4 Estructuras anidadas<a class="headerlink" href="#14-estructuras-anidadas" title="Permanent link">&para;</a></h3>
 <p>Un registro puede contener otros registros.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -761,7 +1019,7 @@ registro sin modificarlo</li>
 </pre></div>
 </td></tr></table>
 
-<h3 id="15-arrays-de-registros"><a name="1-5"/> 1.5 Arrays de registros<a class="headerlink" href="#15-arrays-de-registros" title="Permanent link">&para;</a></h3>
+<h3 id="15-arrays-de-registros">1.5 Arrays de registros<a class="headerlink" href="#15-arrays-de-registros" title="Permanent link">&para;</a></h3>
 <p>Podemos definir arrays donde su tipo base sea un registro, es decir, cada elemento del vector es un registro, con memoria reservada para su uso. Ya que en los arrays sólo podemos almacenar diversos valores de un mismo tipo, los arrays de estructuras permiten almacenar diversos valores de diferentes tipos agrupados en registros.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -788,7 +1046,7 @@ registro sin modificarlo</li>
 </pre></div>
 </td></tr></table>
 
-<h2 id="2-uniones"><a name="2"/> 2. Uniones<a class="headerlink" href="#2-uniones" title="Permanent link">&para;</a></h2>
+<h2 id="2-uniones">2. Uniones<a class="headerlink" href="#2-uniones" title="Permanent link">&para;</a></h2>
 <p>Las uniones son similares a las estructuras en cuanto que agrupan una serie de datos, pero la forma de almacenamiento es diferente:</p>
 <ul>
 <li>Las estructuras almacenan variables relacionadas juntas y almacenadas en posiciones contiguas de memoria.</li>
@@ -1497,7 +1755,7 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 
 <p>Define un array genérico de figuras de tipo TFigura. Podrá contener tanto triángulos como rectángulos. Implementa una función que reciba dicho array e imprima los datos de la figura que contiene en cada posición.</p>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2018-19<br />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
@@ -1516,6 +1774,41 @@ Cristina Pomares Puig</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.html" title="Tema 5" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Tema 5
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 0: Entorno Linux y herramientas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
