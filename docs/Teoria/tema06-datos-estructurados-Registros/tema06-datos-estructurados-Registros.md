@@ -154,7 +154,7 @@ persona2.genero = 'M';
 
 Para acceder a los campos de una variable de tipo puntero (lo veremos en el siguiente tema) a registro utilizamos el operador puntero `->`. Este operador indica que en la parte izquierda está la dirección de memoria de un registro, y la parte derecha los campos del mismo.
 
-~~~c
+~~~text
 <puntero_estructura> -> <nombre_campo> = datos;
 ~~~
 
@@ -205,6 +205,8 @@ int main() {
 
    imprimePunto(p1);
    imprimePunto(p2);
+
+   return 0;
 }
 
 TPunto leerPunto() {
@@ -288,13 +290,13 @@ Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios vari
 
 Sintaxis:
 
-<pre style="background-color:#ffffe6">
+~~~text
 union nombre-union {
     tipo1 campo1;
     tipo2 campo2;
     ...
 };
-</pre>
+~~~
 
 La forma de acceder a los campos de una unión es igual que en las estructuras.
 
@@ -331,6 +333,8 @@ int main() {
    p1.a = 50;
    p1.b = 'A';
    printf("p1.a: %d p1.b: %c\n", p1.a, p1.b);
+
+   return 0;
 }
 
 // Salida:
@@ -388,6 +392,8 @@ int main() {
    disp[1].tipo = DVD;
 
    imprimeDisp(disp);
+
+   return 0;
 }
 
 void imprimeDisp(TDispositivo arrayDisp[]) {
@@ -502,6 +508,8 @@ int main(){
             printf("Opción incorrecta\n");
       }
    }while(opcion != 3);
+
+   return 0;
 }
 
 int pedirOpcion() {
@@ -598,6 +606,8 @@ int main() {
 
    printf("El perímetro del triángulo es: %.2f\n",triangulo.perimetro);
    printf("El área del triángulo es: %.2f\n",triangulo.area);
+
+   return 0;
 }
 
 TTriangulo leerTriangulo() {
