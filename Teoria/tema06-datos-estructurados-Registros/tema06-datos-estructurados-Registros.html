@@ -728,13 +728,17 @@
 </ul>
 <h3 id="11-definicion-de-un-registro">1.1 Definición de un registro<a class="headerlink" href="#11-definicion-de-un-registro" title="Permanent link">&para;</a></h3>
 <p>La sintaxis es:</p>
-<pre style="background-color:#ffffe6">
-struct nombreRegistro {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>struct nombreRegistro {
    tipo-campo1 nombre-campo1
    tipo-campo2 nombre-campo2
    ...
 };
-</pre>
+</pre></div>
+</td></tr></table>
 
 <p>Pueden utilizarse arrays como campos. Ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -752,9 +756,9 @@ struct nombreRegistro {
 </td></tr></table>
 
 <p>Sintaxis utilizando <code>typedef</code>:</p>
-<pre style="background-color:#ffffe6">
-typedef struct {...} nombreRegistro;
-</pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>typedef struct {...} nombreRegistro;
+</pre></div>
+</td></tr></table>
 
 <p>Dentro de las llaves escribiremos los campos que va a contener el registro.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1052,7 +1056,7 @@ registro sin modificarlo</li>
 <li>Las estructuras almacenan variables relacionadas juntas y almacenadas en posiciones contiguas de memoria.</li>
 <li>Las uniones almacenan también múltiples campos, pero todos ellos se solapan entre sí en la misma posición. Para determinar el tamaño de una unión se analiza el tamaño de cada campo y el de mayor tamaño será el tamaño de la unión.</li>
 </ul>
-<p>Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño. </p>
+<p>Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño.</p>
 <p>Sintaxis:</p>
 <pre style="background-color:#ffffe6">
 union nombre-union {
