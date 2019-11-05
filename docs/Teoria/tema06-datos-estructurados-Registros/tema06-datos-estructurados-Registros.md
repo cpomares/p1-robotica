@@ -235,7 +235,6 @@ void swap(TPunto* p1, TPunto* p2) {
 
 ~~~
 
-
 ### 1.4 Estructuras anidadas
 
 Un registro puede contener otros registros.
@@ -575,6 +574,7 @@ void darDeAltaAlumno(TAlumnos alumnos, int *numAlumnos) {
 ~~~
 
 ### Ejercicio 3
+
 Escribe los tipos de datos adecuados para almacenar triángulos. De cada triángulo se quiere guardar los tres puntos de sus vértices, su área y su perímetro.
 Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. Su área y su perímetro se calcularán automáticamente después de la lectura.
 
@@ -653,10 +653,12 @@ void calculaLados(TTriangulo triangulo, float *lado1, float *lado2, float *lado3
 ## Ejercicios propuestos
 
 ### Ejercicio 4
+
 Vamos a partir del ejercicio de los triángulos. Queremos almacenar 10 triángulos y ordenarlos de menor a mayor perímetro. Muéstralos ordenados por pantalla, puedes usar el algoritmo de ordenación que prefieras. Puedes hacer una función que imprima los datos de un triángulo por pantalla.
 
 ### Ejercicio 5
-Define un nuevo tipo TRectangulo y añade la misma funcionalidad que para los triángulos: área y perímetro.
+
+Define un nuevo tipo `TRectangulo` y añade la misma funcionalidad que para los triángulos: área y perímetro.
 
 ### Ejercicio 6
 
@@ -694,12 +696,9 @@ typedef struct {
 }TFigura;
 ~~~
 
-Define un array genérico de figuras de tipo TFigura. Podrá contener tanto triángulos como rectángulos. Implementa una función que reciba dicho array e imprima los datos de la figura que contiene en cada posición.
-
-
+Define un array genérico de figuras de tipo `TFigura`. Podrá contener tanto triángulos como rectángulos. Implementa una función que reciba dicho array e imprima los datos de la figura que contiene en cada posición.
 
 ----
-
 Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
