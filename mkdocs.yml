@@ -9,7 +9,7 @@ nav:
    - 'Tema 3': 'Teoria/tema03-sentencias-de-control/tema03-sentencias-de-control.md'
    - 'Tema 4': 'Teoria/tema04-descomposicion-modular/tema04-descomposicion-modular.md'
    - 'Tema 5': 'Teoria/tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.md'
-   - 'Tema 5': 'Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.md'
+   - 'Tema 6': 'Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.md'
 - 'Prácticas':
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
