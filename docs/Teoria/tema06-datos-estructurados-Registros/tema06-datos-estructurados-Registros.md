@@ -90,7 +90,6 @@ typedef struct {
    char genero;
 } TPersona;
 
-
 int main() {
    // Declaración de variables de estructuras
    struct CD cd1;
@@ -98,6 +97,8 @@ int main() {
 
    // Declaración de variables de estructuras definidas con typedef
    TPersona persona1;
+
+   return 0;
 }
 ~~~
 
@@ -166,7 +167,7 @@ void rellena (TPersona *p) {
     strcpy(p->apellidos, "Garcia");
     p->edad = 45;
 }
-~~~ 
+~~~
 
 ### 1.3  Registros y funciones
 
