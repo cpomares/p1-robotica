@@ -973,10 +973,10 @@ registro sin modificarlo</li>
 
 <span class="n">TPunto</span> <span class="nf">leerPunto</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">TPunto</span> <span class="n">p</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Coordenada x del punto:&quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Coordenada y del punto:&quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Coordenadas x y del punto:&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+
     <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -993,6 +993,23 @@ registro sin modificarlo</li>
    <span class="n">p1</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="n">p2</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">;</span>
    <span class="n">p2</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="n">aux</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
    <span class="n">p2</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="n">aux</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>La función <code>swap</code>también podría hacerse manejando los registros completos en lugar de campo a campo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">TPunto</span><span class="o">*</span> <span class="n">p1</span><span class="p">,</span> <span class="n">TPunto</span><span class="o">*</span> <span class="n">p2</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">TPunto</span> <span class="n">aux</span><span class="p">;</span>
+
+   <span class="n">aux</span> <span class="o">=</span> <span class="o">*</span><span class="n">p1</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1047,7 +1064,7 @@ registro sin modificarlo</li>
    <span class="n">strcpy</span><span class="p">(</span><span class="n">cli</span><span class="p">.</span><span class="n">datosCliente</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span> <span class="s">&quot;Juan&quot;</span><span class="p">);</span>
 
    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span> 
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
