@@ -867,10 +867,10 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">imprimir</span> <span class="p">(</span><span class="n">TPersona</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El nombre es: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">nombre</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Apellidos: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">apellidos</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Edad: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">edad</span><span class="p">);</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">rellena</span> <span class="p">(</span><span class="n">TPersona</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nombre</span><span class="p">,</span> <span class="s">&quot;Pepe&quot;</span><span class="p">);</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">apellidos</span><span class="p">,</span> <span class="s">&quot;Garcia&quot;</span><span class="p">);</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
