@@ -237,7 +237,7 @@ void swap(TPunto* p1, TPunto* p2) {
 
 ### 1.4 Estructuras anidadas
 
-Un registro puede contener otros registros.
+Un registro puede contener otros registros. Ejemplo:
 
 ~~~c
 typedef struct {
