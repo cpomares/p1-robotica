@@ -212,10 +212,10 @@ int main() {
 
 TPunto leerPunto() {
     TPunto p;
-    printf("Coordenada x del punto:");
-    scanf("%d",&p.x);
-    printf("Coordenada y del punto:");
-    scanf("%d",&p.y);
+
+    printf("Coordenadas x y del punto:");
+    scanf("%d %d",&p.x, &p.y);
+
     return p;
 }
 
@@ -233,7 +233,18 @@ void swap(TPunto* p1, TPunto* p2) {
    p2->x = aux.x;
    p2->y = aux.y;
 }
+~~~
 
+La función `swap`también podría hacerse manejando los registros completos en lugar de campo a campo:
+
+~~~c
+void swap(TPunto* p1, TPunto* p2) {
+   TPunto aux;
+
+   aux = *p1;
+   *p1 = *p2;
+   *p2 = aux;
+}
 ~~~
 
 ### 1.4 Estructuras anidadas
@@ -265,7 +276,7 @@ int main(){
    strcpy(cli.datosCliente.nombre, "Juan");
 
    return 0;
-} 
+}
 ~~~
 
 ### 1.5 Arrays de registros
