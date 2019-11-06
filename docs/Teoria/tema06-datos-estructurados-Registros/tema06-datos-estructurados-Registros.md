@@ -180,7 +180,7 @@ void rellena (TPersona *p) {
 
 #### Funciones que devuelven registros
 
-Vamos a seguir la misma norma que cuando tratamos tipos de datos simples, es decir, cuando sólo se va a devolver un dato (en este caso un registro), se hará a través de return.
+Vamos a seguir la misma norma que cuando tratamos tipos de datos simples, es decir, cuando sólo se va a devolver un dato (en este caso un registro), se hará a través de `return`.
 
 ~~~c
 typedef struct {
@@ -255,6 +255,17 @@ typedef struct{
    char direccion[100];
    char nombreEmpresa[50];
 } TCliente;
+
+int main(){
+   TCliente cli;
+
+   cli.codCliente = 4;
+   strcpy(cli.direccion, "Avda Mediterraneo 45");
+   cli.datosCliente.edad = 30;
+   strcpy(cli.datosCliente.nombre, "Juan");
+
+   return 0;
+} 
 ~~~
 
 ### 1.5 Arrays de registros
