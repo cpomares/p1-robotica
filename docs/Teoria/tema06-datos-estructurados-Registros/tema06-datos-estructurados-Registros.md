@@ -161,12 +161,12 @@ Para acceder a los campos de una variable de tipo puntero (lo veremos en el sigu
 Es el caso, por ejemplo, de los registros pasados como parámetro por referencia a una función. La función recibe como argumento la dirección de memoria (puntero) del registro.
 
 ~~~c
-void imprimir (TPersona *p) {
-    printf("El nombre es: %s\n", p->nombre);
-    printf("Apellidos: %s\n", p->apellidos);
-    printf("Edad: %d\n", p->edad);
+void rellena (TPersona *p) {
+    strcpy(p->nombre, "Pepe");
+    strcpy(p->apellidos, "Garcia");
+    p->edad = 45;
 }
-~~~
+~~~ 
 
 ### 1.3  Registros y funciones
 
