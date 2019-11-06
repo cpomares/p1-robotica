@@ -894,7 +894,7 @@ registro sin modificarlo</li>
 </li>
 </ul>
 <h4>Funciones que devuelven registros</h4>
-<p>Vamos a seguir la misma norma que cuando tratamos tipos de datos simples, es decir, cuando sólo se va a devolver un dato (en este caso un registro), se hará a través de return.</p>
+<p>Vamos a seguir la misma norma que cuando tratamos tipos de datos simples, es decir, cuando sólo se va a devolver un dato (en este caso un registro), se hará a través de <code>return</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1012,7 +1012,18 @@ registro sin modificarlo</li>
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
    <span class="kt">char</span> <span class="n">nombre</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
    <span class="kt">char</span> <span class="n">apellidos</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
    <span class="kt">char</span> <span class="n">nif</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
@@ -1026,6 +1037,17 @@ registro sin modificarlo</li>
    <span class="kt">char</span> <span class="n">direccion</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
    <span class="kt">char</span> <span class="n">nombreEmpresa</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
 <span class="p">}</span> <span class="n">TCliente</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+   <span class="n">TCliente</span> <span class="n">cli</span><span class="p">;</span>
+
+   <span class="n">cli</span><span class="p">.</span><span class="n">codCliente</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="n">strcpy</span><span class="p">(</span><span class="n">cli</span><span class="p">.</span><span class="n">direccion</span><span class="p">,</span> <span class="s">&quot;Avda Mediterraneo 45&quot;</span><span class="p">);</span>
+   <span class="n">cli</span><span class="p">.</span><span class="n">datosCliente</span><span class="p">.</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+   <span class="n">strcpy</span><span class="p">(</span><span class="n">cli</span><span class="p">.</span><span class="n">datosCliente</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span> <span class="s">&quot;Juan&quot;</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
 </pre></div>
 </td></tr></table>
 
