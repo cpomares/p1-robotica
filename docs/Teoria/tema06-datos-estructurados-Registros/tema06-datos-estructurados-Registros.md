@@ -301,144 +301,6 @@ vectorProductos[0].precio = 17.5
 vectorProductos[0].stock = 4;
 ~~~
 
-## 2. Uniones
-
-Las uniones son similares a las estructuras en cuanto que agrupan una serie de datos, pero la forma de almacenamiento es diferente:
-
-- Las estructuras almacenan variables relacionadas juntas y almacenadas en posiciones contiguas de memoria.
-- Las uniones almacenan también múltiples campos, pero todos ellos se solapan entre sí en la misma posición. Para determinar el tamaño de una unión se analiza el tamaño de cada campo y el de mayor tamaño será el tamaño de la unión.
-
-Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño.
-
-Sintaxis:
-
-~~~text
-union nombre-union {
-    tipo1 campo1;
-    tipo2 campo2;
-    ...
-};
-~~~
-
-La forma de acceder a los campos de una unión es igual que en las estructuras.
-
-También se pueden definir con `typedef`.
-
-
-Ejemplo:
-
-~~~c
-union ejemplo {
-    char letra;
-    double altura;
-};
-
-// Definido con typedef:
-typedef union {
-    char letra;
-    double altura;
-}TEjemplo;
-~~~
-
-La cantidad total de memoria utilizada por la union es de 8 bytes, ya que el campo `double altura`es el mayor.
-
-Ejemplo:
-
-~~~c
-typedef union {
-   int a;
-   char b;
-}TPrueba;
-
-int main() {
-   TPrueba p1;
-   p1.a = 50;
-   p1.b = 'A';
-   printf("p1.a: %d p1.b: %c\n", p1.a, p1.b);
-
-   return 0;
-}
-
-// Salida:
-// p1.a: 65 p1.b: A
-~~~
-
-Las uniones también nos sirven para **generalizar**. En el siguiente ejemplo, tenemos una estructura para almacenar DVD y otra para almacenar CD. Queremos hacer un array genérico que almacene dispositivos tanto de DVD como de CD. Para ello creamos otra estructura TDispositivo genérica, que almacenará o un CD o un DVD. El array lo definimos de tipo TDispositivo, por lo que podrá almacenar en cada posición un CD o un DVD.
-
-~~~c
-#define TAM 2
-
-typedef enum {CD, DVD} TTipoDisp;
-
-typedef struct{
-   char titulo[20];
-   char artista[25];
-   int num_canciones;
-   float precio;
-} TCD;
-
-typedef struct{
-   char titulo[20];
-   char director[25];
-   float precio;
-} TDVD;
-
-typedef struct {
-   TTipoDisp tipo;
-   union{
-      TCD cd;
-      TDVD dvd;
-   }disp;
-}TDispositivo;
-
-void imprimeDisp(TDispositivo []);
-
-int main() {
-   TDispositivo disp[TAM];
-   TCD cd1 = {
-      "Hopes and fears",
-      "Keane",
-      7,
-      17.99
-   };
-   TDVD dvd1 = {
-      "Spiderman",
-      "Sam Raimi",
-      9.99
-   };
-
-   disp[0].disp.cd = cd1;
-   disp[0].tipo = CD;
-
-   disp[1].disp.dvd = dvd1;
-   disp[1].tipo = DVD;
-
-   imprimeDisp(disp);
-
-   return 0;
-}
-
-void imprimeDisp(TDispositivo arrayDisp[]) {
-   int i;
-
-   for(i = 0; i < TAM; i++) {
-      printf("Tipo: %d\n",arrayDisp[i].tipo);
-      switch(arrayDisp[i].tipo) {
-         printf("Tipo: %d\n",arrayDisp[i].tipo);
-         case CD:
-            printf("***************\n");
-            printf("Título: %s\n", arrayDisp[i].disp.cd.titulo);
-            printf("Artista: %s\n", arrayDisp[i].disp.cd.artista);
-            break;
-         case DVD:
-            printf("***************\n");
-            printf("Título: %s\n", arrayDisp[i].disp.dvd.titulo);
-            printf("Director: %s\n", arrayDisp[i].disp.dvd.director);
-            break;
-      }
-   }
-}
-~~~
 
 ---
 
@@ -675,21 +537,15 @@ void calculaLados(TTriangulo triangulo, float *lado1, float *lado2, float *lado3
 
 ## Ejercicios propuestos
 
-### Ejercicio 4
+### Ejercicio 1
 
 Vamos a partir del ejercicio de los triángulos. Queremos almacenar 10 triángulos y ordenarlos de menor a mayor perímetro. Muéstralos ordenados por pantalla, puedes usar el algoritmo de ordenación que prefieras. Puedes hacer una función que imprima los datos de un triángulo por pantalla.
 
-### Ejercicio 5
+### Ejercicio 2
 
-Define un nuevo tipo `TRectangulo` y añade la misma funcionalidad que para los triángulos: área y perímetro.
-
-### Ejercicio 6
-
-Dada la siguiente definición de tipos de datos:
+Dados los siguientes tipos de datos:
 
 ~~~c
-typedef enum {TRIANGULO, RECTANGULO} TTipoFigura;
-
 typedef struct {
    int x;
    int y;
@@ -698,28 +554,88 @@ typedef struct {
 typedef struct {
    TPunto p1;
    TPunto p2;
-   TPunto p3;
-   float area;
-   float perimetro;
-}TTriangulo;
-
-typedef struct {
-   TPunto p1;  //esquina inferior izquierda
-   TPunto p2;  //esquina superior derecha
-   float area;
-   float perimetro;
-}TRectangulo;
-
-typedef struct {
-   TTipoFigura tipo;
-   union{
-      TTriangulo triangulo;
-      TRectangulo rectangulo;
-   }fig;
-}TFigura;
+}TSegmento;
 ~~~
 
-Define un array genérico de figuras de tipo `TFigura`. Podrá contener tanto triángulos como rectángulos. Implementa una función que reciba dicho array e imprima los datos de la figura que contiene en cada posición.
+y una matriz bidimensional de `TAMx4` numérica de este estilo. Ejemplo:
+
+~~~c
+#define TAM 5
+int matriz[TAM][4] = {{1,4,2,3},
+                      {2,1,5,4},
+                      {4,4,6,7},
+                      {3,3,7,7},
+                      {1,1,7,8}};
+~~~
+
+- Implementa la función `convertir` que reciba una matriz `TAMx4` numérica y devuelva un array unidimensional con `TAM` elementos de tipo `TSegmento`, donde cada segmento se obtiene de cada una de las filas de la matriz original. Por ejemplo, la primera fila daría lugar al segmento:
+
+    <img src="imagenes/segmento.png" width="130px"/>
+
+- Queremos trasladar todos los segmentos del array. El punto inicial de cada segmento se trasladará sumándole un valor a sus dos componentes y el punto final lo hará con otro valor, tal y como se muestra en el dibujo. Implementa las funciones necesarias.
+
+    <img src="imagenes/segmento2.png" width="275px"/>
+
+### Ejercicio 3
+
+Dada la definición de los siguientes tipos de datos, constantes y la función `main()`:
+
+~~~c 	 	 					
+#define TAMCAD 45
+#define TAMASIG 3
+#define NUMASIG 10
+#define NUMALU 100
+
+typedef struct {
+   char codigoAsignatura[TAMASIG];
+   float nota;
+}TAsignatura;
+
+typedef struct {
+   char nombre[TAMCAD];
+   char apellidos[TAMCAD];
+   char direccion[TAMCAD];
+   TAsignatura asig[NUMASIG];
+}TFichaAlumno;
+
+typedef TFichaAlumno TAlumnos [NUMALU];
+
+int main() {
+     TAlumnos alumnos;
+     TFichaAlumno fichaAlumno;
+     TAsignatura asignatura;
+     int i, j;
+
+     RellenaDatos(alumnos);
+
+      /// Código ejercicio 3a
+      /// Código ejercicio 3b
+      /// Código ejercicio 3d
+
+     return 0;
+}
+~~~
+
+Responde a las siguientes cuestiones, suponiendo que la función `RellenaDatos()` ya está definida y se encarga de almacenar en la estructura de datos correspondiente la información de todos los alumnos (un total de `NUMALU`) y de todas las asignaturas de cada alumno (todos están matriculados del mismo número de asignaturas `NUMASIG`):
+ 
+a. Escribe el código que permita mostrar por pantalla los apellidos de todos los alumnos cuyo nombre sea "Carlos" o "Eva". No es necesario que definas una función. Puedes utilizar la función de librería `strcmp`.
+
+b. Escribe el código que permita actualizar la nota de todas las asignaturas de todos los alumnos con el valor `5.0`. No es necesario que definas una función.
+
+c. Define la función con el siguiente prototipo:
+
+~~~c
+float NotaAlumno(TFichaAlumno, char*);
+~~~
+
+que debe devolver la nota del alumno en la asignatura cuyo código se especifica en el segundo argumento. Si el alumno no tiene esa asignatura, la función devolverá `-1.0`. Puedes utilizar la función de librería `strcmp`.
+
+d. Escribe el código que permita mostrar por pantalla el nombre, apellidos y la nota de todos los alumnos en la asignatura "P1". Si el alumno no tiene nota en la asignatura, no debe aparecer en el listado. No es necesario que definas una función y puedes declarar alguna nueva variable si lo consideras necesario. Debes utilizar la función del apartado anterior.
+
+
+## Bibliografía
+
+- Capítulos 11.1 a 11.7 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
 
 ----
 Programación 1, Grado de Robótica, curso 2019-20  
