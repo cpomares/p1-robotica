@@ -340,19 +340,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-uniones" title="2. Uniones" class="md-nav__link">
-    2. Uniones
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
     Ejercicio 1
@@ -388,28 +375,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
-    Ejercicio 4
+  <a href="#ejercicio-1_1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-5" title="Ejercicio 5" class="md-nav__link">
-    Ejercicio 5
+  <a href="#ejercicio-2_1" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-6" title="Ejercicio 6" class="md-nav__link">
-    Ejercicio 6
+  <a href="#ejercicio-3_1" title="Ejercicio 3" class="md-nav__link">
+    Ejercicio 3
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
+  </a>
   
 </li>
       
@@ -588,19 +582,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-uniones" title="2. Uniones" class="md-nav__link">
-    2. Uniones
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
     Ejercicio 1
@@ -636,28 +617,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
-    Ejercicio 4
+  <a href="#ejercicio-1_1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-5" title="Ejercicio 5" class="md-nav__link">
-    Ejercicio 5
+  <a href="#ejercicio-2_1" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-6" title="Ejercicio 6" class="md-nav__link">
-    Ejercicio 6
+  <a href="#ejercicio-3_1" title="Ejercicio 3" class="md-nav__link">
+    Ejercicio 3
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
+  </a>
   
 </li>
       
@@ -1095,234 +1083,6 @@ registro sin modificarlo</li>
 </pre></div>
 </td></tr></table>
 
-<h2 id="2-uniones">2. Uniones<a class="headerlink" href="#2-uniones" title="Permanent link">&para;</a></h2>
-<p>Las uniones son similares a las estructuras en cuanto que agrupan una serie de datos, pero la forma de almacenamiento es diferente:</p>
-<ul>
-<li>Las estructuras almacenan variables relacionadas juntas y almacenadas en posiciones contiguas de memoria.</li>
-<li>Las uniones almacenan también múltiples campos, pero todos ellos se solapan entre sí en la misma posición. Para determinar el tamaño de una unión se analiza el tamaño de cada campo y el de mayor tamaño será el tamaño de la unión.</li>
-</ul>
-<p>Una razón para usarlas es ahorrar memoria. Se usan cuando se tienen varios variables relacionadas de alguna forma, pero no se van a usar al mismo tiempo. Por ejemplo, si tenemos una estructura para almacenar una imagen de 256x256 píxeles, y cada imagen las tenemos codificada en un formato, podemos utilizar una misma estructura para almacenar una imagen, que puede estar en formatos diferentes y sólo ocuparía el mayor tamaño.</p>
-<p>Sintaxis:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>union nombre-union {
-    tipo1 campo1;
-    tipo2 campo2;
-    ...
-};
-</pre></div>
-</td></tr></table>
-
-<p>La forma de acceder a los campos de una unión es igual que en las estructuras.</p>
-<p>También se pueden definir con <code>typedef</code>.</p>
-<p>Ejemplo:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">union</span> <span class="n">ejemplo</span> <span class="p">{</span>
-    <span class="kt">char</span> <span class="n">letra</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">altura</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="c1">// Definido con typedef:</span>
-<span class="k">typedef</span> <span class="k">union</span> <span class="p">{</span>
-    <span class="kt">char</span> <span class="n">letra</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">altura</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TEjemplo</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>La cantidad total de memoria utilizada por la union es de 8 bytes, ya que el campo <code>double altura</code>es el mayor.</p>
-<p>Ejemplo:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">union</span> <span class="p">{</span>
-   <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
-   <span class="kt">char</span> <span class="n">b</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TPrueba</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-   <span class="n">TPrueba</span> <span class="n">p1</span><span class="p">;</span>
-   <span class="n">p1</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-   <span class="n">p1</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
-   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;p1.a: %d p1.b: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">a</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">b</span><span class="p">);</span>
-
-   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// Salida:</span>
-<span class="c1">// p1.a: 65 p1.b: A</span>
-</pre></div>
-</td></tr></table>
-
-<p>Las uniones también nos sirven para <strong>generalizar</strong>. En el siguiente ejemplo, tenemos una estructura para almacenar DVD y otra para almacenar CD. Queremos hacer un array genérico que almacene dispositivos tanto de DVD como de CD. Para ello creamos otra estructura TDispositivo genérica, que almacenará o un CD o un DVD. El array lo definimos de tipo TDispositivo, por lo que podrá almacenar en cada posición un CD o un DVD.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 2</span>
-
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">CD</span><span class="p">,</span> <span class="n">DVD</span><span class="p">}</span> <span class="n">TTipoDisp</span><span class="p">;</span>
-
-<span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
-   <span class="kt">char</span> <span class="n">titulo</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-   <span class="kt">char</span> <span class="n">artista</span><span class="p">[</span><span class="mi">25</span><span class="p">];</span>
-   <span class="kt">int</span> <span class="n">num_canciones</span><span class="p">;</span>
-   <span class="kt">float</span> <span class="n">precio</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">TCD</span><span class="p">;</span>
-
-<span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
-   <span class="kt">char</span> <span class="n">titulo</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-   <span class="kt">char</span> <span class="n">director</span><span class="p">[</span><span class="mi">25</span><span class="p">];</span>
-   <span class="kt">float</span> <span class="n">precio</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">TDVD</span><span class="p">;</span>
-
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-   <span class="n">TTipoDisp</span> <span class="n">tipo</span><span class="p">;</span>
-   <span class="k">union</span><span class="p">{</span>
-      <span class="n">TCD</span> <span class="n">cd</span><span class="p">;</span>
-      <span class="n">TDVD</span> <span class="n">dvd</span><span class="p">;</span>
-   <span class="p">}</span><span class="n">disp</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TDispositivo</span><span class="p">;</span>
-
-<span class="kt">void</span> <span class="nf">imprimeDisp</span><span class="p">(</span><span class="n">TDispositivo</span> <span class="p">[]);</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-   <span class="n">TDispositivo</span> <span class="n">disp</span><span class="p">[</span><span class="n">TAM</span><span class="p">];</span>
-   <span class="n">TCD</span> <span class="n">cd1</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s">&quot;Hopes and fears&quot;</span><span class="p">,</span>
-      <span class="s">&quot;Keane&quot;</span><span class="p">,</span>
-      <span class="mi">7</span><span class="p">,</span>
-      <span class="mf">17.99</span>
-   <span class="p">};</span>
-   <span class="n">TDVD</span> <span class="n">dvd1</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s">&quot;Spiderman&quot;</span><span class="p">,</span>
-      <span class="s">&quot;Sam Raimi&quot;</span><span class="p">,</span>
-      <span class="mf">9.99</span>
-   <span class="p">};</span>
-
-   <span class="n">disp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">cd</span> <span class="o">=</span> <span class="n">cd1</span><span class="p">;</span>
-   <span class="n">disp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">CD</span><span class="p">;</span>
-
-   <span class="n">disp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">dvd</span> <span class="o">=</span> <span class="n">dvd1</span><span class="p">;</span>
-   <span class="n">disp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">DVD</span><span class="p">;</span>
-
-   <span class="n">imprimeDisp</span><span class="p">(</span><span class="n">disp</span><span class="p">);</span>
-
-   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">imprimeDisp</span><span class="p">(</span><span class="n">TDispositivo</span> <span class="n">arrayDisp</span><span class="p">[])</span> <span class="p">{</span>
-   <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-
-   <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">TAM</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Tipo: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">tipo</span><span class="p">);</span>
-      <span class="k">switch</span><span class="p">(</span><span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">tipo</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Tipo: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">tipo</span><span class="p">);</span>
-         <span class="k">case</span> <span class="nl">CD</span><span class="p">:</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;***************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Título: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">cd</span><span class="p">.</span><span class="n">titulo</span><span class="p">);</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Artista: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">cd</span><span class="p">.</span><span class="n">artista</span><span class="p">);</span>
-            <span class="k">break</span><span class="p">;</span>
-         <span class="k">case</span> <span class="nl">DVD</span><span class="p">:</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;***************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Título: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">dvd</span><span class="p">.</span><span class="n">titulo</span><span class="p">);</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Director: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">arrayDisp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">disp</span><span class="p">.</span><span class="n">dvd</span><span class="p">.</span><span class="n">director</span><span class="p">);</span>
-            <span class="k">break</span><span class="p">;</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
 <hr />
 <h3 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h3>
 <p>Define los tipos de datos necesarios que permitan almacenar los datos de 100 alumnos. De cada alumno se quiere almacenar su nombre, apellidos y dirección. Cada uno tiene 10 asignaturas compuestas de código de la asignatura y nota.</p>
@@ -1756,12 +1516,57 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 </td></tr></table>
 
 <h2 id="ejercicios-propuestos">Ejercicios propuestos<a class="headerlink" href="#ejercicios-propuestos" title="Permanent link">&para;</a></h2>
-<h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
+<h3 id="ejercicio-1_1">Ejercicio 1<a class="headerlink" href="#ejercicio-1_1" title="Permanent link">&para;</a></h3>
 <p>Vamos a partir del ejercicio de los triángulos. Queremos almacenar 10 triángulos y ordenarlos de menor a mayor perímetro. Muéstralos ordenados por pantalla, puedes usar el algoritmo de ordenación que prefieras. Puedes hacer una función que imprima los datos de un triángulo por pantalla.</p>
-<h3 id="ejercicio-5">Ejercicio 5<a class="headerlink" href="#ejercicio-5" title="Permanent link">&para;</a></h3>
-<p>Define un nuevo tipo <code>TRectangulo</code> y añade la misma funcionalidad que para los triángulos: área y perímetro.</p>
-<h3 id="ejercicio-6">Ejercicio 6<a class="headerlink" href="#ejercicio-6" title="Permanent link">&para;</a></h3>
-<p>Dada la siguiente definición de tipos de datos:</p>
+<h3 id="ejercicio-2_1">Ejercicio 2<a class="headerlink" href="#ejercicio-2_1" title="Permanent link">&para;</a></h3>
+<p>Dados los siguientes tipos de datos:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span><span class="n">TPunto</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+   <span class="n">TPunto</span> <span class="n">p1</span><span class="p">;</span>
+   <span class="n">TPunto</span> <span class="n">p2</span><span class="p">;</span>
+<span class="p">}</span><span class="n">TSegmento</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>y una matriz bidimensional de <code>TAMx4</code> numérica de este estilo. Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 5</span>
+<span class="kt">int</span> <span class="n">matriz</span><span class="p">[</span><span class="n">TAM</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span>
+                      <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">},</span>
+                      <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">},</span>
+                      <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">},</span>
+                      <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">}};</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>
+<p>Implementa la función <code>convertir</code> que reciba una matriz <code>TAMx4</code> numérica y devuelva un array unidimensional con <code>TAM</code> elementos de tipo <code>TSegmento</code>, donde cada segmento se obtiene de cada una de las filas de la matriz original. Por ejemplo, la primera fila daría lugar al segmento:</p>
+<p><img src="imagenes/segmento.png" width="130px"/></p>
+</li>
+<li>
+<p>Queremos trasladar todos los segmentos del array. El punto inicial de cada segmento se trasladará sumándole un valor a sus dos componentes y el punto final lo hará con otro valor, tal y como se muestra en el dibujo. Implementa las funciones necesarias.</p>
+<p><img src="imagenes/segmento2.png" width="275px"/></p>
+</li>
+</ul>
+<h3 id="ejercicio-3_1">Ejercicio 3<a class="headerlink" href="#ejercicio-3_1" title="Permanent link">&para;</a></h3>
+<p>Dada la definición de los siguientes tipos de datos, constantes y la función <code>main()</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1790,39 +1595,60 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 26
 27
 28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">TRIANGULO</span><span class="p">,</span> <span class="n">RECTANGULO</span><span class="p">}</span> <span class="n">TTipoFigura</span><span class="p">;</span>
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAMCAD 45</span>
+<span class="cp">#define TAMASIG 3</span>
+<span class="cp">#define NUMASIG 10</span>
+<span class="cp">#define NUMALU 100</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-   <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-   <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TPunto</span><span class="p">;</span>
+   <span class="kt">char</span> <span class="n">codigoAsignatura</span><span class="p">[</span><span class="n">TAMASIG</span><span class="p">];</span>
+   <span class="kt">float</span> <span class="n">nota</span><span class="p">;</span>
+<span class="p">}</span><span class="n">TAsignatura</span><span class="p">;</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-   <span class="n">TPunto</span> <span class="n">p1</span><span class="p">;</span>
-   <span class="n">TPunto</span> <span class="n">p2</span><span class="p">;</span>
-   <span class="n">TPunto</span> <span class="n">p3</span><span class="p">;</span>
-   <span class="kt">float</span> <span class="n">area</span><span class="p">;</span>
-   <span class="kt">float</span> <span class="n">perimetro</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TTriangulo</span><span class="p">;</span>
+   <span class="kt">char</span> <span class="n">nombre</span><span class="p">[</span><span class="n">TAMCAD</span><span class="p">];</span>
+   <span class="kt">char</span> <span class="n">apellidos</span><span class="p">[</span><span class="n">TAMCAD</span><span class="p">];</span>
+   <span class="kt">char</span> <span class="n">direccion</span><span class="p">[</span><span class="n">TAMCAD</span><span class="p">];</span>
+   <span class="n">TAsignatura</span> <span class="n">asig</span><span class="p">[</span><span class="n">NUMASIG</span><span class="p">];</span>
+<span class="p">}</span><span class="n">TFichaAlumno</span><span class="p">;</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-   <span class="n">TPunto</span> <span class="n">p1</span><span class="p">;</span>  <span class="c1">//esquina inferior izquierda</span>
-   <span class="n">TPunto</span> <span class="n">p2</span><span class="p">;</span>  <span class="c1">//esquina superior derecha</span>
-   <span class="kt">float</span> <span class="n">area</span><span class="p">;</span>
-   <span class="kt">float</span> <span class="n">perimetro</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TRectangulo</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">TFichaAlumno</span> <span class="n">TAlumnos</span> <span class="p">[</span><span class="n">NUMALU</span><span class="p">];</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-   <span class="n">TTipoFigura</span> <span class="n">tipo</span><span class="p">;</span>
-   <span class="k">union</span><span class="p">{</span>
-      <span class="n">TTriangulo</span> <span class="n">triangulo</span><span class="p">;</span>
-      <span class="n">TRectangulo</span> <span class="n">rectangulo</span><span class="p">;</span>
-   <span class="p">}</span><span class="n">fig</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TFigura</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">TAlumnos</span> <span class="n">alumnos</span><span class="p">;</span>
+     <span class="n">TFichaAlumno</span> <span class="n">fichaAlumno</span><span class="p">;</span>
+     <span class="n">TAsignatura</span> <span class="n">asignatura</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+
+     <span class="n">RellenaDatos</span><span class="p">(</span><span class="n">alumnos</span><span class="p">);</span>
+
+      <span class="c1">/// Código ejercicio 3a</span>
+      <span class="c1">/// Código ejercicio 3b</span>
+      <span class="c1">/// Código ejercicio 3d</span>
+
+     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<p>Define un array genérico de figuras de tipo <code>TFigura</code>. Podrá contener tanto triángulos como rectángulos. Implementa una función que reciba dicho array e imprima los datos de la figura que contiene en cada posición.</p>
+<p>Responde a las siguientes cuestiones, suponiendo que la función <code>RellenaDatos()</code> ya está definida y se encarga de almacenar en la estructura de datos correspondiente la información de todos los alumnos (un total de <code>NUMALU</code>) y de todas las asignaturas de cada alumno (todos están matriculados del mismo número de asignaturas <code>NUMASIG</code>):</p>
+<p>a. Escribe el código que permita mostrar por pantalla los apellidos de todos los alumnos cuyo nombre sea "Carlos" o "Eva". No es necesario que definas una función. Puedes utilizar la función de librería <code>strcmp</code>.</p>
+<p>b. Escribe el código que permita actualizar la nota de todas las asignaturas de todos los alumnos con el valor <code>5.0</code>. No es necesario que definas una función.</p>
+<p>c. Define la función con el siguiente prototipo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">float</span> <span class="nf">NotaAlumno</span><span class="p">(</span><span class="n">TFichaAlumno</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>que debe devolver la nota del alumno en la asignatura cuyo código se especifica en el segundo argumento. Si el alumno no tiene esa asignatura, la función devolverá <code>-1.0</code>. Puedes utilizar la función de librería <code>strcmp</code>.</p>
+<p>d. Escribe el código que permita mostrar por pantalla el nombre, apellidos y la nota de todos los alumnos en la asignatura "P1". Si el alumno no tiene nota en la asignatura, no debe aparecer en el listado. No es necesario que definas una función y puedes declarar alguna nueva variable si lo consideras necesario. Debes utilizar la función del apartado anterior.</p>
+<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Capítulos 11.1 a 11.7 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero</li>
+</ul>
 <hr />
 <p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
