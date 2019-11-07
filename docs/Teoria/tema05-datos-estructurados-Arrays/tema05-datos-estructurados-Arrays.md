@@ -939,6 +939,37 @@ void insercion(int numbers[], int array_size) {
 }
 ~~~
 
+## 6. Datos externos al programa con argumentos de `main()`
+
+Para poder pasar parámetros a un programa a través de la línea de comandos utilizamos la siguiente definición de la función `main`:
+
+~~~c
+int main(int argc, char *argv[])
+~~~
+
+O esta otra equivalente:
+
+~~~c
+int main(int argc, char **argv)
+~~~
+
+- El primer agumento entero `argc`, contiene el número de argumentos recibidos por el programa, debemos considerar que siempre será el número de argumentos pasados más 1, ya que el primer agumento se reserva para contener el nombre del programa.
+- El segundo `argv`es un array de cadenas de caracteres que contiene los parámetros pasados en el mismo orden en que fueron escritos.
+
+Un ejemplo de ejecución del programa con argumentos desde línea de comandos:
+
+~~~text
+./miprograma 3 "hola" 5
+~~~
+
+Le estamos pasando 3 parámetros al programa `miprograma`:
+
+- `argc` contendrá el valor 4, debido al nombre del programa, y los dos argumentos pasados.
+- `argv[0]` contendrá el nombre del ejecutable `miprograma`
+- `arg[1]` será `"3"`
+- `arg[2]` será `"hola"`
+- `arg[3]` será `"5"`
+
 ---
 
 ### Ejercicios propuestos de Arrays
