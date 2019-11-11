@@ -6,9 +6,9 @@
 
 ### En qué consiste el juego
 
-Vamos a implementar un pequeño juego que simula el movimiento dirigido de un robot de un punto a otro dentro de un campo de energía. 
+Vamos a implementar un pequeño juego que simula el movimiento dirigido de un robot de un punto a otro dentro de un campo de energía.
 
-El robot partirá de una posición inicial y lo iremos moviendo eligiendo cada vez una de las 4 posibles direcciones: arriba, derecha, abajo, izquierda. El cursor indicará donde está situado en cada instante el robot. 
+El robot partirá de una posición inicial y lo iremos moviendo eligiendo cada vez una de las 4 posibles direcciones: arriba, derecha, abajo, izquierda. El cursor indicará donde está situado en cada instante el robot.
 
 Las casillas o posiciones inicialmente no son visibles, y pueden estar vacías o disponer de recarga o pérdida de energía. El robot dispone inicialmente de una determinada energía, y el objetivo del juego es alcanzar la posición final sin que el robot se quede sin ella. Las posiciones se irán mostrando conforme avance el robot.
 
@@ -20,7 +20,7 @@ En las siguientes imágenes se muestra distintas situaciones del funcionamiento 
 <img src="imagenes/imagen2.png" width="150px"/>
 <img src="imagenes/imagen3.png" width="150px"/>
 
-Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización del juego: 
+Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización del juego:
 
 - Alcanzar la posición final (representada por el carácter `'F'`).
 - Quedarse sin energía.
@@ -34,7 +34,7 @@ Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización 
 ### Otros detalles del juego
 
 - El entorno por el que se puede mover el robot será un tablero con unas determinadas dimensiones, en donde cada casilla del mismo representa una posición.
-- El robot no se puede mover a una posición que ya ha visitado y tampoco sobrepasar los límites del tablero. Si intenta realizar un movimiento no válido, no se llevará a cabo. 
+- El robot no se puede mover a una posición que ya ha visitado y tampoco sobrepasar los límites del tablero. Si intenta realizar un movimiento no válido, no se llevará a cabo.
 - Al iniciar el juego, solo estarán visibles las casillas inicial y final, y se irán descubriendo el contenido del resto conforme sean visitadas por el robot.
 
 ### Implementación del juego
@@ -61,17 +61,17 @@ Modifica el fichero `practica6.c`:
     - color del descriptor
     - si ha sido visitada o no
     - cantidad de energía
-    
+
 - Antes del inicio del juego, tendrás que inicializar la información de todas las casillas, aunque sólo se visualizará en pantalla la posición inicial y final. No obstante, en las primeras pruebas de tu programa, es recomendable que muestres todo el tablero, para comprobar el correcto funcionamiento del mismo.
 - La cantidad de energía que se asigna a una casilla debe ser un valor aleatorio, con un determinado máximo de energía establecido en una constante de configuración. Para generar valores aleatorios, utiliza las funciones de C `rand()` y `srand()`:
     - Añade las librerías `<stdlib.h>` y `<time.h>`.
-    - Añade al principio de la función `main()` la sentencia siguiente, que inicializa la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.
+    - Para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa, hay que inicializar la semilla. Para ello añade al principio de la función `main()` la sentencia:
 
         ~~~c
         srand(time(0));
         ~~~
-        
-    - Para generar un valor aleatorio dentro del intervalo `[a,b]`, utiliza la siguiente expresión: 
+
+    - Para generar un valor aleatorio dentro del intervalo `[a,b]`, utiliza la siguiente expresión:
 
         ~~~c
         rand() % (b-a+1) + a
@@ -85,7 +85,7 @@ Modifica el fichero `practica6.c`:
 
 Cuando nuestro programa utiliza librerías de usuario es recomendable automatizar el proceso de compilación y construcción del fichero ejecutable. Para ello se utiliza el comando `make`, que requiere un fichero de configuración, que se suele denominar `makefile` y que  contiene dependencias, reglas y comandos a ejecutar para la construcción de este proceso de construcción del ejecutable.
 
-El fichero `makefile` proporcionado, permite que al ejecutar el comando `make`, se cree el fichero ejecutable `practica6` en caso de que compile correctamente el fichero `practica6.c` y la librería de usuario que estamos utilizando. 
+El fichero `makefile` proporcionado, permite que al ejecutar el comando `make`, se cree el fichero ejecutable `practica6` en caso de que compile correctamente el fichero `practica6.c` y la librería de usuario que estamos utilizando.
 
 Cada vez que se ejecute el comando `make`, sólo se recopilarán los ficheros que hayan sido modificados antes de la última construcción del ejecutable.
 
