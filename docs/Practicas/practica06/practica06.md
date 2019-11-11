@@ -44,7 +44,7 @@ Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización 
 Se os proporciona la librería de usuario `terminalIO.h`. Ten en cuenta que cuando usamos una librería de usuario o estándar del lenguaje, no necesitamos conocer cómo están implementadas sus funciones, sino **qué es lo que hacen y cómo se interactúa con ellas** (qué datos de entrada tienen y qué datos devuelven). Por lo tanto, estudia y analiza el fichero `terminalIO.h` para entender todas sus funcionalidades, pero no necesitas comprender el contenido del fichero `terminalIO.c`. La librería te permite hacer lo siguiente:
 
 - Mover el cursor a una determinada posición de la pantalla, así como imprimir texto o un carácter en un determinado color.
-- Utilizar el mismo sistema de coordenadas para representar el tablero del juego y para movernos a una posición en la pantalla, donde la coordenada (0,0) es la esquina superior izquierda.
+- Utilizar el mismo sistema de coordenadas para representar el tablero del juego y para movernos a una posición en la pantalla, donde la coordenada `(0,0)` es la esquina superior izquierda.
 - Detectar qué tecla se ha pulsado, para determinar en qué dirección hay que mover el cursor (utilizando las teclas de los caracteres `'i'` `'k'` `'j'` `'l'`) y también permitir que el usuario pueda terminar el juego en cualquier momento pulsando la tecla `<ESC>`.
 
 #### Fichero `practica6.c`
