@@ -558,15 +558,15 @@
 <p><strong>Duración</strong>: 2 semanas</p>
 <h2 id="juego-simulacion-de-robot">Juego: simulación de robot<a class="headerlink" href="#juego-simulacion-de-robot" title="Permanent link">&para;</a></h2>
 <h3 id="en-que-consiste-el-juego">En qué consiste el juego<a class="headerlink" href="#en-que-consiste-el-juego" title="Permanent link">&para;</a></h3>
-<p>Vamos a implementar un pequeño juego que simula el movimiento dirigido de un robot de un punto a otro dentro de un campo de energía. </p>
-<p>El robot partirá de una posición inicial y lo iremos moviendo eligiendo cada vez una de las 4 posibles direcciones: arriba, derecha, abajo, izquierda. El cursor indicará donde está situado en cada instante el robot. </p>
+<p>Vamos a implementar un pequeño juego que simula el movimiento dirigido de un robot de un punto a otro dentro de un campo de energía.</p>
+<p>El robot partirá de una posición inicial y lo iremos moviendo eligiendo cada vez una de las 4 posibles direcciones: arriba, derecha, abajo, izquierda. El cursor indicará donde está situado en cada instante el robot.</p>
 <p>Las casillas o posiciones inicialmente no son visibles, y pueden estar vacías o disponer de recarga o pérdida de energía. El robot dispone inicialmente de una determinada energía, y el objetivo del juego es alcanzar la posición final sin que el robot se quede sin ella. Las posiciones se irán mostrando conforme avance el robot.</p>
 <h3 id="ejemplos-de-ejecucion-del-juego">Ejemplos de ejecución del juego<a class="headerlink" href="#ejemplos-de-ejecucion-del-juego" title="Permanent link">&para;</a></h3>
 <p>En las siguientes imágenes se muestra distintas situaciones del funcionamiento del juego. Las 3 primeras imágenes muestran una secuencia de ejecución en la que desde una posición inicial (representada por el carácter <code>'I'</code>) y partiendo de una cantidad de energía de 5 unidades, hacemos 3 movimientos hacia abajo del robot, después de los cuales mantiene su energía inicial puesto que las posiciones visitadas están vacías (representadas con el carácter <code>'.'</code>). A continuación lo vamos desplazando a la derecha hasta alcanzar una posición en la que se recarga de energía (representada con el carácter <code>'+'</code>) en 2 unidades, y finalmente después de varios movimientos en distintas direcciones alcanza una posición en la que pierde energía (representada con el carácter <code>'-'</code>), en concreto 3 unidades de pérdida.</p>
 <p><img src="imagenes/imagen1.png" width="150px"/>
 <img src="imagenes/imagen2.png" width="150px"/>
 <img src="imagenes/imagen3.png" width="150px"/></p>
-<p>Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización del juego: </p>
+<p>Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización del juego:</p>
 <ul>
 <li>Alcanzar la posición final (representada por el carácter <code>'F'</code>).</li>
 <li>Quedarse sin energía.</li>
@@ -578,7 +578,7 @@
 <h3 id="otros-detalles-del-juego">Otros detalles del juego<a class="headerlink" href="#otros-detalles-del-juego" title="Permanent link">&para;</a></h3>
 <ul>
 <li>El entorno por el que se puede mover el robot será un tablero con unas determinadas dimensiones, en donde cada casilla del mismo representa una posición.</li>
-<li>El robot no se puede mover a una posición que ya ha visitado y tampoco sobrepasar los límites del tablero. Si intenta realizar un movimiento no válido, no se llevará a cabo. </li>
+<li>El robot no se puede mover a una posición que ya ha visitado y tampoco sobrepasar los límites del tablero. Si intenta realizar un movimiento no válido, no se llevará a cabo.</li>
 <li>Al iniciar el juego, solo estarán visibles las casillas inicial y final, y se irán descubriendo el contenido del resto conforme sean visitadas por el robot.</li>
 </ul>
 <h3 id="implementacion-del-juego">Implementación del juego<a class="headerlink" href="#implementacion-del-juego" title="Permanent link">&para;</a></h3>
@@ -613,14 +613,14 @@
 <ul>
 <li>Añade las librerías <code>&lt;stdlib.h&gt;</code> y <code>&lt;time.h&gt;</code>.</li>
 <li>
-<p>Añade al principio de la función <code>main()</code> la sentencia siguiente, que inicializa la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.</p>
+<p>Para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa, hay que inicializar la semilla. Para ello añade al principio de la función <code>main()</code> la sentencia:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Para generar un valor aleatorio dentro del intervalo <code>[a,b]</code>, utiliza la siguiente expresión: </p>
+<p>Para generar un valor aleatorio dentro del intervalo <code>[a,b]</code>, utiliza la siguiente expresión:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span>
 </pre></div>
 </td></tr></table>
@@ -634,7 +634,7 @@
 </ul>
 <h3 id="ayuda-para-la-compilacion-y-creacion-del-fichero-ejecutable-make">Ayuda para la compilación y creación del fichero ejecutable: <code>make</code><a class="headerlink" href="#ayuda-para-la-compilacion-y-creacion-del-fichero-ejecutable-make" title="Permanent link">&para;</a></h3>
 <p>Cuando nuestro programa utiliza librerías de usuario es recomendable automatizar el proceso de compilación y construcción del fichero ejecutable. Para ello se utiliza el comando <code>make</code>, que requiere un fichero de configuración, que se suele denominar <code>makefile</code> y que  contiene dependencias, reglas y comandos a ejecutar para la construcción de este proceso de construcción del ejecutable.</p>
-<p>El fichero <code>makefile</code> proporcionado, permite que al ejecutar el comando <code>make</code>, se cree el fichero ejecutable <code>practica6</code> en caso de que compile correctamente el fichero <code>practica6.c</code> y la librería de usuario que estamos utilizando. </p>
+<p>El fichero <code>makefile</code> proporcionado, permite que al ejecutar el comando <code>make</code>, se cree el fichero ejecutable <code>practica6</code> en caso de que compile correctamente el fichero <code>practica6.c</code> y la librería de usuario que estamos utilizando.</p>
 <p>Cada vez que se ejecute el comando <code>make</code>, sólo se recopilarán los ficheros que hayan sido modificados antes de la última construcción del ejecutable.</p>
 <p>Si ejecutamos el comando <code>make clean</code> borrará el fichero ejecutable y los ficheros objeto que se guardan en el directorio <code>./obj</code>.</p>
 <hr />
