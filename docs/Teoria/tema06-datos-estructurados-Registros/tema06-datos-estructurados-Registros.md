@@ -617,7 +617,7 @@ int main() {
 ~~~
 
 Responde a las siguientes cuestiones, suponiendo que la función `RellenaDatos()` ya está definida y se encarga de almacenar en la estructura de datos correspondiente la información de todos los alumnos (un total de `NUMALU`) y de todas las asignaturas de cada alumno (todos están matriculados del mismo número de asignaturas `NUMASIG`):
- 
+
 a. Escribe el código que permita mostrar por pantalla los apellidos de todos los alumnos cuyo nombre sea "Carlos" o "Eva". No es necesario que definas una función. Puedes utilizar la función de librería `strcmp`.
 
 b. Escribe el código que permita actualizar la nota de todas las asignaturas de todos los alumnos con el valor `5.0`. No es necesario que definas una función.
@@ -625,7 +625,7 @@ b. Escribe el código que permita actualizar la nota de todas las asignaturas de
 c. Define la función con el siguiente prototipo:
 
 ~~~c
-float NotaAlumno(TFichaAlumno, char*);
+float NotaAlumno(TFichaAlumno, char[]);
 ~~~
 
 que debe devolver la nota del alumno en la asignatura cuyo código se especifica en el segundo argumento. Si el alumno no tiene esa asignatura, la función devolverá `-1.0`. Puedes utilizar la función de librería `strcmp`.
