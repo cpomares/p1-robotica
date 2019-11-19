@@ -1,21 +1,7 @@
 
 # Tema 7: Punteros y memoria dinámica
 
-## Contenidos
-
-- [1. Punteros](#1)
-    - [1.1 Operadores para el manejo de punteros](#1-1)
-    - [1.2 Punteros y arrays](#1-2)
-    - [1.3 Punteros a estructuras](#1-4)
-- [2. Gestión de memoria dinámica](#2)
-    - [2.1. Memoria dinámica](#2-1)
-    - [2.2. Funciones para gestionar la memoria dinámica](#2-2)
-    - [2.3 Arrays dinámicos multidimensionales](#2-3)
-- [3. Punteros y funciones](#3)
-- [4. Arrays de punteros](#4)
-
-
-## <a name="1"/> 1. Punteros
+## 1. Punteros
 
 Ya hemos visto que la **memoria** del ordenador es el lugar donde se almacenan los datos y las instrucciones de un programa. Se llama memoria RAM, que es diferente a la memoria de almacenamiento como discos duros, etc. Está compuesta por un gran número de **celdas** (bytes) de información. A cada una de estas celdas se le asigna una **dirección de memoria**, que permite distinguir unas celdas de otras. De forma que, dada la dirección de memoria de una celda, se podrá obtener su valor actual y modificarlo, como ya hemos visto por ejemplo en el paso de parámetros por referencia.
 
@@ -42,7 +28,7 @@ Características:
 
 Sintaxis:
 
-~~~c
+~~~text
 tipo *nombre_variable;
 ~~~
 
@@ -58,11 +44,10 @@ float *res;   /* res es un puntero a float */
 char *mensaje; /* mensaje es un puntero a char */
 ~~~
 
-### <a name="1.1"/> 1.1 Operadores para el manejo de punteros
+### 1.1 Operadores para el manejo de punteros
 
 Existen dos operadores unarios para trabajar con punteros: `*` y `&`
-
-- `*puntero`: operador indirección. Devuelve el contenido de la dirección de memoria apuntado por `puntero`
+- `*puntero`: operador indirección. Devuelve el contenido de la dirección de memoria apuntado por `puntero`
 - `&variable`: operador dirección: Devuelve la dirección de memoria de una    `variable`
 
 Ejemplo 1:
@@ -115,6 +100,8 @@ void main() {
 
    printf("\n- Enteros: %d, %d y %d.", y, *py, x);
    printf("\n- Direcciones: %p y %p.", &y, py);
+   
+   return 0;
 }
 
 /* Salida por pantalla:
@@ -160,6 +147,8 @@ int main() {
 
    for(c = 'A'; c <= 'Z'; c++)
       printf("%c ", *pc);
+      
+   return 0;
 }
 
 //Salida: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
@@ -186,7 +175,7 @@ valor = 95;
 ~~~
 
 
-### <a name="1.2"/> 1.2 Punteros y arrays
+### 1.2 Punteros y arrays
 
 En C los punteros y los arrays están fuertemente relacionados. Se pueden direccionar arrays como si fueran punteros y punteros como si fueran arrays.
 
@@ -232,7 +221,7 @@ strcpy(nombre, "hola");
 
 Se soluciona utilizando memoria dinámica (lo veremos más adelante).
 
-### <a name="1.3"/> 1.3 Punteros a estructuras
+### 1.3 Punteros a estructuras
 
 Un puntero también puede apuntar a un registro. Se puede declarar el puntero a una estructura tal y como se declara un puntero a cualquier otro tipo.
 
@@ -282,6 +271,8 @@ int main() {
 
    // P1: [2,3] P2: [10,10]
    // P1: [10,10] P2: [5,6]
+   
+   return 0;
 }
 ~~~
 
@@ -304,17 +295,16 @@ En el ejemplo anterior, los segmentos s1 y s2 comparten el punto b. Si éste cam
 
 Como podemos observar, cambiando p2 de s1 hace que cambie también el p1 de s2. Esto sucede porque están compartiendo una referencia al mismo punto, no son copias. Esta es la filosofía de funcionamiento en otros lenguajes, como Java, donde se utiliza el paradigma de programación orientado a objetos.
 
-## <a name="2"/> 2. Gestión de memoria dinámica
+## 2. Gestión de memoria dinámica
 
-### <a name="2.1"/> 2.1 Memoria dinámica
+### 2.1 Memoria dinámica
 
 - La **memoria estática** es el espacio en memoria que se crea al declarar variables de cualquier tipo de dato. La memoria que estas variables ocupan no puede cambiarse durante la ejecución y tampoco puede ser liberada manualmente.
 - La **memoria dinámica** es memoria que se reserva en tiempo de ejecución. Su principal ventaja frente a la estática, es que su tamaño puede variar durante la ejecución del programa. En C, el programador es encargado de liberar esta memoria cuando no la utilice más. El uso de memoria dinámica es necesario cuando a priori no conocemos el número de datos o elementos a tratar o cuando queremos optimizarla.
 
-
 Definimos las **variables dinámicas** como zonas de memoria que pueden reservarse y liberarse durante el transcurso del programa. La única forma de acceder a su contenido es mediante una variable puntero que almacene la dirección de memoria correspondiente. Las variables dinámicas se guardan en la zona de memoria dinámica y se gestionan con las funciones de memoria dinámica (`malloc`, `calloc`, `realloc, `free`).
 
-### <a name="2.2"/> 2.2 Funciones para gestionar la memoria dinámica
+### 2.2 Funciones para gestionar la memoria dinámica
 
 La biblioteca estándar de C proporciona las funciones `malloc`, `calloc`, `realloc` y `free` para el manejo de memoria dinámica. Estas funciones están definidas la librería `stdlib.h`.
 
@@ -324,7 +314,7 @@ La función `malloc` reserva un bloque de memoria y devuelve un puntero al inici
 
 Sintaxis:
 
-~~~c
+~~~text
 void *malloc(size_t size);
 ~~~
 donde el parámetro `size` especifica el número de bytes a reservar. En caso de que no se pueda realizar la asignación, devuelve el valor nulo (definido en la macro `NULL` ), lo que permite saber si hubo errores en la asignación de memoria.
@@ -345,6 +335,8 @@ int main() {
    if (vect1  == NULL) {
    	/* Error al intentar reservar memoria */
    }
+   
+   return 0;
 }
 
 ~~~
@@ -360,7 +352,7 @@ La función `calloc` funciona de modo similar a `malloc`, pero además de reserv
 
 Sintaxis:
 
-~~~c
+~~~text
 void* calloc(size_t num, size_t size);
 ~~~
 Devuelve un puntero a una zona de memoria en la que se reservan `num` elementos de `size` bytes. La memoria se inicializa a 0.
@@ -379,6 +371,8 @@ int main() {
       /* Error al intentar reservar memoria */
       ...
    }
+   
+   return 0;
 }
 ~~~
 
@@ -388,7 +382,7 @@ La función `realloc` redimensiona el espacio asignado de forma dinámica anteri
 
 Sintaxis:
 
-~~~c
+~~~text
 void* realloc(void *ptr, size_t size);
 ~~~
 Donde `ptr` es el puntero a redimensionar, y `size` el nuevo tamaño, en bytes, que tendrá. Si el puntero que se le pasa tiene el valor `NULL`, esta función actúa como `malloc`. Si la reasignación no se pudo hacer con éxito, devuelve un puntero nulo.
@@ -402,6 +396,8 @@ int main() {
    float *vectorFloat;
    vectorFloat = (float *)malloc(sizeof(float) * TAM);
    vectorFloat = (float *)realloc(vectorFloat, sizeof(float)*50);
+   
+   return 0;
 }
 ~~~
 
@@ -410,6 +406,8 @@ int main() {
    float *vectorFloat;
    vectorFloat = NULL;
    vectorFloat = (float *)realloc(vectorFloat, sizeof(float)*50);
+   
+   return 0;
 }
 ~~~
 
@@ -423,7 +421,7 @@ Además existe la función `cfree`, que sirve para liberar memoria de los elemen
 
 Sintaxis:
 
-~~~c
+~~~text
 void free(void *ptr);
 void cfree (void *ptr);
 ~~~
@@ -447,10 +445,12 @@ int main() {
    ...
    free(vectorFloat);
    vectorFloat = NULL;
+   
+   return 0;
 }
 ~~~
 
-### <a name="2.3"/> 2.3 Arrays dinámicos multidimensionales
+### 2.3 Arrays dinámicos multidimensionales
 
 Para definir un array multidimensional de manera dinámica utilizaremos punteros a punteros. En este caso vamos a definir una matriz de dos dimensiones:
 
@@ -492,6 +492,8 @@ int main() {
 
    free(tabla2D);
    tabla2D = NULL;
+   
+   return 0;
 }
 
 void rellenarTabla2D(int **tabla) {
@@ -505,7 +507,7 @@ void rellenarTabla2D(int **tabla) {
 }
 ~~~
 
-## <a name="3"/> 3. Punteros y funciones
+## 3. Punteros y funciones
 
 Uno de los usos de los punteros es el paso de
 parámetros por referencia a una función.
@@ -537,6 +539,8 @@ int main() {
 
   printf("Main. Valor: %s, Dirección: %p, Referencia: %p\n", cadena, cadena, &cadena);
   funcion(cadena);
+  
+  return 0;
 }
 
 /* Salida por pantalla:
@@ -559,6 +563,8 @@ int main() {
 
    printf("Main. Valor: %s, Dirección: %p, Referencia: %p\n", cadena, cadena, &cadena);
    funcionRef(&cadena);
+   
+   return 0;
 }
 
 /* Salida por pantalla:
@@ -588,6 +594,8 @@ int main() {
    // Liberamos memoria
    free(vector);
    vector = NULL;
+   
+   return 0;
 }
 
 void creaVector(int **v) {
@@ -601,7 +609,7 @@ void creaVector(int **v) {
 Una función también puede devolver un tipo de datos
 puntero. La función se declara así:
 
-~~~c
+~~~text
 <tipo*> funcion(<argumentos>);
 ~~~
 
@@ -618,7 +626,7 @@ int* creaVector() {
 }
 ~~~
 
-Ejercicio: Dado un TPunto, define una estructura que contenga un array dinámico de puntos y la cantidad de puntos que contiene. Sólo se debe reservar la memoria necesaria.
+Ejercicio: Dado un `TPunto`, define una estructura que contenga un array dinámico de puntos y la cantidad de puntos que contiene. Sólo se debe reservar la memoria necesaria.
 
 ~~~c
 typedef struct {
@@ -641,6 +649,8 @@ int main() {
    //Función para imprimir los puntos
 
    free(puntos.puntos);
+   
+   return 0;
 }
 
 TPuntos rellenaLista() {
@@ -674,7 +684,7 @@ TPuntos rellenaLista() {
 
 ~~~
 
-En el siguiente ejemplo modificamos la función rellenaLista y le pasamos por parámetro por referencia TPuntos lista. ¿Qué sucede si quitamos los paréntesis de `(*lista)`?
+En el siguiente ejemplo modificamos la función `rellenaLista` y le pasamos por parámetro por referencia `TPuntos lista`. ¿Qué sucede si quitamos los paréntesis de `(*lista)`?
 
 ~~~c
 void rellenaLista(TPuntos *lista) {
@@ -703,7 +713,7 @@ void rellenaLista(TPuntos *lista) {
 }
 ~~~
 
-## <a name="4"/> 4. Arrays de punteros
+## 4. Arrays de punteros
 
 Si se necesita reservar muchos punteros o gestionar de forma más eficiente la memoria, se puede declarar un array de punteros. Un array de punteros es un array cuyos elementos son punteros. Ejemplo:
 
@@ -784,6 +794,8 @@ int main() {
    s = NULL;
    p1 = NULL;
    p2 = NULL;
+   
+   return 0;
 }
 
 TSegmento* creaSegmento() {
@@ -845,6 +857,8 @@ int main() {
 
 // Liberamos memoria
    free(coches);
+   
+   return 0;
 }
 
 void nuevoCoche(TCoches *coches, int *numCoches) {
@@ -916,6 +930,8 @@ int main() {
       // freeTabla3D, tenemos que pasar el puntero tabla3D por
       // referencia para poder modificarlo
    }
+   
+   return 0;
 }
 
 TTabla3D crearTabla3D() {
@@ -991,10 +1007,12 @@ void crear2Tabla3D(TTabla3D *tabla3D) {
 }
 ~~~
 
+## Bibliografía
 
+- Capítulos 12.1 a 12.4 y 13.1 a 13.8 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
