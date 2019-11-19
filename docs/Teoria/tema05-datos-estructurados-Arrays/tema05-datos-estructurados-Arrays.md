@@ -966,9 +966,9 @@ Le estamos pasando 3 parámetros al programa `miprograma`:
 
 - `argc` contendrá el valor 4, debido al nombre del programa, y los dos argumentos pasados.
 - `argv[0]` contendrá el nombre del ejecutable `miprograma`
-- `arg[1]` será `"3"`
-- `arg[2]` será `"hola"`
-- `arg[3]` será `"5"`
+- `argv[1]` será `"3"`
+- `argv[2]` será `"hola"`
+- `argv[3]` será `"5"`
 
 ---
 
