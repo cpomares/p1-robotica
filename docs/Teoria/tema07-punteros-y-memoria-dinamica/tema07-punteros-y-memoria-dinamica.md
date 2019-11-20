@@ -100,7 +100,7 @@ void main() {
 
    printf("\n- Enteros: %d, %d y %d.", y, *py, x);
    printf("\n- Direcciones: %p y %p.", &y, py);
-   
+
    return 0;
 }
 
@@ -147,7 +147,7 @@ int main() {
 
    for(c = 'A'; c <= 'Z'; c++)
       printf("%c ", *pc);
-      
+
    return 0;
 }
 
@@ -271,7 +271,7 @@ int main() {
 
    // P1: [2,3] P2: [10,10]
    // P1: [10,10] P2: [5,6]
-   
+
    return 0;
 }
 ~~~
@@ -335,7 +335,7 @@ int main() {
    if (vect1  == NULL) {
    	/* Error al intentar reservar memoria */
    }
-   
+
    return 0;
 }
 
@@ -371,7 +371,7 @@ int main() {
       /* Error al intentar reservar memoria */
       ...
    }
-   
+
    return 0;
 }
 ~~~
@@ -396,7 +396,7 @@ int main() {
    float *vectorFloat;
    vectorFloat = (float *)malloc(sizeof(float) * TAM);
    vectorFloat = (float *)realloc(vectorFloat, sizeof(float)*50);
-   
+
    return 0;
 }
 ~~~
@@ -406,7 +406,7 @@ int main() {
    float *vectorFloat;
    vectorFloat = NULL;
    vectorFloat = (float *)realloc(vectorFloat, sizeof(float)*50);
-   
+
    return 0;
 }
 ~~~
@@ -445,7 +445,7 @@ int main() {
    ...
    free(vectorFloat);
    vectorFloat = NULL;
-   
+
    return 0;
 }
 ~~~
@@ -455,10 +455,10 @@ int main() {
 Para definir un array multidimensional de manera dinámica utilizaremos punteros a punteros. En este caso vamos a definir una matriz de dos dimensiones:
 
 ~~~c
-int **tabla2D  // un puntero por cada dimensión
+int **tabla2D;  // un puntero por cada dimensión
 ~~~
 
-Se interpreta como un puntero a un tipo que es un puntero a un entero
+Se interpreta como un puntero a un tipo que es un puntero a un entero.
 
 ~~~c
 #include<stdlib.h>
@@ -492,7 +492,7 @@ int main() {
 
    free(tabla2D);
    tabla2D = NULL;
-   
+
    return 0;
 }
 
@@ -539,7 +539,7 @@ int main() {
 
   printf("Main. Valor: %s, Dirección: %p, Referencia: %p\n", cadena, cadena, &cadena);
   funcion(cadena);
-  
+
   return 0;
 }
 
@@ -563,7 +563,7 @@ int main() {
 
    printf("Main. Valor: %s, Dirección: %p, Referencia: %p\n", cadena, cadena, &cadena);
    funcionRef(&cadena);
-   
+
    return 0;
 }
 
@@ -594,7 +594,7 @@ int main() {
    // Liberamos memoria
    free(vector);
    vector = NULL;
-   
+
    return 0;
 }
 
@@ -649,7 +649,7 @@ int main() {
    //Función para imprimir los puntos
 
    free(puntos.puntos);
-   
+
    return 0;
 }
 
@@ -794,7 +794,7 @@ int main() {
    s = NULL;
    p1 = NULL;
    p2 = NULL;
-   
+
    return 0;
 }
 
@@ -857,7 +857,7 @@ int main() {
 
 // Liberamos memoria
    free(coches);
-   
+
    return 0;
 }
 
@@ -930,7 +930,7 @@ int main() {
       // freeTabla3D, tenemos que pasar el puntero tabla3D por
       // referencia para poder modificarlo
    }
-   
+
    return 0;
 }
 
