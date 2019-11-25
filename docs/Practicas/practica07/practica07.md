@@ -2,6 +2,42 @@
 
 **Duración**: 2 semanas
 
+## Memoria dinámica en funciones
+
+Cuando pasamos un array o puntero como parámetro a una función, estamos pasando la dirección de memoria del primer elemento del array, pero no al puntero en sí, que es una copia. Es decir, no podríamos modificar dinámicamente su memoria porque no tenemos una referencia a la misma.
+
+Es decir, si sólo queremos trabajar con los elementos, lo haríamos como hemos hecho hasta ahora. Pero si dentro de una función queremos modificar la memoria dinámicamente (usando `malloc`, `realloc`, etc) necesitamos pasar el array o puntero por referencia. 
+
+Ejemplo:
+
+~~~c
+#define TAM 20
+
+void creaVector(int **);
+
+int main() {
+   int *vector;
+
+   // Reservamos la memoria
+   creaVector(&vector);
+   vector[0] = 1;  //Rellenamos al azar
+   vector[2] = 2;
+   printf("Pos 2: %d\n", vector[2]); //Comprobamos
+
+   // Liberamos memoria
+   free(vector);
+   vector = NULL;
+
+   return 0;
+}
+
+void creaVector(int **v) {
+   *v = (int*)malloc(sizeof(int) * TAM);
+}
+~~~
+
+Podéis ampliar esta explicación en el apartado [Punteros y funciones]((https://cpomares.github.io/p1-robotica/Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html#3-punteros-y-funciones)) del tema 7 de los apuntes.
+
 ## Ejercicio 1
 
 A partir de la solución que os proporcionamos del ejercicio 5 de la práctica 5, modifica el programa para que permita realizar la suma de números binarios de cualquier número de dígitos, en lugar de estar restringidos a una longitud máxima de 8 bits. 
