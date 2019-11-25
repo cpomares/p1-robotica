@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#practica-6-punteros-y-memoria-dinamica" tabindex="1" class="md-skip">
+      <a href="#practica-7-punteros-y-memoria-dinamica" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -538,11 +538,11 @@
               
                 
                 
-                <h1 id="practica-6-punteros-y-memoria-dinamica">Práctica 6: Punteros y memoria dinámica<a class="headerlink" href="#practica-6-punteros-y-memoria-dinamica" title="Permanent link">&para;</a></h1>
+                <h1 id="practica-7-punteros-y-memoria-dinamica">Práctica 7: Punteros y memoria dinámica<a class="headerlink" href="#practica-7-punteros-y-memoria-dinamica" title="Permanent link">&para;</a></h1>
 <p><strong>Duración</strong>: 2 semanas</p>
 <h2 id="memoria-dinamica-en-funciones">Memoria dinámica en funciones<a class="headerlink" href="#memoria-dinamica-en-funciones" title="Permanent link">&para;</a></h2>
 <p>Cuando pasamos un array o puntero como parámetro a una función, estamos pasando la dirección de memoria del primer elemento del array, pero no al puntero en sí, que es una copia. Es decir, no podríamos modificar dinámicamente su memoria porque no tenemos una referencia a la misma.</p>
-<p>Es decir, si sólo queremos trabajar con los elementos, lo haríamos como hemos hecho hasta ahora. Pero si dentro de una función queremos modificar la memoria dinámicamente (usando <code>malloc</code>, <code>realloc</code>, etc) necesitamos pasar el array o puntero por referencia. </p>
+<p>Es decir, si sólo queremos trabajar con los elementos, lo haríamos como hemos hecho hasta ahora. Pero si dentro de una función queremos modificar la memoria dinámicamente (usando <code>malloc</code>, <code>realloc</code>, etc) necesitamos pasar el array o puntero por referencia.</p>
 <p>Ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -594,7 +594,7 @@
 
 <p>Podéis ampliar esta explicación en el apartado <a href="(https://cpomares.github.io/p1-robotica/Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html#3-punteros-y-funciones)">Punteros y funciones</a> del tema 7 de los apuntes.</p>
 <h2 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h2>
-<p>A partir de la solución que os proporcionamos del ejercicio 5 de la práctica 5, modifica el programa para que permita realizar la suma de números binarios de cualquier número de dígitos, en lugar de estar restringidos a una longitud máxima de 8 bits. </p>
+<p>A partir de la solución que os proporcionamos del ejercicio 5 de la práctica 5, modifica el programa para que permita realizar la suma de números binarios de cualquier número de dígitos, en lugar de estar restringidos a una longitud máxima de 8 bits.</p>
 <p>Intenta realizar los mínimos cambios posibles. Para ello, usa esta nueva definición del tipo <code>TPalabra</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="kt">char</span><span class="o">*</span> <span class="n">TPalabra</span><span class="p">;</span>
 </pre></div>
