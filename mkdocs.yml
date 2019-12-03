@@ -11,6 +11,7 @@ nav:
    - 'Tema 5': 'Teoria/tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.md'
    - 'Tema 6': 'Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.md'
    - 'Tema 7': 'Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.md'
+   - 'Tema 8': 'Teoria/tema08-entrada-salida/tema08-entrada-salida.md'
 - 'Prácticas':
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
