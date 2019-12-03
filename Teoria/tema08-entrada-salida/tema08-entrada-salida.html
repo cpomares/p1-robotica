@@ -36,7 +36,7 @@
     
     
       
-        <title>Tema 8: Entrada / salida - P1 Robótica</title>
+        <title>Tema 8 - P1 Robótica</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tema 8: Entrada / salida
+                Tema 8
               
             </span>
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -284,6 +286,145 @@
     <a href="../tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html" title="Tema 7" class="md-nav__link">
       Tema 7
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 8
+      </label>
+    
+    <a href="tema08-entrada-salida.html" title="Tema 8" class="md-nav__link md-nav__link--active">
+      Tema 8
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" title="1. Introducción" class="md-nav__link">
+    1. Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ficheros" title="1.1 Ficheros" class="md-nav__link">
+    1.1 Ficheros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-streams-flujos-de-es" title="1.2 Streams (flujos) de E/S" class="md-nav__link">
+    1.2 Streams (flujos) de E/S
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-manejo-de-ficheros" title="2. Manejo de ficheros" class="md-nav__link">
+    2. Manejo de ficheros
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file" title="FILE*" class="md-nav__link">
+    FILE*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-abrir-el-fichero" title="2.1 Abrir el fichero" class="md-nav__link">
+    2.1 Abrir el fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cerrar-un-fichero" title="2.2 Cerrar un fichero" class="md-nav__link">
+    2.2 Cerrar un fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-funciones-de-entrada-y-salida-para-ficheros" title="2.3 Funciones de entrada y salida para ficheros" class="md-nav__link">
+    2.3 Funciones de entrada y salida para ficheros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura-de-lineas-completas-fgetsy-fputs" title="Lectura y escritura de líneas completas: fgetsy fputs" class="md-nav__link">
+    Lectura y escritura de líneas completas: fgetsy fputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-entrada-y-salida-para-archivos-binarios-fready-fwrite" title="Funciones de entrada y salida para archivos binarios: fready fwrite" class="md-nav__link">
+    Funciones de entrada y salida para archivos binarios: fready fwrite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-entrada-y-salida-para-tipos-de-datos-compuestos" title="Funciones de entrada y salida para tipos de datos compuestos" class="md-nav__link">
+    Funciones de entrada y salida para tipos de datos compuestos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
+    Ejercicios propuestos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -433,9 +574,98 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contenidos" title="Contenidos" class="md-nav__link">
-    Contenidos
+  <a href="#1-introduccion" title="1. Introducción" class="md-nav__link">
+    1. Introducción
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ficheros" title="1.1 Ficheros" class="md-nav__link">
+    1.1 Ficheros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-streams-flujos-de-es" title="1.2 Streams (flujos) de E/S" class="md-nav__link">
+    1.2 Streams (flujos) de E/S
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-manejo-de-ficheros" title="2. Manejo de ficheros" class="md-nav__link">
+    2. Manejo de ficheros
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file" title="FILE*" class="md-nav__link">
+    FILE*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-abrir-el-fichero" title="2.1 Abrir el fichero" class="md-nav__link">
+    2.1 Abrir el fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cerrar-un-fichero" title="2.2 Cerrar un fichero" class="md-nav__link">
+    2.2 Cerrar un fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-funciones-de-entrada-y-salida-para-ficheros" title="2.3 Funciones de entrada y salida para ficheros" class="md-nav__link">
+    2.3 Funciones de entrada y salida para ficheros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura-de-lineas-completas-fgetsy-fputs" title="Lectura y escritura de líneas completas: fgetsy fputs" class="md-nav__link">
+    Lectura y escritura de líneas completas: fgetsy fputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-entrada-y-salida-para-archivos-binarios-fready-fwrite" title="Funciones de entrada y salida para archivos binarios: fready fwrite" class="md-nav__link">
+    Funciones de entrada y salida para archivos binarios: fready fwrite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-entrada-y-salida-para-tipos-de-datos-compuestos" title="Funciones de entrada y salida para tipos de datos compuestos" class="md-nav__link">
+    Funciones de entrada y salida para tipos de datos compuestos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
+    Ejercicios propuestos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -457,25 +687,10 @@
                 
                 
                 <h1 id="tema-8-entrada-salida">Tema 8: Entrada / salida<a class="headerlink" href="#tema-8-entrada-salida" title="Permanent link">&para;</a></h1>
-<h2 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="#1">1. Introducción</a><ul>
-<li><a href="#1-1">1.1 Ficheros</a></li>
-<li><a href="#1-2">1.2 Streams (flujos) de E/S</a></li>
-</ul>
-</li>
-<li><a href="#2">2. Manejo de ficheros</a><ul>
-<li><a href="#2-1">2.1 Abrir el fichero</a></li>
-<li><a href="#2-2">2.2 Cerrar el fichero</a></li>
-<li><a href="#2-3">2.3 Funciones de entrada y salida para ficheros</a></li>
-</ul>
-</li>
-<li><a href="#3">3. Parámetros a <code>main</code> desde línea de comandos</a></li>
-</ul>
-<h2 id="1-introduccion"><a name="1"/> 1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
+<h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
 <p>C ofrece un conjunto de funciones para realizar operaciones de entrada y salida (E/S) con las cuales puedes leer y escribir cualquier tipo de fichero.</p>
 <p>El manejo de archivos en C se hace mediante el concepto de flujo (<em>streams</em>) o canal. Los flujos pueden estar abiertos o cerrados, y conducen los datos entre el programa y los dispositivos externos.</p>
-<h3 id="11-ficheros"><a name="1.1"/> 1.1 Ficheros<a class="headerlink" href="#11-ficheros" title="Permanent link">&para;</a></h3>
+<h3 id="11-ficheros">1.1 Ficheros<a class="headerlink" href="#11-ficheros" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Toda la información manejada hasta ahora se pierde cuando termina la ejecución de un programa, tanto la introducida como la generada.</li>
 <li>Si tenemos que manejar una gran cantidad de información (un número elevado de variables, valores, etc.) no parece razonable definir esa información en el código.</li>
@@ -483,7 +698,7 @@
 <li>Un fichero almacena de manera permanente la información, usando la memoria permanente (disco duro) del ordenador.</li>
 <li>Para C todo en el ordenador es un fichero: teclado, impresora, cualquier otro dispositivo conectado al ordenador.</li>
 </ul>
-<h3 id="12-streams-flujos-de-es"><a name="1.2"/> 1.2 <em>Streams</em> (flujos) de E/S<a class="headerlink" href="#12-streams-flujos-de-es" title="Permanent link">&para;</a></h3>
+<h3 id="12-streams-flujos-de-es">1.2 <em>Streams</em> (flujos) de E/S<a class="headerlink" href="#12-streams-flujos-de-es" title="Permanent link">&para;</a></h3>
 <p>Un <em>stream</em> (flujo) es una abstracción que se refiere a un conjunto de datos que fluye entre un origen y un destino. Entre el origen y el destino debe existir una conexión o canal (<em>pipe</em>) por el que circulen los datos.</p>
 <p>Cuando se crea o abre un fichero, se crea un <strong><em>stream</em></strong> asociado al fichero, y se genera un descriptor de archivo para poder identificarlo.</p>
 <p>Además, se crea un <strong><em>buffer</em></strong> (almacén intermedio) por donde pasan los datos del archivo. Se utiliza para optimizar las lecturas y escrituras, sobre todo si se realizan de pocos datos y de forma continua.</p>
@@ -500,7 +715,7 @@
 <li><strong>Binario</strong>. Formado por una secuencia ordenada de caracteres, sin separadores especiales, que pueden almacenar cualquier tipo de información.</li>
 </ul>
 <p>No hay diferencia real entre uno y otro, salvo que en un fichero en modo texto hay fines de línea y hay funciones de ficheros que pueden buscarlos. Si se abre en modo binario, la información puede ser de cualquier tipo y las funciones de ficheros no buscarán fines de línea.</p>
-<h2 id="2-manejo-de-ficheros"><a name="2"/> 2. Manejo de ficheros<a class="headerlink" href="#2-manejo-de-ficheros" title="Permanent link">&para;</a></h2>
+<h2 id="2-manejo-de-ficheros">2. Manejo de ficheros<a class="headerlink" href="#2-manejo-de-ficheros" title="Permanent link">&para;</a></h2>
 <p>Cuando trabajamos con ficheros se suele usar el mismo esquema, tanto si escribimos como si leemos:</p>
 <ul>
 <li>Abrir el fichero</li>
@@ -518,7 +733,7 @@ Los campos de <code>FILE*</code>pueden cambiar de un compilador a otro.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="21-abrir-el-fichero"><a name="2.1"/> 2.1 Abrir el fichero<a class="headerlink" href="#21-abrir-el-fichero" title="Permanent link">&para;</a></h3>
+<h3 id="21-abrir-el-fichero">2.1 Abrir el fichero<a class="headerlink" href="#21-abrir-el-fichero" title="Permanent link">&para;</a></h3>
 <p>Para trabajar con un archivo, la primera operación que hay que realizar es abrirlo. La apertura conecta el archivo externo con el programa, y hay que indicarle cómo se va a tratar: binario, de caracteres. etc. El programa accede a los archivos a través de <code>FILE*</code>, la función de apertura devuelve dicho puntero.</p>
 <p>La función <code>fopen</code> abre o crea un fichero:</p>
 <p>Sintaxis:</p>
@@ -605,7 +820,7 @@ Los campos de <code>FILE*</code>pueden cambiar de un compilador a otro.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="22-cerrar-un-fichero"><a name="2.2"/> 2.2 Cerrar un fichero<a class="headerlink" href="#22-cerrar-un-fichero" title="Permanent link">&para;</a></h3>
+<h3 id="22-cerrar-un-fichero">2.2 Cerrar un fichero<a class="headerlink" href="#22-cerrar-un-fichero" title="Permanent link">&para;</a></h3>
 <p>Los archivos en C trabajan con una memoria intermedia llamada <em>buffer</em>. La entrada y salida de datos se almacena en ese <em>buffer</em>, volcándose cuando está lleno.
 Siempre que se termina de trabajar con un fichero y siempre que se termine la ejecución de un programa, hay que cerrar los ficheros abiertos para que, entre otras cosas, se vuelque el <em>buffer</em> y no queden datos sin actualizar.</p>
 <p>La función <code>fclose</code> cierra un fichero.</p>
@@ -635,7 +850,7 @@ Siempre que se termina de trabajar con un fichero y siempre que se termine la ej
 </pre></div>
 </td></tr></table>
 
-<h3 id="23-funciones-de-entrada-y-salida-para-ficheros"><a name="2.3"/> 2.3 Funciones de entrada y salida para ficheros<a class="headerlink" href="#23-funciones-de-entrada-y-salida-para-ficheros" title="Permanent link">&para;</a></h3>
+<h3 id="23-funciones-de-entrada-y-salida-para-ficheros">2.3 Funciones de entrada y salida para ficheros<a class="headerlink" href="#23-funciones-de-entrada-y-salida-para-ficheros" title="Permanent link">&para;</a></h3>
 <ul>
 <li>La estructura <code>FILE</code> contiene una posición (marca) de por dónde vamos leyendo en el fichero.</li>
 <li>Si leemos algo del fichero, la marca avanza hasta el siguiente carácter/dato disponible.</li>
@@ -1279,27 +1494,7 @@ Siempre que se termina de trabajar con un fichero y siempre que se termine la ej
 </pre></div>
 </td></tr></table>
 
-<h2 id="3-parametros-a-main-desde-linea-de-comandos"><a name="3"/> 3. Parámetros a <code>main</code> desde línea de comandos<a class="headerlink" href="#3-parametros-a-main-desde-linea-de-comandos" title="Permanent link">&para;</a></h2>
-<p>Para poder pasar parámetros a un programa a través de la línea de comandos utilizamos la siguiente definición de la función <code>main</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>El primer agumento entero <code>argc</code>, contiene el número de argumentos recibidos por el programa, debemos considerar que siempre será el número de argumentos pasados más 1, ya que el primer agumento se reserva para contener el nombre del programa.</li>
-<li>El segundo <code>argv</code>es un puntero a un array de chars que contiene los parámetros pasados en el mismo orden en que fueron escritos.</li>
-</ul>
-<p>Supongamos que llamamos a un programa de la siguiente manera:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">miprograma</span> <span class="n">fichero1</span><span class="p">.</span><span class="n">txt</span> <span class="n">fichero2</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li><code>argc</code> contendrá el valor 3, debido al nombre del programa, y los dos argumentos pasados.</li>
-<li>argv[0] contendrá el nombre del ejecutable <code>miprograma</code></li>
-<li>argv[1] será fichero1.txt</li>
-<li>argv[2] será fichero2.txt</li>
-</ul>
+<p>Ejemplo pasando el nombre del fichero como parámetro a <code>main</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1364,7 +1559,7 @@ Siempre que se termina de trabajar con un fichero y siempre que se termine la ej
 </pre></div>
 </td></tr></table>
 
-<h2 id="4-ejercicios-propuestos"><a name="4"/> 4. Ejercicios propuestos<a class="headerlink" href="#4-ejercicios-propuestos" title="Permanent link">&para;</a></h2>
+<h3 id="ejercicios-propuestos">Ejercicios propuestos<a class="headerlink" href="#ejercicios-propuestos" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Hacer un programa que pida palabras al usuario y que las guarde en un fichero. El programa finalizará cuando el usuario introduzca "fin".</li>
 <li>Hacer un programa que pregunte el nombre de un fichero. Si existe, deberá mostrar el contenido del fichero de 25 en 25 líneas. Cuando muestre 25 líneas, esperará hasta que el usuario pulse una tecla (<code>getchar</code>) y mostrará las siguientes 25 líneas.</li>
@@ -1534,7 +1729,7 @@ Siempre que se termina de trabajar con un fichero y siempre que se termine la ej
 </td></tr></table>
 
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2018-19<br />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
@@ -1553,6 +1748,41 @@ Cristina Pomares Puig</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html" title="Tema 7" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Tema 7
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 0: Entorno Linux y herramientas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
