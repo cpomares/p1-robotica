@@ -1,30 +1,20 @@
 
 # Tema 8: Entrada / salida
 
-## Contenidos
-
-- [1. Introducción](#1)
-    - [1.1 Ficheros](#1-1)
-    - [1.2 Streams (flujos) de E/S](#1-2)
-- [2. Manejo de ficheros](#2)
-    - [2.1 Abrir el fichero](#2-1)
-    - [2.2 Cerrar el fichero](#2-2)
-    - [2.3 Funciones de entrada y salida para ficheros](#2-3)
-- [3. Parámetros a `main` desde línea de comandos](#3)
 
 
-## <a name="1"/> 1. Introducción
+## 1. Introducción
 
 C ofrece un conjunto de funciones para realizar operaciones de entrada y salida (E/S) con las cuales puedes leer y escribir cualquier tipo de fichero.
 
 El manejo de archivos en C se hace mediante el concepto de flujo (*streams*) o canal. Los flujos pueden estar abiertos o cerrados, y conducen los datos entre el programa y los dispositivos externos.
 
-### <a name="1.1"/> 1.1 Ficheros
+### 1.1 Ficheros
 
 - Toda la información manejada hasta ahora se pierde cuando termina la ejecución de un programa, tanto la introducida como la generada.- Si tenemos que manejar una gran cantidad de información (un número elevado de variables, valores, etc.) no parece razonable definir esa información en el código.- Además, puede que la información a tratar no la tengamos, sino que queramos procesar información que nos suministran almacenada.- Un fichero almacena de manera permanente la información, usando la memoria permanente (disco duro) del ordenador.- Para C todo en el ordenador es un fichero: teclado, impresora, cualquier otro dispositivo conectado al ordenador.
 
 
-### <a name="1.2"/> 1.2 *Streams* (flujos) de E/S
+### 1.2 *Streams* (flujos) de E/S
 
 Un *stream* (flujo) es una abstracción que se refiere a un conjunto de datos que fluye entre un origen y un destino. Entre el origen y el destino debe existir una conexión o canal (*pipe*) por el que circulen los datos.
 
@@ -49,7 +39,7 @@ En el momento de abrir o crear un *stream*, hay que indicar de qué tipo de arch
 No hay diferencia real entre uno y otro, salvo que en un fichero en modo texto hay fines de línea y hay funciones de ficheros que pueden buscarlos. Si se abre en modo binario, la información puede ser de cualquier tipo y las funciones de ficheros no buscarán fines de línea.
 
 
-## <a name="2"/> 2. Manejo de ficheros
+## 2. Manejo de ficheros
 
 Cuando trabajamos con ficheros se suele usar el mismo esquema, tanto si escribimos como si leemos:- Abrir el fichero- Comprobar si el fichero está abierto- Si está abierto, leer/escribir en él hasta que se encuentra el fin de fichero- Cerrar el fichero
 
@@ -66,7 +56,7 @@ FILE *mostrar();  // prototipo de función
 ~~~
 
 
-### <a name="2.1"/> 2.1 Abrir el fichero
+### 2.1 Abrir el fichero
 
 Para trabajar con un archivo, la primera operación que hay que realizar es abrirlo. La apertura conecta el archivo externo con el programa, y hay que indicarle cómo se va a tratar: binario, de caracteres. etc. El programa accede a los archivos a través de `FILE*`, la función de apertura devuelve dicho puntero.
 
@@ -132,7 +122,7 @@ int main() {
 }
 ~~~
 
-### <a name="2.2"/> 2.2 Cerrar un fichero
+### 2.2 Cerrar un fichero
 
 Los archivos en C trabajan con una memoria intermedia llamada *buffer*. La entrada y salida de datos se almacena en ese *buffer*, volcándose cuando está lleno.
 Siempre que se termina de trabajar con un fichero y siempre que se termine la ejecución de un programa, hay que cerrar los ficheros abiertos para que, entre otras cosas, se vuelque el *buffer* y no queden datos sin actualizar.
@@ -158,7 +148,7 @@ fclose(f2);
 ~~~
 
 
-### <a name="2.3"/> 2.3 Funciones de entrada y salida para ficheros
+### 2.3 Funciones de entrada y salida para ficheros
 
 - La estructura `FILE` contiene una posición (marca) de por dónde vamos leyendo en el fichero.- Si leemos algo del fichero, la marca avanza hasta el siguiente carácter/dato disponible.- Si volvemos a leer del fichero, leemos a partir de la marca.- Para saber si hemos llegado al final del fichero, usaremos la función `feof (FILE *f)` (devuelve 0 si no se ha encontrado).
 
@@ -579,27 +569,7 @@ int main() {
 ~~~
 
 
-## <a name="3"/> 3. Parámetros a `main` desde línea de comandos
-
-Para poder pasar parámetros a un programa a través de la línea de comandos utilizamos la siguiente definición de la función `main`:
-
-~~~c
-int main(int argc, char *argv[])
-~~~
-
-- El primer agumento entero `argc`, contiene el número de argumentos recibidos por el programa, debemos considerar que siempre será el número de argumentos pasados más 1, ya que el primer agumento se reserva para contener el nombre del programa.
-- El segundo `argv`es un puntero a un array de chars que contiene los parámetros pasados en el mismo orden en que fueron escritos.
-
-Supongamos que llamamos a un programa de la siguiente manera:
-
-~~~c
-./miprograma fichero1.txt fichero2.txt
-~~~
-
-- `argc` contendrá el valor 3, debido al nombre del programa, y los dos argumentos pasados.
-- argv[0] contendrá el nombre del ejecutable `miprograma`
-- argv[1] será fichero1.txt
-- argv[2] será fichero2.txt
+Ejemplo pasando el nombre del fichero como parámetro a `main`:
 
 ~~~c
 #define TAM 2048
@@ -636,7 +606,7 @@ int main(int argc, char **argv) {
 ~~~
 
 
-## <a name="4"/> 4. Ejercicios propuestos
+### Ejercicios propuestos
 
 1. Hacer un programa que pida palabras al usuario y que las guarde en un fichero. El programa finalizará cuando el usuario introduzca "fin".2. Hacer un programa que pregunte el nombre de un fichero. Si existe, deberá mostrar el contenido del fichero de 25 en 25 líneas. Cuando muestre 25 líneas, esperará hasta que el usuario pulse una tecla (`getchar`) y mostrará las siguientes 25 líneas.
 3. Crear un programa que pida al usuario pares de números enteros y escriba su suma (con el formato `20 + 3 = 23`) en pantalla y en un fichero llamado "sumas.txt". Cada vez que se ejecute el programa, deberá añadir los nuevos resultados a continuación de los resultados de las ejecuciones anteriores.
@@ -737,6 +707,6 @@ int main()
 
 ---
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
