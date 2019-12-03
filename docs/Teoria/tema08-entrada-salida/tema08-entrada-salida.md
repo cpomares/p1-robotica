@@ -1,8 +1,6 @@
 
 # Tema 8: Entrada / salida
 
-
-
 ## 1. Introducción
 
 C ofrece un conjunto de funciones para realizar operaciones de entrada y salida (E/S) con las cuales puedes leer y escribir cualquier tipo de fichero.
