@@ -160,8 +160,11 @@ Un puntero puede apuntar a otra variable puntero. Este concepto se utiliza mucho
 
 ~~~c
 int valor = 100;
-int *ptr1 = &valor;
-int **ptr5 = &ptr1;
+int *ptr1;
+int **ptr5;
+
+ptr1 = &valor;
+ptr5 = &ptr1;
 ~~~
 
 `ptr1`y `ptr5`son punteros. `ptr1`apunta a la variable `valor`de tipo `int`. `ptr5`contiene la dirección de `ptr1`.
