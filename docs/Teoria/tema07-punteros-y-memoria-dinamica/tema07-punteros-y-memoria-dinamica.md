@@ -751,7 +751,7 @@ void rellenaLista(TPuntos *lista) {
 }
 ~~~
 
-## 4. Arrays de punteros
+## 4. Array estático de punteros
 
 Si se necesita reservar muchos punteros o gestionar de forma más eficiente la memoria, se puede declarar un array de punteros. Un array de punteros es un array cuyos elementos son punteros. Ejemplo:
 
@@ -780,9 +780,9 @@ segmentos[0] = &s1;
 segmentos[1] = &s2;
 ~~~
 
-#### Reserva dinámica de memoria de un registro
+## 5. Array dinámico de punteros a registro
 
-En el caso anterior, los segmentos s1 y s2 los tenemos definidos de forma estática. Pero también podríamos haberlo hecho de forma dinámica:
+Vamos a definir un array dinámico de `TSegmento*`:
 
 ~~~c
 TSegmento* segmentos[100];  //array estático de punteros a registro
@@ -794,8 +794,6 @@ segmentos[0] = s;
 // Después de su uso hay que liberar la memoria:
 free(s);
 ~~~
-
-Ejercicio: Modifica el array estático anterior y hazlo dinámico
 
 También podemos reservar la memoria dinámica dentro de una función:
 
