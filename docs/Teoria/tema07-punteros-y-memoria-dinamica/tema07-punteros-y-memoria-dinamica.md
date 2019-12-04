@@ -780,12 +780,11 @@ segmentos[0] = &s1;
 segmentos[1] = &s2;
 ~~~
 
-## 5. Array dinámico de punteros a registro
+## 5. Array dinámico de registros
 
-Vamos a definir un array dinámico de `TSegmento*`:
+Vamos a definir un array dinámico de `TSegmento`:
 
 ~~~c
-TSegmento* segmentos[100];  //array estático de punteros a registro
 TSegmento *s;
 // Reservando una zona de memoria dinámica:
 s = (TSegmento*)malloc(sizeof(TSegmento));
