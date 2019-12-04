@@ -1003,9 +1003,15 @@ especificado: <code>nombre_variable</code> almacenará la dirección de memoria 
 <p>Un puntero puede apuntar a otra variable puntero. Este concepto se utiliza mucho en programas complejos en C y en la definición de estructuras de datos multidimensionales. Para declarar un puntero a un puntero se precede a la variable con dos asteriscos <code>**</code>. Ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">valor</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">**</span><span class="n">ptr5</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">;</span>
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">**</span><span class="n">ptr5</span><span class="p">;</span>
+
+<span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">valor</span><span class="p">;</span>
+<span class="n">ptr5</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">;</span>
 </pre></div>
 </td></tr></table>
 
