@@ -419,8 +419,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-array-dinamico-de-punteros-a-registro" title="5. Array dinámico de punteros a registro" class="md-nav__link">
-    5. Array dinámico de punteros a registro
+  <a href="#5-array-dinamico-de-registros" title="5. Array dinámico de registros" class="md-nav__link">
+    5. Array dinámico de registros
   </a>
   
 </li>
@@ -737,8 +737,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-array-dinamico-de-punteros-a-registro" title="5. Array dinámico de punteros a registro" class="md-nav__link">
-    5. Array dinámico de punteros a registro
+  <a href="#5-array-dinamico-de-registros" title="5. Array dinámico de registros" class="md-nav__link">
+    5. Array dinámico de registros
   </a>
   
 </li>
@@ -1895,17 +1895,15 @@ dinámicas de datos. En el ejemplo anterior, la reserva de memoria dinámica del
 </pre></div>
 </td></tr></table>
 
-<h2 id="5-array-dinamico-de-punteros-a-registro">5. Array dinámico de punteros a registro<a class="headerlink" href="#5-array-dinamico-de-punteros-a-registro" title="Permanent link">&para;</a></h2>
-<p>Vamos a definir un array dinámico de <code>TSegmento*</code>:</p>
+<h2 id="5-array-dinamico-de-registros">5. Array dinámico de registros<a class="headerlink" href="#5-array-dinamico-de-registros" title="Permanent link">&para;</a></h2>
+<p>Vamos a definir un array dinámico de <code>TSegmento</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
 6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">TSegmento</span><span class="o">*</span> <span class="n">segmentos</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>  <span class="c1">//array estático de punteros a registro</span>
-<span class="n">TSegmento</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">TSegmento</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
 <span class="c1">// Reservando una zona de memoria dinámica:</span>
 <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">TSegmento</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">TSegmento</span><span class="p">));</span>
 <span class="n">segmentos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
