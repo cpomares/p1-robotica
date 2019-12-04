@@ -603,6 +603,37 @@ void creaVector(int **v) {
 }
 ~~~
 
+Mismo ejemplo con `typedef`, para simplificar:
+
+~~~c
+#define TAM 20
+
+typedef int* TVector;
+void creaVector(TVector*);
+
+int main() {
+   TVector vector;
+
+   // Reservamos la memoria
+   creaVector(&vector);
+   vector[0] = 1;  //Rellenamos al azar
+   vector[2] = 2;
+   printf("Pos 2: %d\n", vector[2]); //Comprobamos
+
+   // Liberamos memoria
+   free(vector);
+   vector = NULL;
+
+   return 0;
+}
+
+void creaVector(TVector* v) {
+   *v = (int*)malloc(sizeof(int) * TAM);
+
+// Equivalente:
+// *v = (TVector)malloc(sizeof(int) * TAM);
+}
+~~~
 
 ### Devolución de punteros
 
