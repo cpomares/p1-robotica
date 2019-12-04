@@ -603,13 +603,14 @@ void creaVector(int **v) {
 }
 ~~~
 
-Mismo ejemplo con `typedef`, para simplificar:
+Ejemplo con `typedef`:
 
 ~~~c
 #define TAM 20
 
 typedef int* TVector;
 void creaVector(TVector*);
+void ampliaVector(TVector*, int);
 
 int main() {
    TVector vector;
@@ -619,6 +620,7 @@ int main() {
    vector[0] = 1;  //Rellenamos al azar
    vector[2] = 2;
    printf("Pos 2: %d\n", vector[2]); //Comprobamos
+   ampliaVector(&vector, 50);
 
    // Liberamos memoria
    free(vector);
@@ -629,9 +631,14 @@ int main() {
 
 void creaVector(TVector* v) {
    *v = (int*)malloc(sizeof(int) * TAM);
-
 // Equivalente:
 // *v = (TVector)malloc(sizeof(int) * TAM);
+}
+
+void ampliaVector(TVector* v, int tam) {
+   *v = (int*)realloc(*v, sizeof(int)*tam);
+// Equivalente:
+// *v = (TVector)realloc(*v, sizeof(int)*tam);
 }
 ~~~
 
