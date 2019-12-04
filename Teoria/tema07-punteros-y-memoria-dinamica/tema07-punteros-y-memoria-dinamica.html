@@ -412,8 +412,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-arrays-de-punteros" title="4. Arrays de punteros" class="md-nav__link">
-    4. Arrays de punteros
+  <a href="#4-array-estatico-de-punteros" title="4. Array estático de punteros" class="md-nav__link">
+    4. Array estático de punteros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-array-dinamico-de-punteros-a-registro" title="5. Array dinámico de punteros a registro" class="md-nav__link">
+    5. Array dinámico de punteros a registro
   </a>
   
 </li>
@@ -723,8 +730,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-arrays-de-punteros" title="4. Arrays de punteros" class="md-nav__link">
-    4. Arrays de punteros
+  <a href="#4-array-estatico-de-punteros" title="4. Array estático de punteros" class="md-nav__link">
+    4. Array estático de punteros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-array-dinamico-de-punteros-a-registro" title="5. Array dinámico de punteros a registro" class="md-nav__link">
+    5. Array dinámico de punteros a registro
   </a>
   
 </li>
@@ -1853,7 +1867,7 @@ dinámicas de datos. En el ejemplo anterior, la reserva de memoria dinámica del
 </pre></div>
 </td></tr></table>
 
-<h2 id="4-arrays-de-punteros">4. Arrays de punteros<a class="headerlink" href="#4-arrays-de-punteros" title="Permanent link">&para;</a></h2>
+<h2 id="4-array-estatico-de-punteros">4. Array estático de punteros<a class="headerlink" href="#4-array-estatico-de-punteros" title="Permanent link">&para;</a></h2>
 <p>Si se necesita reservar muchos punteros o gestionar de forma más eficiente la memoria, se puede declarar un array de punteros. Un array de punteros es un array cuyos elementos son punteros. Ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span><span class="o">*</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span> <span class="c1">// Array de 10 punteros a enteros</span>
 </pre></div>
@@ -1881,8 +1895,8 @@ dinámicas de datos. En el ejemplo anterior, la reserva de memoria dinámica del
 </pre></div>
 </td></tr></table>
 
-<h4>Reserva dinámica de memoria de un registro</h4>
-<p>En el caso anterior, los segmentos s1 y s2 los tenemos definidos de forma estática. Pero también podríamos haberlo hecho de forma dinámica:</p>
+<h2 id="5-array-dinamico-de-punteros-a-registro">5. Array dinámico de punteros a registro<a class="headerlink" href="#5-array-dinamico-de-punteros-a-registro" title="Permanent link">&para;</a></h2>
+<p>Vamos a definir un array dinámico de <code>TSegmento*</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1901,7 +1915,6 @@ dinámicas de datos. En el ejemplo anterior, la reserva de memoria dinámica del
 </pre></div>
 </td></tr></table>
 
-<p>Ejercicio: Modifica el array estático anterior y hazlo dinámico</p>
 <p>También podemos reservar la memoria dinámica dentro de una función:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
