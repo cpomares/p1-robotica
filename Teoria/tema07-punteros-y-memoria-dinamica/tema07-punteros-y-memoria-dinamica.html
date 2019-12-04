@@ -1600,6 +1600,63 @@ la propia dirección, que es una copia)</p>
 </pre></div>
 </td></tr></table>
 
+<p>Mismo ejemplo con <code>typedef</code>, para simplificar:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define TAM 20</span>
+
+<span class="k">typedef</span> <span class="kt">int</span><span class="o">*</span> <span class="n">TVector</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">creaVector</span><span class="p">(</span><span class="n">TVector</span><span class="o">*</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">TVector</span> <span class="n">vector</span><span class="p">;</span>
+
+   <span class="c1">// Reservamos la memoria</span>
+   <span class="n">creaVector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vector</span><span class="p">);</span>
+   <span class="n">vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">//Rellenamos al azar</span>
+   <span class="n">vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Pos 2: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">//Comprobamos</span>
+
+   <span class="c1">// Liberamos memoria</span>
+   <span class="n">free</span><span class="p">(</span><span class="n">vector</span><span class="p">);</span>
+   <span class="n">vector</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">creaVector</span><span class="p">(</span><span class="n">TVector</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+   <span class="o">*</span><span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">TAM</span><span class="p">);</span>
+
+<span class="c1">// Equivalente:</span>
+<span class="c1">// *v = (TVector)malloc(sizeof(int) * TAM);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="devolucion-de-punteros">Devolución de punteros<a class="headerlink" href="#devolucion-de-punteros" title="Permanent link">&para;</a></h3>
 <p>Una función también puede devolver un tipo de datos
 puntero. La función se declara así:</p>
