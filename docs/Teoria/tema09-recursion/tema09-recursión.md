@@ -1,16 +1,7 @@
 
 # Tema 9: Recursión
 
-## Contenidos
-
-- [1. Qué es la recursividad](#1)
-- [2. Cómo diseñar una función recursiva](#2)
-- [3. La pila de llamadas y el proceso de la recursión](#3)
-- [4. Recursión mutua](#4)
-- [5. Ventajas y desventajas de la recursión](#5)
-- [6. Ejemplos](#6)
-
-## <a name="1"/> 1. Qué es la recursividad
+## 1. Qué es la recursividad
 
 Una función es recursiva si en su definición hay una llamada a sí misma. La recursión o recursividad es una forma diferente de realizar las acciones repetitivas, permitiendo que un subprograma se llame a sí mismo para resolver una versión más pequeña del problema original.
 
@@ -28,7 +19,7 @@ Por ejemplo:
 - Potencia de dos números:
 `x^n = x * x^n-1`
 
-## <a name="2"/> 2. Cómo diseñar una función recursiva
+## 2. Cómo diseñar una función recursiva
 
 #### Esquema básico de una función recursiva
 
@@ -242,7 +233,7 @@ int main() {
 }
 ~~~
 
-## <a name="3"/> 3. La pila de llamadas y el proceso de la recursión
+## 3. La pila de llamadas y el proceso de la recursión
 
 ### La pila de llamadas
 
@@ -311,7 +302,7 @@ Si la recursión está mal hecha y nunca termina se genera un *stack overflow* p
 
 ¿Cuál será el proceso que genera una llamada a Fibonacci? El caso de Fibonacci es distinto, porque en cada función se realizan dos llamadas recursivas, de forma que la pila crece exponencialmente.
 
-## <a name="4"/> 4. Recursión mutua
+## 4. Recursión mutua
 
 Este tipo de recursión se produce cuando una función llama a otra y éste a su vez a la primera.
 
@@ -340,7 +331,7 @@ void funcionB(char c) {
 El programa principal llama a la función recursiva `funcionA`con el argumento 'Z', que a su vez llama a `funcionB` que decrementa el carácter (obtiene el carácter anterior) y llama nuevamente a `funcionA`. Este proceso se repite hasta que c sea el carácter 'A' (caso base). En ese momento, la recursión termina  y se ejecutan los 26 `printf` que se habían quedado en espera en la pila de llamadas y visualizando el alfabeto carácter a carácter de la A a la Z.
 
 
-## <a name="5"/> 5. Ventajas y desventajas de la recursión
+## 5. Ventajas y desventajas de la recursión
 
 ##### Ventajas
 
@@ -454,6 +445,6 @@ laberintos, se ve muy claro el avance, decisión y retroceso.
 
 ----
 
-Programación 1, Grado de Robótica, curso 2018-19  
+Programación 1, Grado de Robótica, curso 2019-20  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
