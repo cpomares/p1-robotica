@@ -457,23 +457,90 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contenidos" title="Contenidos" class="md-nav__link">
-    Contenidos
+  <a href="#1-que-es-la-recursividad" title="1. Qué es la recursividad" class="md-nav__link">
+    1. Qué es la recursividad
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#2-como-disenar-una-funcion-recursiva" title="2. Cómo diseñar una función recursiva" class="md-nav__link">
+    2. Cómo diseñar una función recursiva
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-pila-de-llamadas-y-el-proceso-de-la-recursion" title="3. La pila de llamadas y el proceso de la recursión" class="md-nav__link">
+    3. La pila de llamadas y el proceso de la recursión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#la-pila-de-llamadas" title="La pila de llamadas" class="md-nav__link">
     La pila de llamadas
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#el-proceso-de-la-recursion" title="El proceso de la recursión" class="md-nav__link">
     El proceso de la recursión
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recursion-mutua" title="4. Recursión mutua" class="md-nav__link">
+    4. Recursión mutua
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ventajas-y-desventajas-de-la-recursion" title="5. Ventajas y desventajas de la recursión" class="md-nav__link">
+    5. Ventajas y desventajas de la recursión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-resueltos" title="Ejercicios resueltos" class="md-nav__link">
+    Ejercicios resueltos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
+    Ejercicios propuestos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curiosidad-algoritmos-recursivos-de-vuelta-a-atras-backtracking" title="Curiosidad: Algoritmos recursivos de vuelta a atrás (backtracking)" class="md-nav__link">
+    Curiosidad: Algoritmos recursivos de vuelta a atrás (backtracking)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -495,16 +562,7 @@
                 
                 
                 <h1 id="tema-9-recursion">Tema 9: Recursión<a class="headerlink" href="#tema-9-recursion" title="Permanent link">&para;</a></h1>
-<h2 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="#1">1. Qué es la recursividad</a></li>
-<li><a href="#2">2. Cómo diseñar una función recursiva</a></li>
-<li><a href="#3">3. La pila de llamadas y el proceso de la recursión</a></li>
-<li><a href="#4">4. Recursión mutua</a></li>
-<li><a href="#5">5. Ventajas y desventajas de la recursión</a></li>
-<li><a href="#6">6. Ejemplos</a></li>
-</ul>
-<h2 id="1-que-es-la-recursividad"><a name="1"/> 1. Qué es la recursividad<a class="headerlink" href="#1-que-es-la-recursividad" title="Permanent link">&para;</a></h2>
+<h2 id="1-que-es-la-recursividad">1. Qué es la recursividad<a class="headerlink" href="#1-que-es-la-recursividad" title="Permanent link">&para;</a></h2>
 <p>Una función es recursiva si en su definición hay una llamada a sí misma. La recursión o recursividad es una forma diferente de realizar las acciones repetitivas, permitiendo que un subprograma se llame a sí mismo para resolver una versión más pequeña del problema original.</p>
 <p>Se puede utilizar la recursividad como una alternativa a la iteración. Una solución recursiva es normalmente menos eficiente que una solución iterativa, pero en numerosos casos el uso de la recursión permite a los programadores especificar soluciones naturales, sencillas que serían, en caso contrario, muy difíciles de resolver. Por este motivo, la recursión es una herramienta muy importante y poderosa en la resolución de problemas y en la programación.</p>
 <p>Una vez que uno se acostumbra a su uso, se comprueba que la recursión es una forma mucho más natural que la iteración de expresar un gran número de funciones.</p>
@@ -521,7 +579,7 @@
 <code>x^n = x * x^n-1</code></p>
 </li>
 </ul>
-<h2 id="2-como-disenar-una-funcion-recursiva"><a name="2"/> 2. Cómo diseñar una función recursiva<a class="headerlink" href="#2-como-disenar-una-funcion-recursiva" title="Permanent link">&para;</a></h2>
+<h2 id="2-como-disenar-una-funcion-recursiva">2. Cómo diseñar una función recursiva<a class="headerlink" href="#2-como-disenar-una-funcion-recursiva" title="Permanent link">&para;</a></h2>
 <h4>Esquema básico de una función recursiva</h4>
 <ul>
 <li><strong>Caso general o recursivo</strong>: Incluye una o más llamadas recursivas. Estas llamadas recursivas deben resolver versiones "más pequeñas" del problema que tiene que resolver la función.</li>
@@ -791,7 +849,7 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="3-la-pila-de-llamadas-y-el-proceso-de-la-recursion"><a name="3"/> 3. La pila de llamadas y el proceso de la recursión<a class="headerlink" href="#3-la-pila-de-llamadas-y-el-proceso-de-la-recursion" title="Permanent link">&para;</a></h2>
+<h2 id="3-la-pila-de-llamadas-y-el-proceso-de-la-recursion">3. La pila de llamadas y el proceso de la recursión<a class="headerlink" href="#3-la-pila-de-llamadas-y-el-proceso-de-la-recursion" title="Permanent link">&para;</a></h2>
 <h3 id="la-pila-de-llamadas">La pila de llamadas<a class="headerlink" href="#la-pila-de-llamadas" title="Permanent link">&para;</a></h3>
 <p>La pila de llamadas o <em>call stack</em> es una estructura dinámica de datos LIFO (<em>last in first out</em>) que almacena la información sobre las funciones o subrutinas activas de un programa. Esto hace que sea más sencillo mantener el control de los bloques que deben ser liberados, puesto que será aquel que esté en el tope de la pila.</p>
 <p>Su objetivo es seguir el curso del punto al cual cada función activa debe <strong>retornar el control</strong> cuando termine su ejecución, es decir, aquellas funciones que se han llamado pero todavía no han completado su ejecución ni retornando al lugar siguiente desde donde han sido llamadas.</p>
@@ -865,7 +923,7 @@ devuelve la ejecución al punto en que se hizo la llamada haciendo uso de lo que
 <p>Ejercicio: Haz las trazas de las funciones recursivas <code>potencia</code>y <code>sumatorio</code>.</p>
 </blockquote>
 <p>¿Cuál será el proceso que genera una llamada a Fibonacci? El caso de Fibonacci es distinto, porque en cada función se realizan dos llamadas recursivas, de forma que la pila crece exponencialmente.</p>
-<h2 id="4-recursion-mutua"><a name="4"/> 4. Recursión mutua<a class="headerlink" href="#4-recursion-mutua" title="Permanent link">&para;</a></h2>
+<h2 id="4-recursion-mutua">4. Recursión mutua<a class="headerlink" href="#4-recursion-mutua" title="Permanent link">&para;</a></h2>
 <p>Este tipo de recursión se produce cuando una función llama a otra y éste a su vez a la primera.</p>
 <p>Por ejemplo, el siguiente programa muestra por pantalla el alfabeto utilizando recursión mutua:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -905,7 +963,7 @@ devuelve la ejecución al punto en que se hizo la llamada haciendo uso de lo que
 </td></tr></table>
 
 <p>El programa principal llama a la función recursiva <code>funcionA</code>con el argumento 'Z', que a su vez llama a <code>funcionB</code> que decrementa el carácter (obtiene el carácter anterior) y llama nuevamente a <code>funcionA</code>. Este proceso se repite hasta que c sea el carácter 'A' (caso base). En ese momento, la recursión termina  y se ejecutan los 26 <code>printf</code> que se habían quedado en espera en la pila de llamadas y visualizando el alfabeto carácter a carácter de la A a la Z.</p>
-<h2 id="5-ventajas-y-desventajas-de-la-recursion"><a name="5"/> 5. Ventajas y desventajas de la recursión<a class="headerlink" href="#5-ventajas-y-desventajas-de-la-recursion" title="Permanent link">&para;</a></h2>
+<h2 id="5-ventajas-y-desventajas-de-la-recursion">5. Ventajas y desventajas de la recursión<a class="headerlink" href="#5-ventajas-y-desventajas-de-la-recursion" title="Permanent link">&para;</a></h2>
 <h5>Ventajas</h5>
 <ul>
 <li>Soluciones simples, claras.</li>
@@ -1066,7 +1124,7 @@ El nombre vuelta atrás (<em>backtracking</em>) viene del hecho de que en la bú
 funciona el salvapantallas <a href="https://www.jwz.org/xscreensaver/">xscreensaver</a> en el modo de resolución de
 laberintos, se ve muy claro el avance, decisión y retroceso.</p>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2018-19<br />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
