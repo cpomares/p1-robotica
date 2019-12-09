@@ -23,8 +23,7 @@ de fichero un de palabras las de orden el invertir de ejercicio el para prueba d
 
 Si volviésemos a ejecutar el programa pasando como argumento el fichero de salida, se debería volver a generar un fichero igual que el original.
 
-
-El programa deberá recibir un argumento desde línea de comandos con el nombre del fichero de entrada (con extensión .txt) y leer todas sus palabras guardándolas en un array dinámico de cadenas de caracteres, que a su vez también se crearán con reserva de memoria dinámica. Después deberá escribir en otro fichero de texto las palabras almacenadas en el array dinámico en orden inverso.
+El programa deberá recibir un argumento desde línea de comandos con el nombre del fichero de entrada (con extensión .txt) y leer (carácter a carácter con `fgetc`) todas sus palabras guardándolas en un array dinámico de cadenas de caracteres, que a su vez también se crearán con reserva de memoria dinámica. Después deberá escribir en otro fichero de texto las palabras almacenadas en el array dinámico en orden inverso.
 
 Suponemos que las palabras están separadas por un espacio en blanco y para mantener los distintos párrafos, incluye el carácter final de línea en la última palabra de cada párrafo.
 
