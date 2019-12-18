@@ -429,7 +429,7 @@ int mayoresQue(int array[], int elem, int n){
 2. Define una función recursiva que para un número natural n devuelva la suma de los cuadrados de los números del 1 hasta el n. Por ejemplo, para n=4, debe devolver 30 ya que 1^2+ 2^2 + 3^2 + 4^2 = 30.
 3. Define una función recursiva que, dado un número natural, muestre por pantalla el número formado por los mismos dígitos en sentido contrario. Por ejemplo: para el número 2089 debe mostrar 9802.4. Define una función recursiva que devuelva el número de dígitos impares de un número. Ejemplo: rec(321)=2, rec(28)=0.
 5. Comprobar si un número es par o impar, utilizando recursión mutua.
-6. Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función `max(int, int)`que devuelve el máximo entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el máximo entre el primer elemento y el máximo del resto de elementos.
+6. Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función `mayor(int, int)`que devuelve el mayor entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el mayor entre el primer elemento y el máximo del resto de elementos.
 
 
 ### Curiosidad: Algoritmos recursivos de vuelta a atrás (*backtracking*)
