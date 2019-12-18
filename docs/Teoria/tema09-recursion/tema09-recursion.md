@@ -350,7 +350,7 @@ El valor de la recursividad reside en el hecho de que se puede usar para resolve
 
 1. Dado un array de enteros, escribe un programa que calcule el menor número de un array de enteros utilizando una función recursiva.
 
-Formulación recursiva: el número menor de un array es el menor entre el elemento actual y el menor del resto de los elementos.
+Formulación recursiva: el número menor de un array es el mínimo entre el elemento actual y el menor del resto de los elementos.
 
 ~~~c
 int Menor(int[], int, int);
