@@ -346,91 +346,146 @@ El programa principal llama a la función recursiva `funcionA`con el argumento '
 
 El valor de la recursividad reside en el hecho de que se puede usar para resolver problemas cuya solución iterativa no es fácil de obtener, y sin embargo resueltos de forma recursiva resultan muy concisos y claros.
 
-### Ejercicios resueltos
+#### Ejercicios resueltos
 
-1. Dado un array de enteros, escribe un programa que calcule el menor número de un array de enteros utilizando una función recursiva.
+1. Dado un array de enteros, escribe un programa que calcule el menor número de un array de enteros utilizando una función recursiva. Formulación recursiva: el número menor de un array es el mínimo entre el elemento actual y el menor del resto de los elementos.
 
-Formulación recursiva: el número menor de un array es el mínimo entre el elemento actual y el menor del resto de los elementos.
+    ~~~c
+    int Menor(int[], int, int);
+    int Min(int, int);
 
-~~~c
-int Menor(int[], int, int);
-int Min(int, int);
+    int main() {
+       int a[] = {4,2,8,45,9};
+       int res;
 
-int main() {
-   int a[] = {4,2,8,45,9};
-   int res;
-
-   res = Menor(a, 0, 5);
-   printf("%d\n", res);
-}
-
-int Min(int a, int b) {
-   int res;
-
-   if (a < b)
-      res = a;
-   else
-      res = b;
-
-   return res;
-}
-
-int Menor(int s[], int ini, int fin) {
-    int menor, res;
-
-    if(ini == fin) {
-        res = s[ini];
+       res = Menor(a, 0, 5);
+       printf("%d\n", res);
     }
-    else
-    {
-        menor = Menor(s, ini+1, fin);
-        res = Min(s[ini], menor);
-    }
-    return res;
-}
 
-~~~
+    int Min(int a, int b) {
+       int res;
+
+       if (a < b)
+          res = a;
+       else
+          res = b;
+
+       return res;
+    }
+
+    int Menor(int s[], int ini, int fin) {
+        int menor, res;
+
+        if(ini == fin) {
+            res = s[ini];
+        }
+        else
+        {
+            menor = Menor(s, ini+1, fin);
+            res = Min(s[ini], menor);
+        }
+        return res;
+    ~~~
 
 2. Escribe una función recursiva que reciba como parámetros un array de enteros y su tamaño, y devuelva la suma de todos sus elementos.
 
-~~~c
-int sumaVector(int array[], int n){
-    int res = 0;
+    ~~~c
+    int sumaVector(int array[], int n){
+        int res = 0;
 
-    if(n==0){
-        res = array[0];
-    }else{
-        res = array[n] + sumaVector(array,n-1);
+        if(n==0){
+            res = array[0];
+        }else{
+            res = array[n] + sumaVector(array,n-1);
+        }
+        return res;
     }
-    return res;
-}
-~~~
+    ~~~
 
-3. Escribe una función recursiva llamada `mayoresQue(int array[], int elem, int longitud)`que reciba un array, un número y el tamaño del array, y devuelva la cantidad de elementos del array que son mayores que el número que le pasamos como parámetro.
+3. Escribe una función recursiva `mayoresQue(int array[], int elem, int longitud)`que reciba un array, un número y el índice máximo del array, y devuelva la cantidad de elementos del array que son mayores que el número que le pasamos como parámetro.
 
-~~~c
-int mayoresQue(int array[], int elem, int n){
-    int res = 0;
+    ~~~c
+    int mayoresQue(int array[], int elem, int n){
+        int res = 0;
 
-    if(n == 0)
-        res = 0;
-    else if (array[n] > elem)
-        res = 1 + mayoresQue(array, elem, n-1);
-    else
-        res = mayoresQue(array, elem, n-1);
+        if(n == 0)
+            res = 0;
+        else if (array[n] > elem)
+            res = 1 + mayoresQue(array, elem, n-1);
+        else
+            res = mayoresQue(array, elem, n-1);
 
-    return res;
-}
-~~~
+        return res;
+    }
+    ~~~
 
-## Ejercicios propuestos
+4. Escribe un programa que calcule el número decimal correspondiente a un array de bits mediante una función recursiva.
+
+    ~~~c
+    #include <stdio.h>
+    #include <math.h>
+
+    int binADecimal(int[], int, int);
+
+    int main() {
+       int array[] = {1,1,1,1};
+       int array2[] = {1,0};
+       printf("1111: %d\n", binADecimal(array, 4, 0));
+       printf("10: %d\n", binADecimal(array2, 2, 0));
+    }
+
+    int binADecimal(int bits[], int longitud, int indice) {
+       int decimal;
+       int exponente;
+
+       if (longitud == 0)
+          decimal = 0;
+       else {
+          exponente = pow(2,longitud-1);
+          decimal = (bits[indice] * exponente) +
+                    binADecimal(bits, longitud-1, indice+1);
+       }
+
+       return decimal;
+    }
+    ~~~
+
+5. Escribe la función recursiva `ordenado` que compruebe si un array está ordenado creciente.
+
+    ~~~c
+    bool ordenado(int array[], int n) {
+       bool res;
+
+       if (n == 0)
+          res = true;
+       else {
+          res = (array[n] >= array[n-1]) &&
+                ordenado(array, n-1);
+       }
+
+       return res;
+    }
+    ~~~
+
+    Lo probamos:
+
+    ~~~c
+    int main() {
+       int array[] = {1,4,30,3};
+
+       printf("Ordenado: %d\n", ordenado(array,3));
+    }
+    ~~~
+
+#### Ejercicios propuestos
 
 1. Define una función recursiva que para un número natural n muestre por pantalla la serie creciente de números naturales del 1 al n, es decir, 1 2 3... n.
 2. Define una función recursiva que para un número natural n devuelva la suma de los cuadrados de los números del 1 hasta el n. Por ejemplo, para n=4, debe devolver 30 ya que 1^2+ 2^2 + 3^2 + 4^2 = 30.
-3. Define una función recursiva que, dado un número natural, muestre por pantalla el número formado por los mismos dígitos en sentido contrario. Por ejemplo: para el número 2089 debe mostrar 9802.4. Define una función recursiva que devuelva el número de dígitos impares de un número. Ejemplo: rec(321)=2, rec(28)=0.
-5. Comprobar si un número es par o impar, utilizando recursión mutua.
-6. Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función `mayor(int, int)`que devuelve el mayor entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el mayor entre el primer elemento y el máximo del resto de elementos.
-
+3. Define una función recursiva que, dado un número natural, muestre por pantalla el número formado por los mismos dígitos en sentido contrario. Por ejemplo: para el número 2089 debe mostrar 9802.
+4. Define una función recursiva que devuelva el número de dígitos impares de un número. Ejemplo: rec(321)=2, rec(28)=0.
+5. Implementa la función anterior de forma que se reciba un array de dígitos y la función devuelva el número de dígitos impares que contiene el array.
+6. Comprobar si un número es par o impar, utilizando recursión mutua.
+7. Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función mayor(int, int)que devuelve el mayor entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el máyor entre el primer elemento y el máximo del resto de elementos.
 
 ### Curiosidad: Algoritmos recursivos de vuelta a atrás (*backtracking*)
 
