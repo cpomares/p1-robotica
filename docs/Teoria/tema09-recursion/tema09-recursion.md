@@ -406,16 +406,15 @@ El valor de la recursividad reside en el hecho de que se puede usar para resolve
 
     ~~~c
     int mayoresQue(int array[], int elem, int n){
-        int res = 0;
+          int res = 0;
 
-        if(n == 0)
-            res = 0;
-        else if (array[n] > elem)
-            res = 1 + mayoresQue(array, elem, n-1);
-        else
-            res = mayoresQue(array, elem, n-1);
-
-        return res;
+          if(n >= 0) {
+               if (array[n] > elem)
+                   res = 1 + mayoresQue(array, elem, n-1);
+               else
+                   res = mayoresQue(array, elem, n-1);
+          }
+          return res;
     }
     ~~~
 
