@@ -387,7 +387,7 @@ El valor de la recursividad reside en el hecho de que se puede usar para resolve
         return res;
     ~~~
 
-2. Escribe una función recursiva que reciba como parámetros un array de enteros y su tamaño, y devuelva la suma de todos sus elementos.
+2. Escribe una función recursiva que reciba como parámetros un array de enteros y su índice máximo, y devuelva la suma de todos sus elementos.
 
     ~~~c
     int sumaVector(int array[], int n){
