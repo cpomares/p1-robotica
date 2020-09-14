@@ -14,7 +14,7 @@ prácticas de 2 h. a la semana
 **Profesores**:  
 
 * Antonio Botía ([e-mail](mailto:abotia@ua.es)): Grupos de prácticas: 1 y 4.
-* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupos de prácticas: 2 y 3.
+* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría 1 y grupos de prácticas: 2 y 3.
 
 ### Recursos de la asignatura
 
