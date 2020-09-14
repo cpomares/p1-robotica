@@ -198,6 +198,6 @@ cd practica0
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares

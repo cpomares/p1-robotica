@@ -1,8 +1,8 @@
 
-## Programación 1. Grado de Robótica. Curso 2019-2020
+## Programación 1. Grado de Robótica. Curso 2020-2021
 
 Toda la información está disponible en el [sitio Moodle de P1](https://moodle2019-20.ua.es/moodle/course/view.php?id=1262) y en la
-[ficha del campus virtual](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&wcodasi=33704&scaca=2019-20).
+[guía docente de P1](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodest=C211&wcodasi=33704&wlengua=es&scaca=2020-21).
 
 
 ### Datos académicos de la asignatura
@@ -13,14 +13,14 @@ prácticas de 2 h. a la semana
 
 **Profesores**:  
 
-* Antonio Botía ([e-mail](mailto:abotia@ua.es)): Grupos de prácticas: 2 y 3.
-* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupos de prácticas: 1 y 4.
+* Antonio Botía ([e-mail](mailto:abotia@ua.es)): Grupos de prácticas: 1 y 4.
+* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupos de prácticas: 2 y 3.
 
 ### Recursos de la asignatura
 
-* [Sitio Moodle](https://moodle2019-20.ua.es/moodle/course/view.php?id=1262) contiene los
+* [Sitio Moodle](https://moodle2020-21.ua.es/moodle/course/view.php?id=962) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
-* [Foro de consultas y anuncios](https://moodle2019-20.ua.es/moodle/mod/forum/view.php?id=18878)
+* [Foro de consultas y anuncios](https://moodle2020-21.ua.es/moodle/mod/forum/view.php?id=13376)
   en el sitio Moodle
 
 ### Objetivos y competencias
@@ -56,9 +56,9 @@ prácticas de 2 h. a la semana
 
 * **Tema 5. Tipos de datos estructurados: Arrays**: Concepto de dato estructurado. El tipo array. Arrays unidimensionales, bidimensionales y multidimensionales. Cadenas de caracteres
 
-* **Tema 6. Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
+* **Tema 6. Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
 
-* **Tema 7. Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
+* **Tema 7. Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
 
 * **Tema 8. Entrada/salida**: Declaración, apertura, lectura y escritura de ficheros de texto y binarios en C.
 
@@ -71,7 +71,7 @@ Durante las clases prácticas se realizarán de forma **individual** ejercicios 
 
 ### Horarios
 
-La distribución de grupos del curso 2019-20 es la siguiente:
+La distribución de grupos del curso 2020-2021 es la siguiente:
 
 <img src="imagenes/horarios.png" width="700px"/>
 
@@ -81,13 +81,12 @@ La distribución de grupos del curso 2019-20 es la siguiente:
 
 En la convocatoria ordinaria (enero) se realizará una evaluación continua con las siguientes pruebas:
 
-* **Examen 1**: Del tema 1 al tema 3. Pondera un 15% en la nota final. No se exige nota mínima. **Jueves 10 octubre, 16h-18h**
-* **Examen 2**: Del tema 1 al tema 6. Pondera un 35% en la nota final. No se exige nota mínima.  **Miércoles 27 noviembre, 11h-13h**
-* **Examen 3**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la **fecha oficial** asignada al examen final de la convocatoria de enero.
+* **Examen 1**: Del tema 1 al tema 5. Pondera un 50% en la nota final. No se exige nota mínima. **Miércoles 25 de Noviembre** (fecha de examen aproximada, a la espera de que nos asignen aulas).
+* **Examen 2**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la **fecha oficial** asignada al examen final de la convocatoria de enero. 
 
 Todos los exámenes de la asignatura se realizarán por escrito e incluirán conceptos y ejercicios relacionados con los trabajados tanto en las sesiones de teoría como de prácticas.
 
-Las entregas de las prácticas no ponderarán para la calificación final, pero su realización es **imprescindible** para el aprendizaje de los conceptos, técnicas de la asignatura y para la preparación de las pruebas en las que se evaluarán los conocimientos adquiridos.
+La realización de las prácticas es **imprescindible** para el aprendizaje de los conceptos, técnicas de la asignatura y para la preparación de las pruebas en las que se evaluarán los conocimientos adquiridos.
 
 #### Convocatoria extraordinaria
 
@@ -95,7 +94,7 @@ En la convocatoria extraordinaria se realizará un examen final escrito sobre to
 
 #### Plagios
 
-Los trabajos teórico/prácticos realizados han de ser originales. La detección de copia o plagio supondrá la calificación de "0" en la prueba correspondiente. Se informará la dirección de Departamento y de la EPS sobre esta incidencia. La reiteración en la conducta en esta u otra asignatura conllevará la notificación al vicerrectorado correspondiente de las faltas cometidas para que estudien el caso y sancionen según la legislación (Reglamento de disciplina académica de los Centros oficiales de Enseñanza Superior y de Enseñanza Técnica dependientes del Ministerio de Educación Nacional BOE 12/10/1954).
+Los trabajos teórico/prácticos realizados han de ser originales. La detección de copia o plagio supondrá la calificación de "0" en la prueba correspondiente. Se informará la dirección de Departamento y de la EPS sobre esta incidencia. La reiteración en la conducta en esta u otra asignatura conllevará la notificación al vicerrectorado correspondiente de las faltas cometidas para que estudien el caso y sancionen según la legislación.
 
 ### Bibliografía
 
@@ -121,6 +120,6 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares
