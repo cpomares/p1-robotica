@@ -1,0 +1,1914 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Tema 4: Descomposición modular - P1 Robótica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tema-4-descomposicion-modular" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="P1 Robótica" class="md-header-nav__button md-logo">
+          
+            <img src="../../imagenes/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              P1 Robótica
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tema 4: Descomposición modular
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="P1 Robótica" class="md-nav__button md-logo">
+      
+        <img src="../../imagenes/logo.png" width="48" height="48">
+      
+    </a>
+    P1 Robótica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Teoría
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Teoría
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema00-descripcion-asignatura/tema00-descripcion-asignatura.html" title="Descripción de la asignatura" class="md-nav__link">
+      Descripción de la asignatura
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Prácticas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Prácticas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-nav__link">
+      Práctica 0: Entorno Linux y herramientas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descomposicion-modular" title="1. Descomposición modular" class="md-nav__link">
+    1. Descomposición modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-funciones" title="2. Funciones" class="md-nav__link">
+    2. Funciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-una-funcion-en-c" title="Sintaxis de una función en C" class="md-nav__link">
+    Sintaxis de una función en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-de-las-variables" title="Ámbito de las variables" class="md-nav__link">
+    Ámbito de las variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donde-definir-las-funciones-en-c" title="Dónde definir las funciones en C" class="md-nav__link">
+    Dónde definir las funciones en C
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-de-parametros-por-valor-y-por-referencia" title="Paso de parámetros por valor y por referencia" class="md-nav__link">
+    Paso de parámetros por valor y por referencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-un-programa-en-c" title="Estructura de un programa en C" class="md-nav__link">
+    Estructura de un programa en C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliotecas-del-lenguaje-c" title="Bibliotecas del lenguaje C" class="md-nav__link">
+    Bibliotecas del lenguaje C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" title="Ejercicios" class="md-nav__link">
+    Ejercicios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tema-4-descomposicion-modular">Tema 4: Descomposición modular<a class="headerlink" href="#tema-4-descomposicion-modular" title="Permanent link">&para;</a></h1>
+<h2 id="1-descomposicion-modular">1. Descomposición modular<a class="headerlink" href="#1-descomposicion-modular" title="Permanent link">&para;</a></h2>
+<p>Ya hemos visto que en C se utilizan funciones de biblioteca (como <code>printf</code> o <code>scanf</code>). También hemos utilizado la función <code>main</code>, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.</p>
+<p>El uso de funciones definidas por el programador permite dividir un programa grande en un cierto número de componentes más pequeñas, cada una de las cuales con un propósito único e identificable. Por tanto, un programa en C se puede modularizar en subproblemas (programar de forma estructurada) mediante el uso adecuado de funciones.</p>
+<p>Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función <code>main</code> instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).</p>
+<p>Una de las habilidades fundamentales del pensamiento computacional es la <strong>abstracción</strong>: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones). Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.</p>
+<p>Ventajas de modularizar un programa:</p>
+<ul>
+<li><strong>Generalización</strong>: si un programa tiene instrucciones repetidas en distintas partes, esas instrucciones repetidas se pueden agrupar en una sola función, a la que acceder cuando sea necesario.</li>
+<li><strong>Claridad lógica</strong>: programas más fáciles de escribir y depurar. La estructura lógica es más fácil de entender.</li>
+<li>También permite al programador construir bibliotecas de funciones de <strong>uso frecuente</strong>. Evita la reescritura del código.</li>
+<li>Favorece la <strong>portabilidad</strong>.</li>
+<li>Facilita el diseño descendente y la <strong>programación estructurada</strong>.</li>
+<li>Reduce el tiempo de programación: <strong>reutilización</strong> y división de tareas</li>
+<li>Disminuye el tamaño total del programa</li>
+<li>Facilita la detección y corrección de errores</li>
+<li>Facilita el <strong>mantenimiento</strong> del programa</li>
+</ul>
+<p>Cuando empezamos a abordar un problema, lo mejor es ir dividiéndolo en subproblemas.</p>
+<blockquote>
+<p>Por ejemplo: guiado de un robot desde la clase hasta la puerta de salida</p>
+<p>Subproblemas:</p>
+<ul>
+<li>Encontrar la puerta del aula y salir</li>
+<li>Guiado por el pasillo hasta encontrar las escaleras</li>
+<li>Bajar las escaleras</li>
+<li>Encontrar la puerta de salida y salir</li>
+</ul>
+</blockquote>
+<p>Cada subproblema puede ser tratado por separado: analizado, dividido a su vez en subproblemas, probado de manera independiente, y tenemos la posibilidad de reutilizar código ya hecho</p>
+<h2 id="2-funciones">2. Funciones<a class="headerlink" href="#2-funciones" title="Permanent link">&para;</a></h2>
+<p>Algunos lenguajes de programación tienen dos tipos de
+herramientas para modularizar: procedimientos y funciones. En el lenguaje C sólo existen las <strong>funciones</strong>.</p>
+<p>Un programa en C está estructurado en funciones. De hecho, <code>main()</code> es una función, es la función principal.</p>
+<p>Una función es una unidad de código diseñada para realizar una tarea determinada.</p>
+<p>Las funciones en programación son similares a las funciones matemáticas, pudiendo tener argumentos o parámetros.</p>
+<p>Ejemplo:</p>
+<blockquote>
+<p>Definición de una función en matemáticas: f(x) = x + 5;</p>
+<ul>
+<li>f es el nombre de la función que tiene un parámetro formal: x.</li>
+<li>La función f, una vez definida, puede usarse o llamarse en algunas expresiones: y = f(4) + 1;</li>
+<li>Para descubrir el valor de f(4) hay que sustituir el parámetro formal x por el valor 4 (argumento actual), f(4) = 4+5 = 9, de donde obtenemos que y = 9 + 1 = 10.</li>
+<li>Se dice que la función f devuelve el valor 9.</li>
+</ul>
+</blockquote>
+<p>Las funciones en programación son más generales que las
+funciones matemáticas: pueden tener parámetros  de cualquier tipo y pueden incorporar estructuras de control.</p>
+<h4>Funciones como cajas negras</h4>
+<p>Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber qué hace y cómo se usa, pero no cómo está implementada.</p>
+<h4>Elementos de las funciones</h4>
+<p>Las funciones en programación también tienen todos los
+elementos vistos en las funciones matemáticas:</p>
+<ul>
+<li><strong>Definición</strong>: Donde se define su nombre, los parámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
+del valor que se devuelve (tipo de la función).</li>
+<li><strong>Parámetros formales</strong>: Son los nombres de los parámetros que aparecen en la definición de una función.</li>
+<li><strong>Llamada a una función</strong>: Es la instrucción donde se invoca a la función.</li>
+<li><strong>Parámetros actuales</strong>: Son los parámetros utilizados en la llamada.</li>
+</ul>
+<p>Ejemplo: implementamos en C la función matemática f(x)=x+5:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*int f: Tipo del valor que devuelve la función (tipo de la función).</span>
+<span class="cm">Debe coincidir con el tipo de la expresión que hay después de la palabra return</span>
+<span class="cm">f: nombre de la función</span>
+<span class="cm">(int x): parámetro formal y su tipo*/</span>
+
+<span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span> <span class="cm">/*valor que devuelve la función*/</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>En un programa definimos la función una vez y la utilizamos (llamamos) siempre que sea necesario. La llamada a una función puede utilizarse en cualquier lugar en el que pueda utilizarse una expresión del tipo de la función.</p>
+<p>Ejemplo: ¿Qué salida produce el siguiente programa para un determinado valor de entrada ?</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Prototipo o declaración de la función f</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="n">num3</span><span class="p">;</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Introduzca un número: &quot;</span><span class="p">);</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
+
+   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">;</span>
+   <span class="n">num3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num2</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %d, %d y %d.&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">num3</span><span class="p">));</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Definición de la función f</span>
+   <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Cuando se llama a la función <code>f(5)</code>, el parámetro <strong>formal</strong> <code>x</code> toma el valor de <code>5</code>que es el parámetro <strong>actual</strong>.</p>
+<h3 id="sintaxis-de-una-funcion-en-c">Sintaxis de una función en C<a class="headerlink" href="#sintaxis-de-una-funcion-en-c" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">tipo_devuelto</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nombre_funcion</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">parámetros</span> <span class="n">formales</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="n">cuerpo</span> <span class="n">de</span> <span class="n">la</span> <span class="n">función</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>El <code>&lt;tipo_devuelto&gt;</code> indica el tipo del valor que devuelve la función. En el caso del ejemplo de la función <code>mínimo</code>, el tipo de retorno es <code>int</code>. Es posible que la función no devuelva nada, en ese caso el tipo de devuelto es <code>void</code>.</li>
+<li>El <code>&lt;nombre_función&gt;</code>, en nuestro ejemplo <code>minimo</code>. Debe ser indicativo de la funcionalidad desarrollada. Usaremos la misma norma que para las variables</li>
+<li><code>&lt;parámetros formales&gt;</code>: es una lista con la declaración de todos los parámetros formales (tipo y nombre), separados por comas. Puede estar vacía. Los parámetros formales permiten que se transfiera información desde el punto del programa en donde se llama a la función a ésta. Cada parámetro formal debe ser del mismo tipo que el dato que recibe desde el punto de llamada.</li>
+<li>El <code>&lt;cuerpo de la función&gt;</code>  contiene las instrucciones que realizan la tarea concreta de la función. Es la implementación de la función.<ul>
+<li>Pueden declararse variables locales a la función.</li>
+<li>Puede contener la sentencia <code>return</code> para devolver el valor que corresponda.<ul>
+<li>Formato: <code>return &lt;expresión&gt;;</code></li>
+<li>Esta sentencia puede aparecer varias veces, aunque  es deseable que sólo aparezca una vez al final.</li>
+<li>En cuanto se ejecute una sentencia <code>return</code> la función termina, devolviendo el valor que haya en esa sentencia <code>return</code>.</li>
+<li>El valor devuelto debe ser del tipo especificado <code>tipo_devuelto</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Prototipo o declaración de una función</h4>
+<p>Sintaxis:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">tipo_devuelto</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nombre_f</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">tipo_args_formales</span><span class="o">&gt;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code>&lt;tipo_args_formales&gt;</code>: Es una lista con la declaración de todos los parámetros formales, separados por comas. Pueden ponerse sólo los tipos (sin el nombre de los parámetros).</li>
+<li>El resto es como la sintaxis de definición de una función, pero sin el cuerpo.</li>
+</ul>
+<p>El prototipo, también llamado declaración de una función o cabecera (<em>header</em>) sirve para especificar o declarar que existe una función con cierto número
+y tipo de parámetros y que devuelve un determinado tipo de datos.</p>
+<p>El prototipo no define el proceso que se realiza, el cual se especifica en la definición de la función.
+El prototipo de una función debe ser coherente con
+la cabecera de su definición.</p>
+<p>Ejemplo de prototipos de funciones:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">sumaValores</span> <span class="p">(</span><span class="kt">int</span> <span class="n">valorA</span><span class="p">,</span> <span class="kt">int</span> <span class="n">valorB</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">muestraResultados</span> <span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">estaDentroLimites</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">char</span> <span class="nf">preguntaUsuario</span> <span class="p">();</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Variables locales a una función</h4>
+<p>Las <strong>variables locales</strong> son aquellas que se declaran dentro de una función. Las variables de sus parámetros formales son locales a la función:</p>
+<ul>
+<li>Sólo tienen sentido y sólo pueden usarse dentro de esa función: su <strong>ámbito es local</strong> a la función</li>
+<li>Su nombre es totalmente independiente de las variables locales de
+otras funciones, incluyendo la función <code>main()</code>.</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+   <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+   <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">g</span> <span class="p">(</span><span class="kt">char</span> <span class="n">x</span><span class="p">){</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Si nos fijamos en las variables <code>x</code> de las funciones anteriores, vemos que se llaman igual pero
+son variables distintas: tienen distinto ámbito (visibilidad), distinto significado, distinta utilidad...</p>
+<p>Otros ejemplos:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Esta función recibe dos parámetros y devuelve el menor de ellos</span>
+
+<span class="kt">int</span> <span class="nf">minimo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">menor</span><span class="p">;</span> <span class="c1">// el menor de dos números</span>
+
+   <span class="n">menor</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="n">menor</span><span class="p">)</span>
+      <span class="n">menor</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">menor</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Esta función no recibe parámetros e imprime la cadena de texto &quot;hola mundo&quot;</span>
+
+<span class="kt">void</span> <span class="nf">holamundo</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola mundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="ambito-de-las-variables">Ámbito de las variables<a class="headerlink" href="#ambito-de-las-variables" title="Permanent link">&para;</a></h2>
+<p><strong>Variables locales</strong>: Son variables que sólo son visibles y accesibles dentro del ámbito donde se han creado</p>
+<ul>
+<li>Si declaramos una variable dentro del cuerpo de una función, es accesible en toda la función. En cuanto la función termine su ejecución, esa variable desaparece.</li>
+<li>Si esta declaración se realiza dentro de un bloque de código (dentro de un if, switch, for, while ...), sólo es accesible dentro del bloque de código</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+   <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// variable local al if</span>
+   <span class="p">}</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El valor de la variable es: %d&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="c1">//Error, variable no definida</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><strong>Variables globales</strong> (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a <strong>efectos laterales</strong> erróneos que suelen ser muy difícil de localizar.</p>
+<h3 id="donde-definir-las-funciones-en-c">Dónde definir las funciones en C<a class="headerlink" href="#donde-definir-las-funciones-en-c" title="Permanent link">&para;</a></h3>
+<p>En un programa en C las funciones pueden situarse en dos sitios distintos:</p>
+<ol>
+<li>Antes de la función <code>main()</code>:</li>
+</ol>
+<ul>
+<li>En este caso se definirá la función <code>main()</code> al final.</li>
+<li>Las funciones se ordenarán teniendo en cuenta que para utilizar
+una función ésta debe estar definida previamente.</li>
+</ul>
+<ol start="2">
+<li>Después de la función <code>main()</code>:</li>
+</ol>
+<ul>
+<li>En este caso lo habitual es definir la función <code>main()</code> al principio.</li>
+<li>Antes de la función <code>main()</code> se incluirán los prototipos de todas las funciones. Esto es imprescindible, ya que, al estar definidas las funciones al final, el compilador no reconoce las llamadas a las mismas que puedan haberse realizado.</li>
+<li>El orden de las funciones ya no es importante, ya que todas podrán utilizar a todas las demás, puesto que están todos los prototipos declarados previamente.</li>
+</ul>
+<p>Esta segunda forma es más laboriosa pero evita errores en el orden de las funciones. Además, el tener todos los prototipos juntos simplifica localizar las características de cada función.</p>
+<h2 id="paso-de-parametros-por-valor-y-por-referencia">Paso de parámetros por valor y por referencia<a class="headerlink" href="#paso-de-parametros-por-valor-y-por-referencia" title="Permanent link">&para;</a></h2>
+<h4>Paso de parámetros por valor</h4>
+<p>Cuando se produce la llamada a una función, se transfiere la ejecución del programa al cuerpo de la función. Se crea un <strong>nuevo ámbito local</strong> donde la función se ejecuta. Pasos:</p>
+<ol>
+<li>Se declaran las variables de los parámetros formales.</li>
+<li>Se copia el valor de los parámetros actuales en las
+variables de los parámetros formales.<ul>
+<li>Esta copia se hace por orden: el primer parámetro actual en
+el primer parámetro formal, el segundo en el segundo...
+Esta copia no se hace por el nombre de los respectivos parámetros formales y actuales.</li>
+<li>Se copia el valor: si el argumento
+actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos parámetros actuales y formales son variables distintas.</li>
+</ul>
+</li>
+<li>Se declaran las variables locales a la función.</li>
+<li>Se ejecuta el código de la función en ese ámbito local.</li>
+<li>Al terminar la función las variables LOCALES son destruidas, es decir, el <strong>ámbito donde la función se ejecutó desaparece</strong>. Si los parámetros formales se modifican dentro de la función, no se modificarán los argumentos
+actuales, puesto que son variables distintas.</li>
+</ol>
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">int</span><span class="p">);</span> <span class="c1">// prototipo</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Introduzca un número: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">func</span> <span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*¿Qué salida produce el siguiente programa para distintas entradas?*/</span>
+
+<span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">float</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span> <span class="c1">// prototipo</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Introduzca un número: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %.1f, %.1f y %.1f.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">){</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo de funciones con enumerados:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">Avance</span><span class="p">,</span> <span class="n">Retroceso</span><span class="p">}</span> <span class="n">TMotor</span><span class="p">;</span>
+
+<span class="n">TMotor</span> <span class="nf">leerPalanca</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">modificaEstadoMotor</span><span class="p">(</span><span class="n">TMotor</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">TMotor</span> <span class="n">estadoMotor</span><span class="p">;</span>
+
+   <span class="n">estadoMotor</span> <span class="o">=</span> <span class="n">leerPalanca</span><span class="p">();</span>
+   <span class="n">modificaEstadoMotor</span><span class="p">(</span><span class="n">estadoMotor</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">TMotor</span> <span class="nf">leerPalanca</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">TMotor</span> <span class="n">direccionMotor</span><span class="p">;</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;¿En qué posición está la palanca del cortacésped? 0-Avance 1-Restroceso</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">direccionMotor</span><span class="p">);</span>
+   <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">direccionMotor</span> <span class="o">!=</span> <span class="n">Avance</span> <span class="o">&amp;&amp;</span> <span class="n">direccionMotor</span> <span class="o">!=</span> <span class="n">Retroceso</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="n">direccionMotor</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">modificaEstadoMotor</span><span class="p">(</span><span class="n">TMotor</span> <span class="n">estado</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">switch</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="nl">Avance</span><span class="p">:</span>
+         <span class="c1">//Llamada a función para modificar el motor hacia adelante</span>
+         <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="nl">Retroceso</span><span class="p">:</span>
+         <span class="c1">//Llamada a función para modificar el motor hacia atrás</span>
+         <span class="k">break</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Paso de parámetros por referencia</h4>
+<p>En el paso de parámetros <strong>por valor</strong>, si los argumentos formales se modifican, los argumentos actuales no cambian.</p>
+<p>Sin embargo, a veces resulta muy útil poder modificar en una función los argumentos actuales. Esto se consigue usando el paso de argumentos <strong>por referencia</strong>:</p>
+<ul>
+<li>Esto es otra forma de conseguir que una función devuelva valores (aparte de la instrucción <code>return</code>).</li>
+<li>Además, de esta forma una función puede devolver tantos valores como se deseen.</li>
+</ul>
+<p>En lenguaje C, por defecto todos los pasos de parámetros son por valor. Se llama paso de parámetros por referencia a una técnica
+que permite a una función modificar variables utilizadas como argumentos actuales.</p>
+<p>La función recibe la referencia a la posición de memoria donde se encuentra el valor a utilizar.
+Este parámetro debe ser una variable, la cual puede o no contener un valor inicial.
+Las modificaciones realizadas sobre el parámetro dentro de la función se trasladan a la variable actual ya que se realizan sobre su zona de memoria.</p>
+<h5>Cómo pasar argumentos por referencia:</h5>
+<ol>
+<li>En la llamada a la función:<ul>
+<li>usar el operador de dirección <code>&amp;</code> (ampersand) delante del argumento en la llamada. El operador <code>&amp;</code> indica que dicha variable puede verse modificada por la función.</li>
+</ul>
+</li>
+<li>En la definición de la función:<ul>
+<li>Usar el operador de indirección <code>*</code> (asterisco) delante del argumento formal correspondiente.</li>
+<li>Se usará el operador <code>*</code> cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función.</li>
+</ul>
+</li>
+</ol>
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span> <span class="c1">// prototipo de la función swap</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">);</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;x: %d, y: %d, z:%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Intercambio de valores entre dos variables */</span>
+<span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">y</span><span class="p">){</span> <span class="c1">// definición de la función swap</span>
+   <span class="kt">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="o">*</span><span class="n">x</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="o">*</span><span class="n">y</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Por lo general, usaremos funciones con paso de parámetros <strong>por valor</strong> cuando sólo queramos devolver <strong>un resultado</strong>, y éste se devuelve con <code>return</code>. Y cuando se necesite devolver <strong>más de un resultado</strong>, usaremos funciones con paso de parámetros <strong>por referencia</strong>, siendo esta función tipo <code>void</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">);</span> <span class="c1">// prototipo</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">resultado</span><span class="p">;</span>
+
+   <span class="n">resultado</span> <span class="o">=</span> <span class="n">elevarAlCuadrado</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El resultado es: %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">elevarAlCuadrado</span><span class="p">(</span><span class="kt">int</span> <span class="n">entrada</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// definición</span>
+      <span class="k">return</span> <span class="n">entrada</span> <span class="o">*</span> <span class="n">entrada</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nl">Ejemplo</span><span class="p">:</span>
+
+<span class="c1">// Prototipo o declaración de la función</span>
+<span class="kt">int</span> <span class="n">potencia</span><span class="p">(</span><span class="kt">int</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponente</span><span class="p">);</span>
+<span class="c1">// int potencia(int, int);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
+
+   <span class="n">res</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>  <span class="c1">// Llamada a la función</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// Definición de la función</span>
+<span class="kt">int</span> <span class="nf">potencia</span><span class="p">(</span><span class="kt">int</span> <span class="n">base</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exponente</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">resultado</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+
+   <span class="n">resultado</span> <span class="o">=</span> <span class="n">base</span><span class="p">;</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">exponente</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="n">resultado</span> <span class="o">*=</span> <span class="n">base</span><span class="p">;</span>
+
+   <span class="k">return</span> <span class="n">resultado</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Prototipos</span>
+<span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">pedirXY</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">numero</span><span class="p">,</span> <span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">;</span>
+
+   <span class="n">pedirXY</span><span class="p">(</span><span class="o">&amp;</span><span class="n">posX</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">posY</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;X: %d, Y: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Definiciones de funciones</span>
+
+<span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">dato</span><span class="p">;</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un num entre 1 y 8: &quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">dato</span><span class="p">);</span>
+   <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">dato</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">dato</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="n">dato</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">pedirXY</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+
+   <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">pedirDato</span><span class="p">();</span>
+   <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">pedirDato</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Funciones en Python</h4>
+<p>En Python, la definición de funciones se realiza mediante la instrucción <code>def</code> más un nombre de función descriptivo seguido de paréntesis de apertura y cierre y <code>:</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Cuando una función, haga un retorno de datos, éstos, pueden ser asignados a una variable:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">funcion</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+
+<span class="n">frase</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">frase</span>
+</pre></div>
+</td></tr></table>
+
+<p>En Python todos los parámetros se pasan por valor. El paso por referencia es la manera en que los lenguajes (como C) pueden devolver más de un valor en una misma función. En cambio, Python permite devolver varios datos utilizando tuplas o listas. Por ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">f</span><span class="p">()</span>
+<span class="c1"># Ahora &quot;a&quot; es 4, &quot;b&quot; es 5 y &quot;c&quot; es 6.</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="estructura-de-un-programa-en-c">Estructura de un programa en C<a class="headerlink" href="#estructura-de-un-programa-en-c" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Comentarios: En primer lugar se deben incluir unos comentarios indicando qué hace el programa, requisitos, autor, fecha...</li>
+<li>Inclusión de las Bibliotecas:<ul>
+<li>Las del sistema (como stdio.h, math.h, etc.) van entre ángulos: &lt;...&gt;.</li>
+<li>Las creadas por el programador van entre comillas dobles: "...".</li>
+</ul>
+</li>
+<li>Declaraciones globales: variables y constantes globales (con <code>const</code>), constantes simbólicas del preprocesador (con <code>#define</code>) y definición de tipos de datos (con <code>typedef</code>).<ul>
+<li>Como norma general, <strong>NO DEBEN USARSE VARIABLES GLOBALES</strong>.</li>
+</ul>
+</li>
+<li>Prototipos o declaración de las funciones.</li>
+<li>Implementación de las funciones, incluida <code>main()</code>, que puede ponerse la primera o la última. Las demás funciones deberían ponerse en el mismo orden que sus prototipos para que sea fácil localizarlas.<ul>
+<li>Antes de cada función debe incluirse un comentario indicando qué hace la función, significado de sus argumentos, etc.</li>
+<li>Si se escriben antes las funciones que son llamadas por otras, poniendo <code>main()</code> al
+final, los prototipos no son estrictamente necesarios.</li>
+</ul>
+</li>
+</ol>
+<p>La comunicación entre funciones debe realizarse a través de parámetros, y <strong>no</strong> de variables globales</p>
+<h2 id="bibliotecas-del-lenguaje-c">Bibliotecas del lenguaje C<a class="headerlink" href="#bibliotecas-del-lenguaje-c" title="Permanent link">&para;</a></h2>
+<p>La mayoría de lenguajes de programación proporcionan una colección de procedimientos y funciones de uso común (bibliotecas o librerías). En lenguaje C, para hacer uso de los módulos incluidos en una biblioteca se utiliza la directiva del compilador <code>#include</code>.</p>
+<p>Existe una gran variedad de bibliotecas disponibles:
+  - Funciones matemáticas
+  - Manejo de caracteres y de cadenas de caracteres
+  - Manejo de entrada y salida de datos
+  - Manejo del tiempo (fecha, hora, ...)</p>
+<h4>Algunas funciones predefinidas en C</h4>
+<p><img src="imagenes/predef.png" width="500px"/></p>
+<hr />
+<h2 id="ejercicios">Ejercicios<a class="headerlink" href="#ejercicios" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Define un programa que pida un número impar y dibuje una T de ese tamaño. Define las funciones que consideres necesarias.
+<img src="imagenes/dibujaT.png" width="200px"/></p>
+</li>
+<li>
+<p>Define un programa que permita leer y validar dos datos de entrada de manera que en uno de ellos el valor sea mayor que 0 y menor que 100 y el otro impar y mayor que el número anterior. El programa imprime la suma y la cuenta de los números entre los dos valores.</p>
+</li>
+<li>
+<p>Escribe un programa en C que permita convertir grados Celsius a Fahrenheit y viceversa. El programa debe mostrar un menú para poder seleccionar qué opción
+se desea (más la opción terminar) y preguntar la temperatura que desea convertir. <strong>Cada una de las conversiones se debe realizar en una función distinta</strong>.</p>
+<ul>
+<li>La conversión de grados Celsius a grados Fahrenheit se obtiene multiplicando la temperatura en Celsius por 1,8 y sumando 32.</li>
+<li>La conversión de grados Fahrenheit a grados Celsius se obtiene restándole 32 a la temperatura en grados Fahrenheit y dividiéndolo por 1,8.</li>
+</ul>
+</li>
+<li>
+<p>Escribe la función <code>binarioADecimal</code> que reciba como parámetro un número en binario y devuelva su correspondiente número en decimal. Después, pruébala desde <code>main</code>.</p>
+</li>
+<li>
+<p>Escribe un programa que realice dos operaciones a partir de un número entero n. Las operaciones a realizar son:
+ - Calcular de cuántas cifras se compone
+ - Mostrar la cifra i-ésima de dicho número (la posición i debe pedirse al usuario).</p>
+</li>
+</ol>
+<p>Ejemplo de ejecución:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Introduce</span> <span class="nl">num</span><span class="p">:</span> <span class="mi">5634</span>
+<span class="n">El</span> <span class="n">num</span> <span class="mi">5634</span> <span class="n">tiene</span> <span class="mi">4</span> <span class="n">cifras</span>
+<span class="n">La</span> <span class="n">cifra</span> <span class="mi">2</span> <span class="n">del</span> <span class="n">número</span> <span class="mi">5634</span> <span class="n">es</span> <span class="mi">3</span>
+</pre></div>
+</td></tr></table>
+
+<ol start="6">
+<li>
+<p>Escribe un programa que pida caracteres hasta introducir el '.'. El programa deberá mostrar el primer carácter introducido, el último y el total de caracteres (incluido el '.').</p>
+</li>
+<li>
+<p>Dada la siguiente función que calcula y muestra por pantalla la suma de los números enteros que hay entre un intervalo y que se lleva a cabo para 3 intervalos:</p>
+</li>
+</ol>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">SumaIntervalos</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">suma</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de los números entre 2 y 5 es: &quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="p">);</span>
+
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de los números entre 0 y 3 es: &quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="p">);</span>
+
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de los números entre 1 y 4 es: &quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>La ejecución de dicha función, muestra por pantalla los siguientes mensajes:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">2</span> <span class="n">y</span> <span class="mi">5</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">14</span>
+<span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">0</span> <span class="n">y</span> <span class="mi">3</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">6</span>
+<span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">1</span> <span class="n">y</span> <span class="mi">4</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">10</span>
+</pre></div>
+</td></tr></table>
+
+<p>Se pide definir las funciones necesarias (al menos 2) que permitan generalizar y evitar código duplicado, pidiendo por teclado los datos necesarios.</p>
+<p>Un ejemplo de ejecución equivalente a la anterior, pero solicitando datos por teclado  sería:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Introduce</span> <span class="n">el</span> <span class="n">número</span> <span class="n">de</span> <span class="nl">intervalos</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">Introduce</span> <span class="n">el</span> <span class="nl">intervalo</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="n">la</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">2</span> <span class="n">y</span> <span class="mi">5</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">14</span>
+<span class="n">Introduce</span> <span class="n">el</span> <span class="nl">intervalo</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span>
+<span class="n">la</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">0</span> <span class="n">y</span> <span class="mi">3</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">6</span>
+<span class="n">Introduce</span> <span class="n">el</span> <span class="nl">intervalo</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">4</span>
+<span class="n">la</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">entre</span> <span class="mi">1</span> <span class="n">y</span> <span class="mi">4</span> <span class="nl">es</span><span class="p">:</span> <span class="mi">10</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h4>Solución ejercicio 1</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+<span class="c1">// Prototipos de funciones</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">dibujaT</span><span class="p">(</span><span class="kt">int</span> <span class="n">tam</span><span class="p">);</span>
+
+<span class="c1">///////////</span>
+<span class="c1">// Función principal</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+
+   <span class="n">n</span> <span class="o">=</span> <span class="n">pedirDato</span><span class="p">();</span>
+   <span class="n">dibujaT</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////</span>
+<span class="c1">// Definiciones de funciones</span>
+<span class="c1">/////////</span>
+<span class="kt">int</span> <span class="nf">pedirDato</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un num impar: &quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+   <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">dibujaT</span><span class="p">(</span><span class="kt">int</span> <span class="n">tam</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">fil</span><span class="p">,</span> <span class="n">col</span><span class="p">;</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="n">fil</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">fil</span> <span class="o">&lt;=</span> <span class="n">tam</span><span class="p">;</span> <span class="n">fil</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;=</span> <span class="n">tam</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">col</span> <span class="o">==</span> <span class="n">tam</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span> <span class="o">||</span> <span class="n">fil</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span>
+         <span class="k">else</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 2</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+<span class="c1">// Prototipos de funciones</span>
+<span class="c1">///////////</span>
+<span class="kt">void</span> <span class="nf">pedirDatos</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">sumaYCuenta</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+
+<span class="c1">///////////</span>
+<span class="c1">// Función principal</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cuenta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+   <span class="n">pedirDatos</span><span class="p">(</span><span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">);</span>
+   <span class="n">sumaYCuenta</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">suma</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cuenta</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma entre %d y %d es: %d y hay %d números</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">cuenta</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////</span>
+<span class="c1">// Definiciones de funciones</span>
+<span class="c1">/////////</span>
+<span class="kt">void</span> <span class="nf">pedirDatos</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">n1</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un num entre 1 y 100: &quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">);</span>
+   <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">n1</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="o">*</span><span class="n">n1</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">);</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un num impar y mayor que %d: &quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">n1</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
+   <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">n2</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="o">*</span><span class="n">n2</span> <span class="o">&lt;</span> <span class="o">*</span><span class="n">n1</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sumaYCuenta</span><span class="p">(</span><span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n2</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">suma</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">cuenta</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+   <span class="o">*</span><span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">cuenta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">n1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="o">*</span><span class="n">suma</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">cuenta</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 3</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+<span class="c1">// Prototipos de funciones</span>
+<span class="c1">///////////</span>
+<span class="kt">void</span> <span class="nf">mostrar_menu</span><span class="p">();</span>
+<span class="kt">float</span> <span class="nf">celsius_to_Fahrenheit</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fahrenheit_to_Celsius</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
+
+<span class="c1">///////////</span>
+<span class="c1">// Función principal</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+   <span class="kt">int</span> <span class="n">opcion</span><span class="p">;</span>
+   <span class="kt">float</span> <span class="n">celsius</span><span class="p">,</span> <span class="n">fahr</span><span class="p">;</span>
+
+   <span class="k">do</span><span class="p">{</span>
+      <span class="n">mostrar_menu</span><span class="p">();</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opción: &quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">opcion</span><span class="p">);</span>
+
+      <span class="k">switch</span><span class="p">(</span><span class="n">opcion</span><span class="p">){</span>
+         <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduzca la temperatura en grados Celsius:&quot;</span><span class="p">);</span>
+            <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">celsius</span><span class="p">);</span>
+            <span class="n">fahr</span> <span class="o">=</span> <span class="n">celsius_to_Fahrenheit</span><span class="p">(</span><span class="n">celsius</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La temperatura en grados Fahrenheit es: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fahr</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduzca la temperatura en grados faherenheit: &quot;</span><span class="p">);</span>
+            <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fahr</span><span class="p">);</span>
+            <span class="n">celsius</span> <span class="o">=</span> <span class="n">fahrenheit_to_Celsius</span><span class="p">(</span><span class="n">fahr</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La temperatura en grados Celsius es: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">celsius</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+         <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ha seleccionado la opción Salir</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+         <span class="k">default</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Debe introducir una opción de 1 a 3</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+   <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">opcion</span><span class="o">!=</span><span class="mi">3</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////</span>
+<span class="c1">// Definiciones de funciones</span>
+<span class="c1">/////////</span>
+<span class="kt">void</span> <span class="nf">mostrar_menu</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Seleccione qué tipo de conversión desea realizar:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;1. Convertir grados Celsius a Fahrenheit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;2. Convertir grados Fahrenheit a Celsius.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;3. Terminar el programa.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">celsius_to_Fahrenheit</span><span class="p">(</span><span class="kt">float</span> <span class="n">cel</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">float</span> <span class="n">fah</span><span class="p">;</span>
+   <span class="n">fah</span> <span class="o">=</span> <span class="n">cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span><span class="p">;</span>
+   <span class="k">return</span><span class="p">(</span><span class="n">fah</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">fahrenheit_to_Celsius</span><span class="p">(</span><span class="kt">float</span> <span class="n">fah</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">float</span> <span class="n">cel</span><span class="p">;</span>
+   <span class="n">cel</span> <span class="o">=</span> <span class="p">(</span><span class="n">fah</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span><span class="o">/</span><span class="mf">1.8</span><span class="p">;</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">cel</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 4</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">///////////</span>
+<span class="c1">// Prototipo de función</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">binarioADecimal</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="c1">///////////</span>
+<span class="c1">// Función principal</span>
+<span class="c1">///////////</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">num2</span><span class="p">,</span><span class="n">num10</span><span class="p">;</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduzca un numero en base 2:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+
+   <span class="c1">// Llamada a la función</span>
+   <span class="n">num10</span> <span class="o">=</span> <span class="n">binarioADecimal</span><span class="p">(</span><span class="n">num2</span><span class="p">);</span>
+
+   <span class="c1">// Mostrar Resultados</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El numero %d en base 2 equivale a %d en base 10</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num10</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//////////</span>
+<span class="c1">// Definición de función</span>
+<span class="c1">/////////</span>
+<span class="kt">int</span> <span class="nf">binarioADecimal</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n_decimal</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">coef</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+   <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">n_decimal</span> <span class="o">+=</span> <span class="n">coef</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span>
+      <span class="n">coef</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">n_decimal</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 5</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">pedirNum</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">numCifras</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">cifra_i_esima</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">cifras</span><span class="p">,</span> <span class="n">cifra</span><span class="p">;</span>
+
+   <span class="n">n</span> <span class="o">=</span> <span class="n">pedirNum</span><span class="p">();</span>
+   <span class="n">cifras</span> <span class="o">=</span> <span class="n">numCifras</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El num %d tiene %d cifras</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">cifras</span><span class="p">);</span>
+   <span class="n">cifra</span> <span class="o">=</span> <span class="n">cifra_i_esima</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La cifra 2 del número %d es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">cifra</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">pedirNum</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce num: &quot;</span><span class="p">);</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">numCifras</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">contador</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+   <span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="n">contador</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">cifra_i_esima</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">posicion</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">cifra</span><span class="p">;</span>
+
+   <span class="n">cifra</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+   <span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="n">posicion</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>  <span class="c1">// num /= 10;</span>
+      <span class="n">cifra</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="n">posicion</span> <span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="n">cifra</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 6</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">cuentaCaracteres</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">primero</span><span class="p">,</span> <span class="n">ultimo</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">total</span><span class="p">;</span>
+
+   <span class="n">cuentaCaracteres</span><span class="p">(</span><span class="o">&amp;</span><span class="n">primero</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ultimo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">total</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El primer carácter es: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">primero</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El último es: %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ultimo</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;El total es: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">cuentaCaracteres</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">primero</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ultimo</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">total</span><span class="p">){</span>
+   <span class="kt">char</span> <span class="n">caracter</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+   <span class="k">do</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce un carácter: &quot;</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">caracter</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">total</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+         <span class="o">*</span><span class="n">primero</span> <span class="o">=</span> <span class="n">caracter</span><span class="p">;</span>
+      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span>
+         <span class="o">*</span><span class="n">ultimo</span> <span class="o">=</span> <span class="n">caracter</span><span class="p">;</span>
+
+      <span class="p">(</span><span class="o">*</span><span class="n">total</span><span class="p">)</span><span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">caracter</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Solución ejercicio 7</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">solucion</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce el número de intervalos: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce el intervalo: &quot;</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;la suma de los números entre %d y %d es: &quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sumaIntervalo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">sumaIntervalo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">suma</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Capítulos 7.1 a 7.4.3 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero</li>
+<li>Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros</li>
+</ul>
+<hr />
+<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+© Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
+Cristina Pomares Puig</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
