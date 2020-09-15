@@ -18,6 +18,8 @@ prácticas de 2 h. a la semana
 
 ### Recursos de la asignatura
 
+* [Ficha de la asignatura](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodest=C211&wcodasi=33704&wlengua=es&scaca=2020-21)
+* [Apuntes de la asignatura (teoría y prácticas)](https://cpomares.github.io/p1-robotica/)
 * [Sitio Moodle](https://moodle2020-21.ua.es/moodle/course/view.php?id=962) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
 * [Foro de consultas y anuncios](https://moodle2020-21.ua.es/moodle/mod/forum/view.php?id=13376)
@@ -96,6 +98,37 @@ En la convocatoria extraordinaria se realizará un examen final escrito sobre to
 
 Los trabajos teórico/prácticos realizados han de ser originales. La detección de copia o plagio supondrá la calificación de "0" en la prueba correspondiente. Se informará la dirección de Departamento y de la EPS sobre esta incidencia. La reiteración en la conducta en esta u otra asignatura conllevará la notificación al vicerrectorado correspondiente de las faltas cometidas para que estudien el caso y sancionen según la legislación.
 
+#### Consejos para aprender con éxito los contenidos de la asignatura
+
+El consejo fundamental para aprobar la asignatura es **trabajar todas las semanas y realizar por ti mismo los ejercicios**. Los conceptos de la asignatura se van construyendo de forma progresiva y lo visto en una semana depende muchas veces de lo aprendido en semanas anteriores.
+
+La asignatura es fundamentalmente práctica. Para estudiar una asignatura de programación, no debes memorizar sino entender. No tiene sentido aprender de memoria los ejercicios y los ejemplos vistos en clase. Hay que trabajarlos. La única forma de aprender es: probando, equivocándose y encontrando la solución por uno mismo.
+
+A la hora de enfrentarse con un problema es fundamental también usar lápiz y papel para plasmar las ideas y encontrar la solución más sencilla antes de programarla en el ordenador. 
+
+Resumiendo: trabajar todas las semanas, hacer uno mismo todos los ejercicios y no desanimarse ni descolgarse.
+
+Son muy interesantes algunos comentarios de antiguos estudiantes que han aprobado la asignatura.
+
+¿Qué hiciste para superar con éxito P1? ¿Qué consejos les das a los nuevos alumnos?
+
+*Practicar, practicar y practicar. Los profesores os lo repetirán mucho, pero es la solución clave para poder superar la asignatura. También entender el por qué de los errores [...]*
+
+*Una de las claves para superar esta asignatura  es ser constante y no dejar atrás ningún concepto sin entender (ya que concepto que das en un tema en el siguiente te ayudará ) y sobre todo practicar y practicar, para asentar bien los conocimientos expuestos en las clases de teoría[...]*
+
+*No estudiéis los ejercicios de memoria. Programación se aprende, no se memoriza[...]*
+
+*No dejéis todo para última hora porque la clave es llevar las cosas y conceptos explicados en teoría al día.
+Además, también aconsejaría que practicaran ya no solo con las practicas de clase sino también con más ejercicios para asentar bien todo.
+Y por último, que no se frustren si al principio les cuesta o no entienden bien lo que se explica, ya que puede que muchos no hayan dado nada de programación antes (como fue mi caso), pero no por ello les será imposible aprobar[...]*
+
+*Intentad que no se os atasque en lo básico, porque sino luego avanzar es muy complicado. Lo recomendable aun que suene a lo típico es llevarlo bastante al día y practicar por ti mismo haciendo programas[...]*
+
+*Yo creo que es indispensable hacer las prácticas, pues en las clases teóricas todo parece muy sencillo y lógico, pero todo cambia cuando te sientas delante de la pantalla y empiezas a escribir código. Lo importante para realizar de manera eficiente las prácticas es hacer un pequeño esquema en sucio de qué es lo que quieres hacer y cómo piensas hacerlo, pues de esa forma las ideas quedan mucho más claras y hay menos posibilidad de equivocarse[...]*
+
+*Es totalmente necesario hacer las prácticas, porque de este modo los profesores pueden resolver las dudas en el momento, y también sirven para aprender los nuevos contenidos y repasar para el examen[...]*
+
+
 ### Bibliografía
 
 En Moodle se publican los apuntes de la asignatura, con ejercicios, explicaciones y ejemplos de todos los conceptos estudiados, tanto en teoría como en práctica.
@@ -110,13 +143,14 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
 
+<img src="imagenes/carballeira-cover2.JPG" width="170px"/>
+
+* Carballeira. Problemas resueltos de programación en lenguaje C
+
 <img src="imagenes/kernighan-cover.jpg" width="170px"/>
 
 * KERNIGHAN, Brian W.; RITCHIE, Dennis M. El lenguaje de programación C. Pearson Educación, 1991. ISBN: 968-880-205-0
 
-<img src="imagenes/carballeira-cover2.JPG" width="170px"/>
-
-* Carballeira. Problemas resueltos de programación en lenguaje C
 
 ----
 
