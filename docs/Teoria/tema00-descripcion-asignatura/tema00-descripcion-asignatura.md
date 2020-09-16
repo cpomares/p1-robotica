@@ -1,10 +1,6 @@
 
 ## Programación 1. Grado de Robótica. Curso 2020-2021
 
-Toda la información está disponible en el [sitio Moodle de P1](https://moodle2019-20.ua.es/moodle/course/view.php?id=1262) y en la
-[guía docente de P1](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodest=C211&wcodasi=33704&wlengua=es&scaca=2020-21).
-
-
 ### Datos académicos de la asignatura
 
 **Departamento de Ciencia de la Computación e Inteligencia Artificial**  
@@ -84,7 +80,7 @@ La distribución de grupos del curso 2020-2021 es la siguiente:
 En la convocatoria ordinaria (enero) se realizará una evaluación continua con las siguientes pruebas:
 
 * **Examen 1**: Del tema 1 al tema 5. Pondera un 50% en la nota final. No se exige nota mínima. **Miércoles 25 de Noviembre** (fecha de examen aproximada, a la espera de que nos asignen aulas).
-* **Examen 2**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la **fecha oficial** asignada al examen final de la convocatoria de enero. 
+* **Examen 2**: Del tema 1 al tema 9. Pondera un 50% en la nota final. No se exige nota mínima. Se realizará en la **fecha oficial** asignada al examen final de la convocatoria de enero.
 
 Todos los exámenes de la asignatura se realizarán por escrito e incluirán conceptos y ejercicios relacionados con los trabajados tanto en las sesiones de teoría como de prácticas.
 
@@ -104,7 +100,7 @@ El consejo fundamental para aprobar la asignatura es **trabajar todas las semana
 
 La asignatura es fundamentalmente práctica. Para estudiar una asignatura de programación, no debes memorizar sino entender. No tiene sentido aprender de memoria los ejercicios y los ejemplos vistos en clase. Hay que trabajarlos. La única forma de aprender es: probando, equivocándose y encontrando la solución por uno mismo.
 
-A la hora de enfrentarse con un problema es fundamental también usar lápiz y papel para plasmar las ideas y encontrar la solución más sencilla antes de programarla en el ordenador. 
+A la hora de enfrentarse con un problema es fundamental también usar lápiz y papel para plasmar las ideas y encontrar la solución más sencilla antes de programarla en el ordenador.
 
 Resumiendo: trabajar todas las semanas, hacer uno mismo todos los ejercicios y no desanimarse ni descolgarse.
 
