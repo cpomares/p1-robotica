@@ -35,8 +35,7 @@ El lenguaje C es **fuertemente tipado**, eso significa que tenemos que asignar e
 
 La clasificación de los datos se hace teniendo en cuenta dos aspectos:
 
-- Tamaño que ocupa en memoria fijo o variable: tipos *estáticos* o *dinámicos*
-- Número de elementos que representan: tipos *simples* o *estructurados*
+### Tamaño que ocupa en memoria fijo o variable: tipos *estáticos* o *dinámicos*
 
 **Tipos estáticos**
 
@@ -45,6 +44,8 @@ Ocupan un tamaño fijo en memoria, es decir, su tamaño no puede variar durante 
 **Tipos dinámicos**
 
 También llamados *punteros*, los veremos más adelante. Un puntero no define un tipo determinado, sino que apunta a una dirección de memoria. Podemos reservar un tamaño determinado de memoria, ampliarlo, reducirlo y liberarlo.
+
+### Número de elementos que representan: tipos *simples* o *estructurados*
 
 **Tipos simples**
 
@@ -126,7 +127,7 @@ float interes;			// variable tipo float
 double nota1, nota2;	// variables tipo double
 ~~~
 
-### <a name="3-2"/> 3.2. Constantes
+### 3.2. Constantes
 
 Una constante representa un valor determinado que no cambia a lo largo del programa.
 
@@ -222,8 +223,8 @@ Una forma de comprobar el tamaño que ocupa cada tipo en memoria es usar el oper
 
 ~~~c
 /* Este programa muestra para cada uno de los tipos de
-* datos básicos enteros de C el tamaño que ocupa en
-* bytes. */
+   datos básicos enteros de C el tamaño que ocupa en
+   bytes */
 
 #include <stdio.h>
 int main()
@@ -475,13 +476,11 @@ paloCarta = corazon;
 
 ## 6. Sentencias de entrada / salida
 
-Las sentencias de entrada permiten asociar a las variables valores aportados por el usuario.Por ejemplo, un programa que pida al usuario un precio en euros para convertirlo a pesetas. Las veremos más adelante.Las sentencias de salida permiten mostrar datos al usuario, incluyendo el valor de las variables.Por ejemplo, mostrar el precio una vez convertido a pesetas.
-
-
-
 ### 6.1. Salida: `printf`
 
-Permite imprimir en la pantalla en un formato determinado:
+Las sentencias de salida permiten mostrar datos al usuario, incluyendo el valor de las variables. Por ejemplo, mostrar el precio una vez convertido a pesetas.
+
+`printf` permite imprimir en la pantalla en un formato determinado:
 
 - cadenas de caracteres que se mostrarán conforme se hayan introducido- variables que mostrarán su valor en base a un tipo indicadoLas cadena de caracteres puede incluir valores especiales para introducir saltos de linea usando `\n`
 
@@ -540,6 +539,8 @@ printf("El valor de valorImprimir es: %d\n", valorImprimir);// El valor de valo
 
 
 ### 6.2. Entrada: `scanf`
+
+Las sentencias de entrada permiten asociar a las variables valores aportados por el usuario. Por ejemplo, un programa que pida al usuario un precio en euros para convertirlo a pesetas. 
 
 La sentencia `scanf` nos permite leer un dato que ha introducido el usuario desde teclado y almacenarlo en una variable.Se utilizan una serie de marcas, de forma análoga a `printf`, para dar formato a la entrada en base a los tipos base.
 
@@ -664,6 +665,6 @@ Los tipos de datos que encontramos en Python son muy similares a los de C (pero 
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig

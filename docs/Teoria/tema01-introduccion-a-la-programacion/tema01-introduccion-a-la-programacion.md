@@ -196,13 +196,10 @@ Este proceso es un ciclo, de forma que si después de ejecutar el programa hemos
 
 **Enlazador**: combina archivos objeto y bibliotecas de forma que se puedan ejecutar en una sola unidad.
 
-
-
 Ejemplo de programa en C:
 
 ~~~c
-#include <stdio.h>
-
+#include <stdio.h>
 int main() {
    printf("Hola mundo!!\n");
    return 0;
@@ -511,6 +508,6 @@ Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.in
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
