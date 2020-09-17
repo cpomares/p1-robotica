@@ -269,6 +269,26 @@
     1. Tipos de datos
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-que-ocupa-en-memoria-fijo-o-variable-tipos-estaticos-o-dinamicos" title="Tamaño que ocupa en memoria fijo o variable: tipos estáticos o dinámicos" class="md-nav__link">
+    Tamaño que ocupa en memoria fijo o variable: tipos estáticos o dinámicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numero-de-elementos-que-representan-tipos-simples-o-estructurados" title="Número de elementos que representan: tipos simples o estructurados" class="md-nav__link">
+    Número de elementos que representan: tipos simples o estructurados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -289,6 +309,13 @@
           <li class="md-nav__item">
   <a href="#31-variables" title="3.1. Variables" class="md-nav__link">
     3.1. Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-constantes" title="3.2. Constantes" class="md-nav__link">
+    3.2. Constantes
   </a>
   
 </li>
@@ -442,14 +469,12 @@
 <li>Determinar cómo ejecutar operaciones</li>
 </ol>
 <p>La clasificación de los datos se hace teniendo en cuenta dos aspectos:</p>
-<ul>
-<li>Tamaño que ocupa en memoria fijo o variable: tipos <em>estáticos</em> o <em>dinámicos</em></li>
-<li>Número de elementos que representan: tipos <em>simples</em> o <em>estructurados</em></li>
-</ul>
+<h3 id="tamano-que-ocupa-en-memoria-fijo-o-variable-tipos-estaticos-o-dinamicos">Tamaño que ocupa en memoria fijo o variable: tipos <em>estáticos</em> o <em>dinámicos</em><a class="headerlink" href="#tamano-que-ocupa-en-memoria-fijo-o-variable-tipos-estaticos-o-dinamicos" title="Permanent link">&para;</a></h3>
 <p><strong>Tipos estáticos</strong></p>
 <p>Ocupan un tamaño fijo en memoria, es decir, su tamaño no puede variar durante la ejecución de un programa. Una vez declarada una variable de un tipo determinado, a ésta se le asigna un trozo de memoria fijo, y ese trozo no se podrá aumentar ni disminuir.</p>
 <p><strong>Tipos dinámicos</strong></p>
 <p>También llamados <em>punteros</em>, los veremos más adelante. Un puntero no define un tipo determinado, sino que apunta a una dirección de memoria. Podemos reservar un tamaño determinado de memoria, ampliarlo, reducirlo y liberarlo.</p>
+<h3 id="numero-de-elementos-que-representan-tipos-simples-o-estructurados">Número de elementos que representan: tipos <em>simples</em> o <em>estructurados</em><a class="headerlink" href="#numero-de-elementos-que-representan-tipos-simples-o-estructurados" title="Permanent link">&para;</a></h3>
 <p><strong>Tipos simples</strong></p>
 <p>Sólo representan un dato, son los tipos básicos: entero, carácter, real, etc.</p>
 <p><strong>Tipos estructurados</strong></p>
@@ -532,7 +557,7 @@ Indica qué identificadores son válidos en C:</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="32-constantes"><a name="3-2"/> 3.2. Constantes<a class="headerlink" href="#32-constantes" title="Permanent link">&para;</a></h3>
+<h3 id="32-constantes">3.2. Constantes<a class="headerlink" href="#32-constantes" title="Permanent link">&para;</a></h3>
 <p>Una constante representa un valor determinado que no cambia a lo largo del programa.</p>
 <h4>Constantes con <code>#define</code></h4>
 <p>En C se definen mediante macros a través de la directiva <code>#define</code> mediante la sintaxis:</p>
@@ -666,8 +691,8 @@ Indica qué identificadores son válidos en C:</p>
 17
 18
 19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* Este programa muestra para cada uno de los tipos de</span>
-<span class="cm">* datos básicos enteros de C el tamaño que ocupa en</span>
-<span class="cm">* bytes. */</span>
+<span class="cm">   datos básicos enteros de C el tamaño que ocupa en</span>
+<span class="cm">   bytes */</span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
@@ -1094,12 +1119,9 @@ Indica qué identificadores son válidos en C:</p>
 </td></tr></table>
 
 <h2 id="6-sentencias-de-entrada-salida">6. Sentencias de entrada / salida<a class="headerlink" href="#6-sentencias-de-entrada-salida" title="Permanent link">&para;</a></h2>
-<p>Las sentencias de entrada permiten asociar a las variables valores aportados por el usuario.
-Por ejemplo, un programa que pida al usuario un precio en euros para convertirlo a pesetas. Las veremos más adelante.</p>
-<p>Las sentencias de salida permiten mostrar datos al usuario, incluyendo el valor de las variables.
-Por ejemplo, mostrar el precio una vez convertido a pesetas.</p>
 <h3 id="61-salida-printf">6.1. Salida: <code>printf</code><a class="headerlink" href="#61-salida-printf" title="Permanent link">&para;</a></h3>
-<p>Permite imprimir en la pantalla en un formato determinado:</p>
+<p>Las sentencias de salida permiten mostrar datos al usuario, incluyendo el valor de las variables. Por ejemplo, mostrar el precio una vez convertido a pesetas.</p>
+<p><code>printf</code> permite imprimir en la pantalla en un formato determinado:</p>
 <ul>
 <li>cadenas de caracteres que se mostrarán conforme se hayan introducido</li>
 <li>variables que mostrarán su valor en base a un tipo indicado</li>
@@ -1209,6 +1231,7 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
 </td></tr></table>
 
 <h3 id="62-entrada-scanf">6.2. Entrada: <code>scanf</code><a class="headerlink" href="#62-entrada-scanf" title="Permanent link">&para;</a></h3>
+<p>Las sentencias de entrada permiten asociar a las variables valores aportados por el usuario. Por ejemplo, un programa que pida al usuario un precio en euros para convertirlo a pesetas. </p>
 <p>La sentencia <code>scanf</code> nos permite leer un dato que ha introducido el usuario desde teclado y almacenarlo en una variable.</p>
 <p>Se utilizan una serie de marcas, de forma análoga a <code>printf</code>, para dar formato a la entrada en base a los tipos base.</p>
 <h4>Sintaxis</h4>
@@ -1373,7 +1396,7 @@ del numero, cifras decimales, etc). El valor puede ser el resultado de una opera
 <li>Capítulos 4.1 a 4.4, 4.8 y 4.9 de "Fundamentos de Programación", Jesús Carretero y otros  </li>
 </ul>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
