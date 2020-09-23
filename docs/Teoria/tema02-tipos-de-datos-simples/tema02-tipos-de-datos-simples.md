@@ -55,146 +55,15 @@ Sólo representan un dato, son los tipos básicos: entero, carácter, real, etc.
 
 Están formados por un conjunto de elementos (tipos simples u otros estructurados). Los veremos en próximos temas
 
-## 2. Identificadores
 
-Un *identificador* es un nombre que se asigna a los distintos elementos de un programa: variables, funciones, etc. En lenguaje C son válidos los caracteres alfabéticos en mayúsculas, minúsculas, dígitos numéricos (0..9) y el subrayado (_), aunque no pueden empezar por un número. Las mayúsculas y minúsculas se consideran caracteres distintos, el identificador `hola`es distinto a `Hola`.
-
-Ejemplo de identificadores válidos:
-
-~~~c
-X        Y12      sum_1       _temperature
-names    area     tax_rate    TABLE
-~~~
-
-Ejemplo de identificadores **no** válidos:
-
-~~~c
-4th         /* El primer carácter debe ser una letra o (_) */
-"x"         /* Carácter no válido (") */
-num-orden   /* Carácter no válido (-) */
-error flag  /* Carácter no válido (espacio) */
-numero%1    /* Carácter no válido (%) */
-numero$2    /* Carácter no válido ($) */
-~~~
-
-**Ejercicio**:
-Indica qué identificadores son válidos en C:
-
-~~~c
-casa     mi-casa     mi*casa     micasa1
-_MES     MES_1       MES%1       mes$1
-a980     890a        _890        $a890
-~~~
-
-Solución: Son inválidos `mi-casa mi*casa MES%1 mes$1 $a89 890a`
-
-Las *palabras reservadas* son identificadores que tienen un significado especial para el compilador. Las palabras reservadas no se pueden usar como identificadores. Todas las palabras reservadas en C se escriben en minúsculas.
-
-Palabras reservadas en C:
-
-~~~c
-auto     else     long        typedef
-break    enum     register    union
-case     extern   return      unsigned
-char     float    short       void
-const    for      signed      volatile
-continue goto     sizeof      while
-default  if       static      _Bool
-do       inline   struct      _Complex
-double   int      switch      _Imaginary
-~~~
-
-## 3. Variables y constantes
-
-### 3.1. Variables
-
-Las variables son espacios reservados en la memoria que, como su nombre indica, pueden cambiar de contenido a lo largo de la ejecución de un programa. Una variable corresponde a un área reservada en la memoria principal del ordenador.
-
-Para que nuestro código sea más entendible y claro, el identificador de la variable debe ser mnemotécnico, es decir que debe reflejar el uso dentro del programa de la misma
-
-El tamaño de la zona de memoria, en bytes, dependerá del tipo de dato que se almacene en la variable. Todas las variables en C deben definirse antes de su uso. En una misma línea se pueden declarar varias variables del mismo tipo.
-
-Sintaxis:
-
-	<tipo_de_datos> <nombre1> [,<nombre2>,...];
-
-Ejemplo:
-
-~~~c
-int temperaturaHorno;	// variable tipo int
-long numeroTelefono;	// variable tipo long
-float interes;			// variable tipo float
-double nota1, nota2;	// variables tipo double
-~~~
-
-### 3.2. Constantes
-
-Una constante representa un valor determinado que no cambia a lo largo del programa.
-
-#### Constantes con `#define`
-
-En C se definen mediante macros a través de la directiva `#define` mediante la sintaxis:
-
-~~~c
- #define <nombre> <valor>
-~~~
-
-La palabra reservada `define`indica que la constante tiene un valor fijo durante toda la ejecución del programa. El preprocesador debe sustituir las ocurrencias de `nombre` por su `valor`.
-
-Se suelen escribir en mayúsculas.
-
-Ejemplo:
-
-~~~c
-#define PI 3.141516
-#define VELOCIDAD_LUZ 300000
-#define MENSAJE "pulse intro"
-#define VERDADERO 1
-~~~
-
-#### Constantes con `const`
-
-Otra forma de definir constantes es mediante la instrucción `const`.
-
-Sintaxis:
-
-~~~c
-const tipo identificador = valor;
-~~~
-- `const`: palabra clave usado para crear constantes- `tipo`: palabra clave que determina el tipo de la variable: char, short, int, float, double- `identificador`: nombre asignado a la variable, a elección del desarrollador- `valor`: valor compatible con el tipo de la variable
-
-Ejemplo:
-
-~~~c
-const double cambioEuroPesetas = 166.386;
-~~~
-
-Diferencias entre `#define`y `const`:
-
-- `#define` afecta durante el proceso de pre-procesado, antes de la compilación (donde p.e., se eliminan los comentarios).- `const` permite indicar de forma explícita el tipo de la constante
-
-**Variables y constantes en Python**
-
-En C (lenguaje imperativo) hemos visto que las variables se pueden entender como "cajas" o zonas de memoria en las que se guardan los datos. Pero en Python (lenguaje orientado a objetos) las variables son "etiquetas" que permiten hacer referencia a los datos (objetos).
-
-En C hemos visto que para definir una variable es necesario que antes de utilizar esa variable se defina el tipo de información que va a contener (C es un lenguaje fuertemente tipado). En Python (lenguaje débilmente tipado), es el intérprete del lenguaje el que decide el tipo de variable a utilizar en el momento que se guarda la información.
-
-Definimos variables en Python:
-
-~~~c
->>> a = 3
->>> nombre = "hola"
->>> precio = 30.95
-~~~
-
-## 4. Tipos de datos simples
+## 2. Tipos de datos simples
 
 En C hay 8 tipos de datos simples o elementales, a partir de los cuales se construyen todos los demás. Estos tipos sirven para hacer operaciones aritméticas (numéricos enteros o reales), representación de caracteres (caracteres) y valores lógicos (booleanos).
 
 Vamos a ver los tipos de datos simples, sus operadores asociados y el tamaño que ocupan en memoria.
 
 
-### 4.1. Enteros
+### 2.1. Enteros
 
 Los tipos de datos que permiten representar números enteros en C son:
 
@@ -245,7 +114,7 @@ int main()
 
 Si se asigna a una variable de un tipo un valor que está fuera de su rango, no se obtiene ningún error ni aviso. Ese es uno de los problemas de C, su permisividad con los tipos. Hay que ser cuidadoso.
 
-### 4.2. Reales
+### 2.2. Reales
 
 Hay dos tipos números reales o números en coma flotante en C:
 
@@ -283,13 +152,28 @@ a % 3; //→ devuelve 0a % 4; //→ devuelve 2
 
 Cuando la división se realiza entre enteros, el resultado se trunca al entero más próximo por debajo. Por ejemplo, el resultado de 23/5 es 4 (se llama división entera). Sin embargo en la división real (alguno de los operandos es un número real) no se trunca el resultado. 23/4 da 5.75
 
-### 4.3. Carácter
+#### *Overflow*
+
+Cuando se realizan operaciones con números (tanto enteros como reales), es posible que el resultado de una de ellas dé lugar a un número fuera del rango máximo permitido. Por ejemplo, si tenemos un dato de tipo entero sin signo de 8 bits cuyo valor sea 250 y le sumamos 10, el resultado es 260, que sobrepasa el valor máximo (255).
+
+Es un caso denominado *overflow* o desbordamiento. Los ordenadores pueden reaccionar de forma diferente ante este problema, dependiendo del sistema operativo y del lenguaje utilizado. 
+ 
+
+### 2.3. Carácter
 
 El tipo carácter `char`permite representar valores consistentes en un único carácter, como 'a', 'z', 'B', '%', '5', etc.
 
 Los caracteres válidos son los que están incluidos en la tabla del estándar ASCII extendido. El estándar incluye 256 caracteres, por lo que se necesitan 8 bits (1 byte) para representar un carácter en C.
 
-### 4.4. Lógico
+Entre los datos de tipo carácter válidos están: 
+
+- Las letras minúsculas: 'a', 'b', 'c' ... 'z' 
+- Las letras mayúsculas: 'A', 'B', 'C' ... 'Z' 
+- Los dígitos: '1', '2', '3' ... 
+- Caracteres especiales: '$', '%', '¿', '!' ...
+
+
+### 2.4. Lógico
 
 A diferencia de otros lenguajes, C no tiene un tipo booleano nativo. Necesitamos añadir la cabecera:
 
@@ -298,6 +182,9 @@ A diferencia de otros lenguajes, C no tiene un tipo booleano nativo. Necesitamos
 ~~~
 
 Se maneja como número de 1 byte (un bit sería suficiente). Válido para operaciones lógicas.
+
+En algunos lenguajes, el valor true se representa con el número 1 y el valor false con el número 0.
+
 
 #### Operaciones con booleanos
 
@@ -391,7 +278,7 @@ Precedencia | Operador  | Asociatividad
 7	| &&	| izq. a derecha
 8	| = += -= *= etc	| derecha a izq.
 
-### 4.5. Enumerados
+### 2.5. Enumerados
 
 Un tipo enumerado permite definir un conjunto de constantes simbólicas con valor entero. Limita los posibles valores a los expresados explícitamente a través de una lista. Cada valor de la enumeración se asocia internamente a un número entero, comenzando por 0 y aumentando de 1 en 1.~~~cenum calificacion {suspenso, aprobado, notable, sobresaliente, matricula };
 ~~~
@@ -434,6 +321,165 @@ Otro ejemplo:
 ~~~c
 enum paloPoker{pica, corazon, trebol, diamante };enum paloPoker paloCarta; //variable tipo enumpaloCarta = corazon;paloCarta = espada; // Error! espada no definida en enum
 ~~~
+
+## 3. Identificadores
+
+Un *identificador* es un nombre que se asigna a los distintos elementos de un programa: variables, funciones, etc. En lenguaje C son válidos los caracteres alfabéticos en mayúsculas, minúsculas, dígitos numéricos (0..9) y el subrayado (_), aunque no pueden empezar por un número. Las mayúsculas y minúsculas se consideran caracteres distintos, el identificador `hola`es distinto a `Hola`.
+
+Ejemplo de identificadores válidos:
+
+~~~c
+X        Y12      sum_1       _temperature
+names    area     tax_rate    TABLE
+~~~
+
+Ejemplo de identificadores **no** válidos:
+
+~~~c
+4th         /* El primer carácter debe ser una letra o (_) */
+"x"         /* Carácter no válido (") */
+num-orden   /* Carácter no válido (-) */
+error flag  /* Carácter no válido (espacio) */
+numero%1    /* Carácter no válido (%) */
+numero$2    /* Carácter no válido ($) */
+~~~
+
+**Ejercicio**:
+Indica qué identificadores son válidos en C:
+
+~~~c
+casa     mi-casa     mi*casa     micasa1
+_MES     MES_1       MES%1       mes$1
+a980     890a        _890        $a890
+~~~
+
+Solución: Son inválidos `mi-casa mi*casa MES%1 mes$1 $a89 890a`
+
+Las *palabras reservadas* son identificadores que tienen un significado especial para el compilador. Las palabras reservadas no se pueden usar como identificadores. Todas las palabras reservadas en C se escriben en minúsculas.
+
+Palabras reservadas en C:
+
+~~~c
+auto     else     long        typedef
+break    enum     register    union
+case     extern   return      unsigned
+char     float    short       void
+const    for      signed      volatile
+continue goto     sizeof      while
+default  if       static      _Bool
+do       inline   struct      _Complex
+double   int      switch      _Imaginary
+~~~
+
+## 4. Constantes y variables
+
+### 4.1. Constantes
+
+Una constante representa un valor determinado que no cambia a lo largo del programa.
+
+#### Constantes con `#define`
+
+En C se definen mediante macros a través de la directiva `#define` mediante la sintaxis:
+
+~~~c
+ #define <nombre> <valor>
+~~~
+
+La palabra reservada `define`indica que la constante tiene un valor fijo durante toda la ejecución del programa. El preprocesador debe sustituir las ocurrencias de `nombre` por su `valor`.
+
+Se suelen escribir en mayúsculas.
+
+Ejemplo:
+
+~~~c
+#define PI 3.141516
+#define VELOCIDAD_LUZ 300000
+#define MENSAJE "pulse intro"
+#define VERDADERO 1
+~~~
+
+#### Constantes con `const`
+
+Otra forma de definir constantes es mediante la instrucción `const`.
+
+Sintaxis:
+
+~~~c
+const tipo identificador = valor;
+~~~
+- `const`: palabra clave usado para crear constantes- `tipo`: palabra clave que determina el tipo de la variable: char, short, int, float, double- `identificador`: nombre asignado a la variable, a elección del desarrollador- `valor`: valor compatible con el tipo de la variable
+
+Ejemplo:
+
+~~~c
+const double cambioEuroPesetas = 166.386;
+~~~
+
+Diferencias entre `#define`y `const`:
+
+- `#define` afecta durante el proceso de pre-procesado, antes de la compilación (donde p.e., se eliminan los comentarios).- `const` permite indicar de forma explícita el tipo de la constante
+
+**Variables y constantes en Python**
+
+En C (lenguaje imperativo) hemos visto que las variables se pueden entender como "cajas" o zonas de memoria en las que se guardan los datos. Pero en Python (lenguaje orientado a objetos) las variables son "etiquetas" que permiten hacer referencia a los datos (objetos).
+
+En C hemos visto que para definir una variable es necesario que antes de utilizar esa variable se defina el tipo de información que va a contener (C es un lenguaje fuertemente tipado). En Python (lenguaje débilmente tipado), es el intérprete del lenguaje el que decide el tipo de variable a utilizar en el momento que se guarda la información.
+
+Definimos variables en Python:
+
+~~~c
+>>> a = 3
+>>> nombre = "hola"
+>>> precio = 30.95
+~~~
+
+### 4.2. Variables
+
+Las variables son espacios reservados en la memoria que, como su nombre indica, pueden cambiar de contenido a lo largo de la ejecución de un programa. Una variable corresponde a un área reservada en la memoria principal del ordenador.
+
+Para que nuestro código sea más entendible y claro, el identificador de la variable debe ser mnemotécnico, es decir que debe reflejar el uso dentro del programa de la misma
+
+El tamaño de la zona de memoria, en bytes, dependerá del tipo de dato que se almacene en la variable. Todas las variables en C deben definirse antes de su uso. En una misma línea se pueden declarar varias variables del mismo tipo.
+
+### Declaración
+
+Debemos indicar en el programa cuál va a ser el identificador de la variable y qué tipo de datos va a almacenar. A esto se le llama declarar la variable.
+
+Sintaxis:
+
+	<tipo_de_datos> <nombre1> [,<nombre2>,...];
+
+Ejemplo:
+
+~~~c
+int temperaturaHorno;	// variable tipo int
+long numeroTelefono;	// variable tipo long
+float interes;			// variable tipo float
+double nota1, nota2;	// variables tipo double
+~~~
+
+### Asignación
+
+Para darle un valor a una variable, se emplea una sentencia de asignación:
+
+~~~c
+x = 5;
+caracter = 'B';
+altura = 65.8;
+~~~
+
+### Expresiones
+
+Una expresión es una combinación de constantes, variables, operadores y funciones. 
+
+~~~c
+int y;
+y = 3;
+x = y + 5;  // Expresión
+~~~
+
+En la expresión anterior, estamos asignando a la variable x la suma del contenido de la variable `y` (3) con el valor 5, por lo que `x` tomará el valor de 8.
+
 
 ## 5. Definición de tipos con `typedef`
 
@@ -492,14 +538,14 @@ printf(cadena de control, val1, val2, ..., valN);
 La cadena de control debe ir entre comillas dobles. Ejemplo: `“Hola mundo”`Si queremos mostrar el valor de una variable o valor, haremos uso de especificadores de formato (marcas) dentro de la cadena de control. Por cada marca debemos añadir una variable o valor. La marca determina cómo visualizar la variable (número, basedel numero, cifras decimales, etc). El valor puede ser el resultado de una operación
 
 Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son:
-| Formato   | Significa      |  
+| Formato   | Tipo.          |  
 |-----------|:--------------:|
-| %d %i     | entero         |
-| %c        | carácter       |   
-| %f        | real           |  
-| %ld       | long           |
-| %u        | unsigned       |
-| %e        | real notación científica |
+| %d %i     | int            |
+| %c        | char           |   
+| %f        | float          | 
+| %lf       | double         | 
+| %ld       | long int       |
+| %u        | unsigned (enum)|
 
 **Precisión**
 
@@ -558,7 +604,7 @@ scanf(cadena de control, &var1, &var2, ..., &varN);
 
 Respecto a las marcas, utilizaremos los tipos usados con `printf` excepto en el tipo `double` que debemos usar `%lf` y el `%u` para enumerados. El resto se mantienen: `%c` para `char`, `%d` para `int` y `%f` para `float`.
 
-Ejemplo:
+Ejemplos:
 
 ~~~c
 #include <stdio.h>
@@ -579,13 +625,11 @@ int main() {
 ~~~
 
 
-Ejemplo:
-
 ~~~c
 // Cálculo el índice de masa corporal IMC de una persona
 
    double peso, imc;
-   int altura;
+   int altura;  //centimetros
    char nom, ap1, ap2;
 
    printf("Introduce tus iniciales \n");
@@ -601,6 +645,38 @@ Ejemplo:
 
    imc = peso / ((altura/100.0) * (altura/100.0));
    printf("El IMC de %c%c%c es %g\n", nom, ap1, ap2, imc );
+~~~
+
+
+~~~c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+   int x1, y1;
+   int x2, y2;
+   int x3, y3;
+
+   double lado1, lado2, lado3;
+   double perimetro;
+
+   printf("Introduce el punto 1: ");
+   scanf("%d,%d", &x1, &y1);
+   printf("Introduce el punto 2: ");
+   scanf("%d,%d", &x2, &y2);
+   printf("Introduce el punto 3: ");
+   scanf("%d,%d", &x3, &y3);
+
+   lado1 = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1) * (y2 - y1));
+   lado2 = sqrt((x3 - x2)*(x3 - x2) + (y3 - y2) * (y3 - y2));
+   lado3 = sqrt((x3 - x1)*(x3 - x1) + (y3 - y1) * (y3 - y1));
+
+   perimetro = lado1 + lado2 + lado3;
+
+   printf("El perímetro del triángulo cuyos lados son (%d,%d)--(%d,%d)--(%d,%d) es %.3f\n", x1,y1, x2,y2, x3,y3, perimetro);
+
+   return 0;
+}
 ~~~
 
 Tenemos que tener cuidado cuando leamos caracteres utilizando `scanf`.
@@ -651,6 +727,7 @@ Para solucionarlo, tenemos que quitar del buffer el `\n` antes de leer cualquier
 scanf("\n%c", &c);
 ~~~
 
+
 ### Tipos de datos en Python
 
 Ya vimos en el tema anterior que Python es un lenguaje débilmente tipado. Eso significa que cuando definimos una variable no tenemos que indicar de qué tipo es el dato que va almacenar, porque el intérprete lo puede inferir, pero internamente sí que se trabaja con tipos datos. En Python, para saber de qué tipo es una variable tenemos la instrucción `type`.
@@ -662,6 +739,7 @@ Los tipos de datos que encontramos en Python son muy similares a los de C (pero 
 
 - Capítulos 3.7 a 3.12 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
 - Capítulos 4.1 a 4.4, 4.8 y 4.9 de "Fundamentos de Programación", Jesús Carretero y otros  
+- Capítulo 1.4 de Vozmediano, A. M.. Aprender a programar en C: de 0 a 99 en un solo libro: Un viaje desde la programación estructurada en pseudocódigo hasta las estructuras de datos avanzadas en lenguaje C
 
 ----
 

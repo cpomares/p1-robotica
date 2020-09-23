@@ -135,13 +135,13 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * JOYANES, Luis; ZAHONERO, Ignacio. Programación en C. Metodología, algoritmos y estructuras de datos. McGraw-Hill, 2a edición, 2005. ISBN: 8448198441
 
+<img src="imagenes/vozmediano.png" width="170px"/>
+
+* Aprender a programar en C. De 0 a 99 en un solo libro. A. M. Vozmediano. 2a edición, 2017.
+
 <img src="imagenes/carretero-cover.jpg" width="170px"/>
 
 * CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
-
-<img src="imagenes/carballeira-cover2.JPG" width="170px"/>
-
-* Carballeira. Problemas resueltos de programación en lenguaje C
 
 <img src="imagenes/kernighan-cover.jpg" width="170px"/>
 

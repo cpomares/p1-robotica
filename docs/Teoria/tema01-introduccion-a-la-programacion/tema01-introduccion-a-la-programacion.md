@@ -1,15 +1,7 @@
 
 # Tema 1: Introducción a la  programación
 
-## 1. Lenguajes de programación
-
-Un lenguaje de programación permite especificar procesos que se
-ejecutan en computadores. Un programa escrito en un determinado
-lenguaje nos permite definir las instrucciones que realizará el
-ordenador (o, más en concreto, el procesador) que lo ejecute. Por
-ello, para entender en profundidad qué es un lenguaje de programación
-es fundamental conocer el ordenador.
-
+## 1. Fundamentos de programación
 
 ###  1.1. El ordenador y sus componentes
 
@@ -39,47 +31,45 @@ La información se representa en una computadora mediante el uso de dos estados
 
 <img src="imagenes/impulsos.png" width="400px"/>
 
-Esta dualidad nos permite adoptar un sistema **binario** para representar la información. Así, la presencia de señal se representa por el 1 y la ausencia por el 0. Esto nos lleva al concepto de **bit**, que es la unidad mínima de información. Un *bit* puede adoptar los valores 0 ó 1.Un único *bit* aporta poca cantidad de información. Es por ello que los *bits* seagrupan de 8 en 8 formando un **byte**. Un *byte* permite representar 2^8 = 256 combinaciones diferentes.A su vez, los *bytes* se agrupan formando **palabras**, que dependiendo de cada computadora pueden ser de 8, 16, 32 ó 64 *bytes*.
+Esta dualidad nos permite adoptar un sistema **binario** para representar la información. Así, la presencia de señal se representa por el 1 y la ausencia por el 0. Esto nos lleva al concepto de **bit**, que es la unidad mínima de información. 
 
-### 1.3. Programa
+- **Bit**: unidad mínima de información, puede adoptar los valores 0 ó 1.- **Byte**: 8 bits. Permite representar 2^8 = 256 combinaciones diferentes.- **Palabra**: dependiendo de cada máquina pueden ser de 1, 2, 3, 4 u 8 bytes (8, 16, 24, 32 o 64 bits).
+#### Códigos
 
-Un programa es el conjunto ordenado de instrucciones que indican a la computadora las acciones que debe realizar para cumplir una tarea específica. En este sentido, con un programa especificamos al ordenador qué tiene que hacer, en el orden en el que lo tiene que hacer y los datos que ha de usar para ello.Los programas están escritos en un determinado lenguaje formal libre de ambigüedades, de forma que la especificación de lo que queremos hacer sea unívoca.
+Un código es un método de representación de la información. 
+
+##### Código binario
+
+El sistema de numeración binario es muy parecido al sistema de numeración decimal; por lo tanto, también es un código. La única diferencia con el sistema decimal es la cantidad de símbolos del alfabeto. Si el decimal tiene diez, el binario sólo tiene dos: el 0 y el 1. En todo lo demás son iguales, así que el sistema binario también sirve para representar información numérica.
+ 
+
+##### Código ASCII
+
+El código ASCII consiste en una correspondencia entre números binarios de 8 dígitos y caracteres alfanuméricos.
+
+##### Código UTF-8
+
+En la actualidad, se ha impuesto con fuerza el sistema de codificación UTF-8 de Unicode, con el cual se consiguen representar todos los caracteres de todas las lenguas del mundo. Los primeros 256 caracteres del UTF-8 se corresponden con la tabla ASCII que incluye los símbolos en español.
+
+### 1.3. Programas y lenguajes
+
+Un **lenguaje de programación** permite especificar procesos que se
+ejecutan en computadores. Un programa escrito en un determinado
+lenguaje nos permite definir las instrucciones que realizará el
+ordenador (o, más en concreto, el procesador) que lo ejecute. Por
+ello, para entender en profundidad qué es un lenguaje de programación
+es fundamental conocer el ordenador.
+
+Un **programa** es el conjunto ordenado de instrucciones que indican a la computadora las acciones que debe realizar para cumplir una tarea específica. En este sentido, con un programa especificamos al ordenador qué tiene que hacer, en el orden en el que lo tiene que hacer y los datos que ha de usar para ello.
 
 Con respecto al nivel de abstracción de estos lenguajes, los podemos clasificar en dos grandes grupos:  
   * **Lenguajes Máquina**: Como su propio nombre indica, se trata de los lenguajes "nativos" de la computadora, y por ello es capaz de procesarlos directamente. Sumamente costosos para el programador.
   * **Lenguajes de Alto Nivel**: Se trata de lenguajes mucho más cercanos al lenguaje humano, con un alto nivel de abstracción, por lo que son más comprensibles y menos engorrosos de usar para el programador. Los programas construidos con estos lenguajes han de ser traducidos a lenguaje máquina mediante el uso de un compilador para que la computadora los pueda procesar. Python, C, C++, Java, etc.
 
-### 1.4. Los primeros lenguajes de programación
 
-Los primeros computadores electrónicos se programan directamente usando el conjunto de instrucciones del procesador, en **código máquina**, código hexadecimal.
+#### Los primeros lenguajes de alto nivel
 
-El siguiente programa, en lenguaje máquina, resta un número de otro y el resultado lo almacena en una posición de memoria:
-
-<img src="imagenes/cod-maquina.png" width="500px"/>
-
-El primer lenguaje de un nivel algo más elevado que el código máquina es el **ensamblador**. Programas que empiezan a ayudar a los programadores: ensambladores. Hay una relación casi directa entre la notación en ensamblador y el código hexadecimal que produce el
-ensamblador.
-
-El programa anterior en ensamblador sería:
-
-~~~
-   CAR A
-   RES B
-   ALM C
-   STOP
-C: 0
-A: 7
-B: 2
-~~~
-
-El lenguaje ensamblador constituye un gran avance en lo que a facilidad de comprensión se requiere a la hora de programar. De todas formas, este lenguaje sigue teniendo varios inconvenientes: Por un lado, cada computadora posee un lenguaje ensamblador distinto, por lo que para utilizar un programa en otra computadora distinta habría que rescribirlo. Por otro lado, el lenguaje sigue siendo demasiado cercano al lenguaje máquina, lo que dificulta su comprensión y por tanto encarece el desarrollo de programas de gran extensión.
-Los **lenguajes de alto nivel** se caracterizan por no ser dependientes de máquina. Mediante la compilación de un programa escrito en lenguaje de alto nivel podremos ejecutarlo en cualquier máquina. Para ello, necesitaremos un compilador de ese lenguaje para cada máquina en la que queramos ejecutar nuestro programa.Otra característica de estos lenguajes es su sintaxis es más cercana al lenguaje natural del programador y proporciona distintas herramientas de abstracción que facilitan la programación.
-
-
-### 1.5. Los primeros lenguajes de alto nivel
-
-Los primeros lenguajes de alto nivel se desarrollaron a finales de la
-década de los 50:
+Los primeros lenguajes de alto nivel se desarrollaron a finales de la década de los 50:
 
 - FORTRAN en 1956
 - Lisp en 1958
@@ -100,7 +90,7 @@ El **lenguaje C** surgió en 1972, derivado de Fortran y Algol. Es el que vamos 
 El **lenguaje Python** surgió en 1991, a partir de Lisp y C.
 
 
-### 1.6. Compiladores e intérpretes
+### 1.4. Compiladores e intérpretes
 
 En el nivel de abstracción más bajo, la ejecución de un programa en un
 computador consiste en la ejecución de un conjunto de instrucciones
@@ -159,17 +149,32 @@ programación Java, en el que se realizan ambos procesos: por un lado, el compil
 
 - Ejemplos: Java, Scala
 
+### 1.5. Algoritmos
+
+Un [algoritmo](https://es.wikipedia.org/wiki/Algoritmo) es un conjunto de instrucciones definidas y no-ambiguas, ordenadas y finitas que permite, solucionar un problema, realizar un cálculo, procesar datos y llevar a cabo otras tareas o actividades. Dados un estado inicial y una entrada, siguiendo los pasos sucesivos se llega a un estado final y se obtiene una solución.
+
+Resumiendo, en términos de programación, un algoritmo es una **secuencia de pasos lógicos que permiten solucionar un problema**.
+
+Los algoritmos se pueden expresar de muchas maneras. Normalmente se trabaja en tres niveles:
+
+- **Análisis del problema**. Se explica el problema a grandes rasgos omitiendo detalles.
+- **Diseño de una solución**. Se usa [pseudocódigo](https://es.wikipedia.org/wiki/Pseudoc%C3%B3digo) o [diagramas de flujo](https://es.wikipedia.org/wiki/Diagrama_de_flujo) para describir la secuencia de pasos que encuentran la solución.
+- **Implementación**. Se codifica en un lenguaje de programación específico.
+- **Pruebas**: Se comprueba con una baterís de pruebas que funciona correctamente.
+- **Mantenimiento**: para corregir, adaptar o perfeccionar.
+
+
 ## 2. Lenguaje C
 
 C es el lenguaje principal que vamos a estudiar en la asignatura, pero vamos a ver también algunos ejemplos en Python.
 
-C presenta ciertas características que permiten ejercer un elevado control sobre la eficiencia
+C presenta ciertas características que permiten ejercer un elevado control sobre la **eficiencia**
 de los programas, tanto en la velocidad de ejecución como en el consumo de memoria, pero
 a un precio importante: tenemos que proporcionar información explícita sobre gran cantidad de detalles,
 por lo que generalmente resultan programas más largos y complicados que sus equivalentes en
 otros lenguajes más modernos, aumentando así la probabilidad de que cometamos errores.
 
-C es un lenguaje compilado: antes de ejecutar un programa escrito por nosotros, suministramos
+C es un lenguaje **compilado**: antes de ejecutar un programa escrito por nosotros, suministramos
 su código fuente (en un fichero con extensión .c) a un compilador de C.
 El compilador lee y analiza todo el programa. Si el programa está correctamente escrito
 según la definición del lenguaje, el compilador genera un nuevo fichero con su traducción
@@ -505,6 +510,7 @@ Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.in
 
 - Capítulo 1 y del 3.1 al 3.4  de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
 - Capítulo 1.4 "Programming Language Pragmatics", Michael L. Scott, Compilation and Interpretation
+- Capítulo 1.1 de Vozmediano, A. M.. Aprender a programar en C: de 0 a 99 en un solo libro: Un viaje desde la programación estructurada en pseudocódigo hasta las estructuras de datos avanzadas en lenguaje C.
 
 ----
 
