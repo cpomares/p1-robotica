@@ -676,7 +676,7 @@
 <li>
 <p>Es importante conocer los comandos básicos para usar el terminal, así como algunos conceptos base</p>
 </li>
-<li>Diferencias entre mayúsculas y minúsculas (case sensitive)</li>
+<li>Diferencias entre mayúsculas y minúsculas (<em>case sensitive</em>)</li>
 <li>Separador de carpetas en una ruta: / (en lugar de \)</li>
 </ul>
 <h2 id="terminal-de-linux">Terminal de Linux<a class="headerlink" href="#terminal-de-linux" title="Permanent link">&para;</a></h2>
@@ -824,6 +824,69 @@
 </pre></div>
 </td></tr></table>
 
+<p>Vamos a trabajar con nuestro primer programa <code>firstProgram.c</code>, lo vas a descargar desde Moodle:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define PI 3.141592</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Comentarios de una sola línea    </span>
+    <span class="c1">// Declaramos tres variables numéricas</span>
+
+    <span class="kt">float</span> <span class="n">radio</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">circunferencia</span><span class="p">;</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * Comentario de varias líneas</span>
+<span class="cm">     * </span>
+<span class="cm">     * Asignamos valor al radio del círculo</span>
+<span class="cm">     * y calculamos la longitud de la circunferencia con ese radio.</span>
+<span class="cm">     * </span>
+<span class="cm">     */</span>
+
+     <span class="n">radio</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+     <span class="n">circunferencia</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">radio</span><span class="p">;</span>
+
+     <span class="c1">// Mostramos el resultado por consola</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Circunferencia</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f es la circunferencia del circulo de radio %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">circunferencia</span><span class="p">,</span><span class="n">radio</span><span class="p">);</span> 
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <ul>
 <li>Accede a <strong>Moodle</strong> donde se encuentran los ficheros necesarios para realizar esta práctica</li>
 <li>Descarga el fichero <code>firstProgram.c</code> en la carpeta <code>practica0</code></li>
@@ -866,7 +929,7 @@
 </ul>
 <h2 id="descubriendo-errores">Descubriendo errores<a class="headerlink" href="#descubriendo-errores" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Descarga en la carpeta el fichero <code>firstProgramErrorA.c</code> y <code>firstProgramErrorB.c</code></li>
+<li>Descarga en la carpeta los ficheros <code>firstProgramErrorA.c</code> y <code>firstProgramErrorB.c</code></li>
 <li>Para cada fichero:<ul>
 <li>Abre el fichero desde Geany y estudia las diferencias con respecto al programa original</li>
 <li>Intenta compilar (añadir la opción <code>-Wall</code> nos ayuda). Fíjate que el Geany utiliza esta opción al compilar (observa la ventana donde muestra el resultado de la compilación). Después, desde línea de comandos compila con la opción <code>-Wall</code> y sin dicha opción, y entiende para qué sirve.  </li>
