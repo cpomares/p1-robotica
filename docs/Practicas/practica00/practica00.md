@@ -10,23 +10,13 @@
 - Compilar y ejecutar un primer programa
 - Depurar los fallos encontrados
 
-## Realizar y probar un programa
-
-- Para realizar y probar un programa, debemos implementar el programa usando un editor de textos
-- Compilar el programa para obtener un ejecutable, usando un compilador
-- Ejecutar el programa (ejecutable) desde el sistema operativo
-
-Existen numerosos IDEs, o entornos integrados de desarrollo, que facilitan la tarea del desarrollador, tales como Eclipse, NetBeans, Visual Studio, IntelIiJ, etc
-
-En las prácticas, usaremos **Geany** como alternativa ligera y de licencia GPL entre el resto de opciones
-
 ## Sistema operativo Linux
 
 - Las prácticas se desarrollarán bajo el Sistema Operativo Linux
 - Es posible usarlo a través de una "máquina virtual", permite emular un Sistema Operativo. Por ejemplo, para lanzar Windows desde Linux o viceversa
 
 - Es importante conocer los comandos básicos para usar el terminal, así como algunos conceptos base
-- Diferencias entre mayúsculas y minúsculas (case sensitive)
+- Diferencias entre mayúsculas y minúsculas (*case sensitive*)
 - Separador de carpetas en una ruta: / (en lugar de \\)
 
 ## Terminal de Linux
@@ -115,6 +105,16 @@ sudo apt install geany
 sudo apt install gcc
 ~~~
 
+## Realizar y probar un programa
+
+- Para realizar y probar un programa, debemos implementar el programa usando un editor de textos
+- Compilar el programa para obtener un ejecutable, usando un compilador
+- Ejecutar el programa (ejecutable) desde el sistema operativo
+
+Existen numerosos IDEs, o entornos integrados de desarrollo, que facilitan la tarea del desarrollador, tales como Eclipse, NetBeans, Visual Studio, IntelIiJ, etc
+
+En las prácticas, usaremos **Geany** como alternativa ligera y de licencia GPL entre el resto de opciones
+
 ## Editor de textos Geany
 
 - Gestión de ficheros y edición estándar
@@ -148,6 +148,41 @@ mkdir practica0
 cd practica0
 ~~~
 
+Vamos a trabajar con nuestro primer programa `firstProgram.c`, lo vas a descargar desde Moodle:
+
+~~~c
+#include <stdio.h>
+
+#define PI 3.141592
+
+int main(int argc, char **argv)
+{
+	// Comentarios de una sola línea	
+	// Declaramos tres variables numéricas
+	
+	float radio;
+	float circunferencia;
+	
+	/*
+	 * Comentario de varias líneas
+	 * 
+	 * Asignamos valor al radio del círculo
+	 * y calculamos la longitud de la circunferencia con ese radio.
+	 * 
+	 */
+	 
+	 radio = 3;
+	 circunferencia = 2 * PI * radio;
+	 
+	 // Mostramos el resultado por consola
+     printf("Circunferencia\n");
+	 printf("%f es la circunferencia del circulo de radio %f\n", circunferencia,radio);	
+	
+	
+	return 0;
+}
+~~~
+
 - Accede a **Moodle** donde se encuentran los ficheros necesarios para realizar esta práctica
 - Descarga el fichero `firstProgram.c` en la carpeta `practica0`
 - Abrirlo desde Geany:
@@ -179,7 +214,7 @@ cd practica0
         
 ## Descubriendo errores
 
-- Descarga en la carpeta el fichero `firstProgramErrorA.c` y `firstProgramErrorB.c`
+- Descarga en la carpeta los ficheros `firstProgramErrorA.c` y `firstProgramErrorB.c`
 - Para cada fichero:
     - Abre el fichero desde Geany y estudia las diferencias con respecto al programa original
     - Intenta compilar (añadir la opción `-Wall` nos ayuda). Fíjate que el Geany utiliza esta opción al compilar (observa la ventana donde muestra el resultado de la compilación). Después, desde línea de comandos compila con la opción `-Wall` y sin dicha opción, y entiende para qué sirve.  
