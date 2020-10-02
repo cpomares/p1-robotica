@@ -657,6 +657,12 @@ El punto medio es (8,11)
 </tr>
 </tbody>
 </table>
+<p><strong>Nota</strong>:
+En algunas instalaciones hay problemas al usar la función sqrt() porque da un error de que no está definida, a pesar de hacer el include de esta librería. La solución está en linkar la librería explícitamente desde línea de comandos con la opción -lm:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">gcc</span> <span class="n">ejercicio6</span><span class="p">.</span><span class="k">c</span> <span class="o">-</span><span class="n">o</span> <span class="n">ejercicio6</span> <span class="o">-</span><span class="n">lm</span>
+</pre></div>
+</td></tr></table>
+
 <hr />
 <p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
