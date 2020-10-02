@@ -160,6 +160,12 @@ Casos de prueba:
 | 0 0 y 200 200      | La distancia entre los puntos (0,0)--(200,200) es 282.843 El punto medio es (100,100) |   
 | 28 21 y 1 2      | La distancia entre los puntos (28,21)--(1,2) es 33.015 El punto medio es (14,11)  |
 
+**Nota**:
+En algunas instalaciones hay problemas al usar la función sqrt() porque da un error de que no está definida, a pesar de hacer el include de esta librería. La solución está en linkar la librería explícitamente desde línea de comandos con la opción -lm:
+
+~~~texto
+gcc ejercicio6.c -o ejercicio6 -lm
+~~~
 
 ----
 
