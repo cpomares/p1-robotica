@@ -152,13 +152,16 @@ a % 3; //→ devuelve 0a % 4; //→ devuelve 2
 
 Cuando la división se realiza entre enteros, el resultado se trunca al entero más próximo por debajo. Por ejemplo, el resultado de 23/5 es 4 (se llama división entera). Sin embargo en la división real (alguno de los operandos es un número real) no se trunca el resultado. 23/4 da 5.75
 
-Ejemplos
+Ejemplos operador división:
 
 ~~~c
 int main() {
     printf("%d\n", 5/4); // 1
-    printf("%d\n", 5/4.0); // 
-
+    printf("%f\n", 5/4.0); //1.250000
+    printf("%.2f\n", 5/4.0); //1.25
+    printf("%d\n", 5/4.0); // Error
+    printf("%f\n", 5/4); // Error
+    return 0;
 }
 ~~~
 
