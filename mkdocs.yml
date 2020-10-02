@@ -8,6 +8,7 @@ nav:
    - 'Tema 2: Tipos de datos simples': 'Teoria/tema02-tipos-de-datos-simples/tema02-tipos-de-datos-simples.md'
 - 'Prácticas':
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
+   - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
 theme:
     language: es
     name: 'material'

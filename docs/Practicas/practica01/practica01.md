@@ -2,130 +2,134 @@
 
 ### Ejercicio 1 ###
 
-El siguiente programa debe solicitar por teclado la edad, la inicial del nombre y la altura de una persona, y mostrará por pantalla su inicial y la suma de la edad y la altura. Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada.
+El siguiente programa debe solicitar por teclado la edad, las iniciales de un nombre y 2 apellidos y la altura de una persona, y mostrará por pantalla sus iniciales en orden inverso y la suma de la edad y la altura. Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada.
 
 Después de completarlo, compílalo y ejecútalo para comprobar su correcto funcionamiento.
 
 ~~~c
-#include <stdio.h>
+_________________
 
 int main() {
-   ______________;
-   ______________;
-   ______________;
+    _________________;
+    _________________;
+    _________________;
 
 
-   printf("Introduce tu edad: ");
-   ________________________;
+    printf("Introduce la edad: ");
+    ___________________________;
 
-   printf("Introduce la inicial de tu nombre: ");
-   ________________________;
+    printf("Introduce las iniciales del nombre y 2 apellidos: ");
+    ___________________________;
 
-   printf("Introduce tu altura en metros: ");
-   ________________________;
+    printf("Introduce la altura en metros: ");
+    ___________________________;
 
+    printf("\n\nLas iniciales del nombre y apellidos en orden inverso es:
+          %c%c%c\n",ini_ap2, ini_ap1, ini_nom);
+    printf("La suma de la edad y la altura es: %.2f\n", edad + altura);
 
-   printf("\n\nLa inicial de tu nombre es: %c\n",inicial);
-   printf("La suma de tu edad y altura es: %.2f\n", edad + altura);
-
-   return 0;
+    return 0;
 }
 ~~~
 
 ### Ejercicio 2 ###
 
-Implementa un programa que solicite al usuario 3 caracteres y los muestre por pantalla en orden inverso al que han sido introducidos.
+Implementa un programa que solicite al usuario las notas de los 2 exámenes de la convocatoria de Enero y muestre por pantalla la nota final de la asignatura en dicha convocatoria, teniendo en cuenta que las ponderaciones de cada examen parcial es del 50%.
+
 
 Ejemplo de ejecución:
 
 ~~~text
-Introduce 3 caracteres:
-a b c
-Los caracteres introducidos en orden inverso son:
-c b a
+Introduce la nota del primer examen (temas 1 al 5): 4.3
+Introduce la nota del segundo examen (temas 1 al 9): 5.8
+La nota final en la convocatoria ordinaria de Enero es: 5.05
 ~~~
 
-Datos de entrada: `3 caracteres`
+Datos de entrada: `notas parciales`
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| a b c            | c b a              |
-| 5 6 7            | 7 6 5              |   
-| * > ?            | ? > *              |    
+| 4.3 y 5.8       | La nota final en la convocatoria ordinaria de Enero es: 5.07              |
+| 7.0 y 2.5            | La nota final en la convocatoria ordinaria de Enero es: 4.75              |   
+| 9.5 y 8.7            | La nota final en la convocatoria ordinaria de Enero es: 9.10              |    
 
 
 ### Ejercicio 3 ###
 
-Implementa un programa que solicite al usuario un número de años y muestre por pantalla las horas, minutos y segundos que tienen esa cantidad de años.
+Implementa un programa que solicite al usuario un número de años y muestre por pantalla las horas, minutos y segundos que tienen esa cantidad de años. Suponemos que cada 4 años, uno será bisiesto y por tanto tendrás que considerar un día más.
+
 
 Ejemplo de ejecución:
 
 ~~~text
 Introduce número de años: 1
-En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos
+En 1 años hay 0 bisiestos, 365 días, 8760 horas, 525600 minutos y 31536000 segundos
 ~~~
 
-Dato de entrada: `número de años`
+Dato de entrada: `años`
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|1                 | En 1 años hay 8760 horas, 525600 minutos y 31536000 segundos              |
-| 20               | En 20 años hay 175200 horas, 10512000 minutos, 630720000 segundos    |
-| 100              | En 100 años hay 876000 horas, 52560000 minutos, 3153600000 segundos   |
+|1                 | En 1 años hay 0 bisiestos, 365 días, 8760 horas, 525600 minutos y 31536000 segundos           |
+| 18               | En 18 años hay 4 bisiestos, 6574 días, 157776 horas, 9466560 minutos y 567993600 segundos    |
+| 40              | En 40 años hay 10 bisiestos, 14610 días, 350640 horas, 21038400 minutos y 1262304000 segundos   |
 
 ### Ejercicio 4 ###
 
-Implementa un programa que solicite al usuario las notas de los 3 exámenes de la convocatoria de Enero y muestre por pantalla la nota final de la asignatura en dicha convocatoria, teniendo en cuenta que las ponderaciones de los 3 exámenes son del 15%, 35% y 50% respectivamente.
+Implementa un programa que predice la estatura de un niño cuando sea adulto. Para ello, se utilizará el método “promedio de los padres”, que consiste en calcular la estatura media de ambos progenitores y sumarle 6,35 cm si es niño varón, o restarle dicha cantidad si es niña.
+Hay que tener en cuenta el margen de error de este método, que es de 10,16cm de alto o de bajo.
+
 
 Ejemplo de ejecución:
 
 ~~~text
-Introduce la nota del primer examen (temas 1 al 3): 4.3
-Introduce la nota del segundo examen (temas 1 al 6): 5.5
-Introduce la nota del tercer examen (temas 1 al 9): 5.0
-La nota final en la convocatoria ordinaria de Enero es: 5.07
+Introduce las alturas del padre y la madre: 
+1.75   1.65
+Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm
+Si es niña, tendrá una altura entre 1,53cm y 1,74cm
 ~~~
 
-Datos de entrada: `nota1` `nota2` `nota3`
+Datos de entrada: `alturas padre y madre`
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|  4.3  5.5  5.0   | La nota final en la convocatoria ordinaria de Enero es: 5.07 |
-|  7.0  4.0  3.5   | La nota final en la convocatoria ordinaria de Enero es: 4.20 |   
-|  7.3  8.6  9.8   | La nota final en la convocatoria ordinaria de Enero es: 9.00 |  
+|  1.75 y 1.65   | Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm. Si es niña, tendrá una altura entre 1,53cm y 1,74cm |
+|  1.80 y 1.90   | Si el niño es varón, tendrá una altura entre 1,81cm y 2,02cm. Si es niña, tendrá una altura entre 1,68cm y 1,89cm |   
+|  1.78 y 1.64   | Si el niño es varón, tendrá una altura entre 1,67cm y 1,88cm. Si es niña, tendrá una altura entre 1,54cm y 1,75cm |  
 
 ### Ejercicio 5 ###
 
-Escribe un programa que incluya un enumerado llamado `TipoFigura` con los tipos de figura `circulo`, `cuadrado` y `triangulo`.
+Escribe un programa que incluya un enumerado llamado `TTransporte` con los tipos `Coche`, `Barco`, `Tren` y `Avion`.
 
-Después imprime por pantalla el número asignado por el enumerado a cada figura.
+Después imprime por pantalla el número asignado por el enumerado a cada figura. Para ello no utilices el número directamente, sino que debes utilizar el identificador correspondiente del enumerado.
 Tienes que cambiar el número por defecto.
 
 Ejemplo de ejecución:
 
 ~~~text
-Circulo: 1
-Triangulo: 2
-Cuadrado: 3
+Coche: 5
+Barco: 6
+Tren: 7
+Avion: 8
 ~~~
 
 ### Ejercicio 6 ###
 
-Escribe un programa que pida por teclado los vértices de un triángulo y calcule e imprima por pantalla su perímetro (con dos decimales). Cada vértice consta de una coordenada x,y.
+Escribe un programa que pida por teclado las coordenadas cartesianas de dos puntos y calcule e imprima la distancia euclídea entre ellos y el punto medio. Cada punto consta de una coordenada x,y.
 
-Para leer por teclado dos datos seguidos separados por una coma, puedes utilizar el `scanf` de la siguiente forma:
+Para leer por teclado dos datos seguidos separados por un espacio, puedes utilizar el `scanf` de la siguiente forma:
 
 ~~~c
-scanf("%d,%d", &x, &y);
+scanf("%d %d", &x, &y);
 ~~~
 
-Para calcular el perímetro, primero debes obtener los tres lados mediante el cálculo de la distancia euclídea entre los tres vértices. La fórmula de la distancia euclídea es:
+La fórmula de la distancia euclídea es:
 
 ~~~c
 distancia = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1) * (y2 - y1));
@@ -133,28 +137,32 @@ distancia = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1) * (y2 - y1));
 
 `sqrt` es la función que calcula la raíz cuadrada. Para utilizarla, debes incluir la librería `<math.h>` a tu programa.
 
+La fórmula para calcular el punto medio entre dos puntos es:
+
+<img src="imagenes/punto_medio.png" width="400px"/>
+
 Ejemplo de ejecución:
 
 ~~~text
-Introduce el punto 1: 2,3
-Introduce el punto 2: 4,5
-Introduce el punto 3: 6,7
-El perímetro del triángulo cuyos lados son (2,3)--(4,5)--(6,7) es 11.31
+Introduce el punto 1: 5 6
+Introduce el punto 2: 12 16
+La distancia entre los puntos (5,6)--(12,16) es 12.207
+El punto medio es (8,11)
 ~~~
 
-Datos de entrada: `x1,y1` `x2,y2` `x3,y3`
+Datos de entrada: `x1,y1` `x2,y2` 
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 2,3 4,5 6,7      | El perímetro del triángulo cuyos lados son (2,3)--(4,5)--(6,7) es 11.31    |
-| 2,2 4,4 8,8      | El perímetro del triángulo cuyos lados son (2,2)--(4,4)--(8,8) es 16.97  |   
-| 8,4 3,5 7,6      | El perímetro del triángulo cuyos lados son (8,4)--(3,5)--(7,6) es 11.45  |
+| 5 6 y 12 16      | La distancia entre los puntos (5,6)--(12,16) es 12.207 El punto medio es (8,11)   |
+| 0 0 y 200 200      | La distancia entre los puntos (0,0)--(200,200) es 282.843 El punto medio es (100,100) |   
+| 28 21 y 1 2      | La distancia entre los puntos (28,21)--(1,2) es 33.015 El punto medio es (14,11)  |
 
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares
