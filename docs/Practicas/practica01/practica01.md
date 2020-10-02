@@ -2,9 +2,9 @@
 
 ### Ejercicio 1 ###
 
-El siguiente programa debe solicitar por teclado la edad, las iniciales de un nombre y 2 apellidos y la altura de una persona, y mostrará por pantalla sus iniciales en orden inverso y la suma de la edad y la altura. Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada.
+El siguiente programa debe solicitar por teclado la edad, las iniciales de un nombre y 2 apellidos y la altura de una persona, y mostrará por pantalla sus iniciales en orden inverso y la suma de la edad y la altura.
 
-Después de completarlo, compílalo y ejecútalo para comprobar su correcto funcionamiento.
+Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada. Después, compílalo y ejecútalo para comprobar su correcto funcionamiento.
 
 ~~~c
 _________________
@@ -30,6 +30,12 @@ int main() {
 
     return 0;
 }
+~~~
+
+Para leer por teclado dos datos seguidos separados por un espacio, puedes utilizar el `scanf` de la siguiente forma:
+
+~~~c
+scanf("%d %d", &x, &y);
 ~~~
 
 ### Ejercicio 2 ###
@@ -87,7 +93,7 @@ Hay que tener en cuenta el margen de error de este método, que es de 10,16cm de
 Ejemplo de ejecución:
 
 ~~~text
-Introduce las alturas del padre y la madre: 
+Introduce las alturas del padre y la madre:
 1.75   1.65
 Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm
 Si es niña, tendrá una altura entre 1,53cm y 1,74cm
@@ -123,12 +129,6 @@ Avion: 8
 
 Escribe un programa que pida por teclado las coordenadas cartesianas de dos puntos y calcule e imprima la distancia euclídea entre ellos y el punto medio. Cada punto consta de una coordenada x,y.
 
-Para leer por teclado dos datos seguidos separados por un espacio, puedes utilizar el `scanf` de la siguiente forma:
-
-~~~c
-scanf("%d %d", &x, &y);
-~~~
-
 La fórmula de la distancia euclídea es:
 
 ~~~c
@@ -150,7 +150,7 @@ La distancia entre los puntos (5,6)--(12,16) es 12.207
 El punto medio es (8,11)
 ~~~
 
-Datos de entrada: `x1,y1` `x2,y2` 
+Datos de entrada: `x1,y1` `x2,y2`
 
 Casos de prueba:
 
