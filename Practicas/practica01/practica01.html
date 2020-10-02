@@ -436,8 +436,8 @@
                 
                 <h1 id="practica-1-tipos-de-datos-simples">Práctica 1: Tipos de datos simples<a class="headerlink" href="#practica-1-tipos-de-datos-simples" title="Permanent link">&para;</a></h1>
 <h3 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h3>
-<p>El siguiente programa debe solicitar por teclado la edad, las iniciales de un nombre y 2 apellidos y la altura de una persona, y mostrará por pantalla sus iniciales en orden inverso y la suma de la edad y la altura. Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada.</p>
-<p>Después de completarlo, compílalo y ejecútalo para comprobar su correcto funcionamiento.</p>
+<p>El siguiente programa debe solicitar por teclado la edad, las iniciales de un nombre y 2 apellidos y la altura de una persona, y mostrará por pantalla sus iniciales en orden inverso y la suma de la edad y la altura.</p>
+<p>Completa la implementación de este programa rellenando cada hueco con la sentencia adecuada. Después, compílalo y ejecútalo para comprobar su correcto funcionamiento.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -483,6 +483,11 @@
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Para leer por teclado dos datos seguidos separados por un espacio, puedes utilizar el <code>scanf</code> de la siguiente forma:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
 </pre></div>
 </td></tr></table>
 
@@ -561,7 +566,7 @@ Hay que tener en cuenta el margen de error de este método, que es de 10,16cm de
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce las alturas del padre y la madre: 
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce las alturas del padre y la madre:
 1.75   1.65
 Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm
 Si es niña, tendrá una altura entre 1,53cm y 1,74cm
@@ -609,11 +614,6 @@ Avion: 8
 
 <h3 id="ejercicio-6">Ejercicio 6<a class="headerlink" href="#ejercicio-6" title="Permanent link">&para;</a></h3>
 <p>Escribe un programa que pida por teclado las coordenadas cartesianas de dos puntos y calcule e imprima la distancia euclídea entre ellos y el punto medio. Cada punto consta de una coordenada x,y.</p>
-<p>Para leer por teclado dos datos seguidos separados por un espacio, puedes utilizar el <code>scanf</code> de la siguiente forma:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
 <p>La fórmula de la distancia euclídea es:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">distancia</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">));</span>
 </pre></div>
@@ -633,7 +633,7 @@ El punto medio es (8,11)
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>x1,y1</code> <code>x2,y2</code> </p>
+<p>Datos de entrada: <code>x1,y1</code> <code>x2,y2</code></p>
 <p>Casos de prueba:</p>
 <table>
 <thead>
