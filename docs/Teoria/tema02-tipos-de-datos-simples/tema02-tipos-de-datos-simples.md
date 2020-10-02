@@ -152,6 +152,16 @@ a % 3; //→ devuelve 0a % 4; //→ devuelve 2
 
 Cuando la división se realiza entre enteros, el resultado se trunca al entero más próximo por debajo. Por ejemplo, el resultado de 23/5 es 4 (se llama división entera). Sin embargo en la división real (alguno de los operandos es un número real) no se trunca el resultado. 23/4 da 5.75
 
+Ejemplos
+
+~~~c
+int main() {
+    printf("%d\n", 5/4); // 1
+    printf("%d\n", 5/4.0); // 
+
+}
+~~~
+
 #### *Overflow*
 
 Cuando se realizan operaciones con números (tanto enteros como reales), es posible que el resultado de una de ellas dé lugar a un número fuera del rango máximo permitido. Por ejemplo, si tenemos un dato de tipo entero sin signo de 8 bits cuyo valor sea 250 y le sumamos 10, el resultado es 260, que sobrepasa el valor máximo (255).
