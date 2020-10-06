@@ -95,8 +95,8 @@ Ejemplo de ejecución:
 ~~~text
 Introduce las alturas del padre y la madre:
 1.75   1.65
-Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm
-Si es niña, tendrá una altura entre 1,53cm y 1,74cm
+Si el niño es varón, tendrá una altura entre 1,66m y 1,87m
+Si es niña, tendrá una altura entre 1,53m y 1,74m
 ~~~
 
 Datos de entrada: `alturas padre y madre`
@@ -105,9 +105,9 @@ Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-|  1.75 y 1.65   | Si el niño es varón, tendrá una altura entre 1,66cm y 1,87cm. Si es niña, tendrá una altura entre 1,53cm y 1,74cm |
-|  1.80 y 1.90   | Si el niño es varón, tendrá una altura entre 1,81cm y 2,02cm. Si es niña, tendrá una altura entre 1,68cm y 1,89cm |   
-|  1.78 y 1.64   | Si el niño es varón, tendrá una altura entre 1,67cm y 1,88cm. Si es niña, tendrá una altura entre 1,54cm y 1,75cm |  
+|  1.75 y 1.65   | Si el niño es varón, tendrá una altura entre 1,66m y 1,87m. Si es niña, tendrá una altura entre 1,53m y 1,74m |
+|  1.80 y 1.90   | Si el niño es varón, tendrá una altura entre 1,81m y 2,02m. Si es niña, tendrá una altura entre 1,68m y 1,89m |   
+|  1.78 y 1.64   | Si el niño es varón, tendrá una altura entre 1,67m y 1,88m. Si es niña, tendrá una altura entre 1,54m y 1,75m |  
 
 ### Ejercicio 5 ###
 
