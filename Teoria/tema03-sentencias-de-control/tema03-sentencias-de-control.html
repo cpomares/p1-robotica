@@ -301,22 +301,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-programas-y-algoritmos" title="1. Programas y algoritmos" class="md-nav__link">
-    1. Programas y algoritmos
+  <a href="#1-sentencias-de-control" title="1. Sentencias de control" class="md-nav__link">
+    1. Sentencias de control
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-sentencias-de-control" title="2. Sentencias de control" class="md-nav__link">
-    2. Sentencias de control
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-estructuras-de-seleccion" title="3. Estructuras de selección" class="md-nav__link">
-    3. Estructuras de selección
+  <a href="#2-estructuras-de-seleccion" title="2. Estructuras de selección" class="md-nav__link">
+    2. Estructuras de selección
   </a>
   
     <nav class="md-nav">
@@ -370,8 +363,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-estructuras-de-iteracion" title="4. Estructuras de iteración" class="md-nav__link">
-    4. Estructuras de iteración
+  <a href="#3-estructuras-de-iteracion" title="3. Estructuras de iteración" class="md-nav__link">
+    3. Estructuras de iteración
   </a>
   
     <nav class="md-nav">
@@ -432,8 +425,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-traza-de-ejecucion-de-un-programa" title="5. Traza de ejecución de un programa" class="md-nav__link">
-    5. Traza de ejecución de un programa
+  <a href="#4-traza-de-ejecucion-de-un-programa" title="4. Traza de ejecución de un programa" class="md-nav__link">
+    4. Traza de ejecución de un programa
   </a>
   
 </li>
@@ -477,29 +470,9 @@
                 
                 
                 <h1 id="tema-3-sentencias-de-control">Tema 3: Sentencias de control<a class="headerlink" href="#tema-3-sentencias-de-control" title="Permanent link">&para;</a></h1>
-<h2 id="1-programas-y-algoritmos">1. Programas y algoritmos<a class="headerlink" href="#1-programas-y-algoritmos" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Un <strong>algoritmo</strong> es un conjunto de instrucciones que permiten hallar la solución a un determinado problema.</li>
-<li>Un <strong>programa</strong> es un conjunto de sentencias escritas en un lenguaje determinado para que un ordenador lleve a cabo una tarea. Los programas codifican algoritmos.</li>
-</ul>
-<blockquote>
-<p>Ejemplo. Tarea: Obtener el área de un triángulo</p>
-<ul>
-<li>Algoritmo: multiplicar la base del triángulo por la altura del mismo y dividirla entre dos</li>
-<li>Programa:</li>
-</ul>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">altura</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altura</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;El area de un triángulo de base %d y altura %d es %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">,</span> <span class="n">area</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>En un determinado instante, el <strong>estado de un programa</strong> queda definido por el valor que tienen sus variables en ese momento. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es <strong>imprescindible realizar las sentencias adecuadas en el orden adecuado</strong>.</p>
-<h2 id="2-sentencias-de-control">2. Sentencias de control<a class="headerlink" href="#2-sentencias-de-control" title="Permanent link">&para;</a></h2>
+<h2 id="1-sentencias-de-control">1. Sentencias de control<a class="headerlink" href="#1-sentencias-de-control" title="Permanent link">&para;</a></h2>
 <p>El <strong>flujo de ejecución de un programa</strong> define el orden que siguen las sentencias durante la ejecución del mismo.</p>
+<p>En un determinado instante, el <strong>estado de un programa</strong> queda definido por el valor que tienen sus variables en ese momento. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es <strong>imprescindible realizar las sentencias adecuadas en el orden adecuado</strong>.</p>
 <p>La <strong>estructura secuencial</strong> es aquella en la que las instrucciones o sentencias se ejecutan una a una en el orden establecido.</p>
 <p>Ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -521,13 +494,12 @@
 
 <p>Se puede alterar esa secuencialidad usando estructuras no secuenciales, que permiten variar el flujo de control del programa dependiendo de ciertas condiciones. Las estructuras no secuenciales son:</p>
 <ul>
-<li><strong>Estructuras de selección</strong>: Permite que se tomen rutas
-alternativas de acción dependiendo del resultado de una
+<li><strong>Estructuras de selección</strong>: Permiten que se tomen rutas alternativas de acción dependiendo del resultado de una
 condición.</li>
-<li><strong>Estructuras de iteración</strong>: Permite repetir un conjunto de sentencias.</li>
+<li><strong>Estructuras de iteración</strong>: Permiten repetir un conjunto de sentencias.</li>
 </ul>
 <p><img src="imagenes/estructuras_control.png" width="600px"/></p>
-<h2 id="3-estructuras-de-seleccion">3. Estructuras de selección<a class="headerlink" href="#3-estructuras-de-seleccion" title="Permanent link">&para;</a></h2>
+<h2 id="2-estructuras-de-seleccion">2. Estructuras de selección<a class="headerlink" href="#2-estructuras-de-seleccion" title="Permanent link">&para;</a></h2>
 <p>Permiten que el programa determine las sentencias a ejecutar en base a determinadas <strong>condiciones</strong>.</p>
 <p>Las condiciones se presentan como operadores relacionales (condiciones booleanas), integrando como operandos valores, variables o constantes.</p>
 <p>Suponen una <strong>bifurcación</strong> en la secuencia de ejecución de las instrucciones de un programa</p>
@@ -592,7 +564,7 @@ condición.</li>
 </td></tr></table>
 
 <p>El uso de llaves es opcional si la instrucción a ejecutar tiene una única sentencia y es obligatorio si la instrucción tiene dos o más sentencias. Si no se añaden llaves, solamente la primera instrucción después del <code>if (condicion_a_cumplir)</code> será condicional: la segunda y sucesivas se ejecutarán siempre.</p>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -619,7 +591,8 @@ condición.</li>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-La <code>condicion_a_cumplir</code> puede obtenerse mediante la combinación (usando operadores lógicos) de diferentes (sub)condiciones.</p>
+
+<p>La <code>condicion_a_cumplir</code> puede obtenerse mediante la combinación (usando operadores lógicos) de diferentes (sub)condiciones.</p>
 <p>Precedencia de operadores:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -681,11 +654,9 @@ ejecuten cuando no se cumple la condición (opción <code>else</code>)</p>
 3
 4
 5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condicion_a_cumplir</span><span class="p">)</span> <span class="p">{</span>
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condicion_a_cumplir</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">instruccion</span><span class="p">(</span><span class="n">es</span><span class="p">)</span><span class="n">_a_ejecutar_condicion_verdadera</span><span class="p">;</span>
 <span class="p">}</span>
-
 <span class="k">else</span> <span class="p">{</span>
    <span class="n">instruccion</span><span class="p">(</span><span class="n">es</span><span class="p">)</span><span class="n">_a_ejecutar_condicion_falsa</span><span class="p">;</span>
 <span class="p">}</span>
@@ -740,7 +711,7 @@ ejecuten cuando no se cumple la condición (opción <code>else</code>)</p>
 
 <p><img src="imagenes/if-else.png" width="600px"/></p>
 <h3 id="sentencias-if-anidadas">Sentencias <code>if</code> anidadas<a class="headerlink" href="#sentencias-if-anidadas" title="Permanent link">&para;</a></h3>
-<p>Podemos anidar condiciones usando la combinación <code>else if</code>:</p>
+<p>También podemos anidar condiciones usando la combinación <code>else if</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1065,7 +1036,7 @@ otro caso se evalúa la <code>expresión3</code>.</p>
 <li>Escribe un programa que solicite al usuario una letra (mayúscula o minúscula) e indique si es una vocal o una consonante.</li>
 </ol>
 <hr />
-<h2 id="4-estructuras-de-iteracion">4. Estructuras de iteración<a class="headerlink" href="#4-estructuras-de-iteracion" title="Permanent link">&para;</a></h2>
+<h2 id="3-estructuras-de-iteracion">3. Estructuras de iteración<a class="headerlink" href="#3-estructuras-de-iteracion" title="Permanent link">&para;</a></h2>
 <p>Un <strong>bucle</strong> es una estructura de programación formada por una secuencia de sentencias, denominada <strong>cuerpo del bucle</strong>, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una <strong>iteración</strong>. El número de veces que se ejecuta el cuerpo del bucle está controlado por una <strong>condición</strong> (expresión lógica).</p>
 <p>Por lo tanto, a la hora de diseñar e implementar un bucle, hay
 que tener en cuenta dos aspectos:</p>
@@ -1521,7 +1492,7 @@ Su objetivo es recordar en un determinado lugar del programa un suceso determina
 </td></tr></table>
 
 <p>Ejercicio: Haz el ejercicio anterior (factorial de un número) utilizando un bucle for</p>
-<h2 id="5-traza-de-ejecucion-de-un-programa">5. Traza de ejecución de un programa<a class="headerlink" href="#5-traza-de-ejecucion-de-un-programa" title="Permanent link">&para;</a></h2>
+<h2 id="4-traza-de-ejecucion-de-un-programa">4. Traza de ejecución de un programa<a class="headerlink" href="#4-traza-de-ejecucion-de-un-programa" title="Permanent link">&para;</a></h2>
 <p>Se utiliza para estudiar la secuencia de <strong>estados</strong> por los que pasa un programa, es decir, el valor que van tomando las variables instrucción a instrucción. Las variables almacenan el estado de un programa y mediante los pasos de ejecución se va modificando su estado. Se utilizan principalmente para depurar un programa (corregir errores de ejecución) o para comprender qué hace un programa o parte del mismo.</p>
 <p>La traza se lleva a cabo normalmente mediante la ejecución manual de forma secuencial de las sentencias que componen el programa. También existen herramientas de depuración que nos permiten ejecutar paso a paso, o parar la ejecución en un punto concreto para observar el estado del programa. Por ejemplo el depurador <em>gdb</em>.</p>
 <p>Ejemplo:</p>
@@ -1988,7 +1959,7 @@ Después se pregunta el precio que será un número decimal positivo. La lectura
 <li>Capítulos 5.1 a 5.7 de "Fundamentos de Programación", Jesús Carretero y otros  </li>
 </ul>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
