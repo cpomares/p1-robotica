@@ -412,6 +412,7 @@ ___
 
 
 
+
 ## Bibliografía
 
 - Capítulos 5 y 6 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
