@@ -22,101 +22,108 @@ Casos de prueba:
 | %                | El carácter introducido es desconocido     |   
 | F                | El carácter introducido es una letra mayúscula |
 
-
 ### Ejercicio 2 ###
 
-Escribe un programa que indique el número de días que tiene un mes suponiendo que el año no es bisiesto. El usuario debe introducir un número de mes por teclado (0-enero, 11-diciembre) y suponemos que siempre se introduce un número correcto. El programa debe imprimir por pantalla el número de días que tiene ese mes.
+Escribe un programa que calcule el sueldo de un trabajador de una empresa que cobra 50.000€ anuales, en base a los siguientes criterios:
 
-Utiliza `typedef` para definir un enumerado `TMeses`, puedes hacerlo fuera del `main` de forma global.
+- Si lleva más de 10 años en la empresa se le aplica un aumento del 10%.
+- Si lleva menos de 10 años pero más que 5 se le aplica un aumento del 7%.
+- Si lleva menos de 5 años pero más que 3 se le aplica un aumento del 5%.
+- Si lleva menos de 3 años se le aplica un aumento del 3%.
 
 Ejemplo de ejecución:
 
 ~~~text
-Introduce número de un mes 0 (enero), 11 (diciembre):
-3
-El mes número 3 tiene 31 días
+Introduzca la antigüedad del trabajador: 15
+El aumento que le corresponde al trabajador es de 5000.00€
+Su sueldo quedará en: 55000.00€
 ~~~
 
-Dato de entrada: `número de mes 0-11`
+Datos de entrada: `años`
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 3                | El mes número 3 tiene 30 días  |
-| 11               | El mes número 11 tiene 31 días |
-| 1                | El mes número 1 tiene 28 días  |
+|  15              |  5000 55000  |
+|  3               |  2500 52500  |
+|  1               |  1500 51500   |
+
 
 ### Ejercicio 3 ###
 
-Utilizando el tipo enumerado `TipoFigura` del ejercicio 5 de la práctica anterior, escribe un programa que solicite por teclado una de las tres figuras y calcule e imprima su área correspondiente. Para ellos deberá solicitar los datos necesarios de cada figura.
-
-Utiliza `typedef` para definir el enumerado `TipoFigura`, puedes hacerlo fuera del main de forma global.
-
-Ejemplos de ejecución:
+Escribe un programa que solicite por teclado una figura:
 
 ~~~text
+0-Cuadrado
 1-Circulo
 2-Triangulo
-3-Cuadrado
-Introduce figura:
-1
-Introduce diámetro (ancho) del círculo: 30
-El area es: 706.86
 ~~~
 
-Datos de entrada: `tipo figura`, `ancho`, `[alto]`
+Y calcule e imprima su perímetro correspondiente. Se deberá solicitar los datos necesarios de cada figura. 
 
-- `Círculo`, `ancho`
-- `Triángulo`, `ancho`, `alto`
-- `Cuadrado`, `ancho`
+Utiliza `typedef` para definir un tipo enumerado llamado `TFigura` que contenga los identificadores `Cuadrado`, `Circulo` y `Triangulo`. El tipo `TFigura` puedes hacerlo fuera del `main` de forma global.
+
+Datos de entrada:
+
+~~~text
+Cuadrado: diámetro (ancho)
+Circulo: ancho (base) y alto
+Triángulo: lado (ancho)
+~~~
+
+Ejemplo de ejecución:
+
+~~~text
+0-Cuadrado
+1-Circulo
+2-Triangulo
+Introduce figura:
+0
+Introduce uno de los lados del cuadrado: 23
+El perímetro es: 92.00
+~~~
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 1 30             | El área es: 706.86  |
-| 2 23 30          | El área es: 345.00  |
-| 3 20             | El área es: 400.00  |
+| 0 23             | El perímetro es: 92.00  |
+| 1 100            | El perímetro es: 314.16 |
+| 2 20 42 34       | El perímetro es: 96.00  |
 
 
 ### Ejercicio 4 ###
 
-Implementa un programa que calcule la nota final de la asignatura. En primer lugar se debe solicitar la convocatoria, `'E'` si se trata de la de Enero o `'J'` si se trata de Julio. Si no se teclea ninguna de ellas, se mostrará un mensaje en el que se indique que es incorrecta.
+Escribe un programa que pida un número de 4 cifras y lo redondee a la decena y/o centena más próxima. Ten en cuenta que el redondeo a la alza se produce cuando el siguiente dígito es mayor que 5.
 
-La nota final de la convocatoria de Enero se calcula tal y como está explicado en el ejercicio 4 de la práctica 1.La nota final de la convocatoria de Julio consiste en un único examen.
-
-Además de la nota numérica, deberá aparecer su descripción literal equivalente, teniendo en cuenta:
-
-- `0 <= nota < 5` ==> SUSPENSO
-- `5 <= nota < 7` ==> APROBADO
-- `7 <= nota < 9` ==> NOTABLE
-- `nota >= 9` ==> SOBRESALIENTE
+En primer lugar debes descomponer el número para obtener sus 4 cifras utilizando los operadores % y / (esto se hace de forma eficiente con un bucle, pero todavía no los hemos visto, así que hazlo de cifra en cifra). 
 
 Ejemplo de ejecución:
 
 ~~~text
-Dime la convocatoria(E,J):E
-Introduce la nota del primer examen (temas 1 al 3): 7.3
-Introduce la nota del segundo examen (temas 1 al 6): 8.4
-Introduce la nota del tercer examen (temas 1 al 9): 6.5
-La nota final en la asignatura es: 7.28  NOTABLE
+Introduce número de 4 cifras: 1247
+El número redondeado es: 1250
 ~~~
 
-Datos de entrada: `convocatoria`, `nota1`, `[nota2]`, `[nota3]`
+Datos entrada: número de 4 cifras
 
 Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| E 7.3 8.4 6.5    | La nota final en la asignatura es: 7.28  NOTABLE |
-| J 9.3            | La nota final en la asignatura es: 9.30  SOBRESALIENTE |
-| E 4.5 3.7 2.5.   | La nota final en la asignatura es: 3.22  SUSPENSO |
-| x                | La convocatoria introducida es incorrecta |
+| 2962             | 2962  |
+| 1247            | 1250 |
+| 1258       | 1300  |
+| 1887.      | 1900 |
+| 1847       | 1850 |
+| 1486       | 1500 |
+
+
 
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares

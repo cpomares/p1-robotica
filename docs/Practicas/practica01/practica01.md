@@ -57,7 +57,7 @@ Casos de prueba:
 
 | Datos de entrada | Salida por pantalla |      
 |:----------------:|:-------------------:|
-| 4.3 y 5.8       | La nota final en la convocatoria ordinaria de Enero es: 5.07              |
+| 4.3 y 5.8       | La nota final en la convocatoria ordinaria de Enero es: 5.05              |
 | 7.0 y 2.5            | La nota final en la convocatoria ordinaria de Enero es: 4.75              |   
 | 9.5 y 8.7            | La nota final en la convocatoria ordinaria de Enero es: 9.10              |    
 
