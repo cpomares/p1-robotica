@@ -248,10 +248,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Prácticas
@@ -284,6 +286,77 @@
     <a href="../practica01/practica01.html" title="Práctica 1: Tipos de datos simples" class="md-nav__link">
       Práctica 1: Tipos de datos simples
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Práctica 2: Sentencias de selección
+      </label>
+    
+    <a href="practica02.html" title="Práctica 2: Sentencias de selección" class="md-nav__link md-nav__link--active">
+      Práctica 2: Sentencias de selección
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-2" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-3" title="Ejercicio 3" class="md-nav__link">
+    Ejercicio 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
+    Ejercicio 4
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -396,18 +469,23 @@ El carácter introducido es una letra minúscula
 </tbody>
 </table>
 <h3 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h3>
-<p>Escribe un programa que indique el número de días que tiene un mes suponiendo que el año no es bisiesto. El usuario debe introducir un número de mes por teclado (0-enero, 11-diciembre) y suponemos que siempre se introduce un número correcto. El programa debe imprimir por pantalla el número de días que tiene ese mes.</p>
-<p>Utiliza <code>typedef</code> para definir un enumerado <code>TMeses</code>, puedes hacerlo fuera del <code>main</code> de forma global.</p>
+<p>Escribe un programa que calcule el sueldo de un trabajador de una empresa que cobra 50.000€ anuales, en base a los siguientes criterios:</p>
+<ul>
+<li>Si lleva más de 10 años en la empresa se le aplica un aumento del 10%.</li>
+<li>Si lleva menos de 10 años pero 5 o más años se le aplica un aumento del 7%.</li>
+<li>Si lleva menos de 5 años pero 3 o más años se le aplica un aumento del 5%.</li>
+<li>Si lleva menos de 3 años se le aplica un aumento del 3%.</li>
+</ul>
 <p>Ejemplo de ejecución:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce número de un mes 0 (enero), 11 (diciembre):
-3
-El mes número 3 tiene 31 días
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduzca la antigüedad del trabajador: 15
+El aumento que le corresponde al trabajador es de 5000.00€
+Su sueldo quedará en: 55000.00€
 </pre></div>
 </td></tr></table>
 
-<p>Dato de entrada: <code>número de mes 0-11</code></p>
+<p>Datos de entrada: <code>años</code></p>
 <p>Casos de prueba:</p>
 <table>
 <thead>
@@ -418,45 +496,57 @@ El mes número 3 tiene 31 días
 </thead>
 <tbody>
 <tr>
-<td align="center">3</td>
-<td align="center">El mes número 3 tiene 30 días</td>
+<td align="center">15</td>
+<td align="center">5000 55000</td>
 </tr>
 <tr>
-<td align="center">11</td>
-<td align="center">El mes número 11 tiene 31 días</td>
+<td align="center">3</td>
+<td align="center">2500 52500</td>
 </tr>
 <tr>
 <td align="center">1</td>
-<td align="center">El mes número 1 tiene 28 días</td>
+<td align="center">1500 51500</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ejercicio-3">Ejercicio 3<a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h3>
-<p>Utilizando el tipo enumerado <code>TipoFigura</code> del ejercicio 5 de la práctica anterior, escribe un programa que solicite por teclado una de las tres figuras y calcule e imprima su área correspondiente. Para ellos deberá solicitar los datos necesarios de cada figura.</p>
-<p>Utiliza <code>typedef</code> para definir el enumerado <code>TipoFigura</code>, puedes hacerlo fuera del main de forma global.</p>
-<p>Ejemplos de ejecución:</p>
+<p>Escribe un programa que solicite por teclado una figura:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0-Cuadrado
+1-Circulo
+2-Triangulo
+</pre></div>
+</td></tr></table>
+
+<p>Y calcule e imprima su perímetro correspondiente. Se deberá solicitar los datos necesarios de cada figura. </p>
+<p>Utiliza <code>typedef</code> para definir un tipo enumerado llamado <code>TFigura</code> que contenga los identificadores <code>Cuadrado</code>, <code>Circulo</code> y <code>Triangulo</code>. El tipo <code>TFigura</code> puedes hacerlo fuera del <code>main</code> de forma global.</p>
+<p>Datos de entrada:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Cuadrado: diámetro (ancho)
+Circulo: ancho (base) y alto
+Triángulo: lado (ancho)
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo de ejecución:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>1-Circulo
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0-Cuadrado
+1-Circulo
 2-Triangulo
-3-Cuadrado
 Introduce figura:
-1
-Introduce diámetro (ancho) del círculo: 30
-El area es: 706.86
+0
+Introduce uno de los lados del cuadrado: 23
+El perímetro es: 92.00
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>tipo figura</code>, <code>ancho</code>, <code>[alto]</code></p>
-<ul>
-<li><code>Círculo</code>, <code>ancho</code></li>
-<li><code>Triángulo</code>, <code>ancho</code>, <code>alto</code></li>
-<li><code>Cuadrado</code>, <code>ancho</code></li>
-</ul>
 <p>Casos de prueba:</p>
 <table>
 <thead>
@@ -467,43 +557,30 @@ El area es: 706.86
 </thead>
 <tbody>
 <tr>
-<td align="center">1 30</td>
-<td align="center">El área es: 706.86</td>
+<td align="center">0 23</td>
+<td align="center">El perímetro es: 92.00</td>
 </tr>
 <tr>
-<td align="center">2 23 30</td>
-<td align="center">El área es: 345.00</td>
+<td align="center">1 100</td>
+<td align="center">El perímetro es: 314.16</td>
 </tr>
 <tr>
-<td align="center">3 20</td>
-<td align="center">El área es: 400.00</td>
+<td align="center">2 20 42 34</td>
+<td align="center">El perímetro es: 96.00</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
-<p>Implementa un programa que calcule la nota final de la asignatura. En primer lugar se debe solicitar la convocatoria, <code>'E'</code> si se trata de la de Enero o <code>'J'</code> si se trata de Julio. Si no se teclea ninguna de ellas, se mostrará un mensaje en el que se indique que es incorrecta.</p>
-<p>La nota final de la convocatoria de Enero se calcula tal y como está explicado en el ejercicio 4 de la práctica 1.La nota final de la convocatoria de Julio consiste en un único examen.</p>
-<p>Además de la nota numérica, deberá aparecer su descripción literal equivalente, teniendo en cuenta:</p>
-<ul>
-<li><code>0 &lt;= nota &lt; 5</code> ==&gt; SUSPENSO</li>
-<li><code>5 &lt;= nota &lt; 7</code> ==&gt; APROBADO</li>
-<li><code>7 &lt;= nota &lt; 9</code> ==&gt; NOTABLE</li>
-<li><code>nota &gt;= 9</code> ==&gt; SOBRESALIENTE</li>
-</ul>
+<p>Escribe un programa que pida un número de 4 cifras y lo redondee a la decena y/o centena más próxima. Ten en cuenta que el redondeo a la alza se produce cuando el siguiente dígito es mayor que 5.</p>
+<p>En primer lugar debes descomponer el número para obtener sus 4 cifras utilizando los operadores % y / (esto se hace de forma eficiente con un bucle, pero todavía no los hemos visto, así que hazlo de cifra en cifra). </p>
 <p>Ejemplo de ejecución:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Dime la convocatoria(E,J):E
-Introduce la nota del primer examen (temas 1 al 3): 7.3
-Introduce la nota del segundo examen (temas 1 al 6): 8.4
-Introduce la nota del tercer examen (temas 1 al 9): 6.5
-La nota final en la asignatura es: 7.28  NOTABLE
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce número de 4 cifras: 1247
+El número redondeado es: 1250
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>convocatoria</code>, <code>nota1</code>, <code>[nota2]</code>, <code>[nota3]</code></p>
+<p>Datos entrada: número de 4 cifras</p>
 <p>Casos de prueba:</p>
 <table>
 <thead>
@@ -514,25 +591,33 @@ La nota final en la asignatura es: 7.28  NOTABLE
 </thead>
 <tbody>
 <tr>
-<td align="center">E 7.3 8.4 6.5</td>
-<td align="center">La nota final en la asignatura es: 7.28  NOTABLE</td>
+<td align="center">2962</td>
+<td align="center">2962</td>
 </tr>
 <tr>
-<td align="center">J 9.3</td>
-<td align="center">La nota final en la asignatura es: 9.30  SOBRESALIENTE</td>
+<td align="center">1247</td>
+<td align="center">1250</td>
 </tr>
 <tr>
-<td align="center">E 4.5 3.7 2.5.</td>
-<td align="center">La nota final en la asignatura es: 3.22  SUSPENSO</td>
+<td align="center">1258</td>
+<td align="center">1300</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">La convocatoria introducida es incorrecta</td>
+<td align="center">1887.</td>
+<td align="center">1900</td>
+</tr>
+<tr>
+<td align="center">1847</td>
+<td align="center">1850</td>
+</tr>
+<tr>
+<td align="center">1486</td>
+<td align="center">1500</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Antonio Botía, Cristina Pomares</p>
                 
@@ -551,6 +636,27 @@ Antonio Botía, Cristina Pomares</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../practica01/practica01.html" title="Práctica 1: Tipos de datos simples" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Práctica 1: Tipos de datos simples
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
