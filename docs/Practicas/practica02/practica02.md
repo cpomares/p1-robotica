@@ -62,7 +62,7 @@ Escribe un programa que solicite por teclado una figura:
 
 Y calcule e imprima su perímetro correspondiente. Se deberá solicitar los datos necesarios de cada figura. 
 
-Utiliza `typedef` para definir un tipo enumerado llamado `TFigura` que contenga los identificadores `Cuadrado`, `Circulo` y `Triangulo`. El tipo `TFigura` puedes hacerlo fuera del `main` de forma global.
+Utiliza `typedef` para definir un tipo enumerado llamado `TFigura` que contenga los identificadores `Cuadrado`, `Circulo` y `Triangulo`. El tipo `TFigura` puedes hacerlo fuera del `main` de forma global. Para leer un tipo enumerado con `scanf` debes poner el formato `%u`, ya que se trata de un entero sin signo.
 
 Datos de entrada:
 

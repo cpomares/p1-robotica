@@ -558,7 +558,7 @@ Los códigos de formato o marcas se definen usando `%tipo`. Los más comunes son
 | %f        | float          | 
 | %lf       | double         | 
 | %ld       | long int       |
-| %u        | unsigned (enum)|
+| %u        | unsigned int (enum)|
 
 **Precisión**
 
