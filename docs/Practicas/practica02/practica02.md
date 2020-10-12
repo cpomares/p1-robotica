@@ -72,7 +72,7 @@ Circulo: diámetro
 Triángulo: base y altura 
 ~~~
 
-Ejemplo de ejecución:
+Ejemplos de ejecución con cada figura:
 
 ~~~text
 0-Cuadrado
@@ -82,6 +82,26 @@ Introduce figura:
 0
 Introduce uno de los lados del cuadrado: 23
 El perímetro es: 92.00
+~~~
+
+~~~text
+0-Cuadrado
+1-Circulo
+2-Triangulo
+Introduce figura:
+1
+Introduce diámetro del círculo: 56
+El perímetro es: 175.93
+~~~
+
+~~~text
+0-Cuadrado
+1-Circulo
+2-Triangulo
+Introduce figura:
+2
+Introduce los tres lados del triángulo: 12 32 55
+El perímetro es: 99.00
 ~~~
 
 Casos de prueba:
