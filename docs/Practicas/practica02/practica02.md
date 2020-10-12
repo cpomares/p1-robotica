@@ -67,9 +67,9 @@ Utiliza `typedef` para definir un tipo enumerado llamado `TFigura` que contenga 
 Datos de entrada:
 
 ~~~text
-Cuadrado: diámetro (ancho)
-Circulo: ancho (base) y alto
-Triángulo: lado (ancho)
+Cuadrado: lado
+Circulo: diámetro
+Triángulo: base y altura 
 ~~~
 
 Ejemplo de ejecución:
@@ -99,6 +99,8 @@ Escribe un programa que pida un número de 4 cifras y lo redondee a la decena y/
 
 En primer lugar debes descomponer el número para obtener sus 4 cifras utilizando los operadores % y / (esto se hace de forma eficiente con un bucle, pero todavía no los hemos visto, así que hazlo de cifra en cifra). 
 
+Algoritmo redondeo: En primer lugar se mira la unidad. Si es mayor que 5 (no igual), se incrementa la decena. Y a continuación se mira la decena, si es mayor que 5 (no igual) se incrementa la centena.
+
 Ejemplo de ejecución:
 
 ~~~text
@@ -115,7 +117,7 @@ Casos de prueba:
 | 2962             | 2962  |
 | 1247            | 1250 |
 | 1258       | 1300  |
-| 1887.      | 1900 |
+| 1887       | 1900 |
 | 1847       | 1850 |
 | 1486       | 1500 |
 
