@@ -412,8 +412,8 @@ ___
 
 ## 3. Estructuras de iteración
 
-Un **bucle** es una estructura de programación formada por una secuencia de sentencias, denominada **cuerpo del bucle**, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una **iteración**. El número de veces que se ejecuta el cuerpo del bucle está controlado por una **condición** (expresión lógica).
-  Por lo tanto, a la hora de diseñar e implementar un bucle, hayque tener en cuenta dos aspectos:
+Un **bucle** es una estructura de programación formada por una secuencia de instrucciones, denominada **cuerpo del bucle**, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una **iteración**. El número de veces que se ejecuta el cuerpo del bucle está controlado por una **condición** (expresión lógica).
+Por lo tanto, a la hora de diseñar e implementar un bucle, hay que tener en cuenta dos aspectos:
 
 - El cuerpo del bucle- Cuántas veces debe iterarse el cuerpo del bucle
 
@@ -426,7 +426,7 @@ Se pueden agrupar en dos tipos, dependiendo si conocemos de antemano el número 
 
 ### Bucle `while`
 
-Permite repetir **cero** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
+Permite repetir **cero o más veces** la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
 **Sintaxis:**
 
@@ -463,7 +463,7 @@ scanf("%c", &res);
 while (res == 'S' || res == 's') {
    caramelos = caramelos + 1;
    printf("¿Quieres otro caramelo? (s/n):");
-   scanf("\n%c", &res); //"\n" es para que res ignore el intro
+   scanf("\n%c", &res); //"\n" es para que se ignore el intro
 } // fin de la sentencia while
 
 printf("Te he dado %d caramelos\n", caramelos);
@@ -471,7 +471,7 @@ printf("Te he dado %d caramelos\n", caramelos);
 
 ### Bucle `do-while`
 
-Permite repetir **una** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
+Permite repetir **una o más veces** la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
 **Sintaxis**:
 
@@ -571,7 +571,7 @@ while(i < 10) {
 }
 ~~~
 
-Pero hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:
+Hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:
 
 - Si el cuerpo del bucle (secuencia de instrucciones) se tiene que ejecutar al menos una vez: `do-while`
 - Si no (0 ó más veces):
