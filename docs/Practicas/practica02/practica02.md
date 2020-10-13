@@ -69,7 +69,7 @@ Datos de entrada:
 ~~~text
 Cuadrado: lado
 Circulo: diámetro
-Triángulo: base y altura 
+Triángulo: tres lados 
 ~~~
 
 Ejemplos de ejecución con cada figura:
