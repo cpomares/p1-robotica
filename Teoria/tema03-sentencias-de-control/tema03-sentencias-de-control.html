@@ -1246,9 +1246,8 @@ otro caso se evalúa la <code>expresión3</code>.</p>
 </ol>
 <hr />
 <h2 id="3-estructuras-de-iteracion">3. Estructuras de iteración<a class="headerlink" href="#3-estructuras-de-iteracion" title="Permanent link">&para;</a></h2>
-<p>Un <strong>bucle</strong> es una estructura de programación formada por una secuencia de sentencias, denominada <strong>cuerpo del bucle</strong>, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una <strong>iteración</strong>. El número de veces que se ejecuta el cuerpo del bucle está controlado por una <strong>condición</strong> (expresión lógica).</p>
-<p>Por lo tanto, a la hora de diseñar e implementar un bucle, hay
-que tener en cuenta dos aspectos:</p>
+<p>Un <strong>bucle</strong> es una estructura de programación formada por una secuencia de instrucciones, denominada <strong>cuerpo del bucle</strong>, que se puede repetir varias veces. Cada ejecución del cuerpo del bucle es una <strong>iteración</strong>. El número de veces que se ejecuta el cuerpo del bucle está controlado por una <strong>condición</strong> (expresión lógica).</p>
+<p>Por lo tanto, a la hora de diseñar e implementar un bucle, hay que tener en cuenta dos aspectos:</p>
 <ul>
 <li>El cuerpo del bucle</li>
 <li>Cuántas veces debe iterarse el cuerpo del bucle</li>
@@ -1260,7 +1259,7 @@ que tener en cuenta dos aspectos:</p>
 <li>Bucles <strong>indeterminados</strong>: No sabemos de antemano cuántas iteraciones se realizarán. Es el caso de los bucles <code>while</code>y <code>do-while</code></li>
 </ul>
 <h3 id="bucle-while">Bucle <code>while</code><a class="headerlink" href="#bucle-while" title="Permanent link">&para;</a></h3>
-<p>Permite repetir <strong>cero</strong> o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.</p>
+<p>Permite repetir <strong>cero o más veces</strong> la ejecución de una secuencia de sentencias mientras la condición sea verdadera.</p>
 <p><strong>Sintaxis:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1311,7 +1310,7 @@ que tener en cuenta dos aspectos:</p>
 <span class="k">while</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span> <span class="o">||</span> <span class="n">res</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">caramelos</span> <span class="o">=</span> <span class="n">caramelos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;¿Quieres otro caramelo? (s/n):&quot;</span><span class="p">);</span>
-   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">res</span><span class="p">);</span> <span class="c1">//&quot;\n&quot; es para que res ignore el intro</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">res</span><span class="p">);</span> <span class="c1">//&quot;\n&quot; es para que se ignore el intro</span>
 <span class="p">}</span> <span class="c1">// fin de la sentencia while</span>
 
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Te he dado %d caramelos</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">caramelos</span><span class="p">);</span>
@@ -1319,7 +1318,7 @@ que tener en cuenta dos aspectos:</p>
 </td></tr></table>
 
 <h3 id="bucle-do-while">Bucle <code>do-while</code><a class="headerlink" href="#bucle-do-while" title="Permanent link">&para;</a></h3>
-<p>Permite repetir <strong>una</strong> o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.</p>
+<p>Permite repetir <strong>una o más veces</strong> la ejecución de una secuencia de sentencias mientras la condición sea verdadera.</p>
 <p><strong>Sintaxis</strong>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1444,7 +1443,7 @@ que tener en cuenta dos aspectos:</p>
 </pre></div>
 </td></tr></table>
 
-<p>Pero hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:</p>
+<p>Hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay que usar:</p>
 <ul>
 <li>Si el cuerpo del bucle (secuencia de instrucciones) se tiene que ejecutar al menos una vez: <code>do-while</code></li>
 <li>Si no (0 ó más veces):</li>
