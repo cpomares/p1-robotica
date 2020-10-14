@@ -5,7 +5,7 @@
 ## 1. Sentencias de control
 
  El **flujo de ejecución de un programa** define el orden que siguen las sentencias durante la ejecución del mismo.
- 
+
 En un determinado instante, el **estado de un programa** queda definido por el valor que tienen sus variables en ese momento. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es **imprescindible realizar las sentencias adecuadas en el orden adecuado**.
 
 La **estructura secuencial** es aquella en la que las instrucciones o sentencias se ejecutan una a una en el orden establecido.
@@ -577,6 +577,8 @@ Hay que utilizar siempre el bucle adecuado. Para saber qué tipo de bucle hay qu
 - Si no (0 ó más veces):
    - Si no sabemos de antemano el número de iteraciones: `while`
    - Si sabemos el número de iteraciones (usamos un contador): `for`
+- Si hay más de una condición de parada, se suele usar un `while` o un `do-while` por claridad.
+
 
 ### Variables en los bucles
 
