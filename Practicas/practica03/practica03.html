@@ -371,54 +371,8 @@
                 
                 <h1 id="practica-3-sentencias-de-iteracion">Práctica 3: Sentencias de iteración<a class="headerlink" href="#practica-3-sentencias-de-iteracion" title="Permanent link">&para;</a></h1>
 <h3 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h3>
-<p>Escribe un programa que invierta los dígitos de un entero positivo solicitado por teclado (hay que validar el dato) y lo almacene en una variable. La variable que contiene el número invertido se mostrará por pantalla posteriormente.</p>
-<p>Para obtener el número invertido, de debe empezar en el número 0 e ir añadiéndole las cifras por la derecha:</p>
-<ol>
-<li>Obtener el último dígito</li>
-<li>Añadirlo al número invertido (tener en cuenta las decenas, centenas, etc).</li>
-<li>Reducir en un dígito el número original</li>
-</ol>
-<p>Se repetirá este proceso hasta que el número original no tenga dígitos. </p>
-<p>Pista: debes usar las operaciones <code>/10</code>  <code>%10</code>  <code>*10</code>.</p>
-<p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un numero positivo:123456
-El número invertido es: 654321
-</pre></div>
-</td></tr></table>
-
-<p>Datos de entrada:  <code>número positivo</code></p>
-<p><strong>Casos de prueba:</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">Datos de entrada</th>
-<th align="center">Salida por pantalla</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">-321</td>
-<td align="center">se vuelve a solicitar</td>
-</tr>
-<tr>
-<td align="center">123456</td>
-<td align="center">654321</td>
-</tr>
-<tr>
-<td align="center">21334111</td>
-<td align="center">11143312</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h3>
-<p>Implementa un programa que calcule el resultado acumulado de aplicar sucesivas operaciones aritméticas. El programa inicialmente solicitará un número entero y a continuación irá solicitando un operador aritmético y el siguiente operando, acumulando el resultado para la siguiente operación.</p>
-<p>Los operadores aritméticos permitidos serán ‘+’, ‘-‘, ‘*’, ‘/‘. En caso de introducir un operador incorrecto, se volverá a pedir. El programa deberá terminar cuando el carácter introducido como operador sea un punto ‘.’
-Hay que tener en cuenta que no se puede hacer una división por cero, en cuyo caso se mostrará el mensaje “Error: división por cero” y se solicitará la siguiente operación a realizar.</p>
+<p>Escribe un programa que solicite un número <code>n</code> impar y positivo, validando el dato, y muestre una matriz de <code>nxn</code> tal y como muestra el ejemplo:</p>
+<p>Datos de entrada:  <code>número impar positivo</code></p>
 <p><strong>Ejemplo de ejecución:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -426,37 +380,29 @@ Hay que tener en cuenta que no se puede hacer una división por cero, en cuyo ca
 4
 5
 6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 4
-Introduce operador aritmético (&#39;.&#39; para terminar): +
-Introduce un número: 6
-El resultado parcial acumulado es: 10
-Introduce operador aritmético (&#39;.&#39; para terminar): /
-Introduce un número: 5
-El resultado parcial acumulado es: 2
-Introduce operador aritmético (&#39;.&#39; para terminar): .
-El resultado final acumulado es: 2
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un num impar positivo: 5
+
+ 1   6  11  16  21
+ 2   7  12  17  22
+ 3   8  13  18  23
+ 4   9  14  19  24
+ 5  10  15  20  25
 </pre></div>
 </td></tr></table>
 
 <p><strong>Casos de prueba:</strong></p>
 <ul>
-<li>Datos de entrada: <code>25 .</code></li>
-<li>
-<p>Resultado esperado (salida por pantalla):</p>
+<li>Datos de entrada:</li>
+</ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 25
-Introduce operador aritmético (&#39;.&#39; para terminar): .
-El resultado final acumulado es: 25
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>2
+-5
+7
 </pre></div>
 </td></tr></table>
 
-</li>
-<li>
-<p>Datos de entrada: <code>34 - 14 / 0 .</code></p>
-</li>
+<ul>
 <li>
 <p>Resultado esperado (salida por pantalla):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -469,98 +415,106 @@ El resultado final acumulado es: 25
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 34
-Introduce operador aritmético (&#39;.&#39; para terminar): -
-Introduce un número: 14
-El resultado parcial acumulado es: 20
-Introduce operador aritmético (&#39;.&#39; para terminar): %
-Introduce operador aritmético (&#39;.&#39; para terminar): /
-Introduce un número: 0
-Error: división por cero
-El resultado parcial acumulado es: 20
-Introduce operador aritmético (&#39;.&#39; para terminar): .
-El resultado final acumulado es: 20
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un num impar positivo: 2
+Introduce un num impar positivo: -5
+Introduce un num impar positivo: 7
+
+ 1   8  15  22  29  36  43
+ 2   9  16  23  30  37  44
+ 3  10  17  24  31  38  45
+ 4  11  18  25  32  39  46
+ 5  12  19  26  33  40  47
+ 6  13  20  27  34  41  48
+ 7  14  21  28  35  42  49
+</pre></div>
+</td></tr></table>
+
+</li>
+</ul>
+<h3 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h3>
+<p>Escribe un programa que calcule todos los números en un intervalo (el segundo número mayor que el primero) tales que la suma de los cubos de sus cifras sea igual al valor del número. </p>
+<p>Puedes usar la función <code>pow</code>de la librería <code>math.h</code>para calcular la potencia de un número: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cuadrado</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">numero</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// Cuadrado de un número</span>
+</pre></div>
+</td></tr></table>
+
+<p><strong>Ejemplo de ejecución:</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce intervalo: 100 999
+
+153 370 371 407
+</pre></div>
+</td></tr></table>
+
+<p>Datos de entrada: <code>dos números: intervalo</code></p>
+<p><strong>Casos de prueba:</strong></p>
+<ul>
+<li>
+<p>Datos de entrada: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>100 400
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Resultado esperado (salida por pantalla):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce intervalo: 100 400
+
+153 370 
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Datos de entrada: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>999 400
+400 999
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Resultado esperado (salida por pantalla):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce intervalo: 999 400
+Introduce intervalo: 400 999
+
+407
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Datos de entrada: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0 30000
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Resultado esperado (salida por pantalla):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce intervalo: 0 30000
+0 1 153 370 371 407
 </pre></div>
 </td></tr></table>
 
 </li>
 </ul>
 <h3 id="ejercicio-3">Ejercicio 3<a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h3>
-<p>Escribe un programa que pida un número positivo e impar (hay que validar el dato), y en base a él imprima la figura que se indica en el ejemplo. El número máximo de columnas siempre es fijo: 4.</p>
-<p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 7
-1
-1       2
-1       2       3
-1       2       3       4
-1       2       3
-1       2
-1
-</pre></div>
-</td></tr></table>
-
-<p>Datos de entrada: <code>número impar</code></p>
-<p><strong>Casos de prueba:</strong></p>
-<ul>
-<li>Datos de entrada: <code>5</code></li>
-<li>
-<p>Resultado esperado (salida por pantalla):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 5
-1
-1       2
-1       2       3
-1       2
-1
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Datos de entrada: <code>9</code></p>
-</li>
-<li>
-<p>Resultado esperado (salida por pantalla):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un número: 9
-1
-1       2
-1       2       3
-1       2       3       4
-1       2       3       4
-1       2       3       4
-1       2       3
-1       2
-1
-</pre></div>
-</td></tr></table>
-
-</li>
-</ul>
-<h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
-<p>Implementa un programa que dibuje en pantalla el número 10 con un alto y ancho especificado. Inicialmente se pedirá el alto y ancho cuyos valores deben están incluidos en los intervalos [15..30] y [8..20] respectivamente. Se validarán dichos valores introducidos y cuando sean correctos, se procederá a dibujar el número 10.
-Utilizaremos ‘#’ como carácter de relleno, y ‘.’ como carácter de fondo (en vez de usar el carácter blanco ‘ ‘).
-Los dos dígitos estarán espaciados por 5 caracteres.
-Para dibujar la diagonal del número 1, usaremos la mitad del ancho especificado.</p>
+<p>Implementa un programa que vaya pidiendo una pareja de datos, un carácter y un número entero, y para cada pareja imprima en una línea el carácter (si es una letra minúscula o mayúscula) tantas veces como indique el número indicado, o si el carácter es un dígito, imprima en la línea los números consecutivos desde dicho dígito hasta el número indicado como segundo dato de la pareja.</p>
+<p>Si el primer dato de la pareja no es una letra o un dígito, se debe imprimir un mensaje de error (ver ejemplo de ejecución) y se volverá a pedir otra pareja.</p>
+<p>Si el número indicado como segundo dato no es positivo, entonces se imprimirá una línea en blanco y el programa finalizará.</p>
+<p>Suponemos que el usuario siempre introducirá una pareja de datos formada por un carácter seguido de un número entero.</p>
+<p>Ayuda: Para pasar de un carácter dígito a su correspondiente representación de número entero, puedes realizar la siguiente operación, en donde se usa los códigos ASCII de los caracteres:</p>
+<p><code>num = caracter - '0';</code></p>
+<p>Por ejemplo si carácter tiene el valor <code>'6'</code>, a la variable num se le asignará el valor numérico <code>6</code>.</p>
 <p><strong>Ejemplo de ejecución:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -572,36 +526,88 @@ Para dibujar la diagonal del número 1, usaremos la mitad del ancho especificado
  8
  9
 10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce alto [15..30] y ancho [8..20] de los números: 15 10
-....#.....##########
-...##.....#........#
-..#.#.....#........#
-.#..#.....#........#
-#...#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....##########
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un carácter y un número: a 12
+aaaaaaaaaaaa
+Introduce un carácter y un número: B 54
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+Introduce un carácter y un número: * 4
+Error: no has introducido una letra o un dígito en el primer dato
+Introduce un carácter y un número: 3 23
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 
+Introduce un carácter y un número: 7 4
+
+Introduce un carácter y un número: t 0
 </pre></div>
 </td></tr></table>
 
-<p>Datos de entrada: <code>dos números enteros</code></p>
+<p>Datos de entrada: <code>carácter y número</code></p>
 <p><strong>Casos de prueba:</strong></p>
 <ul>
-<li>Datos de entrada: <code>20 5</code> <code>20 8</code></li>
+<li>
+<p>Datos de entrada: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 10
+3 6
+z 10
+w 0
+</pre></div>
+</td></tr></table>
+
+</li>
 <li>
 <p>Resultado esperado (salida por pantalla):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un carácter y un número: 4 10
+4 5 6 7 8 9 10 
+Introduce un carácter y un número: 3 6
+3 4 5 6 
+Introduce un carácter y un número: z 10
+zzzzzzzzzz
+Introduce un carácter y un número: w 0
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Datos de entrada: </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>h 5
+h 10
+h -1
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Resultado esperado (salida por pantalla):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce un carácter y un número: h 5
+hhhhh
+Introduce un carácter y un número: h 10
+hhhhhhhhhh
+Introduce un carácter y un número: h -1
+</pre></div>
+</td></tr></table>
+
+</li>
+</ul>
+<h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
+<p>Implementa un programa que contabilice la asistencia a los grupos de prácticas de una determinada asignatura.</p>
+<p>La asignatura tiene 4 grupos y cada grupo un mismo número de alumnos matriculados que se deberá indicar previamente.</p>
+<p>El usuario deberá introducir si cada uno de los alumnos de los distintos grupos han asistido o no a clase. Para indicar si ha asistido, se deberá introducir el carácter ’s’ o ’S’. Con cualquier otro carácter introducido se considerará que no ha asistido.</p>
+<p>Después de introducir todos los datos, el programa mostrará un mensaje indicando cuál ha sido el grupo con mayor asistencia y el porcentaje de la misma (ver ejemplo de ejecución). En caso de que haya varios grupos con la misma asistencia, mostraremos el primero de ellos.</p>
+<p><strong>Ejemplo de ejecución:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -623,75 +629,43 @@ Para dibujar la diagonal del número 1, usaremos la mitad del ancho especificado
 19
 20
 21
-22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce alto [15..30] y ancho [8..20] de los números: 20 5
-Introduce alto [15..30] y ancho [8..20] de los números: 20 8
-...#.....########
-..##.....#......#
-.#.#.....#......#
-#..#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....#......#
-...#.....########
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce el número de alumnos por grupo: 5
+Asistencia del grupo 1:
+Alumno 1 asiste? (s/n): s
+Alumno 2 asiste? (s/n): s
+Alumno 3 asiste? (s/n): n
+Alumno 4 asiste? (s/n): n
+Alumno 5 asiste? (s/n): n
+Asistencia del grupo 2:
+Alumno 1 asiste? (s/n): s
+Alumno 2 asiste? (s/n): S
+Alumno 3 asiste? (s/n): S
+Alumno 4 asiste? (s/n): s
+Alumno 5 asiste? (s/n): n
+Asistencia del grupo 3:
+Alumno 1 asiste? (s/n): a
+Alumno 2 asiste? (s/n): s
+Alumno 3 asiste? (s/n): d
+Alumno 4 asiste? (s/n): f
+Alumno 5 asiste? (s/n): g
+Asistencia del grupo 4:
+Alumno 1 asiste? (s/n): n
+Alumno 2 asiste? (s/n): n
+Alumno 3 asiste? (s/n): n
+Alumno 4 asiste? (s/n): s
+Alumno 5 asiste? (s/n): s
+El grupo 2 ha tenido mayor asistencia, un 80.00%
 </pre></div>
 </td></tr></table>
 
-</li>
-<li>
-<p>Datos de entrada: <code>15 20</code></p>
-</li>
-<li>
-<p>Resultado esperado (salida por pantalla):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce alto [15..30] y ancho [8..20] de los números: 15  20
-.........#.....####################
-........##.....#..................#
-.......#.#.....#..................#
-......#..#.....#..................#
-.....#...#.....#..................#
-....#....#.....#..................#
-...#.....#.....#..................#
-..#......#.....#..................#
-.#.......#.....#..................#
-#........#.....#..................#
-.........#.....#..................#
-.........#.....#..................#
-.........#.....#..................#
-.........#.....#..................#
-.........#.....####################
-</pre></div>
-</td></tr></table>
-
-</li>
-</ul>
+<p><strong>Casos de prueba:</strong></p>
+<p><img src="imagenes/ejer4.png" width="600px"/></p>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Antonio Botía, Cristina Pomares</p>
                 
