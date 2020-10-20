@@ -11,6 +11,7 @@ nav:
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
    - 'Práctica 2: Sentencias de selección': 'Practicas/practica02/practica02.md'
+   - 'Práctica 3: Sentencias de iteración': 'Practicas/practica03/practica03.md'
 theme:
     language: es
     name: 'material'

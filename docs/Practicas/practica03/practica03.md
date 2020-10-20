@@ -2,224 +2,240 @@
 
 ### Ejercicio 1 ###
 
-Escribe un programa que invierta los dígitos de un entero positivo solicitado por teclado (hay que validar el dato) y lo almacene en una variable. La variable que contiene el número invertido se mostrará por pantalla posteriormente.
+Escribe un programa que solicite un número `n` impar y positivo, validando el dato, y muestre una matriz de `nxn` tal y como muestra el ejemplo:
 
-Para obtener el número invertido, de debe empezar en el número 0 e ir añadiéndole las cifras por la derecha:
-
-1. Obtener el último dígito
-2. Añadirlo al número invertido (tener en cuenta las decenas, centenas, etc).
-3. Reducir en un dígito el número original
-
-Se repetirá este proceso hasta que el número original no tenga dígitos. 
-
-Pista: debes usar las operaciones `/10`  `%10`  `*10`.
+Datos de entrada:  `número impar positivo`
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce un numero positivo:123456
-El número invertido es: 654321
-~~~
+Introduce un num impar positivo: 5
 
-Datos de entrada:  `número positivo`
+ 1   6  11  16  21
+ 2   7  12  17  22
+ 3   8  13  18  23
+ 4   9  14  19  24
+ 5  10  15  20  25
+~~~
 
 **Casos de prueba:**
 
-| Datos de entrada | Salida por pantalla |      
-|:----------------:|:-------------------:|
-|  -321            | se vuelve a solicitar |
-|  123456          | 654321   |   
-|  21334111        | 11143312 |   
-|  1               | 1        |
+- Datos de entrada:
+
+~~~text
+2
+-5
+7
+~~~
+ 
+- Resultado esperado (salida por pantalla):
+
+    ~~~text
+    Introduce un num impar positivo: 2
+    Introduce un num impar positivo: -5
+    Introduce un num impar positivo: 7
+      
+     1   8  15  22  29  36  43
+     2   9  16  23  30  37  44
+     3  10  17  24  31  38  45
+     4  11  18  25  32  39  46
+     5  12  19  26  33  40  47
+     6  13  20  27  34  41  48
+     7  14  21  28  35  42  49
+    ~~~
 
 
 ### Ejercicio 2 ###
 
-Implementa un programa que calcule el resultado acumulado de aplicar sucesivas operaciones aritméticas. El programa inicialmente solicitará un número entero y a continuación irá solicitando un operador aritmético y el siguiente operando, acumulando el resultado para la siguiente operación.
+Escribe un programa que calcule todos los números en un intervalo (el segundo número mayor que el primero) tales que la suma de los cubos de sus cifras sea igual al valor del número. 
 
-Los operadores aritméticos permitidos serán ‘+’, ‘-‘, ‘*’, ‘/‘. En caso de introducir un operador incorrecto, se volverá a pedir. El programa deberá terminar cuando el carácter introducido como operador sea un punto ‘.’
-Hay que tener en cuenta que no se puede hacer una división por cero, en cuyo caso se mostrará el mensaje “Error: división por cero” y se solicitará la siguiente operación a realizar.
+Puedes usar la función `pow`de la librería `math.h`para calcular la potencia de un número: 
+
+~~~c
+cuadrado = pow(numero, 2);  // Cuadrado de un número
+~~~
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce un número: 4
-Introduce operador aritmético ('.' para terminar): +
-Introduce un número: 6
-El resultado parcial acumulado es: 10
-Introduce operador aritmético ('.' para terminar): /
-Introduce un número: 5
-El resultado parcial acumulado es: 2
-Introduce operador aritmético ('.' para terminar): .
-El resultado final acumulado es: 2
+Introduce intervalo: 100 999
+
+153 370 371 407
 ~~~
+
+Datos de entrada: `dos números: intervalo`
 
 **Casos de prueba:**
 
-- Datos de entrada: `25 .`
-- Resultado esperado (salida por pantalla):
-
+- Datos de entrada: 
+    
     ~~~text
-    Introduce un número: 25
-    Introduce operador aritmético ('.' para terminar): .
-    El resultado final acumulado es: 25
+    100 400
     ~~~
 
-- Datos de entrada: `34 - 14 / 0 .`
 - Resultado esperado (salida por pantalla):
 
     ~~~text
-    Introduce un número: 34
-    Introduce operador aritmético ('.' para terminar): -
-    Introduce un número: 14
-    El resultado parcial acumulado es: 20
-    Introduce operador aritmético ('.' para terminar): %
-    Introduce operador aritmético ('.' para terminar): /
-    Introduce un número: 0
-    Error: división por cero
-    El resultado parcial acumulado es: 20
-    Introduce operador aritmético ('.' para terminar): .
-    El resultado final acumulado es: 20
+    Introduce intervalo: 100 400
+
+    153 370 
+    ~~~
+
+- Datos de entrada: 
+    
+    ~~~text
+    999 400
+    400 999
+    ~~~
+
+- Resultado esperado (salida por pantalla):
+
+    ~~~text
+    Introduce intervalo: 999 400
+    Introduce intervalo: 400 999
+    
+    407
+    ~~~
+    
+- Datos de entrada: 
+
+    ~~~text
+    0 30000
+    ~~~
+
+- Resultado esperado (salida por pantalla):
+    
+    ~~~text
+    Introduce intervalo: 0 30000
+    0 1 153 370 371 407
     ~~~
 
 ### Ejercicio 3 ###
 
-Escribe un programa que pida un número positivo e impar (hay que validar el dato), y en base a él imprima la figura que se indica en el ejemplo. El número máximo de columnas siempre es fijo: 4.
+Implementa un programa que vaya pidiendo una pareja de datos, un carácter y un número entero, y para cada pareja imprima en una línea el carácter (si es una letra minúscula o mayúscula) tantas veces como indique el número indicado, o si el carácter es un dígito, imprima en la línea los números consecutivos desde dicho dígito hasta el número indicado como segundo dato de la pareja.
+
+Si el primer dato de la pareja no es una letra o un dígito, se debe imprimir un mensaje de error (ver ejemplo de ejecución) y se volverá a pedir otra pareja.
+
+Si el número indicado como segundo dato no es positivo, entonces se imprimirá una línea en blanco y el programa finalizará.
+
+Suponemos que el usuario siempre introducirá una pareja de datos formada por un carácter seguido de un número entero.
+
+Ayuda: Para pasar de un carácter dígito a su correspondiente representación de número entero, puedes realizar la siguiente operación, en donde se usa los códigos ASCII de los caracteres:
+
+`num = caracter - '0';`
+
+Por ejemplo si carácter tiene el valor `'6'`, a la variable num se le asignará el valor numérico `6`.
+
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce un número: 7
-1
-1       2
-1       2       3
-1       2       3       4
-1       2       3
-1       2
-1
+Introduce un carácter y un número: a 12
+aaaaaaaaaaaa
+Introduce un carácter y un número: B 54
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+Introduce un carácter y un número: * 4
+Error: no has introducido una letra o un dígito en el primer dato
+Introduce un carácter y un número: 3 23
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 
+Introduce un carácter y un número: 7 4
+
+Introduce un carácter y un número: t 0
 ~~~
 
-Datos de entrada: `número impar`
+Datos de entrada: `carácter y número`
 
 **Casos de prueba:**
 
-- Datos de entrada: `5`
+- Datos de entrada: 
+
+    ~~~text
+    4 10
+    3 6
+    z 10
+    w 0
+    ~~~
+    
 - Resultado esperado (salida por pantalla):
 
     ~~~text
-    Introduce un número: 5
-    1
-    1       2
-    1       2       3
-    1       2
-    1
+    Introduce un carácter y un número: 4 10
+    4 5 6 7 8 9 10 
+    Introduce un carácter y un número: 3 6
+    3 4 5 6 
+    Introduce un carácter y un número: z 10
+    zzzzzzzzzz
+    Introduce un carácter y un número: w 0
     ~~~
 
-- Datos de entrada: `9`
+- Datos de entrada: 
+
+    ~~~text
+    h 5
+    h 10
+    h -1
+    ~~~
+    
 - Resultado esperado (salida por pantalla):
 
     ~~~text
-    Introduce un número: 9
-    1
-    1       2
-    1       2       3
-    1       2       3       4
-    1       2       3       4
-    1       2       3       4
-    1       2       3
-    1       2
-    1
+    Introduce un carácter y un número: h 5
+    hhhhh
+    Introduce un carácter y un número: h 10
+    hhhhhhhhhh
+    Introduce un carácter y un número: h -1
     ~~~
 
 
 ### Ejercicio 4 ###
 
-Implementa un programa que dibuje en pantalla el número 10 con un alto y ancho especificado. Inicialmente se pedirá el alto y ancho cuyos valores deben están incluidos en los intervalos [15..30] y [8..20] respectivamente. Se validarán dichos valores introducidos y cuando sean correctos, se procederá a dibujar el número 10.
-Utilizaremos ‘#’ como carácter de relleno, y ‘.’ como carácter de fondo (en vez de usar el carácter blanco ‘ ‘).
-Los dos dígitos estarán espaciados por 5 caracteres.
-Para dibujar la diagonal del número 1, usaremos la mitad del ancho especificado.
+Implementa un programa que contabilice la asistencia a los grupos de prácticas de una determinada asignatura.
+
+La asignatura tiene 4 grupos y cada grupo un mismo número de alumnos matriculados que se deberá indicar previamente.
+
+El usuario deberá introducir si cada uno de los alumnos de los distintos grupos han asistido o no a clase. Para indicar si ha asistido, se deberá introducir el carácter ’s’ o ’S’. Con cualquier otro carácter introducido se considerará que no ha asistido.
+
+Después de introducir todos los datos, el programa mostrará un mensaje indicando cuál ha sido el grupo con mayor asistencia y el porcentaje de la misma (ver ejemplo de ejecución). En caso de que haya varios grupos con la misma asistencia, mostraremos el primero de ellos.
 
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce alto [15..30] y ancho [8..20] de los números: 15 10
-....#.....##########
-...##.....#........#
-..#.#.....#........#
-.#..#.....#........#
-#...#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....#........#
-....#.....##########
-
+Introduce el número de alumnos por grupo: 5
+Asistencia del grupo 1:
+Alumno 1 asiste? (s/n): s
+Alumno 2 asiste? (s/n): s
+Alumno 3 asiste? (s/n): n
+Alumno 4 asiste? (s/n): n
+Alumno 5 asiste? (s/n): n
+Asistencia del grupo 2:
+Alumno 1 asiste? (s/n): s
+Alumno 2 asiste? (s/n): S
+Alumno 3 asiste? (s/n): S
+Alumno 4 asiste? (s/n): s
+Alumno 5 asiste? (s/n): n
+Asistencia del grupo 3:
+Alumno 1 asiste? (s/n): a
+Alumno 2 asiste? (s/n): s
+Alumno 3 asiste? (s/n): d
+Alumno 4 asiste? (s/n): f
+Alumno 5 asiste? (s/n): g
+Asistencia del grupo 4:
+Alumno 1 asiste? (s/n): n
+Alumno 2 asiste? (s/n): n
+Alumno 3 asiste? (s/n): n
+Alumno 4 asiste? (s/n): s
+Alumno 5 asiste? (s/n): s
+El grupo 2 ha tenido mayor asistencia, un 80.00%
 ~~~
 
-Datos de entrada: `dos números enteros`
 
 **Casos de prueba:**
 
-- Datos de entrada: `20 5` `20 8`
-- Resultado esperado (salida por pantalla):
-
-    ~~~text
-    Introduce alto [15..30] y ancho [8..20] de los números: 20 5
-    Introduce alto [15..30] y ancho [8..20] de los números: 20 8
-    ...#.....########
-    ..##.....#......#
-    .#.#.....#......#
-    #..#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....#......#
-    ...#.....########
-    ~~~
-
-- Datos de entrada: `15 20`
-- Resultado esperado (salida por pantalla):
-
-
-    ~~~text    
-    Introduce alto [15..30] y ancho [8..20] de los números: 15  20
-    .........#.....####################
-    ........##.....#..................#
-    .......#.#.....#..................#
-    ......#..#.....#..................#
-    .....#...#.....#..................#
-    ....#....#.....#..................#
-    ...#.....#.....#..................#
-    ..#......#.....#..................#
-    .#.......#.....#..................#
-    #........#.....#..................#
-    .........#.....#..................#
-    .........#.....#..................#
-    .........#.....#..................#
-    .........#.....#..................#
-    .........#.....####################
-    ~~~
-
+<img src="imagenes/ejer4.png" width="600px"/>
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares
