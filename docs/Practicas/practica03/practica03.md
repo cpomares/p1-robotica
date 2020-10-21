@@ -78,7 +78,7 @@ Datos de entrada: `dos números: intervalo`
     ~~~text
     Introduce intervalo: 100 400
 
-    153 370 
+    153 370 371
     ~~~
 
 - Datos de entrada: 
