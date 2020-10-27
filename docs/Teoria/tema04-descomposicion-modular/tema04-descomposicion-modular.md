@@ -1,7 +1,7 @@
 
 # Tema 4: Descomposición modular
 
-## 1. Descomposición modular 
+## 1. Descomposición modular
 
 Ya hemos visto que en C se utilizan funciones de biblioteca (como `printf` o `scanf`). También hemos utilizado la función `main`, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.
 
@@ -9,7 +9,7 @@ El uso de funciones definidas por el programador permite dividir un programa gra
 
 Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función `main` instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).
 
-Una de las habilidades fundamentales del pensamiento computacional es la **abstracción**: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones). Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.
+Una de las habilidades fundamentales del pensamiento computacional es la **abstracción**: dividir un problema grande en pequeños problemas donde sea más fácil de manejar. Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.
 
 Ventajas de modularizar un programa:
 
@@ -88,7 +88,7 @@ Ejemplo: ¿Qué salida produce el siguiente programa para un determinado valor d
 ~~~c
 #include<stdio.h>
 
-int f (int x);  // Prototipo o declaración de la función f
+int f(int x);  // Prototipo o declaración de la función f
 
 void main() {
    int num1, num2 num3;
@@ -96,16 +96,16 @@ void main() {
    printf("\n- Introduzca un número: ");
    scanf("%d", &num1);
 
-   num2 = f(5);
-   num2 = f(num1) + num1 - num2;
-   num3 = f(num2+1);
+   num2 = f(5);  // Llamada a la función f
+   num2 = f(num1) + num1 - num2; // Llamada a la función f
+   num3 = f(num2+1); // Llamada a la función f
 
    printf("\n- Valores: %d, %d y %d.", num1, num2, f(num3));
 
    return 0;
 }
 
-int f (int x) {   // Definición de la función f
+int f(int x) {   // Definición de la función f
    return x + 5;
 }
 ~~~
@@ -223,7 +223,6 @@ int main() {
 ~~~
 
 **Variables globales** (NO SE PERMITEN EN ESTA ASIGNATURA): Son variables que se declaran fuera de todas las funciones. Pueden ser utilizadas por todas las funciones que haya después de su declaración. Normalmente, estas variables se declaran antes que las funciones, por lo que su ámbito o visibilidad es global. Su uso está desaconsejado, especialmente en programadores noveles, porque complica la comprensión de los programas y pueden dar lugar a **efectos laterales** erróneos que suelen ser muy difícil de localizar.
-
 
 
 ### Dónde definir las funciones en C
@@ -375,10 +374,10 @@ La función recibe la referencia a la posición de memoria donde se encuentra 
 ##### Cómo pasar argumentos por referencia:
 
 1. En la llamada a la función:
-	- usar el operador de dirección `&` (ampersand) delante del argumento en la llamada. El operador `&` indica que dicha variable puede verse modificada por la función.
+	- usar el operador de dirección `&` (ampersand) delante del argumento en la llamada. El operador `&` indica que dicha variable puede verse modificada por la función. Con este operador se obtiene la dirección de memoria de la variable.
 2. En la definición de la función:
 	- Usar el operador de indirección `*` (asterisco) delante del argumento formal correspondiente.
-	- Se usará el operador `*` cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función.
+	- Se usará el operador `*` cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función. Este operador se utiliza para obtener el valor (dato) que contiene la variable.
 
 Ejemplo:
 
@@ -534,7 +533,7 @@ a, b, c = f()
 	- Si se escriben antes las funciones que son llamadas por otras, poniendo `main()` al
 final, los prototipos no son estrictamente necesarios.
 
-La comunicación entre funciones debe realizarse a través de parámetros, y **no** de variables globales
+**La comunicación entre funciones debe realizarse a través de parámetros, y no de variables globales**
 
 
 ## Bibliotecas del lenguaje C
@@ -973,6 +972,6 @@ int sumaIntervalo(int a, int b) {
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
