@@ -440,7 +440,7 @@
 <p>Ya hemos visto que en C se utilizan funciones de biblioteca (como <code>printf</code> o <code>scanf</code>). También hemos utilizado la función <code>main</code>, que es la función principal del programa. En este tema vamos a aprender a definir nuestras propias funciones que realicen determinadas tareas.</p>
 <p>El uso de funciones definidas por el programador permite dividir un programa grande en un cierto número de componentes más pequeñas, cada una de las cuales con un propósito único e identificable. Por tanto, un programa en C se puede modularizar en subproblemas (programar de forma estructurada) mediante el uso adecuado de funciones.</p>
 <p>Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función <code>main</code> instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).</p>
-<p>Una de las habilidades fundamentales del pensamiento computacional es la <strong>abstracción</strong>: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones). Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.</p>
+<p>Una de las habilidades fundamentales del pensamiento computacional es la <strong>abstracción</strong>: dividir un problema grande en pequeños problemas donde sea más fácil de manejar. Esto hace el código más fácil de entender, probar, modificar, compartir y reutilizar.</p>
 <p>Ventajas de modularizar un programa:</p>
 <ul>
 <li><strong>Generalización</strong>: si un programa tiene instrucciones repetidas en distintas partes, esas instrucciones repetidas se pueden agrupar en una sola función, a la que acceder cuando sea necesario.</li>
@@ -539,7 +539,7 @@ del valor que se devuelve (tipo de la función).</li>
 21
 22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Prototipo o declaración de la función f</span>
+<span class="kt">int</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Prototipo o declaración de la función f</span>
 
 <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="n">num3</span><span class="p">;</span>
@@ -547,16 +547,16 @@ del valor que se devuelve (tipo de la función).</li>
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Introduzca un número: &quot;</span><span class="p">);</span>
    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
 
-   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">;</span>
-   <span class="n">num3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num2</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>  <span class="c1">// Llamada a la función f</span>
+   <span class="n">num2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">;</span> <span class="c1">// Llamada a la función f</span>
+   <span class="n">num3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">num2</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Llamada a la función f</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">- Valores: %d, %d y %d.&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">num3</span><span class="p">));</span>
 
    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span> <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Definición de la función f</span>
+<span class="kt">int</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Definición de la función f</span>
    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -927,12 +927,12 @@ Las modificaciones realizadas sobre el parámetro dentro de la función se tra
 <h5>Cómo pasar argumentos por referencia:</h5>
 <ol>
 <li>En la llamada a la función:<ul>
-<li>usar el operador de dirección <code>&amp;</code> (ampersand) delante del argumento en la llamada. El operador <code>&amp;</code> indica que dicha variable puede verse modificada por la función.</li>
+<li>usar el operador de dirección <code>&amp;</code> (ampersand) delante del argumento en la llamada. El operador <code>&amp;</code> indica que dicha variable puede verse modificada por la función. Con este operador se obtiene la dirección de memoria de la variable.</li>
 </ul>
 </li>
 <li>En la definición de la función:<ul>
 <li>Usar el operador de indirección <code>*</code> (asterisco) delante del argumento formal correspondiente.</li>
-<li>Se usará el operador <code>*</code> cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función.</li>
+<li>Se usará el operador <code>*</code> cada vez que la variable del argumento formal sea utilizada, tanto en la declaración de la variable (entre los paréntesis de la función) como en el cuerpo de la función. Este operador se utiliza para obtener el valor (dato) que contiene la variable.</li>
 </ul>
 </li>
 </ol>
@@ -1185,7 +1185,7 @@ final, los prototipos no son estrictamente necesarios.</li>
 </ul>
 </li>
 </ol>
-<p>La comunicación entre funciones debe realizarse a través de parámetros, y <strong>no</strong> de variables globales</p>
+<p><strong>La comunicación entre funciones debe realizarse a través de parámetros, y no de variables globales</strong></p>
 <h2 id="bibliotecas-del-lenguaje-c">Bibliotecas del lenguaje C<a class="headerlink" href="#bibliotecas-del-lenguaje-c" title="Permanent link">&para;</a></h2>
 <p>La mayoría de lenguajes de programación proporcionan una colección de procedimientos y funciones de uso común (bibliotecas o librerías). En lenguaje C, para hacer uso de los módulos incluidos en una biblioteca se utiliza la directiva del compilador <code>#include</code>.</p>
 <p>Existe una gran variedad de bibliotecas disponibles:
@@ -1940,7 +1940,7 @@ se desea (más la opción terminar) y preguntar la temperatura que desea conve
 <li>Capítulos 7.1 a 7.3 de "Fundamentos de Programación", Jesús Carretero y otros</li>
 </ul>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
