@@ -157,11 +157,11 @@ Las funciones que **como mínimo** debes crear son:
 - `elegirMonton`: dependiendo del parámetro "turno", se encargará de pedir al usuario que elija un montón, o bien de lograr que el ordenador elija un motón al azar. Después, comprueba si el montón elegido es correcto. Si es así, devuelve el montón elegido al `main`. Si no, mostrará un mensaje de error ("Error: ese montón ya no tiene palillos") y volverá a pedir que se elija un montón.
 - `elegirPalillos`: dependiendo del valor de "turno", le pide al usuario que elija el número de palillos que quiere retirar, o bien hace que el ordenador lo elija al azar. Ese número debe ser 1 ó 2. Tiene que comprobar que el número de palillos elegido es correcto. Si es así, se devuelve el número de palillos elegidos al `main`. Si no, se muestra un mensaje de error ("Error: ese montón no tiene tantos palillos") y se vuelve a pedir que se introduzca un número de palillos. 
 - `quitarPalillos`: quita un número determinado de palillos de un montón.
-- `comprobarFinJuego`: mira si, entre todos los montones, sólo queda por retirar un palillo. Si es así, el juego debe acabar y el ganador es el jugador que posee el turno actualmente. 
+- `comprobarFinJuego`: mira si, entre todos los montones, sólo queda por retirar un palillo o no queda ninguno. Si es así, el juego debe acabar y debe devolver el ganador. 
 - El `main` os lo damos hecho. Se encarga de invocar a todos los demás en el orden adecuado. Además, irá restando de cada montón los palillos que se hayan retirado, y controlará cuándo debe finalizar el juego.
 
  
-En el fichero que os hemos dejado en Moodle, tenéis el main completo que no debéis modificar y los prototipos de las funciones que como mínimo debéis implementar, así como las definiciones de los tipos de datos que vais a necesitar.
+En el fichero que os hemos dejado en Moodle, tenéis el `main` completo que no debéis modificar y los **prototipos** de las funciones que como mínimo debéis implementar, así como las **definiciones** de los tipos de datos que **debéis usar**.
 
 Comprueba el funcionamiento por separado de cada función antes de integrarlas en tu programa. **Puedes escribir todas las funciones adicionales que consideres conveniente**.
 
