@@ -4,187 +4,187 @@
 
 ### Ejercicio 1 ###
 
-Implementa un programa, modularizado en funciones, que pida 2 intervalos de números `[a,b]` comprobando que son válidos, es decir, que `a < b`, e imprima los valores de ambos intervalos de forma intercalada. Ten en cuenta que el tamaño de los intervalos puede ser distinto.
+Implementa un programa que pida 3 números enteros que representarán los extremos de 2 intervalos. El primer intervalo estará formado por el menor de los 3 números y el de valor intermedio, y el segundo intervalo por el de valor intermedio y el de mayor valor. Ten en cuenta que los números introducidos pueden estar desordenados.
+
+Después se imprimirá por pantalla para cada intervalo, todos los números múltiplos de un número introducido por teclado que haya dentro de cada intervalo.
+
+Paso a paso, el programa tiene que hacer lo siguiente:
+
+- Leer los datos de los intervalos
+- Leer el múltiplo del primer intervalo
+- Leer el mútiplo del segundo intervalo
+- Imprimir los múltiplos del primer intervalo
+- Imprimir los múltiplos del segundo intervalo
+
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce valores del intervalo 1: 0 5
-Introduce valores del intervalo 2: 10 12
-0 10 1 11 2 12 3 4 5
+Introduce 3 números enteros (separados por un espacio en blanco): 30 20 10
+¿Qué múltiplo quieres utilizar para el intervalo [10, 20]: 2
+¿Qué múltiplo quieres utilizar para el intervalo [20, 30]: 3
+Los múltiplos de 2 en el intervalo [10, 20] son:
+10 12 14 16 18 20 
+Los múltiplos de 3 en el intervalo [20, 30] son:
+21 24 27 30
 ~~~
-
-Datos de entrada: `2 intervalos válidos`
 
 **Casos de prueba:**
 
 ~~~text
 Entrada:
-7 2
-3 8
-20 30
+30 20 10
+2
+3
 
 Salida por pantalla:
-3 20 4 21 5 22 6 23 7 24 8 25 26 27 28 29 30
+10 12 14 16 18 20 
+21 24 27 30
 ~~~
 
 ~~~text
 Entrada:
-100 108
-6 2
-2 6
+25 50 8
+0
+5
+4
 
 Salida por pantalla:
-100 2 101 3 102 4 103 5 104 6 105 106 107 108
+10 15 20 25
+28 32 36 40 44 48
 ~~~
 
 ~~~text
 Entrada:
-11 15
-1 5
+17 9 35
+12
+7
 
 Salida por pantalla:
-11 1 12 2 13 3 14 4 15 5
+12
+21 28 35
 ~~~
 
 ### Ejercicio 2 ###
 
-1. Escribe una función que lea un mes (1-12) y un año (1900-2100) por teclado y los devuelva.
-2. Modifica el ejercicio 2 de la práctica 2 para convertirlo en una función que reciba un mes como parámetro y devuelva el número de días que tiene. Añade la comprobación para los años bisiestos:  son bisiestos todos los años múltiplos de 4, excepto aquellos que son múltiplos de 100 pero no de 400.
-3. Utilizando las funciones anteriores, escribe un programa completo que lea un mes y un año y muestre por pantalla el calendario correspondiente a ese mes. Para ello, vamos a utilizar el algoritmo de Zeller que, dada una fecha (dia-mes-año) te devuelve el día de la semana (1-lun, 7-dom). El algoritmo de Zeller te lo damos hecho en la siguiente función:
+Vamos a implementar el juego de Nim (simplificado). El Nim es un juego clásico de estrategia que se supone originario de Oriente. Sus reglas, en nuestra versión modificada, son las siguientes: 
+
+1. Se tienen tres montones de palillos, cada uno de los cuales contiene, al principio del juego, entre 3 y 6 palillos. El número inicial de palillos en cada montón lo determinará el ordenador al azar y puede variar de una partida a otra, pero siempre habrá un mínimo de 3 y un máximo de 6. 
+2. El jugador humano elige un montón y quita 1 ó 2 palillos. 
+3. Después, el ordenador hace lo mismo: elige un montón y quita 1 ó 2 palillos. 
+4. Los pasos 2 y 3 se repiten hasta que sólo queda un palillo o ninguno en total. El jugador que deba retirar el último palillo o no quede ninguno, pierde.
+
+**Ejemplo de ejecución:**
+
+~~~text
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 6 palillos
+  Montón 2: 3 palillos
+  Montón 3: 6 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 2
+¿Cuántos palillos quieres quitar (1 ó 2)? 2
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 6 palillos
+  Montón 2: 1 palillos
+  Montón 3: 6 palillos
+Es mi turno.
+Elijo quitar 1 palillos del montón 2
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 6 palillos
+  Montón 2: 0 palillos
+  Montón 3: 6 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿Cuántos palillos quieres quitar (1 ó 2)? 1
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 5 palillos
+  Montón 2: 0 palillos
+  Montón 3: 6 palillos
+Es mi turno.
+Elijo quitar 1 palillos del montón 3
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 5 palillos
+  Montón 2: 0 palillos
+  Montón 3: 5 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿Cuántos palillos quieres quitar (1 ó 2)? 2
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 3 palillos
+  Montón 2: 0 palillos
+  Montón 3: 5 palillos
+Es mi turno.
+Elijo quitar 1 palillos del montón 3
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 3 palillos
+  Montón 2: 0 palillos
+  Montón 3: 4 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿Cuántos palillos quieres quitar (1 ó 2)? 2
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 1 palillos
+  Montón 2: 0 palillos
+  Montón 3: 4 palillos
+Es mi turno.
+Elijo quitar 1 palillos del montón 3
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 1 palillos
+  Montón 2: 0 palillos
+  Montón 3: 3 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 3
+¿Cuántos palillos quieres quitar (1 ó 2)? 2
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 1 palillos
+  Montón 2: 0 palillos
+  Montón 3: 1 palillos
+Es mi turno.
+Elijo quitar 1 palillos del montón 1
+Enhorabuena!!!! Me has ganado
+~~~
+
+Las funciones que **como mínimo** debes crear son:
+
+- `crearMontones`: se encarga de crear los 3 montones, asignándole a cada uno de ellos una cantidad aleatoria de palillos (entre 3 y 6). Devuelve los montones al main en los parámetros montón1, montón2 y montón3.
+- `mostrarMontones`: muestra el contenido actual de los montones.
+- `elegirMonton`: dependiendo del parámetro "turno", se encargará de pedir al usuario que elija un montón, o bien de lograr que el ordenador elija un motón al azar. Después, comprueba si el montón elegido es correcto. Si es así, devuelve el montón elegido al `main`. Si no, mostrará un mensaje de error ("Error: ese montón ya no tiene palillos") y volverá a pedir que se elija un montón.
+- `elegirPalillos`: dependiendo del valor de "turno", le pide al usuario que elija el número de palillos que quiere retirar, o bien hace que el ordenador lo elija al azar. Ese número debe ser 1 ó 2. Tiene que comprobar que el número de palillos elegido es correcto. Si es así, se devuelve el número de palillos elegidos al `main`. Si no, se muestra un mensaje de error ("Error: ese montón no tiene tantos palillos") y se vuelve a pedir que se introduzca un número de palillos. 
+- `quitarPalillos`: quita un número determinado de palillos de un montón.
+- `comprobarFinJuego`: mira si, entre todos los montones, sólo queda por retirar un palillo. Si es así, el juego debe acabar y el ganador es el jugador que posee el turno actualmente. 
+- El `main` os lo damos hecho. Se encarga de invocar a todos los demás en el orden adecuado. Además, irá restando de cada montón los palillos que se hayan retirado, y controlará cuándo debe finalizar el juego.
+
+ 
+En el fichero que os hemos dejado en Moodle, tenéis el main completo que no debéis modificar y los prototipos de las funciones que como mínimo debéis implementar, así como las definiciones de los tipos de datos que vais a necesitar.
+
+Comprueba el funcionamiento por separado de cada función antes de integrarlas en tu programa. **Puedes escribir todas las funciones adicionales que consideres conveniente**.
+
+Para generar valores aleatorios, en C se utilizan las funciones `rand()` y `srand()`. Para ello:
+
+- Se añaden las librerías `<stdlib.h>` y `<time.h>`.
+- Antes de generar cualquier número aleatorio se añade la siguiente sentencia que inicializa la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.
 
 ~~~c
-int zeller (int dia, int mes, int anyo) {
-  int a, m, y, primerDia;
+   srand(time(0));
+~~~
 
-  a = (14-mes) / 12;
-  y = anyo - a;
-  m = mes + (12*a) - 2;
-  primerDia = (dia + y + (y/4) - (y/100) + (y/400) + (31*m) / 12) % 7;
+- Para generar un valor aleatorio dentro del intervalo [a,b], puedes usar la función que os damos hecha:
 
-  if (primerDia == 0)  // domingo
-    primerDia = 7;
-
-   return primerDia;
+~~~c
+int numeroAleatorio(int a, int b) {
+    return rand() % (b-a+1) + a;
 }
 ~~~
 
 
-**Ejemplo de ejecución:**
-
-~~~text
-Introduce mes: 10
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   1   2   3   4   5   6
-   7   8   9  10  11  12  13
-  14  15  16  17  18  19  20
-  21  22  23  24  25  26  27
-  28  29  30  31
-~~~
-
-Datos de entrada: `mes`, `año`
-
-**Casos de prueba:**
-
-~~~text
-Introduce mes: 22
-Introduce mes: 18
-Introduce mes: 3
-Introduce año: 2020
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   .   .   .   .   .   1
-   2   3   4   5   6   7   8
-   9  10  11  12  13  14  15
-  16  17  18  19  20  21  22
-  23  24  25  26  27  28  29
-  30
-~~~
-
-~~~text
-Introduce mes: 2
-Introduce año: 2020
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   .   .   .   .   1   2
-   3   4   5   6   7   8   9
-  10  11  12  13  14  15  16
-  17  18  19  20  21  22  23
-  24  25  26  27  28  29
-~~~
-
-~~~text
-Introduce mes: 2
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   .   .   .   1   2   3
-   4   5   6   7   8   9  10
-  11  12  13  14  15  16  17
-  18  19  20  21  22  23  24
-  25  26  27  28
-~~~
-
-### Ejercicio 3 ###
-
-Implementa un programa que irá pidiendo 4 caracteres para representar un número binario de 4 bits. En caso de haberse introducido 4 dígitos binarios, se dibujarán en pantalla con un determinado alto y ancho que habrá sido solicitado previamente. Si algún carácter introducido no es un dígito binario, el programa terminará.
-
-**Pista**: Partiendo de la solución del ejercicio 4 de la práctica anterior, modulariza dicho programa.
-Tres de las funciones que incluyas (deberías definir más de 3), deberían realizar lo siguiente:
-
-- una función para imprimir una determinada fila para el número 1
-- otra función para imprimir la separación entre los números en cualquier fila
-- otra función para imprimir una determinada fila para el número 0.
-
-
-**Ejemplo de ejecución:**
-
-~~~text
-Introduce alto [15..30] y ancho [8..20] de los números: 15 8
-Introduce número binario de 4 bits: 1 0 1 0
-
-...#.....########........#.....########
-..##.....#......#.......##.....#......#
-.#.#.....#......#......#.#.....#......#
-#..#.....#......#.....#..#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....#......#........#.....#......#
-...#.....########........#.....########
-
-Introduce número binario de 4 bits: 0 0 1 1
-
-########.....########........#........#
-#......#.....#......#.......##.......##
-#......#.....#......#......#.#......#.#
-#......#.....#......#.....#..#.....#..#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-#......#.....#......#........#........#
-########.....########........#........#
-
-Introduce número binario de 4 bits: 2 1 1 1
-Fin del programa
-~~~
-
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares
