@@ -79,74 +79,67 @@ Vamos a implementar el juego de Nim (simplificado). El Nim es un juego clásico 
 ~~~text
 El turno es del Humano
 El contenido actual de los montones es:
-  Montón 1: 6 palillos
-  Montón 2: 3 palillos
+  Montón 1: 5 palillos
+  Montón 2: 4 palillos
   Montón 3: 6 palillos
 ¿De qué montón quieres quitar palillos (1, 2 ó 3)? 2
 ¿Cuántos palillos quieres quitar (1 ó 2)? 2
 El turno es de la Máquina
 El contenido actual de los montones es:
-  Montón 1: 6 palillos
-  Montón 2: 1 palillos
+  Montón 1: 5 palillos
+  Montón 2: 2 palillos
   Montón 3: 6 palillos
 Es mi turno.
-Elijo quitar 1 palillos del montón 2
+Elijo quitar 2 palillos del montón 2
 El turno es del Humano
 El contenido actual de los montones es:
-  Montón 1: 6 palillos
+  Montón 1: 5 palillos
   Montón 2: 0 palillos
   Montón 3: 6 palillos
-¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 3
 ¿Cuántos palillos quieres quitar (1 ó 2)? 1
 El turno es de la Máquina
 El contenido actual de los montones es:
   Montón 1: 5 palillos
   Montón 2: 0 palillos
-  Montón 3: 6 palillos
+  Montón 3: 5 palillos
 Es mi turno.
-Elijo quitar 1 palillos del montón 3
+Elijo quitar 2 palillos del montón 3
 El turno es del Humano
 El contenido actual de los montones es:
   Montón 1: 5 palillos
-  Montón 2: 0 palillos
-  Montón 3: 5 palillos
-¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
-¿Cuántos palillos quieres quitar (1 ó 2)? 2
-El turno es de la Máquina
-El contenido actual de los montones es:
-  Montón 1: 3 palillos
-  Montón 2: 0 palillos
-  Montón 3: 5 palillos
-Es mi turno.
-Elijo quitar 1 palillos del montón 3
-El turno es del Humano
-El contenido actual de los montones es:
-  Montón 1: 3 palillos
-  Montón 2: 0 palillos
-  Montón 3: 4 palillos
-¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
-¿Cuántos palillos quieres quitar (1 ó 2)? 2
-El turno es de la Máquina
-El contenido actual de los montones es:
-  Montón 1: 1 palillos
-  Montón 2: 0 palillos
-  Montón 3: 4 palillos
-Es mi turno.
-Elijo quitar 1 palillos del montón 3
-El turno es del Humano
-El contenido actual de los montones es:
-  Montón 1: 1 palillos
   Montón 2: 0 palillos
   Montón 3: 3 palillos
 ¿De qué montón quieres quitar palillos (1, 2 ó 3)? 3
 ¿Cuántos palillos quieres quitar (1 ó 2)? 2
 El turno es de la Máquina
 El contenido actual de los montones es:
-  Montón 1: 1 palillos
+  Montón 1: 5 palillos
   Montón 2: 0 palillos
   Montón 3: 1 palillos
 Es mi turno.
+Elijo quitar 1 palillos del montón 3
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 5 palillos
+  Montón 2: 0 palillos
+  Montón 3: 0 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿Cuántos palillos quieres quitar (1 ó 2)? 2
+El turno es de la Máquina
+El contenido actual de los montones es:
+  Montón 1: 3 palillos
+  Montón 2: 0 palillos
+  Montón 3: 0 palillos
+Es mi turno.
 Elijo quitar 1 palillos del montón 1
+El turno es del Humano
+El contenido actual de los montones es:
+  Montón 1: 2 palillos
+  Montón 2: 0 palillos
+  Montón 3: 0 palillos
+¿De qué montón quieres quitar palillos (1, 2 ó 3)? 1
+¿Cuántos palillos quieres quitar (1 ó 2)? 1
 Enhorabuena!!!! Me has ganado
 ~~~
 
