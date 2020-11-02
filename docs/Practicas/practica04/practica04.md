@@ -10,7 +10,7 @@ Después se imprimirá por pantalla para cada intervalo, todos los números múl
 
 Paso a paso, el programa tiene que hacer lo siguiente:
 
-- Leer los datos de los intervalos
+- Leer los datos de los intervalos y ordenarlos de forma creciente
 - Leer el múltiplo del primer intervalo
 - Leer el mútiplo del segundo intervalo
 - Imprimir los múltiplos del primer intervalo
