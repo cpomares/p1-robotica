@@ -667,9 +667,9 @@ Enhorabuena!!!! Me has ganado
 <p>Para generar valores aleatorios, en C se utilizan las funciones <code>rand()</code> y <code>srand()</code>. Para ello:</p>
 <ul>
 <li>Se añaden las librerías <code>&lt;stdlib.h&gt;</code> y <code>&lt;time.h&gt;</code>.</li>
-<li>Antes de generar cualquier número aleatorio se añade la siguiente sentencia que inicializa la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.</li>
+<li>Antes de generar cualquier número aleatorio se añade la siguiente sentencia que inicializa (sólo la primera vez) la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>   <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>   <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>  <span class="c1">//Se ejecuta sólo una vez</span>
 </pre></div>
 </td></tr></table>
 
