@@ -6,13 +6,13 @@
 
 Implementa un programa que pida 3 números enteros que representarán los extremos de 2 intervalos. El primer intervalo estará formado por el menor de los 3 números y el de valor intermedio, y el segundo intervalo por el de valor intermedio y el de mayor valor. Ten en cuenta que los números introducidos pueden estar desordenados.
 
-Después se imprimirá por pantalla para cada intervalo, todos los números múltiplos de un número introducido por teclado que haya dentro de cada intervalo.
+Después se imprimirá por pantalla para cada intervalo, todos los números múltiplos de un número positivo introducido por teclado que haya dentro de cada intervalo.
 
 Paso a paso, el programa tiene que hacer lo siguiente:
 
 - Leer los datos de los intervalos y ordenarlos de forma creciente
-- Leer el múltiplo del primer intervalo
-- Leer el mútiplo del segundo intervalo
+- Leer el múltiplo positivo del primer intervalo
+- Leer el mútiplo positivo del segundo intervalo
 - Imprimir los múltiplos del primer intervalo
 - Imprimir los múltiplos del segundo intervalo
 
