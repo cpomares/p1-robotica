@@ -161,10 +161,10 @@ Comprueba el funcionamiento por separado de cada función antes de integrarlas e
 Para generar valores aleatorios, en C se utilizan las funciones `rand()` y `srand()`. Para ello:
 
 - Se añaden las librerías `<stdlib.h>` y `<time.h>`.
-- Antes de generar cualquier número aleatorio se añade la siguiente sentencia que inicializa la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.
+- Antes de generar cualquier número aleatorio se añade la siguiente sentencia que inicializa (sólo la primera vez) la semilla para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa.
 
 ~~~c
-   srand(time(0));
+   srand(time(0));  //Se ejecuta sólo una vez
 ~~~
 
 - Para generar un valor aleatorio dentro del intervalo [a,b], puedes usar la función que os damos hecha:
