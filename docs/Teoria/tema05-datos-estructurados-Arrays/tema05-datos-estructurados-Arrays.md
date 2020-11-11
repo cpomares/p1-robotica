@@ -229,7 +229,160 @@ int main()
 }
 ~~~
 
-## 3. Arrays multidimensionales
+## 3. Cadenas de caracteres
+
+- En C no existe un tipo específico para definircadenas de caracteres (en otros lenguajes es el tipo `String`).
+- En C, una cadena de caracteres se define como un array unidimensional de tipo `char`.
+- En una cadena de caracteres el último carácter de la cadena debe estar seguido del carácter nulo que se representa por `'\0'`. Este carácter marca el final de la cadena de caracteres.
+- Existen librerías con funciones para realizar la mayor
+parte de las operaciones básicas sobre cadenas.
+
+Ejemplos:
+
+~~~c
+char cadena[20];
+char cadena[]="Adios";
+~~~
+
+En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).
+
+Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.
+
+![](imagenes/cadenaCaracteres.png)
+
+### `printf` y `scanf` con cadenas
+
+Las funciones `printf` y `scanf` tratan el `'\0'` automáticamente con `%s`
+
+~~~c
+printf("%s\n",cadena);
+scanf("%s", cadena);
+scanf("%[^\n]s", cadena); //lee la entrada estandar hasta encontrar \n, sin detenerse en espacios
+~~~
+
+### Librería `string.h`
+
+Para trabajar con cadenas de caracteres, en C tenemos la librería `string.h`:
+
+~~~c
+#include <string.h>
+~~~
+
+Algunas de las funciones que incluye:
+
+- **`int strlen(char s[]);`** Devuelve el tamaño de la cadena antes de `'\0'`
+- **`char *strcpy(char dest[], char src[]);`**Copia la cadena origen `src` en la cadena destino `dest`.
+- **`char *strcat(char dest[], char src[]);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
+- **`int strcmp(char s1[], char s2[]);`**
+Compara dos cadenas. Devuelve 0 en caso de que sean iguales. <0 si la primera cadena es menor y >0 si la primera cadena es mayor. Orden lexicográfico
+
+`strcpy` y `strcat` devuelven un puntero a la cadena
+resultante. No comprueban si el resultado cabe en la cadena final.
+
+### Ejemplos con cadenas de caracteres
+
+Ejemplo 1:
+
+~~~c
+// devuelve la longitud de una cadena de caracteres// esta función es equivalente a strlen()
+int longitudCadena(char cad[]){    
+   int len;
+
+   len = 0;    
+   while (cad[len] != '\0')       
+      len++;
+
+   return len;
+}
+~~~
+
+Ejemplo 2:
+
+~~~c
+int main() {
+    int n;
+    char nombre1[20], nombre2[20];
+
+    printf("Teclea el primer nombre: ");
+    scanf("%s", nombre1);
+    printf("Teclea el segundo nombre: ");
+    scanf("%s", nombre2);
+
+    n = strcmp(nombre1,nombre2);
+    if(n == 0)
+        printf("Nombres iguales\n");
+    else if (n>0)
+        printf("Primer nombre mayor que el segundo\n");
+    else
+        printf("Primer nombre menor que el segundo\n");
+
+    return 0;
+}
+~~~
+
+Ejemplo 3:
+
+~~~c
+int main() {
+    char cad1[10], cad2[10];
+
+    strcpy(cad1, "Hola "); /* Se guardan en cad1 6
+                            caracteres (incluido el ‘\0’)*/
+    strcpy(cad2, "y adios"); /* Se guardan en cad2 8
+                            caracteres (incluido el ‘\0’) */
+    strcat(cad1, cad2); /* Se concatena la cadena cad2 al
+                        final de cad1. Observa que se intentan guardar
+                        en cad1 más caracteres que la longitud de la
+                        cadena. El compilador no da error y se escribe
+                        a continuación de cad1, en memoria que no
+                        pertenece a cad1. */
+    printf("cad1: %s\n", cad1); /* ERROR. Se intenta escribir cad1 hasta que encuentre un
+                          ‘\0’. El resultado es impredecible: puede
+                            escribir "Hola y adios" a pesar de que en total
+                            son más de 10 caracteres, puede escribir otra
+                            cosa o puede quedarse colgado el terminal. */
+    return 0;
+}
+~~~
+
+Para solucionar el problema anterior (en `cad1`no cabe la cadena), podemos comprobar si se puede concatenar antes de hacerlo:
+
+~~~c
+// comprobar si se puede concatenar antes de hacerlo:
+if(strlen(cad1) + strlen(cad2) < 10)
+    strcat(cad1,cad2);
+~~~
+
+
+#### Funciones relacionadas con cadenas de caracteres
+
+Algunas funciones de conversión incluidas en la librería `stdlib.h`
+
+- **`double atof(char *s)`**: convierte la cadena `s` a `float`
+
+~~~c
+char numero[11] = "123.456789";
+printf( "Convertimos la cadena \"%s\" en un float: %f\n", numPtr, atof(numero) );
+~~~
+
+- **`int atoi(char *s)`**: convierte la cadena `s` a `int`
+
+~~~c
+int num;
+num = atoi("123");
+printf("El int es: %d\n", num);
+~~~
+
+- **`long atol(char *s)`**: convierte la cadena `s` a `long int`
+
+
+~~~c
+char numero[11] = "1234567890";
+printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero) );
+~~~
+
+
+## 4. Arrays multidimensionales
 
 Hemos visto los arrays unidimensionales, cuyos elementos se almacenan en posiciones contiguas de memoria, a cada una de las cuales se puede acceder directamente mediante un índice.
 
@@ -459,162 +612,25 @@ void rellenar(int m[][5]) {
 }
 ~~~
 
+### Definición de arrays utilizando `typedef`
 
-## 4. Cadenas de caracteres
-
-- En C no existe un tipo específico para trabajar concadenas de caracteres (en otros lenguajes es el tipo `String`).
-- En C, una cadena de caracteres es un array unidimensional de tipo
-`char`.
-- El último carácter visible de la cadena debe estar seguido del
-carácter nulo que se representa por `'\0'`. Este carácter marca el final de la cadena de caracteres
-- Existen librerías con funciones para realizar la mayor
-parte de las operaciones básicas sobre cadenas.
-
-Ejemplos:
+- Mejora la legibilidad de los programas
 
 ~~~c
-char cadena[20];
-char cadena[]="Adios";
-~~~
+// Definición de tipos de datos 
+typedef float TNotas[50];
+typedef char TPalabra[30];
+typedef int TMatriz[3][3];
 
-En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).
-
-Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.
-
-![](imagenes/cadenaCaracteres.png)
-
-### `printf` y `scanf` con cadenas
-
-Las funciones `printf` y `scanf` tratan el `'\0'` automáticamente con `%s`
-
-~~~c
-printf("%s\n",cadena);
-scanf("%s", cadena);
-scanf("%[^\n]s", cadena); //lee la entrada estandar hasta encontrar \n, sin detenerse en espacios
-~~~
-
-### Librería `string.h`
-
-Para trabajar con cadenas de caracteres, en C tenemos la librería `string.h`:
-
-~~~c
-#include <string.h>
-~~~
-
-Algunas de las funciones que incluye:
-
-- **`int strlen(char s[]);`** Devuelve el tamaño de la cadena antes de `'\0'`
-- **`char *strcpy(char dest[], char src[]);`**Copia la cadena origen `src` en la cadena destino `dest`.
-- **`char *strcat(char dest[], char src[]);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
-- **`int strcmp(char s1[], char s2[]);`**
-Compara dos cadenas. Devuelve 0 en caso de que sean iguales. <0 si la primera cadena es menor y >0 si la primera cadena es mayor. Orden lexicográfico
-
-`strcpy` y `strcat` devuelven un puntero a la cadena
-resultante. No comprueban si el resultado cabe en la cadena final.
-
-### Ejemplos con cadenas de caracteres
-
-Ejemplo 1:
-
-~~~c
-// devuelve la longitud de una cadena de caracteres// esta función es equivalente a strlen()
-int longitudCadena(char cad[]){    
-   int len;
-
-   len = 0;    
-   while (cad[len] != '\0')       
-      len++;
-
-   return len;
-}
-~~~
-
-Ejemplo 2:
-
-~~~c
-int main() {
-    int n;
-    char nombre1[20], nombre2[20];
-
-    printf("Teclea el primer nombre: ");
-    scanf("%s", nombre1);
-    printf("Teclea el segundo nombre: ");
-    scanf("%s", nombre2);
-
-    n = strcmp(nombre1,nombre2);
-    if(n == 0)
-        printf("Nombres iguales\n");
-    else if (n>0)
-        printf("Primer nombre mayor que el segundo\n");
-    else
-        printf("Primer nombre menor que el segundo\n");
-
-    return 0;
-}
-~~~
-
-Ejemplo 3:
-
-~~~c
-int main() {
-    char cad1[10], cad2[10];
-
-    strcpy(cad1, "Hola "); /* Se guardan en cad1 6
-                            caracteres (incluido el ‘\0’)*/
-    strcpy(cad2, "y adios"); /* Se guardan en cad2 8
-                            caracteres (incluido el ‘\0’) */
-    strcat(cad1, cad2); /* Se concatena la cadena cad2 al
-                        final de cad1. Observa que se intentan guardar
-                        en cad1 más caracteres que la longitud de la
-                        cadena. El compilador no da error y se escribe
-                        a continuación de cad1, en memoria que no
-                        pertenece a cad1. */
-    printf("cad1: %s\n", cad1); /* ERROR. Se intenta escribir cad1 hasta que encuentre un
-                          ‘\0’. El resultado es impredecible: puede
-                            escribir "Hola y adios" a pesar de que en total
-                            son más de 10 caracteres, puede escribir otra
-                            cosa o puede quedarse colgado el terminal. */
-    return 0;
-}
-~~~
-
-Para solucionar el problema anterior (en `cad1`no cabe la cadena), podemos comprobar si se puede concatenar antes de hacerlo:
-
-~~~c
-// comprobar si se puede concatenar antes de hacerlo:
-if(strlen(cad1) + strlen(cad2) < 10)
-    strcat(cad1,cad2);
+// Declaración de variables
+TNotas notas1, notas2;
+TPalabra nombre, apellido;
+TMatriz matriz1, matriz2;   
 ~~~
 
 
-#### Funciones relacionadas con cadenas de caracteres
 
-Algunas funciones de conversión incluidas en la librería `stdlib.h`
-
-- **`double atof(char *s)`**: convierte la cadena `s` a `float`
-
-~~~c
-char numero[11] = "123.456789";
-printf( "Convertimos la cadena \"%s\" en un float: %f\n", numPtr, atof(numero) );
-~~~
-
-- **`int atoi(char *s)`**: convierte la cadena `s` a `int`
-
-~~~c
-int num;
-num = atoi("123");
-printf("El int es: %d\n", num);
-~~~
-
-- **`long atol(char *s)`**: convierte la cadena `s` a `long int`
-
-
-~~~c
-char numero[11] = "1234567890";
-printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero) );
-~~~
-
-### Ejemplos de arrays utilizando `typedef`
+#### Ejemplos de arrays utilizando `typedef`
 
 
 1. Escribe un programa completo que lea un vector de enteros positivos e imprima el número mayor.Para la realización del programa utilizaremos tres funciones, una para leer el vector, otra para imprimir el vector por pantalla y otra para encontrar el elemento mayor.
@@ -648,16 +664,11 @@ printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero
     void leerVector(TVector vector)
     {
         int i;
-        i = 0;
 
-        do {
+        for(i = 0; i < TAM; i++) {
           printf("Introduce el numero de la posición %d: ",i);
           scanf("%d", &vector[i]);
-          if (vector[i] < 0)
-             printf("Número incorrecto\n");
-          else
-             i++; // Incrementamos contador
-          } while (i < TAM);
+        }
     }
 
 
