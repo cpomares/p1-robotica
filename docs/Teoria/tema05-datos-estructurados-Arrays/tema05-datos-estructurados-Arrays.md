@@ -35,7 +35,7 @@ int numeros[10];
 
 define un array llamado `numeros` que está formado por 10 elementos de tipo `int`. A cada elemento se acccede mediante un índice entre 0 y `dimension-1` (0 y 9 en este caso).
 
-La declaración anterior hace que el compilador reserve espacio sufuciente para contener 10 valores enteros. En C los enteros ocupan 2 bytes, por lo que un array de 10 enteros ocupa 20 bytes de memoria.
+La declaración anterior hace que el compilador reserve espacio suficiente para contener 10 valores enteros. En C los enteros ocupan 2 bytes, por lo que un array de 10 enteros ocupa 20 bytes de memoria.
 
 **Sintaxis** para acceder a un elemento del array:
 
@@ -108,7 +108,7 @@ void inicializarArray(float calificaciones[]) {
 	}
 }~~~
 
-**Precaución**:  C permite asignar valores fuera de rango a los subíondices. Se debe tener cuidado con no hacer esta acción, ya que se sobreescribirían datos o código
+**Precaución**:  C permite asignar valores fuera de rango a los subíndices. Se debe tener cuidado con no hacer esta acción, ya que se sobreescribirían datos o código.
 
 ### 2.2 Arrays y funciones
 
@@ -1007,6 +1007,6 @@ Le estamos pasando 3 parámetros al programa `miprograma`:
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
