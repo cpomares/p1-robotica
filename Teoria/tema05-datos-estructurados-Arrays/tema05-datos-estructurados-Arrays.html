@@ -320,15 +320,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-arrays-multidimensionales" title="3. Arrays multidimensionales" class="md-nav__link">
-    3. Arrays multidimensionales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-cadenas-de-caracteres" title="4. Cadenas de caracteres" class="md-nav__link">
-    4. Cadenas de caracteres
+  <a href="#3-cadenas-de-caracteres" title="3. Cadenas de caracteres" class="md-nav__link">
+    3. Cadenas de caracteres
   </a>
   
     <nav class="md-nav">
@@ -355,9 +348,22 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arrays-multidimensionales" title="4. Arrays multidimensionales" class="md-nav__link">
+    4. Arrays multidimensionales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#ejemplos-de-arrays-utilizando-typedef" title="Ejemplos de arrays utilizando typedef" class="md-nav__link">
-    Ejemplos de arrays utilizando typedef
+  <a href="#definicion-de-arrays-utilizando-typedef" title="Definición de arrays utilizando typedef" class="md-nav__link">
+    Definición de arrays utilizando typedef
   </a>
   
 </li>
@@ -583,15 +589,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-arrays-multidimensionales" title="3. Arrays multidimensionales" class="md-nav__link">
-    3. Arrays multidimensionales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-cadenas-de-caracteres" title="4. Cadenas de caracteres" class="md-nav__link">
-    4. Cadenas de caracteres
+  <a href="#3-cadenas-de-caracteres" title="3. Cadenas de caracteres" class="md-nav__link">
+    3. Cadenas de caracteres
   </a>
   
     <nav class="md-nav">
@@ -618,9 +617,22 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arrays-multidimensionales" title="4. Arrays multidimensionales" class="md-nav__link">
+    4. Arrays multidimensionales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#ejemplos-de-arrays-utilizando-typedef" title="Ejemplos de arrays utilizando typedef" class="md-nav__link">
-    Ejemplos de arrays utilizando typedef
+  <a href="#definicion-de-arrays-utilizando-typedef" title="Definición de arrays utilizando typedef" class="md-nav__link">
+    Definición de arrays utilizando typedef
   </a>
   
 </li>
@@ -1049,7 +1061,218 @@ Los valores se asignan uno a uno consecutivamente:</p>
 </pre></div>
 </td></tr></table>
 
-<h2 id="3-arrays-multidimensionales">3. Arrays multidimensionales<a class="headerlink" href="#3-arrays-multidimensionales" title="Permanent link">&para;</a></h2>
+<h2 id="3-cadenas-de-caracteres">3. Cadenas de caracteres<a class="headerlink" href="#3-cadenas-de-caracteres" title="Permanent link">&para;</a></h2>
+<ul>
+<li>En C no existe un tipo específico para definir
+cadenas de caracteres (en otros lenguajes es el tipo <code>String</code>).</li>
+<li>En C, una cadena de caracteres se define como un array unidimensional de tipo <code>char</code>.</li>
+<li>En una cadena de caracteres el último carácter de la cadena debe estar seguido del carácter nulo que se representa por <code>'\0'</code>. Este carácter marca el final de la cadena de caracteres.</li>
+<li>Existen librerías con funciones para realizar la mayor
+parte de las operaciones básicas sobre cadenas.</li>
+</ul>
+<p>Ejemplos:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<span class="kt">char</span> <span class="n">cadena</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;Adios&quot;</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).</p>
+<p>Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.</p>
+<p><img alt="" src="imagenes/cadenaCaracteres.png" /></p>
+<h3 id="printf-y-scanf-con-cadenas"><code>printf</code> y <code>scanf</code> con cadenas<a class="headerlink" href="#printf-y-scanf-con-cadenas" title="Permanent link">&para;</a></h3>
+<p>Las funciones <code>printf</code> y <code>scanf</code> tratan el <code>'\0'</code> automáticamente con <code>%s</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span> <span class="c1">//lee la entrada estandar hasta encontrar \n, sin detenerse en espacios</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="libreria-stringh">Librería <code>string.h</code><a class="headerlink" href="#libreria-stringh" title="Permanent link">&para;</a></h3>
+<p>Para trabajar con cadenas de caracteres, en C tenemos la librería <code>string.h</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table>
+
+<p>Algunas de las funciones que incluye:</p>
+<ul>
+<li>
+<p><strong><code>int strlen(char s[]);</code></strong> Devuelve el tamaño de la cadena antes de <code>'\0'</code></p>
+</li>
+<li>
+<p><strong><code>char *strcpy(char dest[], char src[]);</code></strong>
+Copia la cadena origen <code>src</code> en la cadena destino <code>dest</code>.</p>
+</li>
+<li>
+<p><strong><code>char *strcat(char dest[], char src[]);</code></strong>
+Concatena la cadena origen <code>src</code> al final de la cadena destino <code>dest</code></p>
+</li>
+<li><strong><code>int strcmp(char s1[], char s2[]);</code></strong>
+Compara dos cadenas. Devuelve 0 en caso de que sean iguales. &lt;0 si la primera cadena es menor y &gt;0 si la primera cadena es mayor. Orden lexicográfico</li>
+</ul>
+<p><code>strcpy</code> y <code>strcat</code> devuelven un puntero a la cadena
+resultante. No comprueban si el resultado cabe en la cadena final.</p>
+<h3 id="ejemplos-con-cadenas-de-caracteres">Ejemplos con cadenas de caracteres<a class="headerlink" href="#ejemplos-con-cadenas-de-caracteres" title="Permanent link">&para;</a></h3>
+<p>Ejemplo 1:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// devuelve la longitud de una cadena de caracteres</span>
+<span class="c1">// esta función es equivalente a strlen()</span>
+<span class="kt">int</span> <span class="nf">longitudCadena</span><span class="p">(</span><span class="kt">char</span> <span class="n">cad</span><span class="p">[])</span>
+<span class="p">{</span>
+
+   <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
+
+   <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+   <span class="k">while</span> <span class="p">(</span><span class="n">cad</span><span class="p">[</span><span class="n">len</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+
+      <span class="n">len</span><span class="o">++</span><span class="p">;</span>
+
+   <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo 2:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">nombre1</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">nombre2</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Teclea el primer nombre: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">nombre1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Teclea el segundo nombre: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">nombre2</span><span class="p">);</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="n">strcmp</span><span class="p">(</span><span class="n">nombre1</span><span class="p">,</span><span class="n">nombre2</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Nombres iguales</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer nombre mayor que el segundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer nombre menor que el segundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo 3:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">cad1</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">cad2</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span> <span class="s">&quot;Hola &quot;</span><span class="p">);</span> <span class="cm">/* Se guardan en cad1 6</span>
+<span class="cm">                            caracteres (incluido el ‘\0’)*/</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">cad2</span><span class="p">,</span> <span class="s">&quot;y adios&quot;</span><span class="p">);</span> <span class="cm">/* Se guardan en cad2 8</span>
+<span class="cm">                            caracteres (incluido el ‘\0’) */</span>
+    <span class="n">strcat</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span> <span class="n">cad2</span><span class="p">);</span> <span class="cm">/* Se concatena la cadena cad2 al</span>
+<span class="cm">                        final de cad1. Observa que se intentan guardar</span>
+<span class="cm">                        en cad1 más caracteres que la longitud de la</span>
+<span class="cm">                        cadena. El compilador no da error y se escribe</span>
+<span class="cm">                        a continuación de cad1, en memoria que no</span>
+<span class="cm">                        pertenece a cad1. */</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;cad1: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cad1</span><span class="p">);</span> <span class="cm">/* ERROR. Se intenta escribir cad1 hasta que encuentre un</span>
+<span class="cm">                          ‘\0’. El resultado es impredecible: puede</span>
+<span class="cm">                            escribir &quot;Hola y adios&quot; a pesar de que en total</span>
+<span class="cm">                            son más de 10 caracteres, puede escribir otra</span>
+<span class="cm">                            cosa o puede quedarse colgado el terminal. */</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Para solucionar el problema anterior (en <code>cad1</code>no cabe la cadena), podemos comprobar si se puede concatenar antes de hacerlo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// comprobar si se puede concatenar antes de hacerlo:</span>
+<span class="k">if</span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">cad1</span><span class="p">)</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">cad2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">strcat</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span><span class="n">cad2</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h4>Funciones relacionadas con cadenas de caracteres</h4>
+<p>Algunas funciones de conversión incluidas en la librería <code>stdlib.h</code></p>
+<ul>
+<li><strong><code>double atof(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>float</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;123.456789&quot;</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span> <span class="s">&quot;Convertimos la cadena </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s"> en un float: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">,</span> <span class="n">atof</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><strong><code>int atoi(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>int</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="n">num</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;El int es: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><strong><code>long atol(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>long int</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;1234567890&quot;</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span> <span class="s">&quot;Convertimos la cadena </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s"> en un long int: %u</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">,</span> <span class="n">atol</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="4-arrays-multidimensionales">4. Arrays multidimensionales<a class="headerlink" href="#4-arrays-multidimensionales" title="Permanent link">&para;</a></h2>
 <p>Hemos visto los arrays unidimensionales, cuyos elementos se almacenan en posiciones contiguas de memoria, a cada una de las cuales se puede acceder directamente mediante un índice.</p>
 <p>A los arrays de más de una dimensión se les denomina <strong>multidimensionales</strong>.</p>
 <p>Sintaxis:</p>
@@ -1408,220 +1631,31 @@ que en la declaración.</li>
 </pre></div>
 </td></tr></table>
 
-<h2 id="4-cadenas-de-caracteres">4. Cadenas de caracteres<a class="headerlink" href="#4-cadenas-de-caracteres" title="Permanent link">&para;</a></h2>
+<h3 id="definicion-de-arrays-utilizando-typedef">Definición de arrays utilizando <code>typedef</code><a class="headerlink" href="#definicion-de-arrays-utilizando-typedef" title="Permanent link">&para;</a></h3>
 <ul>
-<li>En C no existe un tipo específico para trabajar con
-cadenas de caracteres (en otros lenguajes es el tipo <code>String</code>).</li>
-<li>En C, una cadena de caracteres es un array unidimensional de tipo
-<code>char</code>.</li>
-<li>El último carácter visible de la cadena debe estar seguido del
-carácter nulo que se representa por <code>'\0'</code>. Este carácter marca el final de la cadena de caracteres</li>
-<li>Existen librerías con funciones para realizar la mayor
-parte de las operaciones básicas sobre cadenas.</li>
-</ul>
-<p>Ejemplos:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">cadena</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-<span class="kt">char</span> <span class="n">cadena</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;Adios&quot;</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>En las dos últimas declaraciones el tamaño del array será el número de caracteres dado en la inicialización más 1 (que corresponde al carácter ‘\0’).</p>
-<p>Las cadenas se deben almacenar en arrays de caracteres, pero no todos lo arrays de caracteres contienen cadenas. Las cadenas contienen un carácter nulo al final del array de caracteres.</p>
-<p><img alt="" src="imagenes/cadenaCaracteres.png" /></p>
-<h3 id="printf-y-scanf-con-cadenas"><code>printf</code> y <code>scanf</code> con cadenas<a class="headerlink" href="#printf-y-scanf-con-cadenas" title="Permanent link">&para;</a></h3>
-<p>Las funciones <code>printf</code> y <code>scanf</code> tratan el <code>'\0'</code> automáticamente con <code>%s</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">cadena</span><span class="p">);</span>
-<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span>
-<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]s&quot;</span><span class="p">,</span> <span class="n">cadena</span><span class="p">);</span> <span class="c1">//lee la entrada estandar hasta encontrar \n, sin detenerse en espacios</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="libreria-stringh">Librería <code>string.h</code><a class="headerlink" href="#libreria-stringh" title="Permanent link">&para;</a></h3>
-<p>Para trabajar con cadenas de caracteres, en C tenemos la librería <code>string.h</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-</pre></div>
-</td></tr></table>
-
-<p>Algunas de las funciones que incluye:</p>
-<ul>
-<li>
-<p><strong><code>int strlen(char s[]);</code></strong> Devuelve el tamaño de la cadena antes de <code>'\0'</code></p>
-</li>
-<li>
-<p><strong><code>char *strcpy(char dest[], char src[]);</code></strong>
-Copia la cadena origen <code>src</code> en la cadena destino <code>dest</code>.</p>
-</li>
-<li>
-<p><strong><code>char *strcat(char dest[], char src[]);</code></strong>
-Concatena la cadena origen <code>src</code> al final de la cadena destino <code>dest</code></p>
-</li>
-<li><strong><code>int strcmp(char s1[], char s2[]);</code></strong>
-Compara dos cadenas. Devuelve 0 en caso de que sean iguales. &lt;0 si la primera cadena es menor y &gt;0 si la primera cadena es mayor. Orden lexicográfico</li>
-</ul>
-<p><code>strcpy</code> y <code>strcat</code> devuelven un puntero a la cadena
-resultante. No comprueban si el resultado cabe en la cadena final.</p>
-<h3 id="ejemplos-con-cadenas-de-caracteres">Ejemplos con cadenas de caracteres<a class="headerlink" href="#ejemplos-con-cadenas-de-caracteres" title="Permanent link">&para;</a></h3>
-<p>Ejemplo 1:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// devuelve la longitud de una cadena de caracteres</span>
-<span class="c1">// esta función es equivalente a strlen()</span>
-<span class="kt">int</span> <span class="nf">longitudCadena</span><span class="p">(</span><span class="kt">char</span> <span class="n">cad</span><span class="p">[])</span>
-<span class="p">{</span>
-
-   <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
-
-   <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-   <span class="k">while</span> <span class="p">(</span><span class="n">cad</span><span class="p">[</span><span class="n">len</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span>
-
-      <span class="n">len</span><span class="o">++</span><span class="p">;</span>
-
-   <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Ejemplo 2:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">nombre1</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">nombre2</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Teclea el primer nombre: &quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">nombre1</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Teclea el segundo nombre: &quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">nombre2</span><span class="p">);</span>
-
-    <span class="n">n</span> <span class="o">=</span> <span class="n">strcmp</span><span class="p">(</span><span class="n">nombre1</span><span class="p">,</span><span class="n">nombre2</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Nombres iguales</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer nombre mayor que el segundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">else</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Primer nombre menor que el segundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Ejemplo 3:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">char</span> <span class="n">cad1</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">cad2</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
-
-    <span class="n">strcpy</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span> <span class="s">&quot;Hola &quot;</span><span class="p">);</span> <span class="cm">/* Se guardan en cad1 6</span>
-<span class="cm">                            caracteres (incluido el ‘\0’)*/</span>
-    <span class="n">strcpy</span><span class="p">(</span><span class="n">cad2</span><span class="p">,</span> <span class="s">&quot;y adios&quot;</span><span class="p">);</span> <span class="cm">/* Se guardan en cad2 8</span>
-<span class="cm">                            caracteres (incluido el ‘\0’) */</span>
-    <span class="n">strcat</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span> <span class="n">cad2</span><span class="p">);</span> <span class="cm">/* Se concatena la cadena cad2 al</span>
-<span class="cm">                        final de cad1. Observa que se intentan guardar</span>
-<span class="cm">                        en cad1 más caracteres que la longitud de la</span>
-<span class="cm">                        cadena. El compilador no da error y se escribe</span>
-<span class="cm">                        a continuación de cad1, en memoria que no</span>
-<span class="cm">                        pertenece a cad1. */</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;cad1: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cad1</span><span class="p">);</span> <span class="cm">/* ERROR. Se intenta escribir cad1 hasta que encuentre un</span>
-<span class="cm">                          ‘\0’. El resultado es impredecible: puede</span>
-<span class="cm">                            escribir &quot;Hola y adios&quot; a pesar de que en total</span>
-<span class="cm">                            son más de 10 caracteres, puede escribir otra</span>
-<span class="cm">                            cosa o puede quedarse colgado el terminal. */</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Para solucionar el problema anterior (en <code>cad1</code>no cabe la cadena), podemos comprobar si se puede concatenar antes de hacerlo:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// comprobar si se puede concatenar antes de hacerlo:</span>
-<span class="k">if</span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">cad1</span><span class="p">)</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">cad2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">strcat</span><span class="p">(</span><span class="n">cad1</span><span class="p">,</span><span class="n">cad2</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<h4>Funciones relacionadas con cadenas de caracteres</h4>
-<p>Algunas funciones de conversión incluidas en la librería <code>stdlib.h</code></p>
-<ul>
-<li><strong><code>double atof(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>float</code></li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;123.456789&quot;</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span> <span class="s">&quot;Convertimos la cadena </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s"> en un float: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">,</span> <span class="n">atof</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li><strong><code>int atoi(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>int</code></li>
+<li>Mejora la legibilidad de los programas</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
-<span class="n">num</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;El int es: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Definición de tipos de datos </span>
+<span class="k">typedef</span> <span class="kt">float</span> <span class="n">TNotas</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">TPalabra</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+<span class="k">typedef</span> <span class="kt">int</span> <span class="n">TMatriz</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="c1">// Declaración de variables</span>
+<span class="n">TNotas</span> <span class="n">notas1</span><span class="p">,</span> <span class="n">notas2</span><span class="p">;</span>
+<span class="n">TPalabra</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">;</span>
+<span class="n">TMatriz</span> <span class="n">matriz1</span><span class="p">,</span> <span class="n">matriz2</span><span class="p">;</span>   
 </pre></div>
 </td></tr></table>
 
-<ul>
-<li><strong><code>long atol(char *s)</code></strong>: convierte la cadena <code>s</code> a <code>long int</code></li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;1234567890&quot;</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span> <span class="s">&quot;Convertimos la cadena </span><span class="se">\&quot;</span><span class="s">%s</span><span class="se">\&quot;</span><span class="s"> en un long int: %u</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">,</span> <span class="n">atol</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="ejemplos-de-arrays-utilizando-typedef">Ejemplos de arrays utilizando <code>typedef</code><a class="headerlink" href="#ejemplos-de-arrays-utilizando-typedef" title="Permanent link">&para;</a></h3>
+<h4>Ejemplos de arrays utilizando <code>typedef</code></h4>
 <ol>
 <li>
 <p>Escribe un programa completo que lea un vector de enteros positivos e imprima el número mayor.
@@ -1684,12 +1718,7 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 56
 57
 58
-59
-60
-61
-62
-63
-64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+59</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
 
@@ -1717,16 +1746,11 @@ Para la realización del programa utilizaremos tres funciones, una para leer el
 <span class="kt">void</span> <span class="nf">leerVector</span><span class="p">(</span><span class="n">TVector</span> <span class="n">vector</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">do</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">TAM</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce el numero de la posición %d: &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
       <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Número incorrecto</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-      <span class="k">else</span>
-         <span class="n">i</span><span class="o">++</span><span class="p">;</span> <span class="c1">// Incrementamos contador</span>
-      <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">TAM</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
 
