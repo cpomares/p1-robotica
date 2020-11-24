@@ -4,223 +4,139 @@
 
 ### Ejercicio 1 ###
 
-Modifica el ejercicio 1 de la práctica 4 para almacenar los intervalos en arrays que como máximo tendrán 20 elementos.
+Implementa un programa que compruebe los aciertos que tiene una quiniela de futbol. 
 
-Utiliza la siguiente definición:
+Una quiniela está formada por 8 apuestas, y cada apuesta contiene los resultados (1, X, 2) de 14 partidos de futbol. El pleno al 15 no lo tendremos en cuenta.
 
-~~~c
-#define MAX 20
-typedef int TIntervalo[MAX];
-~~~
+Los resultados de la quiniela completa (las 8 apuestas) se rellenarán de forma aleatoria y también se generará de forma aleatoria los resultados reales (1, X, 2) de los partidos.
 
-Y los siguientes prototipos:
+Una vez generados todos estos resultados aleatorios, el programa mostrará la quiniela completa y los resultados reales de los partidos, y finalmente deberá calcular y mostrar los aciertos de cada apuesta e indicar cuál ha sido la ganadora.
+En el caso de que varias apuestas tengan los mismos aciertos, se mostrará como ganadora la primera de ellas.
 
-~~~c
-void leerIntervalo(int, int*, int*);
-int almacenaIntervalo(TIntervalo, int, int);  // almacena un intervalo en un array
-void intercalar(TIntervalo, int, TIntervalo, int); // intercala dos arrays de intervalos
-void imprimirIntervalo(TIntervalo, int, int); // imprime un array de intervalo
-~~~
-
-Si un intervalo es mayor que `MAX`, sólo se almacenarán en el array los valores que quepan.
+La implementación de este ejercicio hazla **sin** utilizar `typedef` para las matrices / arrays.
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce valores del intervalo 1: 2 7
-Introduce valores del intervalo 2: 20 37
-2 20 3 21 4 22 5 23 6 24 7 25 26 27 28 29 30 31 32 33 34 35 36 37
-~~~
 
-Datos de entrada: `2 intervalos válidos`
+		APUESTAS QUINIELA				RESULTADOS
+--------------------------------------------------------
+2	X	X	X	X	X	1	2			1
+--------------------------------------------------------
+2	2	X	2	X	X	1	X			X
+--------------------------------------------------------
+1	1	1	X	X	1	1	2			1
+--------------------------------------------------------
+X	X	2	1	2	X	X	1			X
+--------------------------------------------------------
+X	1	2	1	2	2	1	X			1
+--------------------------------------------------------
+X	1	X	X	X	2	1	2			1
+--------------------------------------------------------
+X	2	1	2	2	1	X	1			1
+--------------------------------------------------------
+1	2	1	1	1	1	2	X			1
+--------------------------------------------------------
+X	1	2	1	2	X	2	1			X
+--------------------------------------------------------
+X	X	X	2	2	1	X	X			1
+--------------------------------------------------------
+1	1	2	1	X	X	2	2			X
+--------------------------------------------------------
+1	X	2	1	1	1	2	1			1
+--------------------------------------------------------
+1	2	2	1	1	X	X	2			X
+--------------------------------------------------------
+2	1	1	2	2	2	X	1			1
+--------------------------------------------------------
 
-**Casos de prueba:**
-
-~~~text
-Introduce valores del intervalo 1: 1 25
-Introduce valores del intervalo 2: 3 9
-1 3 2 4 3 5 4 6 5 7 6 8 7 9 8 9 10 11 12 13 14 15 16 17 18 19 20
-~~~
-
-~~~text
-Introduce valores del intervalo 1: 9 3
-Introduce valores del intervalo 1: 3 9
-Introduce valores del intervalo 2: 1 45
-3 1 4 2 5 3 6 4 7 5 8 6 9 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Aciertos:
+5	5	5	3	4	10	6	4
+	
+La apuesta 6 ha sido la ganadora!!!!
 ~~~
 
 ### Ejercicio 2 ###
 
-Implementa un programa que pida dos cadenas de texto y concatene la segunda a continuación de la primera. No puedes usar las funciones predefinidas `strcat` ni `strlen`. 
+Implementa un programa que muestre una sopa de letras con una palabra escondida.
+
+El programa debe generar una sopa de letras de tamaño 10x10, que estará formado por letras minúsculas seleccionadas aleatoriamente.
+
+A continuación pedirá por teclado una palabra, de un tamaño que quepa dentro de la sopa de letras. La posición inicial de la palabra dentro de la sopa de letras se seleccionará de forma aleatoria, así como la dirección en la que se escribirá. Las direcciones válidas son izquierda y derecha en sentido horizontal, y también se elegirán de forma aleatoria.
+
+El programa a continuación mostrará la sopa de letras con la palabra escondida, y el usuario deberá descubrirla en un tiempo máximo que se irá mostrando en pantalla en forma de una cuenta atrás. Una vez finalizada la cuenta atrás, se mostrará la solución.
 
 **Ejemplo de ejecución:**
 
 ~~~text
-Introduce cadenas: hola amigo
-Resultado: holaamigo
-~~~
+Introduce palabra de máxima longitud 10: asignaturas
+Introduce palabra de máxima longitud 10: hola
 
-Datos de entrada: `dos cadenas de texto`
+SOPA DE LETRAS
 
-**Casos de prueba:**
-
-~~~text
-Introduce cadenas: AAAAAAAAA BBBBBBBB
-Resultado: AAAAAAAAABBBBBBBB
-~~~
-
-### Ejercicio 3 ###
-
-Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 6x7 (define para ello un tipo `TCalendario`), rellenando con ceros los días vacíos.
-
-El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz. Los 0s almacenados se imprimen como puntos `.`.
-
-Por ejemplo, Octubre 2019 se almacenaría en la siguiente matriz `TCalendario`:
-
-<img src="imagenes/octubre2019.png" width="300px"/>
-
-**Ejemplo de ejecución:**
-
-~~~text
-Introduce mes: 10
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   1   2   3   4   5   6
-   7   8   9  10  11  12  13
-  14  15  16  17  18  19  20
-  21  22  23  24  25  26  27
-  28  29  30  31   .   .   .
-   .   .   .   .   .   .   .
-~~~
-
-~~~text
-Introduce mes: 09
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   .   .   .   .   .   1
-   2   3   4   5   6   7   8
-   9  10  11  12  13  14  15
-  16  17  18  19  20  21  22
-  23  24  25  26  27  28  29
-  30   .   .   .   .   .   .
-~~~
-
-### Ejercicio 4 ###
-
-Basándonos en el programa implementado del ejercicio 3 de la práctica 4, implementa un nuevo programa que pida y valide un número binario de 8 bits y lo dibuje en pantalla con un determinado alto y ancho que habrá sido solicitado previamente. Si algún carácter introducido no es un dígito binario, el programa terminará.
-
-El número binario de 8 bits se debe leer carácter a carácter y almacenarse en un array de caracteres (lo llamaremos `TPalabra`).
-
-Fíjate en los siguiente ejemplos que el carácter de fondo utilizado en lugar de ‘.’ debe ser el carácter que representa un espacio en blanco.
+g b f l i a l o h r 
+b a l k x d l s m l 
+x h k c v t w i m x 
+l r l s u t u g g s 
+x a w d v k s p i n 
+n o t g h r r q y w 
+v j p s j e l d g f 
+a o g w t r r n d r 
+o r g f d g q p v s 
+i x v e r g z s q y 
 
 
-**Ejemplo de ejecución:**
+Cuenta atrás...
+10 9 8 7 6 5 4 3 2 1 
 
-~~~text
-Introduce alto [15..30] y ancho [8..20] de los números: 15 8
-Introduce palabra de 8 bits: 10010101
-
-   #         ########     ########        #         ########        #         ########        #    
-  ##         #      #     #      #       ##         #      #       ##         #      #       ##    
- # #         #      #     #      #      # #         #      #      # #         #      #      # #    
-#  #         #      #     #      #     #  #         #      #     #  #         #      #     #  #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         ########     ########        #         ########        #         ########        #    
-
-Introduce palabra de 8 bits: 00101011
-
-########     ########        #         ########        #         ########        #            #    
-#      #     #      #       ##         #      #       ##         #      #       ##           ##    
-#      #     #      #      # #         #      #      # #         #      #      # #          # #    
-#      #     #      #     #  #         #      #     #  #         #      #     #  #         #  #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-########     ########        #         ########        #         ########        #            #    
-
-Introduce palabra de 8 bits: f
-Fin del programa
+La palabra "hola" se encuentra en la posición inicial (0, 8) en dirección IZQUIERDA
 ~~~
 
 
-### Ejercicio 5 ###
+Debes utilizar, al menos, las siguientes definiciones en tu programa:
 
-Implementa un programa que pida 2 números binarios e imprima su suma binaria. Para ello, ten en cuenta lo siguiente:
+~~~c
+#define NUM_FILAS 10
+#define NUM_COLUMNAS 10
+#define MAX_CADENA 80
 
-- Lee los números carácter a carácter y guárdalos en un array de caracteres.
-- La longitud máxima de los números debe ser de 8 bits.
-- En el caso de que uno de los números introducidos tenga mayor longitud o no sea binario, el programa terminará.
-- Los números introducidos pueden tener distinto tamaño, en cuyo caso habrá que rellenar el menor de ellos con ceros a su izquierda, para que ambos tengan el mismo número de bits.
-- La suma binaria se lleva a cabo de la siguiente manera:
-
-    ~~~text
-      0 + 0 = 0
-      0 + 1 = 1
-      1 + 0 = 1
-      1 + 1 = 0  y acarreo 1
-    ~~~
-
-
-**Ejemplo de ejecución:**
-
-~~~text
-Introduce palabra de máximo de 8 bits: 11
-Introduce palabra de máximo de 8 bits: 11
-
-
-     11
-   + 11
-     --
-    110
-Introduce palabra de máximo de 8 bits: 111
-Introduce palabra de máximo de 8 bits: 11
-
-
-     111
-   + 011
-     ---
-    1010
-Introduce palabra de máximo de 8 bits: 00011
-Introduce palabra de máximo de 8 bits: 101
-
-
-     00011
-   + 00101
-     -----
-     01000
-Introduce palabra de máximo de 8 bits: 11111111
-Introduce palabra de máximo de 8 bits: 10010100
-
-
-     11111111
-   + 10010100
-     --------
-    110010011
-Introduce palabra de máximo de 8 bits: f
-Fin del programa
+typedef char TSopaLetras[NUM_FILAS][NUM_COLUMNAS];
+typedef char TPalabra[MAX_CADENA];
 ~~~
 
+Te damos la implementación de las siguientes funciones:
+
+~~~c
+// Esta función genera de forma aleatoria una letra minúscula, 
+// teniendo en cuenta que el código ASCII tiene 26 letras minúsculas
+char LetraAleatoria() {
+    char letra;
+    int  num;
+    
+    num = rand() % NUM_LETRAS;
+    letra = 'a' + num;
+ 
+    return letra;
+}
+
+
+
+// Esta función imprime en pantalla una cuenta atrás, segundo a segundo
+// Hay que incluir : #include <unistd.h>
+void CuentaAtras() {
+    int i;
+    
+    printf("\nCuenta atrás...\n");
+    for (i=SEGUNDOS_CUENTA_ATRAS; i>0; i--) {
+        printf("%d ", i);
+        fflush(stdout);
+        sleep(1);
+    }
+}
+~~~
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares

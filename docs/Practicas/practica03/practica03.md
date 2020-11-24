@@ -1,5 +1,7 @@
 # Práctica 3: Sentencias de iteración
 
+**Duración**: 2 semanas
+
 ### Ejercicio 1 ###
 
 Escribe un programa que solicite un número `n` impar y positivo, validando el dato, y muestre una matriz de `nxn` tal y como muestra el ejemplo:

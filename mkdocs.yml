@@ -9,12 +9,14 @@ nav:
    - 'Tema 3: Sentencias de control': 'Teoria/tema03-sentencias-de-control/tema03-sentencias-de-control.md'
    - 'Tema 4: Descomposición modular': 'Teoria/tema04-descomposicion-modular/tema04-descomposicion-modular.md'
    - 'Tema 5: Datos estructurados: Arrays': 'Teoria/tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.md'
+   - 'Tema 6: Datos estructurados: Registros': 'Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.md'
 - 'Prácticas':
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
    - 'Práctica 2: Sentencias de selección': 'Practicas/practica02/practica02.md'
    - 'Práctica 3: Sentencias de iteración': 'Practicas/practica03/practica03.md'
    - 'Práctica 4: Descomposición modular': 'Practicas/practica04/practica04.md'
+   - 'Práctica 5: Datos estructurados: Arrays': 'Practicas/practica05/practica05.md'
 theme:
     language: es
     name: 'material'
