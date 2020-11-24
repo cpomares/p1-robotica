@@ -263,6 +263,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.html" title="Tema 6: Datos estructurados: Registros" class="md-nav__link">
+      Tema 6: Datos estructurados: Registros
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -272,10 +284,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Prácticas
@@ -347,6 +361,63 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Práctica 5: Datos estructurados: Arrays
+      </label>
+    
+    <a href="practica05.html" title="Práctica 5: Datos estructurados: Arrays" class="md-nav__link md-nav__link--active">
+      Práctica 5: Datos estructurados: Arrays
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-1" title="Ejercicio 1" class="md-nav__link">
+    Ejercicio 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-2" title="Ejercicio 2" class="md-nav__link">
+    Ejercicio 2
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -386,27 +457,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#ejercicio-3" title="Ejercicio 3" class="md-nav__link">
-    Ejercicio 3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
-    Ejercicio 4
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio-5" title="Ejercicio 5" class="md-nav__link">
-    Ejercicio 5
-  </a>
-  
-</li>
-      
       
       
       
@@ -427,126 +477,12 @@
                 <h1 id="practica-5-datos-estructurados-arrays">Práctica 5: Datos estructurados: Arrays<a class="headerlink" href="#practica-5-datos-estructurados-arrays" title="Permanent link">&para;</a></h1>
 <p><strong>Duración</strong>: 2 semanas</p>
 <h3 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h3>
-<p>Modifica el ejercicio 1 de la práctica 4 para almacenar los intervalos en arrays que como máximo tendrán 20 elementos.</p>
-<p>Utiliza la siguiente definición:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define MAX 20</span>
-<span class="k">typedef</span> <span class="kt">int</span> <span class="n">TIntervalo</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-</pre></div>
-</td></tr></table>
-
-<p>Y los siguientes prototipos:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">leerIntervalo</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">almacenaIntervalo</span><span class="p">(</span><span class="n">TIntervalo</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>  <span class="c1">// almacena un intervalo en un array</span>
-<span class="kt">void</span> <span class="nf">intercalar</span><span class="p">(</span><span class="n">TIntervalo</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">TIntervalo</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span> <span class="c1">// intercala dos arrays de intervalos</span>
-<span class="kt">void</span> <span class="nf">imprimirIntervalo</span><span class="p">(</span><span class="n">TIntervalo</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span> <span class="c1">// imprime un array de intervalo</span>
-</pre></div>
-</td></tr></table>
-
-<p>Si un intervalo es mayor que <code>MAX</code>, sólo se almacenarán en el array los valores que quepan.</p>
-<p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce valores del intervalo 1: 2 7
-Introduce valores del intervalo 2: 20 37
-2 20 3 21 4 22 5 23 6 24 7 25 26 27 28 29 30 31 32 33 34 35 36 37
-</pre></div>
-</td></tr></table>
-
-<p>Datos de entrada: <code>2 intervalos válidos</code></p>
-<p><strong>Casos de prueba:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce valores del intervalo 1: 1 25
-Introduce valores del intervalo 2: 3 9
-1 3 2 4 3 5 4 6 5 7 6 8 7 9 8 9 10 11 12 13 14 15 16 17 18 19 20
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce valores del intervalo 1: 9 3
-Introduce valores del intervalo 1: 3 9
-Introduce valores del intervalo 2: 1 45
-3 1 4 2 5 3 6 4 7 5 8 6 9 7 8 9 10 11 12 13 14 15 16 17 18 19 20
-</pre></div>
-</td></tr></table>
-
-<h3 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h3>
-<p>Implementa un programa que pida dos cadenas de texto y concatene la segunda a continuación de la primera. No puedes usar las funciones predefinidas <code>strcat</code> ni <code>strlen</code>. </p>
-<p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce cadenas: hola amigo
-Resultado: holaamigo
-</pre></div>
-</td></tr></table>
-
-<p>Datos de entrada: <code>dos cadenas de texto</code></p>
-<p><strong>Casos de prueba:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce cadenas: AAAAAAAAA BBBBBBBB
-Resultado: AAAAAAAAABBBBBBBB
-</pre></div>
-</td></tr></table>
-
-<h3 id="ejercicio-3">Ejercicio 3<a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h3>
-<p>Modifica el ejercicio 2 de la práctica 4 para que el calendario se almacene en una matriz de enteros 6x7 (define para ello un tipo <code>TCalendario</code>), rellenando con ceros los días vacíos.</p>
-<p>El programa tiene que funcionar igual que el de la práctica anterior, pero ahora el calendario se imprime directamente desde los datos almacenados en la matriz. Los 0s almacenados se imprimen como puntos <code>.</code>.</p>
-<p>Por ejemplo, Octubre 2019 se almacenaría en la siguiente matriz <code>TCalendario</code>:</p>
-<p><img src="imagenes/octubre2019.png" width="300px"/></p>
-<p><strong>Ejemplo de ejecución:</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce mes: 10
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   1   2   3   4   5   6
-   7   8   9  10  11  12  13
-  14  15  16  17  18  19  20
-  21  22  23  24  25  26  27
-  28  29  30  31   .   .   .
-   .   .   .   .   .   .   .
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce mes: 09
-Introduce año: 2019
-
- LUN MAR MIE JUE VIE SAB DOM
-   .   .   .   .   .   .   1
-   2   3   4   5   6   7   8
-   9  10  11  12  13  14  15
-  16  17  18  19  20  21  22
-  23  24  25  26  27  28  29
-  30   .   .   .   .   .   .
-</pre></div>
-</td></tr></table>
-
-<h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
-<p>Basándonos en el programa implementado del ejercicio 3 de la práctica 4, implementa un nuevo programa que pida y valide un número binario de 8 bits y lo dibuje en pantalla con un determinado alto y ancho que habrá sido solicitado previamente. Si algún carácter introducido no es un dígito binario, el programa terminará.</p>
-<p>El número binario de 8 bits se debe leer carácter a carácter y almacenarse en un array de caracteres (lo llamaremos <code>TPalabra</code>).</p>
-<p>Fíjate en los siguiente ejemplos que el carácter de fondo utilizado en lugar de ‘.’ debe ser el carácter que representa un espacio en blanco.</p>
+<p>Implementa un programa que compruebe los aciertos que tiene una quiniela de futbol. </p>
+<p>Una quiniela está formada por 8 apuestas, y cada apuesta contiene los resultados (1, X, 2) de 14 partidos de futbol. El pleno al 15 no lo tendremos en cuenta.</p>
+<p>Los resultados de la quiniela completa (las 8 apuestas) se rellenarán de forma aleatoria y también se generará de forma aleatoria los resultados reales (1, X, 2) de los partidos.</p>
+<p>Una vez generados todos estos resultados aleatorios, el programa mostrará la quiniela completa y los resultados reales de los partidos, y finalmente deberá calcular y mostrar los aciertos de cada apuesta e indicar cuál ha sido la ganadora.
+En el caso de que varias apuestas tengan los mismos aciertos, se mostrará como ganadora la primera de ellas.</p>
+<p>La implementación de este ejercicio hazla <strong>sin</strong> utilizar <code>typedef</code> para las matrices / arrays.</p>
 <p><strong>Ejemplo de ejecución:</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -582,74 +518,110 @@ Introduce año: 2019
 32
 33
 34
-35
-36
-37
-38
-39</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce alto [15..30] y ancho [8..20] de los números: 15 8
-Introduce palabra de 8 bits: 10010101
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>        APUESTAS QUINIELA               RESULTADOS
+--------------------------------------------------------
+2   X   X   X   X   X   1   2           1
+--------------------------------------------------------
+2   2   X   2   X   X   1   X           X
+--------------------------------------------------------
+1   1   1   X   X   1   1   2           1
+--------------------------------------------------------
+X   X   2   1   2   X   X   1           X
+--------------------------------------------------------
+X   1   2   1   2   2   1   X           1
+--------------------------------------------------------
+X   1   X   X   X   2   1   2           1
+--------------------------------------------------------
+X   2   1   2   2   1   X   1           1
+--------------------------------------------------------
+1   2   1   1   1   1   2   X           1
+--------------------------------------------------------
+X   1   2   1   2   X   2   1           X
+--------------------------------------------------------
+X   X   X   2   2   1   X   X           1
+--------------------------------------------------------
+1   1   2   1   X   X   2   2           X
+--------------------------------------------------------
+1   X   2   1   1   1   2   1           1
+--------------------------------------------------------
+1   2   2   1   1   X   X   2           X
+--------------------------------------------------------
+2   1   1   2   2   2   X   1           1
+--------------------------------------------------------
 
-   #         ########     ########        #         ########        #         ########        #    
-  ##         #      #     #      #       ##         #      #       ##         #      #       ##    
- # #         #      #     #      #      # #         #      #      # #         #      #      # #    
-#  #         #      #     #      #     #  #         #      #     #  #         #      #     #  #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         #      #     #      #        #         #      #        #         #      #        #    
-   #         ########     ########        #         ########        #         ########        #    
+Aciertos:
+5   5   5   3   4   10  6   4
 
-Introduce palabra de 8 bits: 00101011
-
-########     ########        #         ########        #         ########        #            #    
-#      #     #      #       ##         #      #       ##         #      #       ##           ##    
-#      #     #      #      # #         #      #      # #         #      #      # #          # #    
-#      #     #      #     #  #         #      #     #  #         #      #     #  #         #  #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-#      #     #      #        #         #      #        #         #      #        #            #    
-########     ########        #         ########        #         ########        #            #    
-
-Introduce palabra de 8 bits: f
-Fin del programa
+La apuesta 6 ha sido la ganadora!!!!
 </pre></div>
 </td></tr></table>
 
-<h3 id="ejercicio-5">Ejercicio 5<a class="headerlink" href="#ejercicio-5" title="Permanent link">&para;</a></h3>
-<p>Implementa un programa que pida 2 números binarios e imprima su suma binaria. Para ello, ten en cuenta lo siguiente:</p>
-<ul>
-<li>Lee los números carácter a carácter y guárdalos en un array de caracteres.</li>
-<li>La longitud máxima de los números debe ser de 8 bits.</li>
-<li>En el caso de que uno de los números introducidos tenga mayor longitud o no sea binario, el programa terminará.</li>
-<li>Los números introducidos pueden tener distinto tamaño, en cuyo caso habrá que rellenar el menor de ellos con ceros a su izquierda, para que ambos tengan el mismo número de bits.</li>
-<li>
-<p>La suma binaria se lleva a cabo de la siguiente manera:</p>
+<h3 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h3>
+<p>Implementa un programa que muestre una sopa de letras con una palabra escondida.</p>
+<p>El programa debe generar una sopa de letras de tamaño 10x10, que estará formado por letras minúsculas seleccionadas aleatoriamente.</p>
+<p>A continuación pedirá por teclado una palabra, de un tamaño que quepa dentro de la sopa de letras. La posición inicial de la palabra dentro de la sopa de letras se seleccionará de forma aleatoria, así como la dirección en la que se escribirá. Las direcciones válidas son izquierda y derecha en sentido horizontal, y también se elegirán de forma aleatoria.</p>
+<p>El programa a continuación mostrará la sopa de letras con la palabra escondida, y el usuario deberá descubrirla en un tiempo máximo que se irá mostrando en pantalla en forma de una cuenta atrás. Una vez finalizada la cuenta atrás, se mostrará la solución.</p>
+<p><strong>Ejemplo de ejecución:</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce palabra de máxima longitud 10: asignaturas
+Introduce palabra de máxima longitud 10: hola
+
+SOPA DE LETRAS
+
+g b f l i a l o h r 
+b a l k x d l s m l 
+x h k c v t w i m x 
+l r l s u t u g g s 
+x a w d v k s p i n 
+n o t g h r r q y w 
+v j p s j e l d g f 
+a o g w t r r n d r 
+o r g f d g q p v s 
+i x v e r g z s q y 
+
+
+Cuenta atrás...
+10 9 8 7 6 5 4 3 2 1 
+
+La palabra &quot;hola&quot; se encuentra en la posición inicial (0, 8) en dirección IZQUIERDA
+</pre></div>
+</td></tr></table>
+
+<p>Debes utilizar, al menos, las siguientes definiciones en tu programa:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  0 + 0 = 0
-  0 + 1 = 1
-  1 + 0 = 1
-  1 + 1 = 0  y acarreo 1
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define NUM_FILAS 10</span>
+<span class="cp">#define NUM_COLUMNAS 10</span>
+<span class="cp">#define MAX_CADENA 80</span>
+
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">TSopaLetras</span><span class="p">[</span><span class="n">NUM_FILAS</span><span class="p">][</span><span class="n">NUM_COLUMNAS</span><span class="p">];</span>
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">TPalabra</span><span class="p">[</span><span class="n">MAX_CADENA</span><span class="p">];</span>
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
-<p><strong>Ejemplo de ejecución:</strong></p>
+<p>Te damos la implementación de las siguientes funciones:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -675,53 +647,37 @@ Fin del programa
 23
 24
 25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Introduce palabra de máximo de 8 bits: 11
-Introduce palabra de máximo de 8 bits: 11
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Esta función genera de forma aleatoria una letra minúscula, </span>
+<span class="c1">// teniendo en cuenta que el código ASCII tiene 26 letras minúsculas</span>
+<span class="kt">char</span> <span class="nf">LetraAleatoria</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">letra</span><span class="p">;</span>
+    <span class="kt">int</span>  <span class="n">num</span><span class="p">;</span>
+
+    <span class="n">num</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="n">NUM_LETRAS</span><span class="p">;</span>
+    <span class="n">letra</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">letra</span><span class="p">;</span>
+<span class="p">}</span>
 
 
-     11
-   + 11
-     --
-    110
-Introduce palabra de máximo de 8 bits: 111
-Introduce palabra de máximo de 8 bits: 11
 
+<span class="c1">// Esta función imprime en pantalla una cuenta atrás, segundo a segundo</span>
+<span class="c1">// Hay que incluir : #include &lt;unistd.h&gt;</span>
+<span class="kt">void</span> <span class="nf">CuentaAtras</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 
-     111
-   + 011
-     ---
-    1010
-Introduce palabra de máximo de 8 bits: 00011
-Introduce palabra de máximo de 8 bits: 101
-
-
-     00011
-   + 00101
-     -----
-     01000
-Introduce palabra de máximo de 8 bits: 11111111
-Introduce palabra de máximo de 8 bits: 10010100
-
-
-     11111111
-   + 10010100
-     --------
-    110010011
-Introduce palabra de máximo de 8 bits: f
-Fin del programa
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Cuenta atrás...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">SEGUNDOS_CUENTA_ATRAS</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Antonio Botía, Cristina Pomares</p>
                 
@@ -740,6 +696,27 @@ Antonio Botía, Cristina Pomares</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../practica04/practica04.html" title="Práctica 4: Descomposición modular" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Práctica 4: Descomposición modular
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
