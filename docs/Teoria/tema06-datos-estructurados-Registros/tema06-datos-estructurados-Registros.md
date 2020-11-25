@@ -638,6 +638,6 @@ d. Escribe el código que permita mostrar por pantalla el nombre, apellidos y la
 - Capítulos 11.1 a 11.7 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero
 
 ----
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
