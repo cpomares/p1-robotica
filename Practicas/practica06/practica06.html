@@ -393,63 +393,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#juego-simulacion-de-robot" title="Juego: simulación de robot" class="md-nav__link">
-    Juego: simulación de robot
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#en-que-consiste-el-juego" title="En qué consiste el juego" class="md-nav__link">
-    En qué consiste el juego
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplos-de-ejecucion-del-juego" title="Ejemplos de ejecución del juego" class="md-nav__link">
-    Ejemplos de ejecución del juego
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#otros-detalles-del-juego" title="Otros detalles del juego" class="md-nav__link">
-    Otros detalles del juego
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementacion-del-juego" title="Implementación del juego" class="md-nav__link">
-    Implementación del juego
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ayuda-para-la-compilacion-y-creacion-del-fichero-ejecutable-make" title="Ayuda para la compilación y creación del fichero ejecutable: make" class="md-nav__link">
-    Ayuda para la compilación y creación del fichero ejecutable: make
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -463,89 +406,268 @@
                 
                 <h1 id="practica-6-datos-estructurados-registros">Práctica 6: Datos estructurados: Registros<a class="headerlink" href="#practica-6-datos-estructurados-registros" title="Permanent link">&para;</a></h1>
 <p><strong>Duración</strong>: 2 semanas</p>
-<h2 id="juego-simulacion-de-robot">Juego: simulación de robot<a class="headerlink" href="#juego-simulacion-de-robot" title="Permanent link">&para;</a></h2>
-<h3 id="en-que-consiste-el-juego">En qué consiste el juego<a class="headerlink" href="#en-que-consiste-el-juego" title="Permanent link">&para;</a></h3>
-<p>Vamos a implementar un pequeño juego que simula el movimiento dirigido de un robot de un punto a otro dentro de un campo de energía.</p>
-<p>El robot partirá de una posición inicial y lo iremos moviendo eligiendo cada vez una de las 4 posibles direcciones: arriba, derecha, abajo, izquierda. El cursor indicará donde está situado en cada instante el robot.</p>
-<p>Las casillas o posiciones inicialmente no son visibles, y pueden estar vacías o disponer de recarga o pérdida de energía. El robot dispone inicialmente de una determinada energía, y el objetivo del juego es alcanzar la posición final sin que el robot se quede sin ella. Las posiciones se irán mostrando conforme avance el robot.</p>
-<h3 id="ejemplos-de-ejecucion-del-juego">Ejemplos de ejecución del juego<a class="headerlink" href="#ejemplos-de-ejecucion-del-juego" title="Permanent link">&para;</a></h3>
-<p>En las siguientes imágenes se muestra distintas situaciones del funcionamiento del juego. Las 3 primeras imágenes muestran una secuencia de ejecución en la que desde una posición inicial (representada por el carácter <code>'I'</code>) y partiendo de una cantidad de energía de 5 unidades, hacemos 3 movimientos hacia abajo del robot, después de los cuales mantiene su energía inicial puesto que las posiciones visitadas están vacías (representadas con el carácter <code>'.'</code>). A continuación lo vamos desplazando a la derecha hasta alcanzar una posición en la que se recarga de energía (representada con el carácter <code>'+'</code>) en 2 unidades, y finalmente después de varios movimientos en distintas direcciones alcanza una posición en la que pierde energía (representada con el carácter <code>'-'</code>), en concreto 3 unidades de pérdida.</p>
-<p><img src="imagenes/imagen1.png" width="150px"/>
-<img src="imagenes/imagen2.png" width="150px"/>
-<img src="imagenes/imagen3.png" width="150px"/></p>
-<p>Las 3 siguientes imágenes muestran las 3 posibles situaciones de finalización del juego:</p>
+<p>Para la realización de esta práctica vamos a partir del programa de la sopa de letras de la práctica anterior (puedes utilizar como punto de partida tu solución o la publicada por los profesores).</p>
 <ul>
-<li>Alcanzar la posición final (representada por el carácter <code>'F'</code>).</li>
-<li>Quedarse sin energía.</li>
-<li>Cancelar la ejecución si lo decide el usuario.</li>
+<li>Debes ampliar las direcciones para ocultar la palabra a las 8 posibles horizontales, verticales y diagonales.</li>
 </ul>
-<p><img src="imagenes/imagen4.png" width="250px"/>
-<img src="imagenes/imagen5.png" width="250px"/>
-<img src="imagenes/imagen6.png" width="150px"/></p>
-<h3 id="otros-detalles-del-juego">Otros detalles del juego<a class="headerlink" href="#otros-detalles-del-juego" title="Permanent link">&para;</a></h3>
-<ul>
-<li>El entorno por el que se puede mover el robot será un tablero con unas determinadas dimensiones, en donde cada casilla del mismo representa una posición.</li>
-<li>El robot no se puede mover a una posición que ya ha visitado y tampoco sobrepasar los límites del tablero. Si intenta realizar un movimiento no válido, no se llevará a cabo.</li>
-<li>Al iniciar el juego, solo estarán visibles las casillas inicial y final, y se irán descubriendo el contenido del resto conforme sean visitadas por el robot.</li>
-</ul>
-<h3 id="implementacion-del-juego">Implementación del juego<a class="headerlink" href="#implementacion-del-juego" title="Permanent link">&para;</a></h3>
-<h4>Librería <code>terminalIO</code></h4>
-<p>Se os proporciona la librería de usuario <code>terminalIO.h</code>. Ten en cuenta que cuando usamos una librería de usuario o estándar del lenguaje, no necesitamos conocer cómo están implementadas sus funciones, sino <strong>qué es lo que hacen y cómo se interactúa con ellas</strong> (qué datos de entrada tienen y qué datos devuelven). Por lo tanto, estudia y analiza el fichero <code>terminalIO.h</code> para entender todas sus funcionalidades, pero no necesitas comprender el contenido del fichero <code>terminalIO.c</code>. La librería te permite hacer lo siguiente:</p>
-<ul>
-<li>Mover el cursor a una determinada posición de la pantalla, así como imprimir texto o un carácter en un determinado color.</li>
-<li>Utilizar el mismo sistema de coordenadas para representar el tablero del juego y para movernos a una posición en la pantalla, donde la coordenada <code>(0,0)</code> es la esquina superior izquierda.</li>
-<li>Detectar qué tecla se ha pulsado, para determinar en qué dirección hay que mover el cursor (utilizando las teclas de los caracteres <code>'i'</code> <code>'k'</code> <code>'j'</code> <code>'l'</code>) y también permitir que el usuario pueda terminar el juego en cualquier momento pulsando la tecla <code>&lt;ESC&gt;</code>.</li>
-</ul>
-<h4>Fichero <code>practica6.c</code></h4>
-<p>Se os proporciona el fichero <code>practica6.c</code>a partir del cual tenéis que implementar vuestro juego. Este fichero contiene la declaración de constantes de configuración del juego y la función <code>main()</code> con un ejemplo de uso de la librería <code>terminalIO</code>. Al ejecutar el programa, puedes mover el cursor pulsando algunas de las teclas citadas anteriormente y se muestra un mensaje indicado la posición actual del mismo. El programa finaliza su ejecución cuando se pulsa la tecla <code>&lt;ESC&gt;</code>, mientras que la pulsación de cualquier otra tecla será ignorada.</p>
-<p>Modifica el fichero <code>practica6.c</code>:</p>
-<ul>
-<li>Modifica la función <code>main()</code> teniendo en cuenta que <strong>no debe contener más de 30 líneas de código</strong>, aparte de la declaración de variables.</li>
-<li>Añade nuevas constantes y tipos de datos.</li>
-<li>Añade funciones que modularicen correctamente el programa.</li>
-<li>
-<p>Guarda en una matriz la información necesaria para cada <strong>casilla</strong> del tablero:</p>
-<ul>
-<li>descriptor de la casilla</li>
-<li>color del descriptor</li>
-<li>si ha sido visitada o no</li>
-<li>cantidad de energía</li>
-</ul>
-</li>
-<li>
-<p>Antes del inicio del juego, tendrás que inicializar la información de todas las casillas, aunque sólo se visualizará en pantalla la posición inicial y final. No obstante, en las primeras pruebas de tu programa, es recomendable que muestres todo el tablero, para comprobar el correcto funcionamiento del mismo.</p>
-</li>
-<li>
-<p>La cantidad de energía que se asigna a una casilla debe ser un valor aleatorio, con un determinado máximo de energía establecido en una constante de configuración. Para generar valores aleatorios, utiliza las funciones de C <code>rand()</code> y <code>srand()</code>:</p>
-<ul>
-<li>Añade las librerías <code>&lt;stdlib.h&gt;</code> y <code>&lt;time.h&gt;</code>.</li>
-<li>
-<p>Para generar números aleatorios dependiendo del instante de tiempo en el que estamos ejecutando el programa, hay que inicializar la semilla. Para ello añade al principio de la función <code>main()</code> la sentencia:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">IZQUIERDA</span><span class="p">,</span> <span class="n">DERECHA</span><span class="p">,</span> <span class="n">ARRIBA</span><span class="p">,</span> <span class="n">ABAJO</span><span class="p">,</span> <span class="n">IZQ_ARRIBA</span><span class="p">,</span> <span class="n">DER_ARRIBA</span><span class="p">,</span> <span class="n">IZQ_ABAJO</span><span class="p">,</span> <span class="n">DER_ABAJO</span><span class="p">}</span> <span class="n">TDireccion</span><span class="p">;</span>
 </pre></div>
 </td></tr></table>
 
-</li>
-<li>
-<p>Para generar un valor aleatorio dentro del intervalo <code>[a,b]</code>, utiliza la siguiente expresión:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span>
+<ul>
+<li>Al ejecutar el programa, se pasará desde línea de comandos un máximo de 5 palabras a ocultar. Las palabras que no quepan en la sopa de letras, se descartarán. Si hay más de 5 palabras válidas, se descartarán las restantes. </li>
+<li>Se deben ocultar las palabras leídas en la sopa de letras. No hace falta tener en cuenta posibles solapes entre ellas. </li>
+<li>Se pedirán desde teclado las palabras que ha descubierto el usuario, restringiendo el tiempo a 30 segundos, a partir del cual no se podrá introducir ninguna palabra más. </li>
+<li>A continuación se mostrará la solución y las palabras que ha acertado el usuario.</li>
+</ul>
+<p>Hay que usar las siguientes definiciones, aparte de las de la práctica anterior:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">fila</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">columna</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">TPosicion</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">TCadena</span>   <span class="n">palabra</span><span class="p">;</span>
+    <span class="n">TPosicion</span>  <span class="n">posicion</span><span class="p">;</span>
+    <span class="n">TDireccion</span> <span class="n">direccion</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">TPalabraSopaLetras</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="n">TPalabraSopaLetras</span> <span class="n">TPalabras</span><span class="p">[</span><span class="n">MAX_PALABRAS</span><span class="p">];</span>
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
-</li>
-<li>
-<p>Asegúrate que el mensaje de finalización del juego se imprima con el color por defecto, para restablecer dicho color en el terminal al finalizar tu programa.</p>
-</li>
-</ul>
-<h3 id="ayuda-para-la-compilacion-y-creacion-del-fichero-ejecutable-make">Ayuda para la compilación y creación del fichero ejecutable: <code>make</code><a class="headerlink" href="#ayuda-para-la-compilacion-y-creacion-del-fichero-ejecutable-make" title="Permanent link">&para;</a></h3>
-<p>Cuando nuestro programa utiliza librerías de usuario es recomendable automatizar el proceso de compilación y construcción del fichero ejecutable. Para ello se utiliza el comando <code>make</code>, que requiere un fichero de configuración, que se suele denominar <code>makefile</code> y que  contiene dependencias, reglas y comandos a ejecutar para la construcción de este proceso de construcción del ejecutable.</p>
-<p>El fichero <code>makefile</code> proporcionado, permite que al ejecutar el comando <code>make</code>, se cree el fichero ejecutable <code>practica6</code> en caso de que compile correctamente el fichero <code>practica6.c</code> y la librería de usuario que estamos utilizando.</p>
-<p>Cada vez que se ejecute el comando <code>make</code>, sólo se recopilarán los ficheros que hayan sido modificados antes de la última construcción del ejecutable.</p>
-<p>Si ejecutamos el comando <code>make clean</code> borrará el fichero ejecutable y los ficheros objeto que se guardan en el directorio <code>./obj</code>.</p>
+<p><strong>Observación</strong>:
+Es posible que las palabras a ocultar en la sopa de letras se superpongan unas con otras. No lo vamos a tener en cuenta. En el ejemplo 1 no se superponen las palabras, pero en el ejemplo 2 puedes comprobar que después de escribir en la sopa de letras la palabra “francia”, se ha escrito la palabra “suecia”, haciendo desaparecer la primera de ellas.</p>
+<p><strong>Ayuda implementación</strong>: Para calcular cuánto tiempo ha transcurrido entre dos instantes de tiempo determinados, utiliza lo siguiente:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">time_t</span>  <span class="n">hora_inicio</span><span class="p">,</span> <span class="n">hora_fin</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">tiempo_transcurrido</span><span class="p">;</span>
+
+<span class="n">hora_inicio</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>  <span class="c1">// nos devuelve la hora actual</span>
+
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>  <span class="c1">// sentencias de las que mediremos su tiempo de ejecución</span>
+
+<span class="n">hora_fin</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="c1">// calcular los segundos transcurridos entre hora inicio y hora fin</span>
+<span class="n">tiempo_transcurrido</span> <span class="o">=</span> <span class="n">difftime</span><span class="p">(</span><span class="n">hora_fin</span><span class="p">,</span> <span class="n">hora_inicio</span><span class="p">);</span> 
+</pre></div>
+</td></tr></table>
+
+<p><strong>Ejemplo 1 de ejecución</strong>: </p>
+<p>Se indican 4 palabras a ocultar, de las cuales una se descarta porque no cabe en la sopa de letras. Después se introducen por teclado 2 palabras encontradas y excedemos el tiempo límite, por lo que no se pueden introducir mas palabras. Las 2 palabras encontradas son respuestas correctas.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./programa portugal liechtenstein francia italia
+
+SOPA DE LETRAS
+
+q i c a d w d z j j 
+l t p p y v z j q z 
+a a f l w f j z c i 
+g l a i c n a r f y 
+u i n t q f w r g x 
+t a j z m s p t x f 
+r h v x x g x l g k 
+o y q l c w k a b s 
+p d h p n w g x e b 
+q i z e f m q p j p 
+
+Dispones de 30 segundos para indicar las palabras encontradas...
+
+Introduce una palabra encontrada: portugal
+Introduce su posicion inicial (fila columna): 8 0
+Introduce dirección
+4-IZQ_ARRIBA        2-ARRIBA        5-DER_ARRIBA
+0-IZQUIERDA                 1-DERECHA
+6-IZQ_ABAJO     3-ABAJO     7-DER_ABAJO ...:2
+
+Consumidos 21 segundos
+
+¿quieres introducir otra palabra (s/n): s
+
+Introduce una palabra encontrada: italia
+Introduce su posicion inicial (fila columna): 0 1
+Introduce dirección
+4-IZQ_ARRIBA        2-ARRIBA        5-DER_ARRIBA
+0-IZQUIERDA                 1-DERECHA
+6-IZQ_ABAJO     3-ABAJO     7-DER_ABAJO ...:3
+
+Consumidos 36 segundos
+
+Excedido el tiempo límite para responder
+
+
+Las palabras ocultas son:
+
+portugal en posición inicial (8,0) y dirección ARRIBA
+francia en posición inicial (3,8) y dirección IZQUIERDA
+italia en posición inicial (0,1) y dirección ABAJO
+
+
+Las palabras acertadas son:
+portugal
+italia
+</pre></div>
+</td></tr></table>
+
+<p><strong>Ejemplo 2 de ejecución</strong>: </p>
+<p>Se indican 6 palabras válidas a ocultar y la última se descarta por exceder el límite máximo de palabras. Sólo se introduce por teclado una palabra encontrada, sin consumir el tiempo máximo. La respuesta no es correcta porque la dirección está equivocada.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./programa portugal francia italia suiza suecia noruega
+
+SOPA DE LETRAS
+
+n y w p x n z x o i 
+o a z i u s z s r y 
+l f b n e d m v p p 
+k a i a n a r f o c 
+c w g c i y e f r a 
+h d w u z c o y i o 
+t k s n t r e l q i 
+d j g k s r a u l u 
+q z m z f t o u s e 
+i y n z i y b p x v 
+
+
+Dispones de 30 segundos para indicar las palabras encontradas...
+
+Introduce una palabra encontrada: suiza
+Introduce su posicion inicial (fila columna): 1 5
+Introduce dirección
+4-IZQ_ARRIBA        2-ARRIBA        5-DER_ARRIBA
+0-IZQUIERDA                 1-DERECHA
+6-IZQ_ABAJO     3-ABAJO     7-DER_ABAJO ...:1
+
+Consumidos 16 segundos
+
+
+¿quieres introducir otra palabra (s/n): n
+
+Consumidos 16 segundos
+
+
+Las palabras ocultas son:
+
+portugal en posición inicial (9,7) y dirección IZQUIERDA-ARRIBA
+francia en posición inicial (3,7) y dirección IZQUIERDA
+italia en posición inicial (9,4) y dirección DERECHA-ARRIBA
+suiza en posición inicial (1,5) y dirección IZQUIERDA
+suecia en posición inicial (8,8) y dirección IZQUIERDA-ARRIBA
+
+No has encontrado ninguna palabra
+</pre></div>
+</td></tr></table>
+
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Antonio Botía, Cristina Pomares</p>
                 
