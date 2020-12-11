@@ -632,6 +632,98 @@ que debe devolver la nota del alumno en la asignatura cuyo código se especifica
 
 d. Escribe el código que permita mostrar por pantalla el nombre, apellidos y la nota de todos los alumnos en la asignatura "P1". Si el alumno no tiene nota en la asignatura, no debe aparecer en el listado. No es necesario que definas una función y puedes declarar alguna nueva variable si lo consideras necesario. Debes utilizar la función del apartado anterior.
 
+### Ejercicio 4
+
+Dadas las siguientes definiciones:
+ 
+~~~c
+#define MAXVERTICES 50
+ 
+typedef struct {
+   int x;
+   int y;
+}TVertice;
+ 
+typedef struct {
+   TVertice vertices[MAXVERTICES];
+   int n;  // número de vértices del polígono
+}TPoligono;
+~~~
+
+- A. Define las funciones `construyeVertice` y `construyePoligono`, cuyos prototipos son los siguientes:
+
+~~~c
+TVertice construyeVertice(int x, int y);
+TPoligono construyePoligono(int [], int); 
+~~~
+
+La función `construyePoligono` recibe un array de enteros y su longitud, que siempre es par, y construye y devuelve un polígono a partir del array, construyendo cada vértice con los elementos de dos en dos del array de enteros.
+ 
+Ejemplo:
+ 
+~~~text
+	int array[10] = {10,20,3,4,50,60,7,8,90,100};
+	El polígono tendrá los vértices (10,20)-(3,4)-(50,60)-(7,8)-(90,100)
+~~~
+
+- B. Define las funciones indicadas en los siguientes prototipos:
+ 
+~~~c
+void trasladaVertice(TVertice*, int, int);
+void trasladaPoligono(TPoligono*, int, int);
+~~~
+
+Ambas funciones reciben, a parte del TVertice o TPoligono correspondiente, un incremento en X y un incremento en Y que indican la traslación de cada vértice.
+ 
+Ejemplo:
+ 
+~~~text
+	Si el polígono tiene los vértices (10,20)-(3,4)-(50,60)-(7,8)-(90,100)
+	Después de trasladarlo con incremento en X: 100, incremento en Y: 200
+	El polígono tendrá los vértices (110,220)-(103,204)-(150,260)-(107,208)-(190,300)
+~~~
+
+- C. Suponiendo que tenemos definida la función:
+
+~~~text
+ void imprimePoligono(TPoligono)
+~~~
+ 
+completa el `main` con las llamadas correspondientes:
+ 
+~~~c
+int main() {
+   int array[10] = {1,2,3,4,5,6,7,8,9,10};
+   TPoligono pol;
+ 
+   // llamada a construyePoligono con el array definido
+ 
+   _______________________
+ 
+  // llamada a trasladaPoligono con incremento en X 10, incremento en Y 100  
+   
+   _______________________
+ 
+  // llamada a imprimePoligono con el polígono trasladado 
+
+   _______________________
+   
+   return 0;
+}
+~~~ 
+ 
+- D. Modifica ahora la función `trasladaPoligono` para realizar en ella la llamada a `imprimePoligono`:
+ 
+~~~c
+void trasladaPoligono(TPoligono *pol, int incrX, int incrY) {
+ 
+   // código hecho en el apartado B
+ 
+   // llamada a imprimePoligono:
+
+    ________________________ 
+}
+~~~
 
 ## Bibliografía
 
