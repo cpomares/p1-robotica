@@ -2,138 +2,80 @@
 
 **Duración**: 2 semanas
 
-## Memoria dinámica en funciones
+Esta práctica consiste en modificar la práctica anterior de forma que se utilice **reserva dinámica de memoria** en lugar de usar reserva estática.
 
-Cuando pasamos un array o puntero como parámetro a una función, estamos pasando la dirección de memoria del primer elemento del array, pero no al puntero en sí, que es una copia. Es decir, no podríamos modificar dinámicamente su memoria porque no tenemos una referencia a la misma.
+Deberás eliminar las constantes `MAX_PALABRAS`, `NUM_FILAS`, `NUM_COLUMNAS` y `MAX_CADENA`, y reservar sólo la memoria necesaria para las estructuras de datos que utilizaban dichas constantes.
 
-Es decir, si sólo queremos trabajar con los elementos, lo haríamos como hemos hecho hasta ahora. Pero si dentro de una función queremos modificar la memoria dinámicamente (usando `malloc`, `realloc`, etc) necesitamos pasar el array o puntero por referencia.
+De esta forma, se leerá desde línea de comandos el tamaño de la sopa de letras (filas y columnas) y también un número indeterminado de palabras de cualquier longitud.
 
-Ejemplo:
-
-~~~c
-#define TAM 20
-
-void creaVector(int **);
-
-int main() {
-   int *vector;
-
-   // Reservamos la memoria
-   creaVector(&vector);
-   vector[0] = 1;  //Rellenamos al azar
-   vector[2] = 2;
-   printf("Pos 2: %d\n", vector[2]); //Comprobamos
-
-   // Liberamos memoria
-   free(vector);
-   vector = NULL;
-
-   return 0;
-}
-
-void creaVector(int **v) {
-   *v = (int*)malloc(sizeof(int) * TAM);
-}
-~~~
-
-Podéis ampliar esta explicación en el apartado [Punteros y funciones]((https://cpomares.github.io/p1-robotica/Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html#3-punteros-y-funciones)) del tema 7 de los apuntes.
-
-## Ejercicio 1
-
-A partir de la solución que os proporcionamos del ejercicio 5 de la práctica 5, modifica el programa para que permita realizar la suma de números binarios de cualquier número de dígitos, en lugar de estar restringidos a una longitud máxima de 8 bits.
-
-Intenta realizar los mínimos cambios posibles. Para ello, usa esta nueva definición del tipo `TPalabra`:
-
-~~~c
-typedef char* TPalabra;
-~~~
-
-y utiliza las mismas funciones ya implementadas, modificando si es necesario los prototipos de algunas de ellas y su definición. Puedes añadir alguna otra función si lo consideras conveniente.
-
-
-Ejemplos de ejecución:
+**Ejemplo de ejecución**: Se indica desde línea de comandos el tamaño de la sopa de letras (15x20)  y 7 palabras a ocultar, que no se descarta ninguna porque todas caben en la sopa de letras. El funcionamiento del juego es el mismo que en la práctica anterior.
 
 ~~~text
-Introduce palabra de bits: 1000101010101010101010101010100000001
-Introduce palabra de bits: 10101000000101010101010
+$ ./programa 15 20 portugal liechtenstein francia italia suiza suecia noruega
+
+SOPA DE LETRAS
+
+u w s q e z t a e z j m x t b b y e d x 
+c s g i t t f x z w t d s v r p l z e j 
+x n r d y x z e w t s u e c i a w l s a 
+e p k i w v f t n a y t o r e a q z b x 
+g h e a v h h b q l a i v c a n g z a d 
+f h n a n q t r p c i s h u c f p u i u 
+s v o g s t i o d r l t m i y x g m h j 
+v l r d v q r c a i a n a r f z e a t u 
+o g u n o t c z v n t q y q s e j s t y 
+y e e r u x q p a m i l n o f b y y g a 
+v p g g o f s z r j m c t k j e r i r r 
+p p a g b q i u q q e v h z j o h n a j 
+r l b j f u w d s h m b v c a c o r x k 
+k m b z s r d m p o e r t e r o s z c u 
+j e v v d z v u p l s l b x t s m r h c 
+
+Dispones de 30 segundos para indicar las palabras encontradas...
 
 
-     1000101010101010101010101010100000001
-   + 0000000000000010101000000101010101010
-     -------------------------------------
-     1000101010101101010010101111110101011
+Introduce una palabra encontrada: italia
+Introduce su posicion inicial (fila columna): 9 10
+Introduce dirección
+4-IZQ_ARRIBA		2-ARRIBA		5-DER_ARRIBA
+0-IZQUIERDA					1-DERECHA
+6-IZQ_ABAJO		3-ABAJO		7-DER_ABAJO	...:2
 
-Introduce palabra de bits: 1101000111110001010111
-Introduce palabra de bits: 1100010000000010000110
-
-
-     1101000111110001010111
-   + 1100010000000010000110
-     ----------------------
-    11001010111110011011101
+Consumidos 25 segundos
 
 
-Introduce palabra de bits: f
-Fin del programa
-~~~
+¿quieres introducir otra palabra (s/n): s 
 
-## Ejercicio 2
+Introduce una palabra encontrada: portugal
+Introduce su posicion inicial (fila columna): 5 8
+Introduce dirección
+4-IZQ_ARRIBA		2-ARRIBA		5-DER_ARRIBA
+0-IZQUIERDA					1-DERECHA
+6-IZQ_ABAJO		3-ABAJO		7-DER_ABAJO	...:6
 
-A partir del programa implementado en el ejercicio anterior, modifícalo para que utilice esta nueva definición del tipo `TPalabra`:
+Consumidos 34 segundos
 
-~~~c
-typedef struct {
-    char *bits;
-    int  lon;
-} TPalabra;
-~~~
+Excedido el tiempo límite para responder
 
-## Ejercicio 3
 
-Modifica el ejercicio 3 de la práctica 5 utilizando memoria dinámica, de forma que las filas del calendario sólo se creen cuando se necesiten y no quede ninguna vacía. Utiliza las siguientes definiciones:
 
-~~~c
-#define COL 7
+Las palabras ocultas son:
 
-typedef int TFilaCalendario[COL];
-typedef TFilaCalendario *TCalendario;
-~~~
+portugal en posición inicial (5,8) y dirección IZQUIERDA-ABAJO
+liechtenstein en posición inicial (1,16) y dirección IZQUIERDA-ABAJO
+francia en posición inicial (7,14) y dirección IZQUIERDA
+italia en posición inicial (9,10) y dirección ARRIBA
+suiza en posición inicial (13,4) y dirección DERECHA-ARRIBA
+suecia en posición inicial (2,10) y dirección DERECHA
+noruega en posición inicial (5,2) y dirección ABAJO
 
-Ahora el tipo `TCalendario` es un array dinámico de tipo `TFilaCalendario` (que a su vez es un array estático de 7 elementos).
-
-Si partes de la solución que os proporcionamos, sólo debes modificar dos funciones además del `main()`. Es posible que debas modificar el prototipo de alguna más, puedes hacerlo, pero modificando mínimamente su código.
-
-Ejemplos de ejecución:
-
-~~~text
-Introduce mes: 10
-Introduce año: 2020
-
- LUN MAR MIE JUE VIE SAB DOM
-
-   .   .   .   1   2   3   4
-   5   6   7   8   9  10  11
-  12  13  14  15  16  17  18
-  19  20  21  22  23  24  25
-  26  27  28  29  30  31   .
-~~~
-
-~~~text
-Introduce mes: 11
-Introduce año: 2020
-
- LUN MAR MIE JUE VIE SAB DOM
-
-   .   .   .   .   .   .   1
-   2   3   4   5   6   7   8
-   9  10  11  12  13  14  15
-  16  17  18  19  20  21  22
-  23  24  25  26  27  28  29
-  30   .   .   .   .   .   .
+Las palabras acertadas son:
+italia
+portugal
 ~~~
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares
