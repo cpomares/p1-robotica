@@ -10,7 +10,7 @@ nav:
    - 'Tema 4: Descomposición modular': 'Teoria/tema04-descomposicion-modular/tema04-descomposicion-modular.md'
    - 'Tema 5: Datos estructurados: Arrays': 'Teoria/tema05-datos-estructurados-Arrays/tema05-datos-estructurados-Arrays.md'
    - 'Tema 6: Datos estructurados: Registros': 'Teoria/tema06-datos-estructurados-Registros/tema06-datos-estructurados-Registros.md'
-
+   - 'Tema 7: Punteros y memoria dinámica': 'Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.md'
 - 'Prácticas':
    - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
@@ -19,7 +19,7 @@ nav:
    - 'Práctica 4: Descomposición modular': 'Practicas/practica04/practica04.md'
    - 'Práctica 5: Datos estructurados: Arrays': 'Practicas/practica05/practica05.md'
    - 'Práctica 6: Datos estructurados: Registros': 'Practicas/practica06/practica06.md'
-   
+   - 'Práctica 7: Punteros y memoria dinámica': 'Practicas/practica07/practica07.md'
    theme:
     language: es
     name: 'material'
