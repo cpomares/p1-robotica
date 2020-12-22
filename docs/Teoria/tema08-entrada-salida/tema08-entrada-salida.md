@@ -604,7 +604,7 @@ int main(int argc, char **argv) {
 ~~~
 
 
-### Ejercicios propuestos
+### Ejercicios resueltos
 
 1. Hacer un programa que pida palabras al usuario y que las guarde en un fichero. El programa finalizará cuando el usuario introduzca "fin".2. Hacer un programa que pregunte el nombre de un fichero. Si existe, deberá mostrar el contenido del fichero de 25 en 25 líneas. Cuando muestre 25 líneas, esperará hasta que el usuario pulse una tecla (`getchar`) y mostrará las siguientes 25 líneas.
 3. Crear un programa que pida al usuario pares de números enteros y escriba su suma (con el formato `20 + 3 = 23`) en pantalla y en un fichero llamado "sumas.txt". Cada vez que se ejecute el programa, deberá añadir los nuevos resultados a continuación de los resultados de las ejecuciones anteriores.
@@ -703,6 +703,88 @@ int main()
 }
 ~~~
 
+## Ejercicios propuestos
+
+1. Escribe un programa que lea de un fichero de texto los elementos de una matriz cuadrada y muestre un mensaje en pantalla indicando si es o no simétrica.
+
+    Recuerda que una matriz cuadrada de dimensión N es simétrica si aij = aji para todo i,j con i, j = 1,2,3,4,...,N.
+
+    El nombre del fichero se pasará como parámetro al programa a través de la línea de comandos. Si el fichero no se puede abrir o no se indica ninguno, el programa deberá terminar su ejecución.
+
+    El fichero de texto tendrá el siguiente formato, que suponemos que siempre será correcto:
+En la primera línea se indica la dimensión de la matriz cuadrada.
+Las siguientes líneas contendrán los elementos de cada fila de la matriz (una fila por cada línea).
+
+    Ten en cuenta además que tu programa deberá reservar **sólo la memoria necesaria** para guardar los elementos de la matriz.
+
+    Ejemplos de ficheros:
+
+    ~~~text
+fichero1.txt:
+3
+1 2 3
+2 4 5
+3 5 6
+~~~
+
+    ~~~text
+fichero2.txt:
+4
+1  2   3  4
+5  6   7  8
+9  10 11 12
+13 14 15 16
+    ~~~
+
+    Ejemplos de ejecución:
+
+    ~~~text
+$ ./miPrograma fichero1.txt
+La matriz almacenada en el fichero fichero1.txt ES SIMETRICA
+$ ./miPrograma fichero2.txt
+La matriz almacenada en el fichero fichero2.txt NO ES SIMETRICA
+$ ./miPrograma
+Falta argumento en la línea de comandos o el fichero no se puede leer
+    ~~~
+
+2. Dada la definición del siguiente tipo de dato:
+
+    ~~~c
+typedef struct {
+   int a;
+   float b;
+   char c;
+}TElem;
+    ~~~
+
+    a. Añade un nuevo tipo de dato llamado `TElementos` que contenga un vector dinámico cuyos elementos son de tipo `TElem y un número que indique el total de elementos que contiene el vector.
+
+    b.  Define la función `leerYRellenar` que recibe como parámetros un nombre de fichero de texto y el tipo `TElementos` definido previamente. La función debe leer el contenido del fichero y almacenarlo en el vector, que irá creciendo dinámicamente conforme se lean líneas del fichero. El formato de cada línea del fichero es [int float char], ejemplo:
+
+    ~~~text
+3 1.5 A
+4 8.9 B
+1 5.2 C
+    ~~~
+
+    c.  Completa el `main()` para:
+realizar la llamada a la función anterior  
+imprimir por pantalla el contenido del vector.
+liberar la memoria reservada dinámicamente
+
+~~~c
+int main() {
+   TElementos elems;
+   char nombre[] = "fichero.txt";
+
+   leerYRellenar(nombre, &elems);  // rellena aquí la llamada
+
+  // Escribe aquí tu código para imprimir el contenido del vector:
+
+
+
+  // Escribe a continuación el código para liberar la memoria reservada:
+~~~
 ---
 
 Programación 1, Grado de Robótica, curso 2020-21  
