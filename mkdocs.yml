@@ -13,7 +13,7 @@ nav:
    - 'Tema 7: Punteros y memoria dinámica': 'Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.md'
    - 'Tema 8: Entrada / Salida': 'Teoria/tema08-entrada-salida/tema08-entrada-salida.md'
 - 'Prácticas':
-   - 'Practica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
+   - 'Práctica 0: Entorno Linux y herramientas': 'Practicas/practica00/practica00.md'
    - 'Práctica 1: Tipos de datos simples': 'Practicas/practica01/practica01.md'
    - 'Práctica 2: Sentencias de selección': 'Practicas/practica02/practica02.md'
    - 'Práctica 3: Sentencias de iteración': 'Practicas/practica03/practica03.md'
