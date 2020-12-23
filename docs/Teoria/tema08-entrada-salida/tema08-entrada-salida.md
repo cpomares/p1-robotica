@@ -9,37 +9,36 @@ El manejo de archivos en C se hace mediante el concepto de flujo (*streams*) o c
 
 ### 1.1 Ficheros
 
-- Toda la información manejada hasta ahora se pierde cuando termina la ejecución de un programa, tanto la introducida como la generada.- Si tenemos que manejar una gran cantidad de información (un número elevado de variables, valores, etc.) no parece razonable definir esa información en el código.- Además, puede que la información a tratar no la tengamos, sino que queramos procesar información que nos suministran almacenada.- Un fichero almacena de manera permanente la información, usando la memoria permanente (disco duro) del ordenador.- Para C todo en el ordenador es un fichero: teclado, impresora, cualquier otro dispositivo conectado al ordenador.
+- Toda la información manejada hasta ahora se pierde cuando termina la ejecución de un programa, tanto la introducida como la generada.
+- Si tenemos que manejar una gran cantidad de información (un número elevado de variables, valores, etc.) no parece razonable definir esa información en el código.
+- Además, puede que la información a tratar no la tengamos, sino que queramos procesar información que nos suministran almacenada.
+- Un fichero almacena de manera permanente la información, usando la memoria permanente (disco duro) del ordenador.
 
 
 ### 1.2 *Streams* (flujos) de E/S
 
-Un *stream* (flujo) es una abstracción que se refiere a un conjunto de datos que fluye entre un origen y un destino. Entre el origen y el destino debe existir una conexión o canal (*pipe*) por el que circulen los datos.
+- Cuando se crea o abre un fichero se genera un descriptor de archivo para poder identificarlo.
+- Se crea un ***buffer*** (almacén intermedio) por donde pasan los datos del archivo.
+- Todo archivo abierto lleva asociado un **puntero de posición** que indica el lugar donde realizará la siguiente lectura o escritura.
 
-Cuando se crea o abre un fichero, se crea un ***stream*** asociado al fichero, y se genera un descriptor de archivo para poder identificarlo.
+Hay dos tipos de ficheros:
 
-Además, se crea un ***buffer*** (almacén intermedio) por donde pasan los datos del archivo. Se utiliza para optimizar las lecturas y escrituras, sobre todo si se realizan de pocos datos y de forma continua.
+- Uno es el fichero de **texto**, consistente en líneas de texto. Una línea es una secuencia de caracteres terminada en el carácter de línea nueva ('\n' ó '\r\n').
+- El otro formato es el fichero **binario**, que consiste en una secuencia de bytes que representan datos internos como números, estructuras o arrays. Se utiliza principalmente para datos que no son de tipo texto, pueden contener cualquier información. La codificación de estos ficheros ha de estar especificada mediante un estándar o con la documentación del programa.
 
-Se puede pensar en el buffer como un array donde se van almacenando los datos dirigidos al archivo o desde el archivo. El buffer se vuelca cuando de una forma u otra se da la orden de vaciarlo.
-
-Todo archivo abierto lleva asociado un puntero de posición que indica el lugar donde realizará la siguiente lectura o escritura. Cuando se crea un archivo, el **puntero de la posición** es cero (inicio). Se va actualizando conforme se lee o se escribe. Se puede indicar una nueva posición con la función *fseek*.
-
-Hay dos tipos de *streams*:
-
-- Uno es el *stream* de **texto**, consistente en líneas de texto. Una línea es una secuencia de caracteres terminada en el carácter de línea nueva ('\n' ó '\r\n').
-- El otro formato es el del *stream* **binario**, que consiste en una secuencia de bytes que representan datos internos como números, estructuras o arrays. Se utiliza principalmente para datos que no son de tipo texto, pueden contener cualquier información. La codificación de estos ficheros ha de estar especificada mediante un estándar o con la documentación del programa.
-
-En el momento de abrir o crear un *stream*, hay que indicar de qué tipo de archivo se trata:
+En el momento de abrir o crear un fichero, hay que indicar de qué tipo de archivo se trata:
 
 - **Texto**. Formado por líneas de caracteres, terminadas en un salto de línea.
 - **Binario**. Formado por una secuencia ordenada de caracteres, sin separadores especiales, que pueden almacenar cualquier tipo de información.
 
-No hay diferencia real entre uno y otro, salvo que en un fichero en modo texto hay fines de línea y hay funciones de ficheros que pueden buscarlos. Si se abre en modo binario, la información puede ser de cualquier tipo y las funciones de ficheros no buscarán fines de línea.
-
-
 ## 2. Manejo de ficheros
 
-Cuando trabajamos con ficheros se suele usar el mismo esquema, tanto si escribimos como si leemos:- Abrir el fichero- Comprobar si el fichero está abierto- Si está abierto, leer/escribir en él hasta que se encuentra el fin de fichero- Cerrar el fichero
+Cuando trabajamos con ficheros se suele usar el mismo esquema, tanto si escribimos como si leemos:
+
+- Abrir el fichero
+- Comprobar si el fichero está abierto
+- Si está abierto, leer/escribir en él hasta que se encuentra el fin de fichero
+- Cerrar el fichero
 
 ### `FILE*`
 
@@ -95,10 +94,11 @@ El segundo parámetro de `fopen`indica el modo de tratar el archivo: lectura, es
 
 Por defecto siempre el archivo es de texto. Se utiliza la letra `b`para modo binario como último carácter. Algunos compiladores admiten la letra `t`al final para archivos de texto.
 
-- **"r"** modo lectura. El flujo se posiciona al principio del fichero.
-- **"r+"** modo lectura y escritura. El flujo se posiciona al principio del fichero- **"w"** modo escritura. Si el fichero no existe, se crea. Si existe, se trunca a 0. El flujo se posiciona al principio del fichero- **"w+"** modo lectura y escritura. Si el fichero no existe, se crea. Si existe, se trunca a 0. El flujo se posiciona al principio del fichero
-- **"a"** modo escritura añadir al final. Si el fichero no existe, se crea. El flujo se posiciona al final del fichero.- **"a+"** modo lectura y escritura añadir al final. Si el fichero no existe, se crea. El flujo se posiciona al final del fichero.
-- Podemos combinar modos: **"rw"**
+- **"r"**: modo lectura. Abre un archivo para lectura. El flujo se posiciona al principio del fichero.
+- **"w"**: modo escritura. Crea un nuevo archivo para escritura (si ya existe, se pierden los datos preexistentes). El flujo se posiciona al principio del fichero.
+- **"a"**: Abre el archivo para añadir datos al final (se conservan datos existentes), o crea el archivo si no existía.El flujo se posiciona al final del fichero.
+
+El modo anterior puede ir acompañado de un símbolo **`+`**, por ejemplo `r+`. El símbolo + indica que se permite la lectura y la escritura. Por ejemplo `r+` indica apertura de un archivo existente para lectura o escritura, `w+` indica creación de un nuevo archivo para lectura o escritura y `a+` indica apertura de un archivo para lectura o escritura al final.
 
 Para abrir un archivo binario:
 
