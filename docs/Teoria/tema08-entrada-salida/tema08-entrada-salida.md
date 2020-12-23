@@ -15,7 +15,7 @@ El manejo de archivos en C se hace mediante el concepto de flujo (*streams*) o c
 - Un fichero almacena de manera permanente la información, usando la memoria permanente (disco duro) del ordenador.
 
 
-### 1.2 *Streams* (flujos) de E/S
+### 1.2 Tipos de ficheros
 
 - Cuando se crea o abre un fichero se genera un descriptor de archivo para poder identificarlo.
 - Se crea un ***buffer*** (almacén intermedio) por donde pasan los datos del archivo.
