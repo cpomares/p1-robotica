@@ -17,9 +17,13 @@ El manejo de archivos en C se hace mediante el concepto de flujo (*streams*) o c
 
 ### 1.2 Tipos de ficheros
 
+#### Streams
+
 - Cuando se crea o abre un fichero se genera un descriptor de archivo para poder identificarlo.
 - Se crea un ***buffer*** (almacén intermedio) por donde pasan los datos del archivo.
 - Todo archivo abierto lleva asociado un **puntero de posición** que indica el lugar donde realizará la siguiente lectura o escritura.
+
+#### Tipos
 
 Hay dos tipos de ficheros:
 
