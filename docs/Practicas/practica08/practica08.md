@@ -4,64 +4,48 @@
 
 ## Ejercicio
 
-Implementa un programa que lea un fichero de texto y escriba en otro fichero de texto las palabras en orden inverso.
+Implementa un programa que lea desde un fichero de texto los datos de 2 matrices e imprima en otro fichero el resultado de la multiplicación de ambas matrices. El nombre del fichero de entrada se leerá desde línea de comandos. Al fichero de salida puedes ponerle el nombre que quieras.
 
-Ejemplo: Si en el fichero original de entrada tenemos el siguiente texto:
+El fichero de entrada tendrá el siguiente formato (ver también ejemplos de ejecución):
+
+En la primera línea se indica el número de filas y columnas de dicha matriz. En las siguientes líneas están los datos de las distintas filas de la primera matriz. En la siguiente línea, el número de filas y columnas de la segunda matriz
+en las líneas restantes los datos de la segunda matriz
+
+Debes utilizar *reserva dinámica de memoria* para guardar las matrices.
+
+Suponemos que las dimensiones de las dos matrices permiten realizar su producto.
+
+**Ayudas para la implementación**:
+
+Para imprimir en el fichero de salida los corchetes de las matrices, utiliza las siguientes constantes:
+
+~~~c
+#define LINEA_VERTICAL "\u2502"
+#define ESQUINA_SUPERIOR_IZQ "\u250c"
+#define ESQUINA_SUPERIOR_DER "\u2510"
+#define ESQUINA_INFERIOR_IZQ "\u2514"
+#define ESQUINA_INFERIOR_DER "\u2518"
+~~~
+
+Para simplificar el algoritmo de imprimir las matrices en el fichero de salida, vamos a suponer que **el número de filas de ambas matrices siempre será el mismo, aunque sí pueden tener distinto número de columnas**.
+
+
+Ejemplos de ejecución:
 
 ~~~text
-Esto es una frase de prueba para el ejercicio de invertir el orden de las palabras de un fichero de texto.
-Y esta otra frase está en otro párrafo.
+$ ./programa matrices.txt
 ~~~
 
-El programa deberá generar el siguiente fichero de texto de salida:
+Ejemplo 1:
 
-~~~text
-párrafo.
-otro en está frase otra esta Y texto.
-de fichero un de palabras las de orden el invertir de ejercicio el para prueba de frase una es Esto
-~~~
+![](imagenes/matriz1.png)
 
-Si volviésemos a ejecutar el programa pasando como argumento el fichero de salida, se debería volver a generar un fichero igual que el original.
+Ejemplo 2:
 
-El programa deberá recibir un argumento desde línea de comandos con el nombre del fichero de entrada (con extensión .txt) y leer (carácter a carácter con `fgetc`) todas sus palabras guardándolas en un array dinámico de cadenas de caracteres, que a su vez también se crearán con reserva de memoria dinámica. Después deberá escribir en otro fichero de texto las palabras almacenadas en el array dinámico en orden inverso.
-
-Suponemos que las palabras están separadas por un espacio en blanco y para mantener los distintos párrafos, incluye el carácter final de línea en la última palabra de cada párrafo.
-
-Deberás construir el nombre del fichero de salida de la siguiente forma:
-nombre original (sin extensión) + "_out" + extension.
-
-Por ejemplo, si el fichero de entrada se denomina `"prueba.txt"`, el fichero de salida tendrá el nombre: `"prueba_out.txt"`.
-
-Además, debes implementar versiones de las funciones `strcpy()`, `strncpy()` y `strcat()` para que trabajen con memoria dinámica. Las funciones de librería `strcpy`y `strcat`ya las conoces. La función de librería `strncpy` copia los `n` primeros caracteres de una cadena en otra, por ejemplo:
-
-~~~c
-...
-strncpy(texto2, texto1, 4);
-texto2[4]='\0';
-printf("Los 4 primeros caracteres son %s\n", texto2);
-~~~
-
-Define las nuevas funciones con los siguientes prototipos:
-
-~~~c
-TCadena strcpyDinamico(TCadena);
-TCadena strncpyDinamico(TCadena, int);
-void    strcatDinamico(TCadena*, TCadena);
-~~~
-
-Finalmente, debes utilizar las siguientes definiciones de tipos de datos:
-
-~~~c
-typedef char* TCadena;
-
-typedef struct {
-    int n;
-    TCadena* palabras;
-} TTexto;
-~~~
+![](imagenes/matriz2.png)
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Antonio Botía, Cristina Pomares
