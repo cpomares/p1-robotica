@@ -395,6 +395,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
+    Ejercicio 4
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -415,6 +422,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html" title="Tema 7: Punteros y memoria dinámica" class="md-nav__link">
+      Tema 7: Punteros y memoria dinámica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema08-entrada-salida/tema08-entrada-salida.html" title="Tema 8: Entrada / Salida" class="md-nav__link">
+      Tema 8: Entrada / Salida
+    </a>
   </li>
 
         
@@ -522,6 +553,30 @@
   <li class="md-nav__item">
     <a href="../../Practicas/practica06/practica06.html" title="Práctica 6: Datos estructurados: Registros" class="md-nav__link">
       Práctica 6: Datos estructurados: Registros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica07/practica07.html" title="Práctica 7: Punteros y memoria dinámica" class="md-nav__link">
+      Práctica 7: Punteros y memoria dinámica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Practicas/practica08/practica08.html" title="Práctica 8: Entrada y Salida" class="md-nav__link">
+      Práctica 8: Entrada y Salida
     </a>
   </li>
 
@@ -645,6 +700,13 @@
           <li class="md-nav__item">
   <a href="#ejercicio-3_1" title="Ejercicio 3" class="md-nav__link">
     Ejercicio 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" title="Ejercicio 4" class="md-nav__link">
+    Ejercicio 4
   </a>
   
 </li>
@@ -1657,6 +1719,135 @@ Se pide leer un triángulo por teclado: únicamente se leerán sus tres puntos. 
 
 <p>que debe devolver la nota del alumno en la asignatura cuyo código se especifica en el segundo argumento. Si el alumno no tiene esa asignatura, la función devolverá <code>-1.0</code>. Puedes utilizar la función de librería <code>strcmp</code>.</p>
 <p>d. Escribe el código que permita mostrar por pantalla el nombre, apellidos y la nota de todos los alumnos en la asignatura "P1". Si el alumno no tiene nota en la asignatura, no debe aparecer en el listado. No es necesario que definas una función y puedes declarar alguna nueva variable si lo consideras necesario. Debes utilizar la función del apartado anterior.</p>
+<h3 id="ejercicio-4">Ejercicio 4<a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h3>
+<p>Dadas las siguientes definiciones:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define MAXVERTICES 50</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span><span class="n">TVertice</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+   <span class="n">TVertice</span> <span class="n">vertices</span><span class="p">[</span><span class="n">MAXVERTICES</span><span class="p">];</span>
+   <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>  <span class="c1">// número de vértices del polígono</span>
+<span class="p">}</span><span class="n">TPoligono</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>A. Define las funciones <code>construyeVertice</code> y <code>construyePoligono</code>, cuyos prototipos son los siguientes:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">TVertice</span> <span class="nf">construyeVertice</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+<span class="n">TPoligono</span> <span class="nf">construyePoligono</span><span class="p">(</span><span class="kt">int</span> <span class="p">[],</span> <span class="kt">int</span><span class="p">);</span> 
+</pre></div>
+</td></tr></table>
+
+<p>La función <code>construyePoligono</code> recibe un array de enteros y su longitud, que siempre es par, y construye y devuelve un polígono a partir del array, construyendo cada vértice con los elementos de dos en dos del array de enteros.</p>
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    int array[10] = {10,20,3,4,50,60,7,8,90,100};
+    El polígono tendrá los vértices (10,20)-(3,4)-(50,60)-(7,8)-(90,100)
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>B. Define las funciones indicadas en los siguientes prototipos:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">trasladaVertice</span><span class="p">(</span><span class="n">TVertice</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">trasladaPoligono</span><span class="p">(</span><span class="n">TPoligono</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>Ambas funciones reciben, a parte del TVertice o TPoligono correspondiente, un incremento en X y un incremento en Y que indican la traslación de cada vértice.</p>
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    Si el polígono tiene los vértices (10,20)-(3,4)-(50,60)-(7,8)-(90,100)
+    Después de trasladarlo con incremento en X: 100, incremento en Y: 200
+    El polígono tendrá los vértices (110,220)-(103,204)-(150,260)-(107,208)-(190,300)
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>C. Suponiendo que tenemos definida la función:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> void imprimePoligono(TPoligono)
+</pre></div>
+</td></tr></table>
+
+<p>completa el <code>main</code> con las llamadas correspondientes:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">};</span>
+   <span class="n">TPoligono</span> <span class="n">pol</span><span class="p">;</span>
+
+   <span class="c1">// llamada a construyePoligono con el array definido</span>
+
+   <span class="n">_______________________</span>
+
+  <span class="c1">// llamada a trasladaPoligono con incremento en X 10, incremento en Y 100  </span>
+
+   <span class="n">_______________________</span>
+
+  <span class="c1">// llamada a imprimePoligono con el polígono trasladado </span>
+
+   <span class="n">_______________________</span>
+
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>D. Modifica ahora la función <code>trasladaPoligono</code> para realizar en ella la llamada a <code>imprimePoligono</code>:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">trasladaPoligono</span><span class="p">(</span><span class="n">TPoligono</span> <span class="o">*</span><span class="n">pol</span><span class="p">,</span> <span class="kt">int</span> <span class="n">incrX</span><span class="p">,</span> <span class="kt">int</span> <span class="n">incrY</span><span class="p">)</span> <span class="p">{</span>
+
+   <span class="c1">// código hecho en el apartado B</span>
+
+   <span class="c1">// llamada a imprimePoligono:</span>
+
+    <span class="n">________________________</span> 
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Capítulos 11.1 a 11.7 de "Programación en C, metodología, algoritmos y estructuras de datos", Luis Joyanes, Ignacio Zahonero</li>
@@ -1700,13 +1891,13 @@ Cristina Pomares Puig</p>
           </a>
         
         
-          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html" title="Tema 7: Punteros y memoria dinámica" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Práctica 0: Entorno Linux y herramientas
+                Tema 7: Punteros y memoria dinámica
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

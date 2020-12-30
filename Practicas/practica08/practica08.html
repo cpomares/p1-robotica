@@ -36,7 +36,7 @@
     
     
       
-        <title>Práctica 8: Entrada y salida - P1 Robótica</title>
+        <title>Práctica 8: Entrada y Salida - P1 Robótica</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Práctica 8: Entrada y salida
+                Práctica 8: Entrada y Salida
               
             </span>
           
@@ -275,6 +275,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Teoria/tema07-punteros-y-memoria-dinamica/tema07-punteros-y-memoria-dinamica.html" title="Tema 7: Punteros y memoria dinámica" class="md-nav__link">
+      Tema 7: Punteros y memoria dinámica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Teoria/tema08-entrada-salida/tema08-entrada-salida.html" title="Tema 8: Entrada / Salida" class="md-nav__link">
+      Tema 8: Entrada / Salida
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -284,10 +308,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Prácticas
@@ -383,6 +409,68 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practica07/practica07.html" title="Práctica 7: Punteros y memoria dinámica" class="md-nav__link">
+      Práctica 7: Punteros y memoria dinámica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Práctica 8: Entrada y Salida
+      </label>
+    
+    <a href="practica08.html" title="Práctica 8: Entrada y Salida" class="md-nav__link md-nav__link--active">
+      Práctica 8: Entrada y Salida
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio" title="Ejercicio" class="md-nav__link">
+    Ejercicio
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -435,66 +523,38 @@
                 <h1 id="practica-8-entrada-y-salida">Práctica 8: Entrada y salida<a class="headerlink" href="#practica-8-entrada-y-salida" title="Permanent link">&para;</a></h1>
 <p><strong>Duración</strong>: 2 semanas</p>
 <h2 id="ejercicio">Ejercicio<a class="headerlink" href="#ejercicio" title="Permanent link">&para;</a></h2>
-<p>Implementa un programa que lea un fichero de texto y escriba en otro fichero de texto las palabras en orden inverso.</p>
-<p>Ejemplo: Si en el fichero original de entrada tenemos el siguiente texto:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Esto es una frase de prueba para el ejercicio de invertir el orden de las palabras de un fichero de texto.
-Y esta otra frase está en otro párrafo.
-</pre></div>
-</td></tr></table>
-
-<p>El programa deberá generar el siguiente fichero de texto de salida:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>párrafo.
-otro en está frase otra esta Y texto.
-de fichero un de palabras las de orden el invertir de ejercicio el para prueba de frase una es Esto
-</pre></div>
-</td></tr></table>
-
-<p>Si volviésemos a ejecutar el programa pasando como argumento el fichero de salida, se debería volver a generar un fichero igual que el original.</p>
-<p>El programa deberá recibir un argumento desde línea de comandos con el nombre del fichero de entrada (con extensión .txt) y leer (carácter a carácter con <code>fgetc</code>) todas sus palabras guardándolas en un array dinámico de cadenas de caracteres, que a su vez también se crearán con reserva de memoria dinámica. Después deberá escribir en otro fichero de texto las palabras almacenadas en el array dinámico en orden inverso.</p>
-<p>Suponemos que las palabras están separadas por un espacio en blanco y para mantener los distintos párrafos, incluye el carácter final de línea en la última palabra de cada párrafo.</p>
-<p>Deberás construir el nombre del fichero de salida de la siguiente forma:
-nombre original (sin extensión) + "_out" + extension.</p>
-<p>Por ejemplo, si el fichero de entrada se denomina <code>"prueba.txt"</code>, el fichero de salida tendrá el nombre: <code>"prueba_out.txt"</code>.</p>
-<p>Además, debes implementar versiones de las funciones <code>strcpy()</code>, <code>strncpy()</code> y <code>strcat()</code> para que trabajen con memoria dinámica. Las funciones de librería <code>strcpy</code>y <code>strcat</code>ya las conoces. La función de librería <code>strncpy</code> copia los <code>n</code> primeros caracteres de una cadena en otra, por ejemplo:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">...</span>
-<span class="n">strncpy</span><span class="p">(</span><span class="n">texto2</span><span class="p">,</span> <span class="n">texto1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
-<span class="n">texto2</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Los 4 primeros caracteres son %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">texto2</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>Define las nuevas funciones con los siguientes prototipos:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">TCadena</span> <span class="nf">strcpyDinamico</span><span class="p">(</span><span class="n">TCadena</span><span class="p">);</span>
-<span class="n">TCadena</span> <span class="nf">strncpyDinamico</span><span class="p">(</span><span class="n">TCadena</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
-<span class="kt">void</span>    <span class="nf">strcatDinamico</span><span class="p">(</span><span class="n">TCadena</span><span class="o">*</span><span class="p">,</span> <span class="n">TCadena</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>Finalmente, debes utilizar las siguientes definiciones de tipos de datos:</p>
+<p>Implementa un programa que lea desde un fichero de texto los datos de 2 matrices e imprima en otro fichero el resultado de la multiplicación de ambas matrices. El nombre del fichero de entrada se leerá desde línea de comandos. Al fichero de salida puedes ponerle el nombre que quieras.</p>
+<p>El fichero de entrada tendrá el siguiente formato (ver también ejemplos de ejecución):</p>
+<p>En la primera línea se indica el número de filas y columnas de dicha matriz. En las siguientes líneas están los datos de las distintas filas de la primera matriz. En la siguiente línea, el número de filas y columnas de la segunda matriz
+en las líneas restantes los datos de la segunda matriz</p>
+<p>Debes utilizar <em>reserva dinámica de memoria</em> para guardar las matrices.</p>
+<p>Suponemos que las dimensiones de las dos matrices permiten realizar su producto.</p>
+<p><strong>Ayudas para la implementación</strong>:</p>
+<p>Para imprimir en el fichero de salida los corchetes de las matrices, utiliza las siguientes constantes:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="kt">char</span><span class="o">*</span> <span class="n">TCadena</span><span class="p">;</span>
-
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">TCadena</span><span class="o">*</span> <span class="n">palabras</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">TTexto</span><span class="p">;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define LINEA_VERTICAL &quot;\u2502&quot;</span>
+<span class="cp">#define ESQUINA_SUPERIOR_IZQ &quot;\u250c&quot;</span>
+<span class="cp">#define ESQUINA_SUPERIOR_DER &quot;\u2510&quot;</span>
+<span class="cp">#define ESQUINA_INFERIOR_IZQ &quot;\u2514&quot;</span>
+<span class="cp">#define ESQUINA_INFERIOR_DER &quot;\u2518&quot;</span>
 </pre></div>
 </td></tr></table>
 
+<p>Para simplificar el algoritmo de imprimir las matrices en el fichero de salida, vamos a suponer que <strong>el número de filas de ambas matrices siempre será el mismo, aunque sí pueden tener distinto número de columnas</strong>.</p>
+<p>Ejemplos de ejecución:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./programa matrices.txt
+</pre></div>
+</td></tr></table>
+
+<p>Ejemplo 1:</p>
+<p><img alt="" src="imagenes/matriz1.png" /></p>
+<p>Ejemplo 2:</p>
+<p><img alt="" src="imagenes/matriz2.png" /></p>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Antonio Botía, Cristina Pomares</p>
                 
@@ -513,6 +573,27 @@ Antonio Botía, Cristina Pomares</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../practica07/practica07.html" title="Práctica 7: Punteros y memoria dinámica" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Práctica 7: Punteros y memoria dinámica
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
