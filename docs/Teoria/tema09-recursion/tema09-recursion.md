@@ -485,6 +485,11 @@ El valor de la recursividad reside en el hecho de que se puede usar para resolve
 5. Implementa la función anterior de forma que se reciba un array de dígitos y la función devuelva el número de dígitos impares que contiene el array.
 6. Comprobar si un número es par o impar, utilizando recursión mutua.
 7. Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función mayor(int, int)que devuelve el mayor entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el máyor entre el primer elemento y el máximo del resto de elementos.
+8. Escribe la función recursiva palindroma, que comprueba si la cadena recibida es palíndroma, cuyo prototipo es:
+
+    ~~~c
+    bool palindroma(char cad[], int ini, int fin);
+    ~~~
 
 ### Curiosidad: Algoritmos recursivos de vuelta a atrás (*backtracking*)
 
@@ -499,6 +504,6 @@ laberintos, se ve muy claro el avance, decisión y retroceso.
 
 ----
 
-Programación 1, Grado de Robótica, curso 2019-20  
+Programación 1, Grado de Robótica, curso 2020-21  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
