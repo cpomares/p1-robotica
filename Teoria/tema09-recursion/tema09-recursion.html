@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -296,6 +298,117 @@
     <a href="../tema08-entrada-salida/tema08-entrada-salida.html" title="Tema 8: Entrada / Salida" class="md-nav__link">
       Tema 8: Entrada / Salida
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 9: Recursión
+      </label>
+    
+    <a href="tema09-recursion.html" title="Tema 9: Recursión" class="md-nav__link md-nav__link--active">
+      Tema 9: Recursión
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-la-recursividad" title="1. Qué es la recursividad" class="md-nav__link">
+    1. Qué es la recursividad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-como-disenar-una-funcion-recursiva" title="2. Cómo diseñar una función recursiva" class="md-nav__link">
+    2. Cómo diseñar una función recursiva
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-pila-de-llamadas-y-el-proceso-de-la-recursion" title="3. La pila de llamadas y el proceso de la recursión" class="md-nav__link">
+    3. La pila de llamadas y el proceso de la recursión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-pila-de-llamadas" title="La pila de llamadas" class="md-nav__link">
+    La pila de llamadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-proceso-de-la-recursion" title="El proceso de la recursión" class="md-nav__link">
+    El proceso de la recursión
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recursion-mutua" title="4. Recursión mutua" class="md-nav__link">
+    4. Recursión mutua
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ventajas-y-desventajas-de-la-recursion" title="5. Ventajas y desventajas de la recursión" class="md-nav__link">
+    5. Ventajas y desventajas de la recursión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curiosidad-algoritmos-recursivos-de-vuelta-a-atras-backtracking" title="Curiosidad: Algoritmos recursivos de vuelta a atrás (backtracking)" class="md-nav__link">
+    Curiosidad: Algoritmos recursivos de vuelta a atrás (backtracking)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1192,6 +1305,13 @@ devuelve la ejecución al punto en que se hizo la llamada haciendo uso de lo que
 <li>Implementa la función anterior de forma que se reciba un array de dígitos y la función devuelva el número de dígitos impares que contiene el array.</li>
 <li>Comprobar si un número es par o impar, utilizando recursión mutua.</li>
 <li>Define una función recursiva que obtenga el valor máximo de un array de enteros. Pista: puedes definir y utilizar la función mayor(int, int)que devuelve el mayor entre dos números enteros. El caso base es cuando el array sólo tiene un elemento. El caso general se puede plantear como el máyor entre el primer elemento y el máximo del resto de elementos.</li>
+<li>
+<p>Escribe la función recursiva palindroma, que comprueba si la cadena recibida es palíndroma, cuyo prototipo es:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">palindroma</span><span class="p">(</span><span class="kt">char</span> <span class="n">cad</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">ini</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fin</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+</li>
 </ol>
 <h3 id="curiosidad-algoritmos-recursivos-de-vuelta-a-atras-backtracking">Curiosidad: Algoritmos recursivos de vuelta a atrás (<em>backtracking</em>)<a class="headerlink" href="#curiosidad-algoritmos-recursivos-de-vuelta-a-atras-backtracking" title="Permanent link">&para;</a></h3>
 <p>Se trata de una estrategia recursiva para resolver problemas como los de los laberintos, el sudoku, algunos problemas de ajedrez como el recorrido del caballo o las ocho damas y similares, en los que mediante una búsqueda en profundidad se puede dar con la solución.
@@ -1201,7 +1321,7 @@ El nombre vuelta atrás (<em>backtracking</em>) viene del hecho de que en la bú
 funciona el salvapantallas <a href="https://www.jwz.org/xscreensaver/">xscreensaver</a> en el modo de resolución de
 laberintos, se ve muy claro el avance, decisión y retroceso.</p>
 <hr />
-<p>Programación 1, Grado de Robótica, curso 2019-20<br />
+<p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
                 
@@ -1220,6 +1340,41 @@ Cristina Pomares Puig</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema08-entrada-salida/tema08-entrada-salida.html" title="Tema 8: Entrada / Salida" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Tema 8: Entrada / Salida
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Practicas/practica00/practica00.html" title="Práctica 0: Entorno Linux y herramientas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 0: Entorno Linux y herramientas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
