@@ -89,6 +89,9 @@ int main() {
    else {
       // Archivo abierto con éxito
    }
+   
+   return 0;
+}
 
 ~~~
 
@@ -121,6 +124,8 @@ int main() {
    if (fp1 == NULL || fp2 == NULL) {
       // Error
    }
+   
+   return 0;
 }
 ~~~
 
@@ -180,6 +185,7 @@ int main() {
       } while (c != 'Z');
       fclose(f);
    }
+   return 0;
 }
 ~~~
 
@@ -212,6 +218,7 @@ int main() {
       printf("Número de líneas del archivo: %d", n);
       fclose(f);
    }
+   return 0;
 }
 ~~~
 
@@ -243,6 +250,7 @@ int main() {
 
       }
    }
+   return 0;
 }
 ~~~
 
@@ -275,6 +283,8 @@ int main() {
    // instrucciones para abrir el fichero
 
    fgets(cad, T, f);
+   
+   return 0;
 }
 ~~~
 
@@ -309,6 +319,8 @@ int main() {
          fclose(f2);
       }
    }
+   
+   return 0;
 }
 ~~~
 
@@ -339,6 +351,8 @@ int main(){
       }
       fclose(f);
    }
+   
+   return 0;
 }
 ~~~
 
@@ -367,6 +381,8 @@ int main() {
 
    //Cerramos el archivo
    fclose(descriptor);
+   
+   return 0;
 }
 ~~~
 
@@ -403,6 +419,8 @@ int main() {
       free(p.nombre);
       p.nombre = NULL;
    }
+   
+   return 0;
 }
 
 void entrada(TPersona *p) {
@@ -462,6 +480,8 @@ int main() {
       }while(p.x != 0 && p.y != 0);
       fclose(f);
    }
+   
+   return 0;
 }
 ~~~
 
@@ -488,6 +508,8 @@ int main() {
       }
       fclose(f);
    }
+   
+   return 0;
 }
 ~~~
 
@@ -567,6 +589,8 @@ int main() {
 
       fclose(f2);
    }
+   
+   return 0;
 }
 ~~~
 
@@ -604,6 +628,8 @@ int main(int argc, char **argv) {
          fclose(fs);
       }
    }
+   
+   return 0;
 }
 ~~~
 
@@ -640,6 +666,8 @@ int main() {
 
       fclose(pf);
    }
+   
+   return 0;
 }
 
 ~~~
@@ -672,6 +700,8 @@ int main() {
       }
       fclose(f);
    }
+   
+   return 0;
 }
 
 ~~~
@@ -679,18 +709,15 @@ int main() {
 #### Solución ejercicio 3
 
 ~~~c
-int main()
-{
+int main() {
    FILE *resultados;
    int numero1=0, numero2=0, suma=0;
 
    if((resultados = fopen("sumas.txt", "a+")) == NULL)
       printf("No se pudo abrir el archivo.\n");
-   else
-   {
+   else {
       printf("Escriba dos numeros.\n\"000\" para salir.\n");
-      do
-      {
+      do {
          printf("Primer numero: ");
          scanf("%d", &numero1);
          if (numero1 != 0) {
@@ -700,10 +727,11 @@ int main()
             printf("%d + %d = %d\n", numero1, numero2, suma);
             fprintf(resultados, "%d + %d = %d\n", numero1, numero2, suma);
          }
-      }
-      while (numero1 != 0);
+      } while (numero1 != 0);
       fclose(resultados);
    }
+   
+   return 0;
 }
 ~~~
 
@@ -754,11 +782,11 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
 2. Dada la definición del siguiente tipo de dato:
 
     ~~~c
-typedef struct {
-   int a;
-   float b;
-   char c;
-}TElem;
+    typedef struct {
+        int a;
+        float b;
+        char c;
+    }TElem;
     ~~~
 
     a. Añade un nuevo tipo de dato llamado `TElementos` que contenga un vector dinámico cuyos elementos son de tipo `TElem y un número que indique el total de elementos que contiene el vector.
