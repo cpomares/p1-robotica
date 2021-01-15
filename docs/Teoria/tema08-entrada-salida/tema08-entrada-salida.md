@@ -752,20 +752,20 @@ Las siguientes líneas contendrán los elementos de cada fila de la matriz (una 
     Ejemplos de ficheros:
 
     ~~~text
-fichero1.txt:
-3
-1 2 3
-2 4 5
-3 5 6
-~~~
+    fichero1.txt:
+    3
+    1 2 3
+    2 4 5
+    3 5 6
+    ~~~
 
     ~~~text
-fichero2.txt:
-4
-1  2   3  4
-5  6   7  8
-9  10 11 12
-13 14 15 16
+    fichero2.txt:
+    4
+    1  2   3  4
+    5  6   7  8
+    9  10 11 12
+    13 14 15 16
     ~~~
 
     Ejemplos de ejecución:
@@ -794,9 +794,9 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
     b.  Define la función `leerYRellenar` que recibe como parámetros un nombre de fichero de texto y el tipo `TElementos` definido previamente. La función debe leer el contenido del fichero y almacenarlo en el vector, que irá creciendo dinámicamente conforme se lean líneas del fichero. El formato de cada línea del fichero es [int float char], ejemplo:
 
     ~~~text
-3 1.5 A
-4 8.9 B
-1 5.2 C
+    3 1.5 A
+    4 8.9 B
+    1 5.2 C
     ~~~
 
     c.  Completa el `main()` para:
@@ -804,19 +804,21 @@ realizar la llamada a la función anterior
 imprimir por pantalla el contenido del vector.
 liberar la memoria reservada dinámicamente
 
-~~~c
-int main() {
-   TElementos elems;
-   char nombre[] = "fichero.txt";
-
-   leerYRellenar(nombre, &elems);  // rellena aquí la llamada
-
-  // Escribe aquí tu código para imprimir el contenido del vector:
-
-
-
-  // Escribe a continuación el código para liberar la memoria reservada:
-~~~
+    ~~~c
+    int main() {
+       TElementos elems;
+       char nombre[] = "fichero.txt";
+    
+       leerYRellenar(nombre, &elems);  // rellena aquí la llamada
+    
+      // Escribe aquí tu código para imprimir el contenido del vector:
+    
+    
+    
+      // Escribe a continuación el código para liberar la memoria reservada:
+      
+    }
+    ~~~
 ---
 
 Programación 1, Grado de Robótica, curso 2020-21  
