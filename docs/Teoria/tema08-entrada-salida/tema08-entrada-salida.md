@@ -781,30 +781,31 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
 
 2. Dada la definición del siguiente tipo de dato:
 
-~~~c
+    ~~~c
 typedef struct {
     int a;
     float b;
     char c;
 }TElem;
-~~~
+    ~~~
 
-    a. Añade un nuevo tipo de dato llamado `TElementos` que contenga un vector dinámico cuyos elementos son de tipo `TElem y un número que indique el total de elementos que contiene el vector.
+
+    a. Añade un nuevo tipo de dato llamado `TElementos` que contenga un vector dinámico cuyos elementos son de tipo `TElem` y un número que indique el total de elementos que contiene el vector.
 
     b.  Define la función `leerYRellenar` que recibe como parámetros un nombre de fichero de texto y el tipo `TElementos` definido previamente. La función debe leer el contenido del fichero y almacenarlo en el vector, que irá creciendo dinámicamente conforme se lean líneas del fichero. El formato de cada línea del fichero es [int float char], ejemplo:
 
-~~~text
+    ~~~text
 3 1.5 A
 4 8.9 B
 1 5.2 C
-~~~
+    ~~~
 
     c.  Completa el `main()` para:
 realizar la llamada a la función anterior  
 imprimir por pantalla el contenido del vector.
 liberar la memoria reservada dinámicamente
 
-~~~c
+    ~~~c
 int main() {
    TElementos elems;
    char nombre[] = "fichero.txt";
@@ -818,7 +819,8 @@ int main() {
   // Escribe a continuación el código para liberar la memoria reservada:
   
 }
-~~~
+    ~~~
+    
 ---
 
 Programación 1, Grado de Robótica, curso 2020-21  
