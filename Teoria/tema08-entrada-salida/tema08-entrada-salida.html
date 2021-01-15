@@ -1852,6 +1852,8 @@ En la primera línea se indica la dimensión de la matriz cuadrada.
 Las siguientes líneas contendrán los elementos de cada fila de la matriz (una fila por cada línea).</p>
 <p>Ten en cuenta además que tu programa deberá reservar <strong>sólo la memoria necesaria</strong> para guardar los elementos de la matriz.</p>
 <p>Ejemplos de ficheros:</p>
+</li>
+</ol>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1878,18 +1880,27 @@ Las siguientes líneas contendrán los elementos de cada fila de la matriz (una 
 </pre></div>
 </td></tr></table>
 
-<p>Ejemplos de ejecución:</p>
-<p>~~~text
-$ ./miPrograma fichero1.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Ejemplos</span> <span class="n">de</span> <span class="n">ejecución</span><span class="p">:</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./miPrograma fichero1.txt
 La matriz almacenada en el fichero fichero1.txt ES SIMETRICA
 $ ./miPrograma fichero2.txt
 La matriz almacenada en el fichero fichero2.txt NO ES SIMETRICA
 $ ./miPrograma
 Falta argumento en la línea de comandos o el fichero no se puede leer
-~~~</p>
-</li>
-<li>
-<p>Dada la definición del siguiente tipo de dato:</p>
+</pre></div>
+</td></tr></table>
+
+<ol start="2">
+<li>Dada la definición del siguiente tipo de dato:</li>
+</ol>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1902,8 +1913,14 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
 </pre></div>
 </td></tr></table>
 
-<p>a. Añade un nuevo tipo de dato llamado <code>TElementos</code> que contenga un vector dinámico cuyos elementos son de tipo `TElem y un número que indique el total de elementos que contiene el vector.</p>
-<p>b.  Define la función <code>leerYRellenar</code> que recibe como parámetros un nombre de fichero de texto y el tipo <code>TElementos</code> definido previamente. La función debe leer el contenido del fichero y almacenarlo en el vector, que irá creciendo dinámicamente conforme se lean líneas del fichero. El formato de cada línea del fichero es [int float char], ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span><span class="p">.</span> <span class="n">Añade</span> <span class="n">un</span> <span class="n">nuevo</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span> <span class="n">llamado</span> <span class="ss">`TElementos`</span> <span class="n">que</span> <span class="n">contenga</span> <span class="n">un</span> <span class="n">vector</span> <span class="n">dinámico</span> <span class="n">cuyos</span> <span class="n">elementos</span> <span class="n">son</span> <span class="n">de</span> <span class="n">tipo</span> <span class="ss">`TElem y un número que indique el total de elementos que contiene el vector.</span>
+
+<span class="ss">b.  Define la función `</span><span class="n">leerYRellenar</span><span class="ss">` que recibe como parámetros un nombre de fichero de texto y el tipo `</span><span class="n">TElementos</span><span class="o">`</span> <span class="n">definido</span> <span class="n">previamente</span><span class="p">.</span> <span class="n">La</span> <span class="n">función</span> <span class="n">debe</span> <span class="n">leer</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">del</span> <span class="n">fichero</span> <span class="n">y</span> <span class="n">almacenarlo</span> <span class="n">en</span> <span class="n">el</span> <span class="n">vector</span><span class="p">,</span> <span class="n">que</span> <span class="n">irá</span> <span class="n">creciendo</span> <span class="n">dinámicamente</span> <span class="n">conforme</span> <span class="n">se</span> <span class="n">lean</span> <span class="n">líneas</span> <span class="n">del</span> <span class="n">fichero</span><span class="p">.</span> <span class="n">El</span> <span class="n">formato</span> <span class="n">de</span> <span class="n">cada</span> <span class="n">línea</span> <span class="n">del</span> <span class="n">fichero</span> <span class="n">es</span> <span class="p">[</span><span class="kt">int</span> <span class="kt">float</span> <span class="kt">char</span><span class="p">],</span> <span class="n">ejemplo</span><span class="p">:</span>
+</pre></div>
+</td></tr></table>
+
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>3 1.5 A
@@ -1912,8 +1929,11 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
 </pre></div>
 </td></tr></table>
 
-<p>c.  Completa el <code>main()</code> para:
-realizar la llamada a la función anterior<br />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">c</span><span class="p">.</span>  <span class="n">Completa</span> <span class="n">el</span> <span class="o">`</span><span class="n">main</span><span class="p">()</span><span class="o">`</span> <span class="n">para</span><span class="p">:</span>
+</pre></div>
+</td></tr></table>
+
+<p>realizar la llamada a la función anterior<br />
 imprimir por pantalla el contenido del vector.
 liberar la memoria reservada dinámicamente</p>
 <h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1943,8 +1963,6 @@ liberar la memoria reservada dinámicamente</p>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table><a class="headerlink" href="#1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada" title="Permanent link">&para;</a></h2>
-</li>
-</ol>
 <p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>
