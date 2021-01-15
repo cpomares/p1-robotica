@@ -496,7 +496,7 @@ El valor de la recursividad reside en el hecho de que se puede usar para resolve
 Se trata de una estrategia recursiva para resolver problemas como los de los laberintos, el sudoku, algunos problemas de ajedrez como el recorrido del caballo o las ocho damas y similares, en los que mediante una búsqueda en profundidad se puede dar con la solución.
 El nombre vuelta atrás (*backtracking*) viene del hecho de que en la búsqueda de la solución se va volviendo a un punto anterior para probar alternativas.
 
-Si estáis interesados en el tema, podéis hacer un ejercicio. Se trata de que, dado un mapa con obstáculos y una posición inicial de un robot y una posición objetivo, el robot sea capaz de encontrar el objetivo. Podéis utilizar las estructuras de datos similares a las de la práctica y leer el mapa con los obstáculos desde línea de comandos. El camino lo resolverá el algoritmo recursivo. Podéis encontrar mucha información al respecto en internet, como por ejemplo en el siguiente [enlace](https://www.cs.bu.edu/teaching/alg/maze/).
+Si estáis interesados en el tema, podéis hacer un ejercicio. Se trata de que, dado un mapa con obstáculos y una posición inicial de un robot y una posición objetivo, el robot sea capaz de encontrar el objetivo. Podéis utilizar las estructuras de datos similares a las de la práctica y leer el mapa con los obstáculos desde línea de comandos. El camino lo resolverá el algoritmo recursivo. Podéis encontrar mucha información al respecto en internet. Podéis realizar búsquedas tipo "*solve maze backtracking*".
 
 En este video de [youtube](https://youtu.be/-u4neMXIRA8) podéis ver cómo
 funciona el salvapantallas [xscreensaver](https://www.jwz.org/xscreensaver/) en el modo de resolución de
