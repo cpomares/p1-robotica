@@ -724,7 +724,7 @@ TPuntos rellenaLista() {
 
 ~~~
 
-En el siguiente ejemplo modificamos la función `rellenaLista` y le pasamos por parámetro por referencia `TPuntos lista`. ¿Qué sucede si quitamos los paréntesis de `(*lista)`?
+En el siguiente ejemplo modificamos la función `rellenaLista` y le pasamos por parámetro por referencia `TPuntos lista`. 
 
 ~~~c
 void rellenaLista(TPuntos *lista) {
