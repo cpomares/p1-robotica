@@ -424,13 +424,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada" title=" 1" class="md-nav__link">
-     1
-  </a>
-  
-</li>
-      
       
       
       
@@ -710,13 +703,6 @@
         <li class="md-nav__item">
   <a href="#ejercicios-propuestos" title="Ejercicios propuestos" class="md-nav__link">
     Ejercicios propuestos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada" title=" 1" class="md-nav__link">
-     1
   </a>
   
 </li>
@@ -1899,70 +1885,38 @@ Falta argumento en la línea de comandos o el fichero no se puede leer
 </td></tr></table>
 
 <ol start="2">
-<li>Dada la definición del siguiente tipo de dato:</li>
-</ol>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
-    <span class="kt">float</span> <span class="n">b</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
-<span class="p">}</span><span class="n">TElem</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span><span class="p">.</span> <span class="n">Añade</span> <span class="n">un</span> <span class="n">nuevo</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span> <span class="n">llamado</span> <span class="ss">`TElementos`</span> <span class="n">que</span> <span class="n">contenga</span> <span class="n">un</span> <span class="n">vector</span> <span class="n">dinámico</span> <span class="n">cuyos</span> <span class="n">elementos</span> <span class="n">son</span> <span class="n">de</span> <span class="n">tipo</span> <span class="ss">`TElem y un número que indique el total de elementos que contiene el vector.</span>
-
-<span class="ss">b.  Define la función `</span><span class="n">leerYRellenar</span><span class="ss">` que recibe como parámetros un nombre de fichero de texto y el tipo `</span><span class="n">TElementos</span><span class="o">`</span> <span class="n">definido</span> <span class="n">previamente</span><span class="p">.</span> <span class="n">La</span> <span class="n">función</span> <span class="n">debe</span> <span class="n">leer</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">del</span> <span class="n">fichero</span> <span class="n">y</span> <span class="n">almacenarlo</span> <span class="n">en</span> <span class="n">el</span> <span class="n">vector</span><span class="p">,</span> <span class="n">que</span> <span class="n">irá</span> <span class="n">creciendo</span> <span class="n">dinámicamente</span> <span class="n">conforme</span> <span class="n">se</span> <span class="n">lean</span> <span class="n">líneas</span> <span class="n">del</span> <span class="n">fichero</span><span class="p">.</span> <span class="n">El</span> <span class="n">formato</span> <span class="n">de</span> <span class="n">cada</span> <span class="n">línea</span> <span class="n">del</span> <span class="n">fichero</span> <span class="n">es</span> <span class="p">[</span><span class="kt">int</span> <span class="kt">float</span> <span class="kt">char</span><span class="p">],</span> <span class="n">ejemplo</span><span class="p">:</span>
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>3 1.5 A
+<li>
+<p>Dada la definición del siguiente tipo de dato:</p>
+<p>~~~c
+typedef struct {
+int a;
+float b;
+char c;
+}TElem;
+~~~</p>
+<p>a. Añade un nuevo tipo de dato llamado <code>TElementos</code> que contenga un vector dinámico cuyos elementos son de tipo <code>TElem</code> y un número que indique el total de elementos que contiene el vector.</p>
+<p>b.  Define la función <code>leerYRellenar</code> que recibe como parámetros un nombre de fichero de texto y el tipo <code>TElementos</code> definido previamente. La función debe leer el contenido del fichero y almacenarlo en el vector, que irá creciendo dinámicamente conforme se lean líneas del fichero. El formato de cada línea del fichero es [int float char], ejemplo:</p>
+<p>~~~text
+3 1.5 A
 4 8.9 B
 1 5.2 C
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">c</span><span class="p">.</span>  <span class="n">Completa</span> <span class="n">el</span> <span class="o">`</span><span class="n">main</span><span class="p">()</span><span class="o">`</span> <span class="n">para</span><span class="p">:</span>
-</pre></div>
-</td></tr></table>
-
-<p>realizar la llamada a la función anterior<br />
+~~~</p>
+<p>c.  Completa el <code>main()</code> para:
+realizar la llamada a la función anterior<br />
 imprimir por pantalla el contenido del vector.
 liberar la memoria reservada dinámicamente</p>
-<h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-   <span class="n">TElementos</span> <span class="n">elems</span><span class="p">;</span>
-   <span class="kt">char</span> <span class="n">nombre</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;fichero.txt&quot;</span><span class="p">;</span>
-
-   <span class="n">leerYRellenar</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">elems</span><span class="p">);</span>  <span class="c1">// rellena aquí la llamada</span>
-
-  <span class="c1">// Escribe aquí tu código para imprimir el contenido del vector:</span>
-
-
-
-  <span class="c1">// Escribe a continuación el código para liberar la memoria reservada:</span>
-
-<span class="p">}</span>
-</pre></div>
-</td></tr></table><a class="headerlink" href="#1-2-3-4-5-6-7-8-9-10-11-12-13int-main-telementos-elems-char-nombre-ficherotxt-leeryrellenarnombre-elems-rellena-aqui-la-llamada-escribe-aqui-tu-codigo-para-imprimir-el-contenido-del-vector-escribe-a-continuacion-el-codigo-para-liberar-la-memoria-reservada" title="Permanent link">&para;</a></h2>
+<p>~~~c
+int main() {
+   TElementos elems;
+   char nombre[] = "fichero.txt";</p>
+</li>
+</ol>
+<p>leerYRellenar(nombre, &amp;elems);  // rellena aquí la llamada</p>
+<p>// Escribe aquí tu código para imprimir el contenido del vector:</p>
+<p>// Escribe a continuación el código para liberar la memoria reservada:</p>
+<p>}
+    ~~~</p>
+<hr />
 <p>Programación 1, Grado de Robótica, curso 2020-21<br />
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante<br />
 Cristina Pomares Puig</p>

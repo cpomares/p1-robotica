@@ -1876,23 +1876,23 @@ dinámicas de datos. En el ejemplo anterior, la reserva de memoria dinámica del
 
    <span class="n">fin</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-   <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">puntos</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-   <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">lista</span><span class="o">-&gt;</span><span class="n">puntos</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+   <span class="n">lista</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Introduce puntos hasta introducir -1 -1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
    <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">fin</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
       <span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-         <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">puntos</span> <span class="o">=</span> <span class="p">(</span><span class="n">TPunto</span> <span class="o">*</span><span class="p">)</span> <span class="n">realloc</span><span class="p">((</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">puntos</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">TPunto</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-         <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">puntos</span><span class="p">[</span><span class="n">n</span><span class="p">].</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-         <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">puntos</span><span class="p">[</span><span class="n">n</span><span class="p">].</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+         <span class="n">lista</span><span class="o">-&gt;</span><span class="n">puntos</span> <span class="o">=</span> <span class="p">(</span><span class="n">TPunto</span> <span class="o">*</span><span class="p">)</span> <span class="n">realloc</span><span class="p">(</span><span class="n">lista</span><span class="o">-&gt;</span><span class="n">puntos</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">TPunto</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+         <span class="n">lista</span><span class="o">-&gt;</span><span class="n">puntos</span><span class="p">[</span><span class="n">n</span><span class="p">].</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+         <span class="n">lista</span><span class="o">-&gt;</span><span class="n">puntos</span><span class="p">[</span><span class="n">n</span><span class="p">].</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
          <span class="n">n</span><span class="o">++</span><span class="p">;</span>
       <span class="p">}</span>
       <span class="k">else</span>
          <span class="n">fin</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
    <span class="p">}</span>
 
-   <span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">).</span><span class="n">num</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="n">lista</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
