@@ -733,23 +733,23 @@ void rellenaLista(TPuntos *lista) {
 
    fin = false;
    n = 0;
-   (*lista).puntos = NULL;
-   (*lista).num = 0;
+   lista->puntos = NULL;
+   lista->num = 0;
 
    printf("Introduce puntos hasta introducir -1 -1\n");
    while(!fin) {
       scanf("%d %d", &x , &y);
       if(x != -1 && y != -1) {
-         (*lista).puntos = (TPunto *) realloc((*lista).puntos, sizeof(TPunto) * (n+1));
-         (*lista).puntos[n].x = x;
-         (*lista).puntos[n].y = y;
+         lista->puntos = (TPunto *) realloc(lista->puntos, sizeof(TPunto) * (n+1));
+         lista->puntos[n].x = x;
+         lista->puntos[n].y = y;
          n++;
       }
       else
          fin = true;
    }
 
-   (*lista).num = n;
+   lista->num = n;
 }
 ~~~
 
